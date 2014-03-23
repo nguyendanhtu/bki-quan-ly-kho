@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_HRMConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_HRMConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_HRM.DS.Properties.Settings.GlobalReference.Default.BKI_HRMConnectionString3" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString3" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_GD_BAO_CAO_DU_AN_2TableAdapter" GeneratorDataComponentClassName="V_GD_BAO_CAO_DU_AN_2TableAdapter" Name="V_GD_BAO_CAO_DU_AN_2" UserDataComponentName="V_GD_BAO_CAO_DU_AN_2TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_HRMConnectionString3 (Settings)" DbObjectName="BKI_HRM.dbo.V_GD_BAO_CAO_DU_AN_2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_KHOConnectionString3 (Settings)" DbObjectName="BKI_KHO.dbo.V_GD_BAO_CAO_DU_AN_2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT TEN_DU_AN, MA_DU_AN, NGAY_BAT_DAU, TRUONG_DU_AN, SL_THANH_VIEN, NGAY_KET_THUC, CO_CHE, GHI_CHU FROM dbo.V_GD_BAO_CAO_DU_AN_2</CommandText>

@@ -18,14 +18,14 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.DS;
-using BKI_HRM.US;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.DS;
+using BKI_KHO.US;
+using BKI_KHO.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using IP.Core.IPExcelReport;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
 	public class f200_V_GD_QUA_TRINH_LAM_VIEC : System.Windows.Forms.Form
 	{

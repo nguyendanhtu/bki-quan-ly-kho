@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM.NghiepVu
+﻿namespace BKI_KHO.NghiepVu
 {
     partial class f701_v_gd_hop_dong_lao_dong_DE
     {

@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM
+﻿namespace BKI_KHO
 {
     partial class f201_DM_NHAN_SU_DE
     {

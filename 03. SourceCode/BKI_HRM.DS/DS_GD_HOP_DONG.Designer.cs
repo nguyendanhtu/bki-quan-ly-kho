@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BKI_HRM.DS {
+namespace BKI_KHO.DS {
     
     
     /// <summary>
@@ -277,7 +277,7 @@ namespace BKI_HRM.DS {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GD_HOP_DONGDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class GD_HOP_DONGDataTable : global::System.Data.TypedTableBase<GD_HOP_DONGRow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -483,12 +483,6 @@ namespace BKI_HRM.DS {
             public GD_HOP_DONGRow FindByID(decimal ID) {
                 return ((GD_HOP_DONGRow)(this.Rows.Find(new object[] {
                             ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -962,7 +956,7 @@ namespace BKI_HRM.DS {
         }
     }
 }
-namespace BKI_HRM.DS.DS_GD_HOP_DONGTableAdapters {
+namespace BKI_KHO.DS.DS_GD_HOP_DONGTableAdapters {
     
     
     /// <summary>
@@ -1173,7 +1167,7 @@ SELECT ID, MA_HOP_DONG, ID_LOAI_HOP_DONG, ID_NHAN_SU, NGAY_KY_HOP_DONG, NGAY_CO_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_HRM.DS.Properties.Settings.Default.BKI_HRMConnectionString6;
+            this._connection.ConnectionString = global::BKI_KHO.DS.Properties.Settings.Default.BKI_KHOConnectionString6;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

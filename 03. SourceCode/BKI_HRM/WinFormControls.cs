@@ -10,12 +10,12 @@ using IP.Core.IPException;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
 
-using BKI_HRM.DS;
-using BKI_HRM.US;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.DS;
+using BKI_KHO.US;
+using BKI_KHO.DS.CDBNames;
 
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
     public class WinFormControls
     {

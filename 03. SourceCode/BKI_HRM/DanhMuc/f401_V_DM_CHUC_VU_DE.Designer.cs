@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM
+﻿namespace BKI_KHO
 {
     partial class f401_V_DM_CHUC_VU_DE
     {

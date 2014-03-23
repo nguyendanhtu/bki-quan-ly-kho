@@ -6,16 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
-using BKI_HRM.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
+using BKI_KHO.US;
 using IP.Core.IPCommon;
 using IP.Core.IPData;
 using IP.Core.IPSystemAdmin;
 using IP.Core.IPUserService;
 using Encoder = System.Drawing.Imaging.Encoder;
 
-namespace BKI_HRM.DanhMuc {
+namespace BKI_KHO.DanhMuc {
     public partial class f102_v_dm_don_vi_de : Form {
 
         #region Public Interfaces

@@ -8,12 +8,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BKI_HRM.DS.CDBNames;
-using BKI_HRM.US;
-using BKI_HRM.DS;
+using BKI_KHO.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
 using IP.Core.IPCommon;
 
-namespace BKI_HRM.NghiepVu
+namespace BKI_KHO.NghiepVu
 {
     public partial class f701_v_gd_hop_dong_lao_dong_DE : Form
     {

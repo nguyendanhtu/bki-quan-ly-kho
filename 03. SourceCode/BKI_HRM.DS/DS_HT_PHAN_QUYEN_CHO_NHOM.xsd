@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyPhatHanhTraiPhieuConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyPhatHanhTraiPhieuConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_HRM.DS.Properties.Settings.GlobalReference.Default.QuanLyPhatHanhTraiPhieuConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyPhatHanhTraiPhieuConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyPhatHanhTraiPhieuConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.QuanLyPhatHanhTraiPhieuConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HT_PHAN_QUYEN_CHO_NHOMTableAdapter" GeneratorDataComponentClassName="HT_PHAN_QUYEN_CHO_NHOMTableAdapter" Name="HT_PHAN_QUYEN_CHO_NHOM" UserDataComponentName="HT_PHAN_QUYEN_CHO_NHOMTableAdapter">

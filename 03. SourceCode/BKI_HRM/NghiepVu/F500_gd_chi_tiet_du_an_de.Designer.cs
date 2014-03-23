@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM.NghiepVu
+﻿namespace BKI_KHO.NghiepVu
 {
     partial class F500_gd_chi_tiet_du_an_de
     {

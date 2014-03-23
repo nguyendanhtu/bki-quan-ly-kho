@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM
+﻿namespace BKI_KHO
 {
     partial class f203_v_gd_trang_thai_lao_dong_de
     {

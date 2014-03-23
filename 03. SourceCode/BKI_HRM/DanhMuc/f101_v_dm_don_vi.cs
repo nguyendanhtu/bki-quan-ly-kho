@@ -13,21 +13,21 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using BKI_HRM.DanhMuc;
+using BKI_KHO.DanhMuc;
 using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using SIS.Controls.Button;
 
-namespace BKI_HRM {
+namespace BKI_KHO {
 
 
 

@@ -11,12 +11,12 @@ using IP.Core.IPUserService;
 using IP.Core.IPData;
 using IP.Core.IPData.DBNames;
 using IP.Core.IPSystemAdmin;
-using BKI_HRM;
-using BKI_HRM.DS.CDBNames;
-using BKI_HRM.DS;
-using BKI_HRM.US;
+using BKI_KHO;
+using BKI_KHO.DS.CDBNames;
+using BKI_KHO.DS;
+using BKI_KHO.US;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
 	/// <summary>
 	/// Summary description for f998_ht_nguoi_su_dung_de.

@@ -21,7 +21,7 @@ using IP.Core.IPSystemAdmin;
 using IP.Core.IPData.DBNames;
 
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
 
 

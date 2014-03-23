@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM
+﻿namespace BKI_KHO
 {
     partial class f202_v_gd_qua_trinh_lam_viec_de
     {

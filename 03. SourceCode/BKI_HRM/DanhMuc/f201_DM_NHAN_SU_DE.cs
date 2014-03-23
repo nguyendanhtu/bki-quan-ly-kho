@@ -11,13 +11,13 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
     public partial class f201_DM_NHAN_SU_DE : Form
     {

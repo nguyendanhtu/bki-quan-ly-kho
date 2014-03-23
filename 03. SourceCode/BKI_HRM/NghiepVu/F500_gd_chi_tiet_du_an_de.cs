@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using IP.Core.IPCommon;
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 using IP.Core.IPUserService;
 using IP.Core.IPData;
 
-namespace BKI_HRM.NghiepVu
+namespace BKI_KHO.NghiepVu
 {
     public partial class F500_gd_chi_tiet_du_an_de : Form
     {

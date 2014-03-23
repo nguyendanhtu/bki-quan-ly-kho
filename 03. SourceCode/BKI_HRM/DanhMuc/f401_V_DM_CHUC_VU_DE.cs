@@ -6,15 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
-using BKI_HRM.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
+using BKI_KHO.US;
 using IP.Core.IPCommon;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
 using Encoder = System.Drawing.Imaging.Encoder;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
     public partial class f401_V_DM_CHUC_VU_DE : Form
     {

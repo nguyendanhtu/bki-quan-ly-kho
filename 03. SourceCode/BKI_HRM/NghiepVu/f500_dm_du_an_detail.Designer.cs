@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM.NghiepVu
+﻿namespace BKI_KHO.NghiepVu
 {
     partial class f500_dm_du_an_detail
     {

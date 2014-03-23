@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BKI_HRM.US</RootNamespace>
     <AssemblyName>BKI_HRM.US</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -78,9 +78,9 @@
     <Compile Include="Windows.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BKI_HRM.DS\BKI_HRM.DS.csproj">
+    <ProjectReference Include="..\BKI_HRM.DS\BKI_KHO.DS.csproj">
       <Project>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</Project>
-      <Name>BKI_HRM.DS</Name>
+      <Name>BKI_KHO.DS</Name>
     </ProjectReference>
     <ProjectReference Include="..\IPBusinessService\IPBusinessService.vbproj">
       <Project>{73CA732C-2CFB-4A14-B0B9-F43763B1C2F3}</Project>

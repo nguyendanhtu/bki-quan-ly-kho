@@ -6,13 +6,13 @@ using System.Drawing;
 
 using System.Text;
 using System.Windows.Forms;
-using BKI_HRM;
-using BKI_HRM.US;
+using BKI_KHO;
+using BKI_KHO.US;
 using IP.Core.IPCommon;
 using IP.Core.IPExcelReport;
 using IP.Core.IPSystemAdmin;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
     public partial class f400_Main : Form
     {
@@ -56,12 +56,12 @@ namespace BKI_HRM
         private void set_define_events()
         {
             this.m_menuitem_tudien.Click += new EventHandler(m_mnu_tu_dien_he_thong_Click);
-            this.m_menuitem_user.Click += new EventHandler(m_mnu_quan_ly_nguoi_su_dung_Click);
-            this.m_menuitem_thoat.Click += new EventHandler(m_menuitem_thoat_Click);
-            this.m_menuitem_qldonvi.Click += new EventHandler(m_menuitem_qldonvi_Click);
-            this.m_menu_dsnhansu.Click += new EventHandler(m_menu_dsnhansu_Click);
-            this.m_menuitem_traCuuNhanSuChung.Click += new EventHandler(m_menuitem_traCuuNhanSuChung_Click);
-            m_menuitem_nhan_su_theo_phong_ban.Click += new System.EventHandler(m_menuitem_nhan_su_theo_phong_ban_Click);
+            //this.m_menuitem_user.Click += new EventHandler(m_mnu_quan_ly_nguoi_su_dung_Click);
+            //this.m_menuitem_thoat.Click += new EventHandler(m_menuitem_thoat_Click);
+            //this.m_menuitem_qldonvi.Click += new EventHandler(m_menuitem_qldonvi_Click);
+            //this.m_menu_dsnhansu.Click += new EventHandler(m_menu_dsnhansu_Click);
+            //this.m_menuitem_traCuuNhanSuChung.Click += new EventHandler(m_menuitem_traCuuNhanSuChung_Click);
+            //m_menuitem_nhan_su_theo_phong_ban.Click += new System.EventHandler(m_menuitem_nhan_su_theo_phong_ban_Click);
         }
 
         private void m_menu_dsnhansu_Click(object sender, EventArgs e)
@@ -309,12 +309,12 @@ namespace BKI_HRM
                 v_us.FillDatasetSapKetThuc(v_ds, DateTime.Now.Date);
                 if (v_ds.Tables[0].Rows.Count > 0)
                 {
-                    m_lbl_du_an_sap_kt.Text = "Có " + v_ds.Tables[0].Rows.Count.ToString() + " dự án sắp kết thúc. Click để xem chi tiết!";
-                    m_lbl_du_an_sap_kt.Visible = true;
+                    //m_lbl_du_an_sap_kt.Text = "Có " + v_ds.Tables[0].Rows.Count.ToString() + " dự án sắp kết thúc. Click để xem chi tiết!";
+                    //m_lbl_du_an_sap_kt.Visible = true;
                 }
                 else
                 {
-                    m_lbl_du_an_sap_kt.Visible = false;
+                    //m_lbl_du_an_sap_kt.Visible = false;
                 }
 
                 US.US_V_GD_HOP_DONG_LAO_DONG v_us_v_gd_hop_dong = new US.US_V_GD_HOP_DONG_LAO_DONG();
@@ -322,7 +322,7 @@ namespace BKI_HRM
                 v_us_v_gd_hop_dong.FIllDataset_By_Hop_Dong_Sap_Het_Han(v_ds_v_gd_hop_dong);
                 if (v_ds_v_gd_hop_dong.Tables[0].Rows.Count > 0)
                 {
-                    m_lbl_thong_bao_hop_dong_sap_het_han.Text = string.Format("Có {0} hợp đồng sắp hết hạn. Click để xem chi tiết!", v_ds_v_gd_hop_dong.Tables[0].Rows.Count);
+                    //m_lbl_thong_bao_hop_dong_sap_het_han.Text = string.Format("Có {0} hợp đồng sắp hết hạn. Click để xem chi tiết!", v_ds_v_gd_hop_dong.Tables[0].Rows.Count);
                 }
             }
             catch (Exception v_e)

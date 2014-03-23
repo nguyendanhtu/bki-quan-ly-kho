@@ -18,13 +18,13 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
 
 	public class f401_V_DM_CHUC_VU : System.Windows.Forms.Form

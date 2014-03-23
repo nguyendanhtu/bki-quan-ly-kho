@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BKI_HRM.DS.CDBNames
+namespace BKI_KHO.DS.CDBNames
 {
     public enum e_loai_tu_dien
     {
