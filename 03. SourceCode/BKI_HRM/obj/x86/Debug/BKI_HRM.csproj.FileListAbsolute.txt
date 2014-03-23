@@ -8,3 +8,6 @@ C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\obj\x86\
 D:\QLNS-HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.exe.config
 D:\QLNS-HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.exe
 D:\QLNS-HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.pdb
+E:\00. WORK - PROJECT\BKI_Quan-ly-kho\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.exe.config
+E:\00. WORK - PROJECT\BKI_Quan-ly-kho\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.exe
+E:\00. WORK - PROJECT\BKI_Quan-ly-kho\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.pdb
