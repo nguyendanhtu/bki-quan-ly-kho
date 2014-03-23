@@ -15,11 +15,11 @@ using IP.Core.IPExcelReport;
 using IP.Core.IPException;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 
-namespace BKI_HRM {
+namespace BKI_KHO {
     public class f100_V_GD_TRANG_THAI_LAO_DONG : System.Windows.Forms.Form {
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;

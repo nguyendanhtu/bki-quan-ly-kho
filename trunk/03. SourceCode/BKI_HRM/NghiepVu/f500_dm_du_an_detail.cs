@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using IP.Core.IPCommon;
-//using BKI_HRM.US;
-//using BKI_HRM.DS;
+//using BKI_KHO.US;
+//using BKI_KHO.DS;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.DS.CDBNames;
 
-namespace BKI_HRM.NghiepVu
+namespace BKI_KHO.NghiepVu
 {
     public partial class f500_dm_du_an_detail : Form
     {
@@ -152,8 +152,8 @@ namespace BKI_HRM.NghiepVu
         }
         public void load_data_2_txt_ma_quyet_dinh_custom_source()
         {
-            BKI_HRM.DS.DS_DM_QUYET_DINH v_ds_quyet_dinh = new BKI_HRM.DS.DS_DM_QUYET_DINH();
-            BKI_HRM.US.US_DM_QUYET_DINH v_us_quyet_dinh = new BKI_HRM.US.US_DM_QUYET_DINH();
+            BKI_KHO.DS.DS_DM_QUYET_DINH v_ds_quyet_dinh = new BKI_KHO.DS.DS_DM_QUYET_DINH();
+            BKI_KHO.US.US_DM_QUYET_DINH v_us_quyet_dinh = new BKI_KHO.US.US_DM_QUYET_DINH();
             v_us_quyet_dinh.FillDatasetByIdLoaiQD(v_ds_quyet_dinh,(int)cm_dm_tu_dien.THANH_LAP_DU_AN);
             int count = v_ds_quyet_dinh.Tables["DM_QUYET_DINH"].Rows.Count;
             for (int i = 0; i < count; i++)
@@ -190,8 +190,8 @@ namespace BKI_HRM.NghiepVu
             m_us_dm_du_an.dcID_LOAI_DU_AN = CIPConvert.ToDecimal(m_cbo_loai_du_an.SelectedValue);
             m_us_dm_du_an.dcID_TRANG_THAI = CIPConvert.ToDecimal(m_cbo_trang_thai.SelectedValue);
 
-            BKI_HRM.US.US_DM_QUYET_DINH v_us = new BKI_HRM.US.US_DM_QUYET_DINH();
-            BKI_HRM.DS.DS_DM_QUYET_DINH v_ds = new BKI_HRM.DS.DS_DM_QUYET_DINH();
+            BKI_KHO.US.US_DM_QUYET_DINH v_us = new BKI_KHO.US.US_DM_QUYET_DINH();
+            BKI_KHO.DS.DS_DM_QUYET_DINH v_ds = new BKI_KHO.DS.DS_DM_QUYET_DINH();
 
             //v_us.FillDatasetByMaQuyetDinh(v_ds,m_txt_ma_quyet_dinh.Text);
 

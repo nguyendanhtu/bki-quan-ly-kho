@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM {
+﻿namespace BKI_KHO {
     partial class f104_bao_cao_nhan_su_theo_phong_ban {
         /// <summary>
         /// Required designer variable.

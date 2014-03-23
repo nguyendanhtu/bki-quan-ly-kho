@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace BKI_HRM
+namespace BKI_KHO
 {
     partial class f400_Main
     {

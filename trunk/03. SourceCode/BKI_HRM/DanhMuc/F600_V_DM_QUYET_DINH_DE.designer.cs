@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM.DanhMuc
+﻿namespace BKI_KHO.DanhMuc
 {
     partial class F600_V_DM_QUYET_DINH_DE
     {

@@ -11,11 +11,11 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_HRM.US;
-using BKI_HRM.DS;
-using BKI_HRM.DS.CDBNames;
+using BKI_KHO.US;
+using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
     public partial class f202_v_gd_qua_trinh_lam_viec_de : Form
     {

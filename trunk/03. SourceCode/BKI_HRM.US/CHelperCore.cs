@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BKI_HRM.US
+namespace BKI_KHO.US
 {
     public static class CHelperCore
     {

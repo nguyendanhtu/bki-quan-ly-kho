@@ -1,4 +1,4 @@
-﻿namespace BKI_HRM.DanhMuc {
+﻿namespace BKI_KHO.DanhMuc {
     partial class f102_v_dm_don_vi_de {
         /// <summary>
         /// Required designer variable.

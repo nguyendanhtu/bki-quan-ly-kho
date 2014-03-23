@@ -6,11 +6,11 @@ using IP.Core.IPCommon;
 using IP.Core.IPSystemAdmin;
 using IP.Core.IPBusinessService;
 using IP.Core.IPUserService;
-using BKI_HRM;
+using BKI_KHO;
 
 
 
-namespace BKI_HRM
+namespace BKI_KHO
 {
 	#region Nhiệm vụ của Class
 	//*********************************************************************************

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BKI_HRM.DS {
+namespace BKI_KHO.DS {
     
     
     /// <summary>
@@ -277,7 +277,7 @@ namespace BKI_HRM.DS {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class V_GD_HOP_DONG_LAO_DONGDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class V_GD_HOP_DONG_LAO_DONGDataTable : global::System.Data.TypedTableBase<V_GD_HOP_DONG_LAO_DONGRow> {
             
             private global::System.Data.DataColumn columnMA_NV;
             
@@ -527,12 +527,6 @@ namespace BKI_HRM.DS {
             public V_GD_HOP_DONG_LAO_DONGRow FindByID(decimal ID) {
                 return ((V_GD_HOP_DONG_LAO_DONGRow)(this.Rows.Find(new object[] {
                             ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1071,7 +1065,7 @@ namespace BKI_HRM.DS {
         }
     }
 }
-namespace BKI_HRM.DS.DS_V_GD_HOP_DONG_LAO_DONGTableAdapters {
+namespace BKI_KHO.DS.DS_V_GD_HOP_DONG_LAO_DONGTableAdapters {
     
     
     /// <summary>
@@ -1217,7 +1211,7 @@ namespace BKI_HRM.DS.DS_V_GD_HOP_DONG_LAO_DONGTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_HRM.DS.Properties.Settings.Default.BKI_HRMConnectionString6;
+            this._connection.ConnectionString = global::BKI_KHO.DS.Properties.Settings.Default.BKI_KHOConnectionString6;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

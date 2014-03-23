@@ -8,13 +8,13 @@
 /// </summary>
 
 
-using BKI_HRM.DS;
+using BKI_KHO.DS;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
 using System;
-namespace BKI_HRM.US
+namespace BKI_KHO.US
 {
 
     public class US_HT_PHAN_QUYEN_HE_THONG : US_Object
