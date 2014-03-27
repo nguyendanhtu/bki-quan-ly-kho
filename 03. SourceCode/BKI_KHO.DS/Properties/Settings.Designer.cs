@@ -26,74 +26,8 @@ namespace BKI_KHO.DS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TrongHV;Initial Catalog=BKI_KHO;Persist Security Info=True;User ID=sa" +
-            ";Password=sa")]
-        public string BKI_KHOConnectionString {
-            get {
-                return ((string)(this["BKI_KHOConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHHT\\SQLEXPRESS;Initial Catalog=BKI_KHO;Persist Security Info=True;U" +
-            "ser ID=sa;Password=sa")]
-        public string BKI_KHOConnectionString1 {
-            get {
-                return ((string)(this["BKI_KHOConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHLT-PC\\SQLEXPRESS;Initial Catalog=BKI_KHO;Persist Security Info=Tru" +
-            "e;User ID=sa;Password=sa")]
-        public string BKI_KHOConnectionString2 {
-            get {
-                return ((string)(this["BKI_KHOConnectionString2"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TRONGHV\\SQLEXPRESS;Initial Catalog=BKI_KHO;Persist Security Info=True" +
-            ";User ID=sa;Password=sa")]
-        public string BKI_KHOConnectionString3 {
-            get {
-                return ((string)(this["BKI_KHOConnectionString3"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THAIPH-PC\\SQLEXPRESS;Initial Catalog=BKI_KHO;Persist Security Info=Tr" +
-            "ue;User ID=sa;Password=sa")]
-        public string BKI_KHOConnectionString4 {
-            get {
-                return ((string)(this["BKI_KHOConnectionString4"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHLT\\SQLEXPRESS;Initial Catalog=BKI_KHO;Persist Security Info=True;U" +
-            "ser ID=sa;Password=sa")]
-        public string BKI_KHOConnectionString5 {
-            get {
-                return ((string)(this["BKI_KHOConnectionString5"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=APPLE8;Initial Catalog=BKI_KHO;Persist Security Info=True;User ID=sa;" +
-            "Password=1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BKI_KHO;Initial Catalog=BKI_KHO;Persist Security Info=True;User ID=sa" +
+            ";Password=sa123456")]
         public string BKI_KHOConnectionString6 {
             get {
                 return ((string)(this["BKI_KHOConnectionString6"]));
