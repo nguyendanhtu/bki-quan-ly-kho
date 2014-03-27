@@ -4,3 +4,9 @@ C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPException\bin\
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPException\obj\Debug\IPException.dll
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPException\obj\Debug\IPException.xml
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPException\obj\Debug\IPException.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\bin\IPException.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\bin\IPException.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\bin\IPException.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.pdb
