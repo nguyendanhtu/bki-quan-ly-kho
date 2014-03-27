@@ -8,8 +8,8 @@
     <ProjectGuid>{B91F4BE2-5024-4012-A4A8-4E52E8609778}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BKI_HRM</RootNamespace>
-    <AssemblyName>BKI_HRM</AssemblyName>
+    <RootNamespace>BKI_KHO</RootNamespace>
+    <AssemblyName>BKI_KHO</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DanhMuc\Class1.cs" />
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +103,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -159,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaoCao\" />
-    <Folder Include="DanhMuc\" />
     <Folder Include="NghiepVu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

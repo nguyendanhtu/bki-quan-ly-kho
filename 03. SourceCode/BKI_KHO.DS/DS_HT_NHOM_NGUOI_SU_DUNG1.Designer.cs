@@ -979,7 +979,7 @@ SELECT ID, MA_NHOM, GHI_CHU, TRANG_THAI_NHOM, ID_INPUTED_BY, INPUTED_DATE, ID_LA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_KHO.DS.Properties.Settings.Default.BKI_KHOConnectionString;
+            this._connection.ConnectionString = global::BKI_KHO.DS.Properties.Settings.Default.QuanLyPhatHanhTraiPhieuConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
