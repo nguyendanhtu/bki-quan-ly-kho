@@ -68,8 +68,7 @@ namespace BKI_KHO
         {
             try
             {
-                f201_dm_nhan_su frm = new f201_dm_nhan_su();
-                frm.display();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -81,7 +80,7 @@ namespace BKI_KHO
         {
             try
             {
-
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -133,8 +132,7 @@ namespace BKI_KHO
         {
             try
             {
-                f401_V_DM_CHUC_VU frm = new f401_V_DM_CHUC_VU();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -147,8 +145,7 @@ namespace BKI_KHO
         {
             try
             {
-                f101_v_dm_don_vi frm = new f101_v_dm_don_vi();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -160,8 +157,7 @@ namespace BKI_KHO
         {
             try
             {
-                F500_DM_DU_AN frm = new F500_DM_DU_AN();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -173,8 +169,7 @@ namespace BKI_KHO
         {
             try
             {
-                f103_bao_cao_tra_cuu_nhan_su frm = new f103_bao_cao_tra_cuu_nhan_su();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -186,9 +181,7 @@ namespace BKI_KHO
         {
             try
             {
-                //f601_v_dm_quyet_dinh frm = new f601_v_dm_quyet_dinh();
-                f600_v_dm_quyet_dinh frm = new f600_v_dm_quyet_dinh();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -200,8 +193,7 @@ namespace BKI_KHO
         {
             try
             {
-                f203_v_gd_trang_thai_lao_dong frm = new f203_v_gd_trang_thai_lao_dong();
-                frm.display();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -213,8 +205,7 @@ namespace BKI_KHO
         {
             try
             {
-                f104_bao_cao_nhan_su_theo_phong_ban frm = new f104_bao_cao_nhan_su_theo_phong_ban();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -226,8 +217,7 @@ namespace BKI_KHO
         {
             try
             {
-                f701_v_hop_dong_lao_dong frm = new f701_v_hop_dong_lao_dong();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -239,8 +229,7 @@ namespace BKI_KHO
         {
             try
             {
-                f202_V_GD_QUA_TRINH_LAM_VIEC frm = new f202_V_GD_QUA_TRINH_LAM_VIEC();
-                frm.display();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -252,8 +241,7 @@ namespace BKI_KHO
         {
             try
             {
-                f402_BAO_CAO_NHAN_SU_CHUC_VU frm = new f402_BAO_CAO_NHAN_SU_CHUC_VU();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -265,8 +253,7 @@ namespace BKI_KHO
         {
             try
             {
-                f501_v_dm_nhan_su_du_an frm = new f501_v_dm_nhan_su_du_an();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -278,8 +265,7 @@ namespace BKI_KHO
         {
             try
             {
-                f502_bao_cao_du_an frm = new f502_bao_cao_du_an();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -291,8 +277,7 @@ namespace BKI_KHO
         {
             try
             {
-                f103_bao_cao_tra_cuu_nhan_su frm = new f103_bao_cao_tra_cuu_nhan_su();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -304,26 +289,7 @@ namespace BKI_KHO
         {
             try
             {
-                US.US_DM_DU_AN v_us = new US.US_DM_DU_AN();
-                DS.DS_DM_DU_AN v_ds = new DS.DS_DM_DU_AN();
-                v_us.FillDatasetSapKetThuc(v_ds, DateTime.Now.Date);
-                if (v_ds.Tables[0].Rows.Count > 0)
-                {
-                    //m_lbl_du_an_sap_kt.Text = "Có " + v_ds.Tables[0].Rows.Count.ToString() + " dự án sắp kết thúc. Click để xem chi tiết!";
-                    //m_lbl_du_an_sap_kt.Visible = true;
-                }
-                else
-                {
-                    //m_lbl_du_an_sap_kt.Visible = false;
-                }
 
-                US.US_V_GD_HOP_DONG_LAO_DONG v_us_v_gd_hop_dong = new US.US_V_GD_HOP_DONG_LAO_DONG();
-                DS.DS_V_GD_HOP_DONG_LAO_DONG v_ds_v_gd_hop_dong = new DS.DS_V_GD_HOP_DONG_LAO_DONG();
-                v_us_v_gd_hop_dong.FIllDataset_By_Hop_Dong_Sap_Het_Han(v_ds_v_gd_hop_dong);
-                if (v_ds_v_gd_hop_dong.Tables[0].Rows.Count > 0)
-                {
-                    //m_lbl_thong_bao_hop_dong_sap_het_han.Text = string.Format("Có {0} hợp đồng sắp hết hạn. Click để xem chi tiết!", v_ds_v_gd_hop_dong.Tables[0].Rows.Count);
-                }
             }
             catch (Exception v_e)
             {
@@ -335,8 +301,7 @@ namespace BKI_KHO
         {
             try
             {
-                F500_DM_DU_AN frm = new F500_DM_DU_AN();
-                frm.DisplaySapKetThuc();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -348,8 +313,7 @@ namespace BKI_KHO
         {
             try
             {
-                f702_bao_cao_hdld_het_han frm = new f702_bao_cao_hdld_het_han();
-                frm.Show();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
@@ -361,8 +325,7 @@ namespace BKI_KHO
         {
             try
             {
-                f701_v_hop_dong_lao_dong frm = new f701_v_hop_dong_lao_dong();
-                frm.Display_Hop_Dong_Sap_Het_Han();
+                MessageBox.Show("Chưa có chức năng này!");
             }
             catch (Exception v_e)
             {
