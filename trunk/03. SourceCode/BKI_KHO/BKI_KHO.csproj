@@ -69,8 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="DanhMuc\Class1.cs" />
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaoCao\" />
+    <Folder Include="DanhMuc\" />
     <Folder Include="NghiepVu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
