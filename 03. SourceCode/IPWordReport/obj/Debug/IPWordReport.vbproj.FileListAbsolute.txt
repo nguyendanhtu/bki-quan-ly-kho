@@ -11,3 +11,13 @@ C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPWordReport\obj
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPWordReport\obj\Debug\IP.Core.IPWordReport.dll
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPWordReport\obj\Debug\IP.Core.IPWordReport.xml
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPWordReport\obj\Debug\IP.Core.IPWordReport.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\bin\IP.Core.IPWordReport.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\bin\IP.Core.IPWordReport.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\bin\IP.Core.IPWordReport.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\bin\Interop.Microsoft.Office.Core.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\bin\Interop.Word.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\obj\Debug\IPWordReport.vbproj.ResolveComReference.cache
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\obj\Debug\IP.Core.IPWordReport.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\obj\Debug\IP.Core.IPWordReport.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPWordReport\obj\Debug\IP.Core.IPWordReport.pdb

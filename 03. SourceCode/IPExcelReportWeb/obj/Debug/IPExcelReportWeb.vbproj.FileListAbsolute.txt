@@ -7,3 +7,12 @@ C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPExcelReportWeb
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb

@@ -8,3 +8,13 @@ C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessServic
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.dll
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.xml
 C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPException.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPException.pdb
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\bin\IPException.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
