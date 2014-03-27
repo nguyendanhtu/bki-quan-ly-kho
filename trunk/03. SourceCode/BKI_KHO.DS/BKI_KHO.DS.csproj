@@ -8,8 +8,8 @@
     <ProjectGuid>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BKI_HRM.DS</RootNamespace>
-    <AssemblyName>BKI_HRM.DS</AssemblyName>
+    <RootNamespace>BKI_KHO.DS</RootNamespace>
+    <AssemblyName>BKI_KHO.DS</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
