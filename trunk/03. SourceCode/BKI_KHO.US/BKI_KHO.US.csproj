@@ -57,6 +57,8 @@
     <Compile Include="US_DM_NHA_CUNG_CAP.cs" />
     <Compile Include="US_DM_NHOM_HANG.cs" />
     <Compile Include="US_DM_TIEN_TE.cs" />
+    <Compile Include="US_DM_NGUOI_DUNG.cs" />
+    <Compile Include="US_DM_THUE.cs" />
     <Compile Include="US_HT_NHOM_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
