@@ -548,6 +548,29 @@ namespace BKI_KHO.DS.CDBNames
         public const string DON_VI = "DON_VI";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
     }
+
+    public class DM_THUE
+    {
+        public const string ID = "ID";
+        public const string TEN = "TEN";
+        public const string TEN_NGAN = "TEN_NGAN";
+        public const string TY_LE = "TY_LE";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
+    public class DM_NGUOI_DUNG
+    {
+        public const string ID = "ID";
+        public const string MA_NGUOI_DUNG = "MA_NGUOI_DUNG";
+        public const string HO_NGUOI_DUNG = "HO_NGUOI_DUNG";
+        public const string TEN_DEM = "TEN_DEM";
+        public const string MOBILE = "MOBILE";
+        public const string NGAY_SINH = "NGAY_SINH";
+        public const string EMAIL = "EMAIL";
+        public const string ID_TO_CHUC = "ID_TO_CHUC";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
     //End TuyenNT
     public class DM_NHA_CUNG_CAP
     {
