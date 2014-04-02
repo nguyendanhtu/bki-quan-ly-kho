@@ -87,7 +87,27 @@
     <Compile Include="DanhMuc\f301_DM_DON_VI_DE.Designer.cs">
       <DependentUpon>f301_DM_DON_VI_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="f301_DM_DON_VI.cs" />
+    <Compile Include="DanhMuc\f800_DM_NHA_CUNG_CAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f800_DM_NHA_CUNG_CAP_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f800_DM_NHA_CUNG_CAP_DE.Designer.cs">
+      <DependentUpon>f800_DM_NHA_CUNG_CAP_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f801_DM_NHOM_HANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f802_DM_TIEN_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f802_DM_TIEN_TE_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f802_DM_TIEN_TE_DE.Designer.cs">
+      <DependentUpon>f802_DM_TIEN_TE_DE.cs</DependentUpon>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +133,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f301_DM_DON_VI_DE.resx">
       <DependentUpon>f301_DM_DON_VI_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f800_DM_NHA_CUNG_CAP.resx">
+      <DependentUpon>f800_DM_NHA_CUNG_CAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f800_DM_NHA_CUNG_CAP_DE.resx">
+      <DependentUpon>f800_DM_NHA_CUNG_CAP_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f801_DM_NHOM_HANG.resx">
+      <DependentUpon>f801_DM_NHOM_HANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f802_DM_TIEN_TE.resx">
+      <DependentUpon>f802_DM_TIEN_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f802_DM_TIEN_TE_DE.resx">
+      <DependentUpon>f802_DM_TIEN_TE_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
@@ -192,6 +227,7 @@
   <ItemGroup>
     <Folder Include="BaoCao\" />
     <Folder Include="NghiepVu\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

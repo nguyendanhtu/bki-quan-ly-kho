@@ -346,6 +346,19 @@ namespace BKI_KHO
             f301_dm_don_vi.ShowDialog();
         }
 
+        private void m_menuitem_nhomhanghoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f801_DM_NHOM_HANG f801 = new f801_DM_NHOM_HANG();
+                f801.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
     }
