@@ -72,6 +72,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_NHA_CUNG_CAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NHA_CUNG_CAP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_NHOM_HANG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_TIEN_TE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_TIEN_TE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_NHOM_NGUOI_SU_DUNG1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +170,7 @@
     </None>
     <None Include="DS_DM_NGUOI_DUNG.xsc">
       <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="DS_DM_NGUOI_DUNG.xsd">
       <SubType>Designer</SubType>
@@ -163,6 +179,39 @@
     </None>
     <None Include="DS_DM_NGUOI_DUNG.xss">
       <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHA_CUNG_CAP.xsc">
+      <DependentUpon>DS_DM_NHA_CUNG_CAP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHA_CUNG_CAP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NHA_CUNG_CAP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NHA_CUNG_CAP.xss">
+      <DependentUpon>DS_DM_NHA_CUNG_CAP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xsc">
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NHOM_HANG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xss">
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_TIEN_TE.xsc">
+      <DependentUpon>DS_DM_TIEN_TE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_TIEN_TE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_TIEN_TE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_TIEN_TE.xss">
+      <DependentUpon>DS_DM_TIEN_TE.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_NHOM_NGUOI_SU_DUNG.xsc">
       <DependentUpon>DS_HT_NHOM_NGUOI_SU_DUNG.xsd</DependentUpon>

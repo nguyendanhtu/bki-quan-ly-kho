@@ -83,6 +83,7 @@ namespace BKI_KHO
             this.m_menuitem_taikhoannganhang = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_tinh = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_quocgia = new System.Windows.Forms.ToolStripMenuItem();
+            this.loạiChứngTừToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_quanlynghiepvu = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_muahang = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_dondatmuahang = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,7 +190,6 @@ namespace BKI_KHO
             this.m_cmd_thoat = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.m_sst_main = new System.Windows.Forms.StatusStrip();
-            this.loạiChứngTừToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m_mst_menu.SuspendLayout();
             this.m_tst_menu.SuspendLayout();
             this.SuspendLayout();
@@ -475,6 +475,7 @@ namespace BKI_KHO
             this.m_menuitem_nhomhanghoa.Name = "m_menuitem_nhomhanghoa";
             this.m_menuitem_nhomhanghoa.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_nhomhanghoa.Text = "&Nhóm hàng hóa";
+            this.m_menuitem_nhomhanghoa.Click += new System.EventHandler(this.m_menuitem_nhomhanghoa_Click);
             // 
             // m_menuitem_hanghoa
             // 
@@ -576,6 +577,12 @@ namespace BKI_KHO
             this.m_menuitem_quocgia.Name = "m_menuitem_quocgia";
             this.m_menuitem_quocgia.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_quocgia.Text = "Quốc gia";
+            // 
+            // loạiChứngTừToolStripMenuItem
+            // 
+            this.loạiChứngTừToolStripMenuItem.Name = "loạiChứngTừToolStripMenuItem";
+            this.loạiChứngTừToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.loạiChứngTừToolStripMenuItem.Text = "Loại chứng từ";
             // 
             // m_menuitem_quanlynghiepvu
             // 
@@ -1407,12 +1414,6 @@ namespace BKI_KHO
             this.m_sst_main.Size = new System.Drawing.Size(835, 22);
             this.m_sst_main.TabIndex = 5;
             this.m_sst_main.Text = "statusStrip1";
-            // 
-            // loạiChứngTừToolStripMenuItem
-            // 
-            this.loạiChứngTừToolStripMenuItem.Name = "loạiChứngTừToolStripMenuItem";
-            this.loạiChứngTừToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.loạiChứngTừToolStripMenuItem.Text = "Loại chứng từ";
             // 
             // f400_Main
             // 
