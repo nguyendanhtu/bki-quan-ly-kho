@@ -52,6 +52,26 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="DS_DM_DON_VI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_DON_VI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_HANG_HOA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_HANG_HOA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_LOAI_CHUNG_TU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_LOAI_CHUNG_TU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_NGUOI_DUNG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_NHOM_NGUOI_SU_DUNG1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +91,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_DM_HANG_HOA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_HANG_HOA.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -94,6 +119,50 @@
     </None>
     <None Include="DS_CM_DM_TU_DIEN.xss">
       <DependentUpon>DS_CM_DM_TU_DIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DON_VI.xsc">
+      <DependentUpon>DS_DM_DON_VI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DON_VI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_DON_VI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_DON_VI.xss">
+      <DependentUpon>DS_DM_DON_VI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HANG_HOA.xsc">
+      <DependentUpon>DS_DM_HANG_HOA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HANG_HOA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_HANG_HOA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_HANG_HOA.xss">
+      <DependentUpon>DS_DM_HANG_HOA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_LOAI_CHUNG_TU.xsc">
+      <DependentUpon>DS_DM_LOAI_CHUNG_TU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_LOAI_CHUNG_TU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_LOAI_CHUNG_TU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_LOAI_CHUNG_TU.xss">
+      <DependentUpon>DS_DM_LOAI_CHUNG_TU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGUOI_DUNG.xsc">
+      <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGUOI_DUNG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NGUOI_DUNG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NGUOI_DUNG.xss">
+      <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_NHOM_NGUOI_SU_DUNG.xsc">
       <DependentUpon>DS_HT_NHOM_NGUOI_SU_DUNG.xsd</DependentUpon>
@@ -138,6 +207,17 @@
     </None>
     <None Include="DS_HT_USER_GROUP.xss">
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_HANG_HOA.xsc">
+      <DependentUpon>DS_V_DM_HANG_HOA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_HANG_HOA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_HANG_HOA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_HANG_HOA.xss">
+      <DependentUpon>DS_V_DM_HANG_HOA.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
