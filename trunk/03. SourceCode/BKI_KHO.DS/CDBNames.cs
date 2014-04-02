@@ -272,18 +272,18 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_KY_HOP_DONG = "NGAY_KY_HOP_DONG";
     }
 
-    public class DM_DON_VI {
-        public const string ID = "ID";
-        public const string MA_DON_VI = "MA_DON_VI";
-        public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string TEN_TA = "TEN_TA";
-        public const string ID_CAP_DON_VI = "ID_CAP_DON_VI";
-        public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
-        public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
-        public const string DIA_BAN = "DIA_BAN";
-        public const string TRANG_THAI = "TRANG_THAI";
-        public const string TU_NGAY = "TU_NGAY";
-    }
+    //public class DM_DON_VI {
+    //    public const string ID = "ID";
+    //    public const string MA_DON_VI = "MA_DON_VI";
+    //    public const string TEN_DON_VI = "TEN_DON_VI";
+    //    public const string TEN_TA = "TEN_TA";
+    //    public const string ID_CAP_DON_VI = "ID_CAP_DON_VI";
+    //    public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
+    //    public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
+    //    public const string DIA_BAN = "DIA_BAN";
+    //    public const string TRANG_THAI = "TRANG_THAI";
+    //    public const string TU_NGAY = "TU_NGAY";
+    //}
     public class DM_NHAN_SU
     {
         public const string ID = "ID";
@@ -507,5 +507,69 @@ namespace BKI_KHO.DS.CDBNames
        public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
        public const string NGAY_KET_THUC = "NGAY_KET_THUC";
    }
-
+   
+    //Begin TuyenNT
+    public class DM_HANG_HOA
+    {
+        public const string ID = "ID";
+        public const string ID_NHOM_GOC = "ID_NHOM_GOC";
+        public const string ID_NHOM = "ID_NHOM";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string TEN_HANG_EN = "TEN_HANG_EN";
+        public const string IMAGE = "IMAGE";
+        public const string MO_TA = "MO_TA";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string BARCODE = "BARCODE";
+        public const string ID_DON_VI = "ID_DON_VI";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string GIA_BAN_LE = "GIA_BAN_LE";
+    }
+    public class DM_NHOM_HANG
+    {
+        public const string ID = "ID";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN = "TEN";
+        public const string MO_TA = "MO_TA";
+    }
+    public class DM_NHA_CUNG_CAP
+    {
+        public const string ID = "ID";
+        public const string MA_NHA_CUNG_CAP = "MA_NHA_CUNG_CAP";
+        public const string TEN_NHA_CUNG_CAP = "TEN_NHA_CUNG_CAP";
+        public const string ID_NHOM_NHA_CUNG_CAP = "ID_NHOM_NHA_CUNG_CAP";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string TEL = "TEL";
+        public const string FAX = "FAX";
+        public const string EMAIL = "EMAIL";
+        public const string WEBSITE = "WEBSITE";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+        public const string NGUOI_DAI_DIEN = "NGUOI_DAI_DIEN";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+    public class DM_DON_VI
+    {
+        public const string ID = "ID";
+        public const string MA = "MA";
+        public const string TEN = "TEN";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+    public class V_DM_HANG_HOA
+    {
+        public const string ID = "ID";
+        public const string ID_NHOM_GOC = "ID_NHOM_GOC";
+        public const string ID_NHOM = "ID_NHOM";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string TEN_HANG_EN = "TEN_HANG_EN";
+        public const string IMAGE = "IMAGE";
+        public const string MO_TA = "MO_TA";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string GIA_BAN_LE = "GIA_BAN_LE";
+        public const string DON_VI = "DON_VI";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+    }
+    //End TuyenNT
 }
