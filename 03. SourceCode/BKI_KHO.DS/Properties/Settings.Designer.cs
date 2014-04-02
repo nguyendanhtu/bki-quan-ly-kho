@@ -28,9 +28,9 @@ namespace BKI_KHO.DS.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BKI_KHO;Initial Catalog=BKI_KHO;Persist Security Info=True;User ID=sa" +
             ";Password=sa123456")]
-        public string BKI_KHOConnectionString6 {
+        public string BKI_KHOConnectionString {
             get {
-                return ((string)(this["BKI_KHOConnectionString6"]));
+                return ((string)(this["BKI_KHOConnectionString"]));
             }
         }
     }
