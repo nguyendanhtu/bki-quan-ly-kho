@@ -346,6 +346,13 @@ namespace BKI_KHO
             f301_dm_don_vi.ShowDialog();
         }
 
+<<<<<<< .mine
+        private void loạiChứngTừToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f500_DM_LOAI_CHUNG_TU f500 = new f500_DM_LOAI_CHUNG_TU();
+            f500.display();
+        }
+=======
         private void m_menuitem_nhomhanghoa_Click(object sender, EventArgs e)
         {
             try
@@ -358,8 +365,19 @@ namespace BKI_KHO
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+>>>>>>> .r45
+
+        private void m_menuitem_khohang_Click(object sender, EventArgs e)
+        {
+            f501_DM_KHO f501 = new f501_DM_KHO();
+            f501.display();
+        }
+
+<<<<<<< .mine
 
 
+=======
 
+>>>>>>> .r45
     }
 }
