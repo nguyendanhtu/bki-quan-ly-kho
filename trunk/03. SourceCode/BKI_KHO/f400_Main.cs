@@ -365,5 +365,26 @@ namespace BKI_KHO
             f501_DM_KHO f501 = new f501_DM_KHO();
             f501.display();
         }
+
+        private void thuếToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f100_DM_THUE f100_dm_thue = new f100_DM_THUE();
+            f100_dm_thue.ShowDialog();
+        }
+
+        private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f101_DM_NGUOI_DUNG f101_dm_nguoi_dung = new f101_DM_NGUOI_DUNG();
+            f101_dm_nguoi_dung.ShowDialog();
+        }
+
+        private void m_menuitem_khachhang_Click(object sender, EventArgs e)
+        {
+            f102_DM_KHACH_HANG f102_dm_khach_hang = new f102_DM_KHACH_HANG();
+            f102_dm_khach_hang.ShowDialog();
+        }
+
+
+
     }
 }
