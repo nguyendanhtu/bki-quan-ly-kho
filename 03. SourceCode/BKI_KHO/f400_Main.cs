@@ -333,19 +333,16 @@ namespace BKI_KHO
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_menuitem_hanghoa_Click(object sender, EventArgs e)
         {
             f300_V_DM_HANG_HOA f300_v_dm_hang_hoa = new f300_V_DM_HANG_HOA();
             f300_v_dm_hang_hoa.ShowDialog();
         }
-
         private void m_menuitem_donvitinh_Click(object sender, EventArgs e)
         {
             f301_DM_DON_VI f301_dm_don_vi = new f301_DM_DON_VI();
             f301_dm_don_vi.ShowDialog();
         }
-
         private void m_menuitem_nhomhanghoa_Click(object sender, EventArgs e)
         {
             try
@@ -358,8 +355,15 @@ namespace BKI_KHO
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-
-
+        private void loạiChứngTừToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f500_DM_LOAI_CHUNG_TU f500 = new f500_DM_LOAI_CHUNG_TU();
+            f500.display();
+        }
+        private void m_menuitem_khohang_Click(object sender, EventArgs e)
+        {
+            f501_DM_KHO f501 = new f501_DM_KHO();
+            f501.display();
+        }
     }
 }
