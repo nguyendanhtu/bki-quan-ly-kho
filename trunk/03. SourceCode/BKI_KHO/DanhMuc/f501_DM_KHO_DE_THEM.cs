@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BKI_KHO.US;
-
+using BKI_KHO.DS;
 namespace BKI_KHO.DanhMuc
 {
 	public partial class f501_DM_KHO_DE_THEM : Form
 	{
 		#region Members
-		US_DM_KHO m_us_kho;
+		US_DM_KHO m_us_kho = new US_DM_KHO();
 		#endregion Members
 
 		#region structure
@@ -32,6 +32,7 @@ namespace BKI_KHO.DanhMuc
 			this.m_txt_ma_nv.Text = "";
 			this.m_txt_so_dien_thoai.Text = "";
 			this.m_txt_ma_kho.Text = "";
+            this.m_txt_ten_kho.Text = "";
 		}
 
 		private void m_cmd_xoa_trang_Click(object sender, EventArgs e)
@@ -45,18 +46,24 @@ namespace BKI_KHO.DanhMuc
 			m_us_kho.strGHI_CHU = this.m_txt_ghi_chu.Text;
 			m_us_kho.dcID_NHAN_VIEN = decimal.Parse(this.m_txt_ma_nv.Text);
 			m_us_kho.strMA_KHO = m_txt_ma_kho.Text;
+            m_us_kho.strTEN_KHO = m_txt_ten_kho.Text;
 		}
 		private void m_cmd_them_Click(object sender, EventArgs e)
 		{
 			// kiem tra null
-			if (this.m_txt_dia_chi.Text == "" || this.m_txt_ghi_chu.Text == "" || this.m_txt_ma_kho.Text == "" || this.m_txt_ma_nv.Text == "" || this.m_txt_so_dien_thoai.Text == "")
-			{
-				form_to_us_object();
-				m_us_kho.Insert();
-			}
+            if (this.m_txt_dia_chi.Text == "" || this.m_txt_ghi_chu.Text == "" || this.m_txt_ma_kho.Text == "" || this.m_txt_ma_nv.Text == "" || this.m_txt_so_dien_thoai.Text == "")
+            {
+                MessageBox.Show("Bạn nhập đủ các trường");
+            }
+            else
+            {
+                form_to_us_object();
+                m_us_kho.Insert();
+            }
 			// Xoa trang cac truong
 			xoa_trang();
-		}
+            this.Close();
+	}
 		#endregion private methods
 
 		#region public interface
