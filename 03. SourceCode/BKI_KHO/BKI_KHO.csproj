@@ -288,6 +288,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL_Procedure\TextFile1.txt" />
     <Content Include="SQL_Procedure\TuyenNT.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
