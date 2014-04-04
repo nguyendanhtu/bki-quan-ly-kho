@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString6" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DM_TAI_KHOANTableAdapter" GeneratorDataComponentClassName="DM_TAI_KHOANTableAdapter" Name="DM_TAI_KHOAN" UserDataComponentName="DM_TAI_KHOANTableAdapter">
@@ -128,7 +128,7 @@ SELECT ID_TAI_KHOAN, ID_NHOM_TAI_KHOAN, ParentAccountID, MA_TAI_KHOAN, TEN_TAI_K
   <xs:element name="DS_DM_TAI_KHOAN" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_DM_TAI_KHOAN" msprop:Generator_UserDSName="DS_DM_TAI_KHOAN">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DM_TAI_KHOAN" msprop:Generator_TableClassName="DM_TAI_KHOANDataTable" msprop:Generator_TableVarName="tableDM_TAI_KHOAN" msprop:Generator_TablePropName="DM_TAI_KHOAN" msprop:Generator_RowDeletingName="DM_TAI_KHOANRowDeleting" msprop:Generator_RowChangingName="DM_TAI_KHOANRowChanging" msprop:Generator_RowEvHandlerName="DM_TAI_KHOANRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_TAI_KHOANRowDeleted" msprop:Generator_UserTableName="DM_TAI_KHOAN" msprop:Generator_RowChangedName="DM_TAI_KHOANRowChanged" msprop:Generator_RowEvArgName="DM_TAI_KHOANRowChangeEvent" msprop:Generator_RowClassName="DM_TAI_KHOANRow">
+        <xs:element name="DM_TAI_KHOAN" msprop:Generator_TableClassName="DM_TAI_KHOANDataTable" msprop:Generator_TableVarName="tableDM_TAI_KHOAN" msprop:Generator_RowChangedName="DM_TAI_KHOANRowChanged" msprop:Generator_TablePropName="DM_TAI_KHOAN" msprop:Generator_RowDeletingName="DM_TAI_KHOANRowDeleting" msprop:Generator_RowChangingName="DM_TAI_KHOANRowChanging" msprop:Generator_RowEvHandlerName="DM_TAI_KHOANRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_TAI_KHOANRowDeleted" msprop:Generator_RowClassName="DM_TAI_KHOANRow" msprop:Generator_UserTableName="DM_TAI_KHOAN" msprop:Generator_RowEvArgName="DM_TAI_KHOANRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_TAI_KHOAN" msprop:Generator_ColumnVarNameInTable="columnID_TAI_KHOAN" msprop:Generator_ColumnPropNameInRow="ID_TAI_KHOAN" msprop:Generator_ColumnPropNameInTable="ID_TAI_KHOANColumn" msprop:Generator_UserColumnName="ID_TAI_KHOAN" type="xs:decimal" />

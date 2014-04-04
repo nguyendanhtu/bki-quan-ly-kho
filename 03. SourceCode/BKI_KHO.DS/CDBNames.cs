@@ -572,6 +572,42 @@ namespace BKI_KHO.DS.CDBNames
     }
 
     //End TuyenNT
+    #region TONGDV_NAMESPACE
+    /// <summary>
+    /// DM_LOAI CHUNG TU
+    /// </summary>
+    public class DM_LOAI_CHUNG_TU
+    {
+        public const string ID = "ID";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+    }
+    public class DM_KHO
+    {
+        public const string ID_KHO = "ID_KHO";
+        public const string MA_KHO = "MA_KHO";
+        public const string TEN_KHO = "TEN_KHO";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string DIEN_THOAI = "DIEN_THOAI";
+        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+    public class DM_TAI_KHOAN
+    {
+        public const string ID_TAI_KHOAN = "ID_TAI_KHOAN";
+        public const string ID_NHOM_TAI_KHOAN = "ID_NHOM_TAI_KHOAN";
+        public const string ParentAccountID = "ParentAccountID";
+        public const string MA_TAI_KHOAN = "MA_TAI_KHOAN";
+        public const string TEN_TAI_KHOAN = "TEN_TAI_KHOAN";
+        public const string KIEU_TAI_KHOAN = "KIEU_TAI_KHOAN";
+        public const string DA_TIEN_TE = "DA_TIEN_TE";
+        public const string THEO_SO_LUONG = "THEO_SO_LUONG";
+        public const string DANG_CHI_TIET = "DANG_CHI_TIET";
+        public const string KICH_HOAT = "KICH_HOAT";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
+    #endregion TONGDV_NAMESPACE
     public class DM_NHA_CUNG_CAP
     {
         public const string ID = "ID";
