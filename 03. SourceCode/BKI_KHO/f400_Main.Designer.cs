@@ -84,6 +84,8 @@ namespace BKI_KHO
             this.m_menuitem_tinh = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_quocgia = new System.Windows.Forms.ToolStripMenuItem();
             this.loạiChứngTừToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thuếToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ngườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_quanlynghiepvu = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_muahang = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_dondatmuahang = new System.Windows.Forms.ToolStripMenuItem();
@@ -465,7 +467,9 @@ namespace BKI_KHO
             this.m_menuitem_taikhoannganhang,
             this.m_menuitem_tinh,
             this.m_menuitem_quocgia,
-            this.loạiChứngTừToolStripMenuItem});
+            this.loạiChứngTừToolStripMenuItem,
+            this.thuếToolStripMenuItem,
+            this.ngườiDùngToolStripMenuItem});
             this.m_menuitem_quanlydanhmuc.Name = "m_menuitem_quanlydanhmuc";
             this.m_menuitem_quanlydanhmuc.Size = new System.Drawing.Size(173, 22);
             this.m_menuitem_quanlydanhmuc.Text = "Quản lý &Danh mục";
@@ -512,6 +516,7 @@ namespace BKI_KHO
             this.m_menuitem_khachhang.Name = "m_menuitem_khachhang";
             this.m_menuitem_khachhang.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_khachhang.Text = "Khá&ch hàng";
+            this.m_menuitem_khachhang.Click += new System.EventHandler(this.m_menuitem_khachhang_Click);
             // 
             // m_menuitem_nhacungcap
             // 
@@ -585,6 +590,20 @@ namespace BKI_KHO
             this.loạiChứngTừToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.loạiChứngTừToolStripMenuItem.Text = "Loại chứng từ";
             this.loạiChứngTừToolStripMenuItem.Click += new System.EventHandler(this.loạiChứngTừToolStripMenuItem_Click);
+            // 
+            // thuếToolStripMenuItem
+            // 
+            this.thuếToolStripMenuItem.Name = "thuếToolStripMenuItem";
+            this.thuếToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.thuếToolStripMenuItem.Text = "Thuế";
+            this.thuếToolStripMenuItem.Click += new System.EventHandler(this.thuếToolStripMenuItem_Click);
+            // 
+            // ngườiDùngToolStripMenuItem
+            // 
+            this.ngườiDùngToolStripMenuItem.Name = "ngườiDùngToolStripMenuItem";
+            this.ngườiDùngToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.ngườiDùngToolStripMenuItem.Text = "Người Dùng";
+            this.ngườiDùngToolStripMenuItem.Click += new System.EventHandler(this.ngườiDùngToolStripMenuItem_Click);
             // 
             // m_menuitem_quanlynghiepvu
             // 
@@ -1605,5 +1624,7 @@ namespace BKI_KHO
         private ToolStripButton toolStripButton1;
         private StatusStrip m_sst_main;
         private ToolStripMenuItem loạiChứngTừToolStripMenuItem;
+        private ToolStripMenuItem thuếToolStripMenuItem;
+        private ToolStripMenuItem ngườiDùngToolStripMenuItem;
     }
 }

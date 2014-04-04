@@ -69,17 +69,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
-    <Compile Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.cs">
+    <Compile Include="DanhMuc\f100_DM_THUE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.Designer.cs">
-      <DependentUpon>f100_DM_NGUOI_DUNG_DE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\f101_DM_THUE_DE.cs">
+    <Compile Include="DanhMuc\f100_DM_THUE_DE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f101_DM_THUE_DE.Designer.cs">
-      <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
+    <Compile Include="DanhMuc\f100_DM_THUE_DE.Designer.cs">
+      <DependentUpon>f100_DM_THUE_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f101_DM_NGUOI_DUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f101_DM_NGUOI_DUNG_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f101_DM_NGUOI_DUNG_DE.Designer.cs">
+      <DependentUpon>f101_DM_NGUOI_DUNG_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f102_DM_KHACH_HANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f102_DM_KHACH_HANG_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f102_DM_KHACH_HANG_DE.Designer.cs">
+      <DependentUpon>f102_DM_KHACH_HANG_DE.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f300_V_DM_HANG_HOA_DE.cs">
       <SubType>Form</SubType>
@@ -158,12 +173,22 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinFormControls.cs" />
-    <EmbeddedResource Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.resx">
-      <DependentUpon>f100_DM_NGUOI_DUNG_DE.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\f100_DM_THUE_DE.resx">
+      <DependentUpon>f100_DM_THUE_DE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f101_DM_THUE_DE.resx">
-      <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\f101_DM_NGUOI_DUNG.resx">
+      <DependentUpon>f101_DM_NGUOI_DUNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f101_DM_NGUOI_DUNG_DE.resx">
+      <DependentUpon>f101_DM_NGUOI_DUNG_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f102_DM_KHACH_HANG.resx">
+      <DependentUpon>f102_DM_KHACH_HANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f102_DM_KHACH_HANG_DE.resx">
+      <DependentUpon>f102_DM_KHACH_HANG_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f100_DM_THUE.resx" />
     <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA_DE.resx">
       <DependentUpon>f300_V_DM_HANG_HOA_DE.cs</DependentUpon>
     </EmbeddedResource>
