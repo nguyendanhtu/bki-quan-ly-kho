@@ -494,7 +494,6 @@ namespace BKI_KHO
             this.m_menuitem_khohang.Name = "m_menuitem_khohang";
             this.m_menuitem_khohang.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_khohang.Text = "&Kho hàng";
-            this.m_menuitem_khohang.Click += new System.EventHandler(this.m_menuitem_khohang_Click);
             // 
             // toolStripSeparator10
             // 
@@ -579,22 +578,12 @@ namespace BKI_KHO
             this.m_menuitem_quocgia.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_quocgia.Text = "Quốc gia";
             // 
-<<<<<<< .mine
-            // loạiChứngTừToolStripMenuItem
-            // 
-            this.loạiChứngTừToolStripMenuItem.Name = "loạiChứngTừToolStripMenuItem";
-            this.loạiChứngTừToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.loạiChứngTừToolStripMenuItem.Text = "Loại chứng từ";
-            this.loạiChứngTừToolStripMenuItem.Click += new System.EventHandler(this.loạiChứngTừToolStripMenuItem_Click);
-            // 
-=======
             // loạiChứngTừToolStripMenuItem
             // 
             this.loạiChứngTừToolStripMenuItem.Name = "loạiChứngTừToolStripMenuItem";
             this.loạiChứngTừToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.loạiChứngTừToolStripMenuItem.Text = "Loại chứng từ";
             // 
->>>>>>> .r45
             // m_menuitem_quanlynghiepvu
             // 
             this.m_menuitem_quanlynghiepvu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
