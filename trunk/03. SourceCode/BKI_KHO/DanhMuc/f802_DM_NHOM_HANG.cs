@@ -29,7 +29,7 @@ namespace BKI_KHO
 
 
 
-	public class f801_DM_NHOM_HANG : System.Windows.Forms.Form
+	public class f802_DM_NHOM_HANG : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
 		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
@@ -41,7 +41,7 @@ namespace BKI_KHO
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
 		private System.ComponentModel.IContainer components;
 
-		public f801_DM_NHOM_HANG()
+		public f802_DM_NHOM_HANG()
 		{
 			//
 			// Required for Windows Form Designer support
@@ -77,7 +77,7 @@ namespace BKI_KHO
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(f801_DM_NHOM_HANG));
+			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(f802_DM_NHOM_HANG));
 			this.ImageList = new System.Windows.Forms.ImageList(this.components);
 			this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
 			this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
@@ -195,14 +195,14 @@ namespace BKI_KHO
 			this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(@"Normal{Font:Microsoft Sans Serif, 8.25pt;}	Alternate{BackColor:Info;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	");
 			this.m_fg.TabIndex = 20;
 			// 
-			// f801_DM_NHOM_HANG
+			// f802_DM_NHOM_HANG
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(686, 409);
 			this.Controls.Add(this.m_fg);
 			this.Controls.Add(this.m_pnl_out_place_dm);
-			this.Name = "f801_DM_NHOM_HANG";
-			this.Text = "f801_DM_NHOM_HANG";
+			this.Name = "f802_DM_NHOM_HANG";
+			this.Text = "f802_DM_NHOM_HANG";
 			this.Load += new System.EventHandler(this.f801_DM_NHOM_HANG_Load);
 			this.m_pnl_out_place_dm.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();

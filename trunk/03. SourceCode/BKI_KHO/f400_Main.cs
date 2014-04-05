@@ -347,7 +347,7 @@ namespace BKI_KHO
         {
             try
             {
-                f801_DM_NHOM_HANG f801 = new f801_DM_NHOM_HANG();
+                f802_DM_NHOM_HANG f801 = new f802_DM_NHOM_HANG();
                 f801.ShowDialog();
             }
             catch (Exception v_e)

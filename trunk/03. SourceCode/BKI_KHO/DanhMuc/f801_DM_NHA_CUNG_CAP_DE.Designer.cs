@@ -1,6 +1,6 @@
 ﻿namespace BKI_KHO.DanhMuc
 {
-    partial class f800_DM_NHA_CUNG_CAP_DE
+    partial class f801_DM_NHA_CUNG_CAP_DE
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f800_DM_NHA_CUNG_CAP_DE));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f801_DM_NHA_CUNG_CAP_DE));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_txt_ghi_chu = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -394,7 +394,7 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // f800_DM_NHA_CUNG_CAP_DE
+            // f801_DM_NHA_CUNG_CAP_DE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -402,7 +402,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "f800_DM_NHA_CUNG_CAP_DE";
+            this.Name = "f801_DM_NHA_CUNG_CAP_DE";
             this.Text = "Chi tiết thông tin nhà cung cấp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
