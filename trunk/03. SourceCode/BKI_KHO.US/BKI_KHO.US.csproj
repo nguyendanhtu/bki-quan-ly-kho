@@ -59,7 +59,6 @@
     <Compile Include="US_DM_KHO.cs" />
     <Compile Include="US_DM_LOAI_CHUNG_TU.cs" />
     <Compile Include="US_DM_NHA_CUNG_CAP.cs" />
-    <Compile Include="US_DM_NHOM_HANG.cs" />
     <Compile Include="US_DM_TAI_KHOAN.cs" />
     <Compile Include="US_DM_THUE.cs" />
     <Compile Include="US_DM_TIEN_TE.cs" />
