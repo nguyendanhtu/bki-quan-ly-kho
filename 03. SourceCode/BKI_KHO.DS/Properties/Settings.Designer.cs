@@ -43,5 +43,16 @@ namespace BKI_KHO.DS.Properties {
                 return ((string)(this["BKI_KHOConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\TNT;Initial Catalog=BKI_KHO;Persist Security Info=True;User ID=sa;P" +
+            "assword=sa")]
+        public string BKI_KHOConnectionString2 {
+            get {
+                return ((string)(this["BKI_KHOConnectionString2"]));
+            }
+        }
     }
 }

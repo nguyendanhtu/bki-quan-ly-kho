@@ -81,12 +81,13 @@ namespace BKI_KHO
 			//
 			// Required for Windows Form Designer support
 			//
+            
 			InitializeComponent();
-
+            format_controls();
 			//
 			// TODO: Add any constructor code after InitializeComponent call
 			//
-			format_controls();
+			
 		}
 
 		/// <summary>
