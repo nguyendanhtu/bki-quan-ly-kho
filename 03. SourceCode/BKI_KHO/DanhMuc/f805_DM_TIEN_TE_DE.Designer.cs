@@ -1,6 +1,6 @@
 ﻿namespace BKI_KHO.DanhMuc
 {
-    partial class f802_DM_TIEN_TE_DE
+    partial class f805_DM_TIEN_TE_DE
     {
         /// <summary>
         /// Required designer variable.

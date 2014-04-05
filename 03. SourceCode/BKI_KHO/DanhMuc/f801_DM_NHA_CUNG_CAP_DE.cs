@@ -11,7 +11,7 @@ using IP.Core.IPCommon;
 
 namespace BKI_KHO.DanhMuc
 {
-    public partial class f800_DM_NHA_CUNG_CAP_DE : Form
+    public partial class f801_DM_NHA_CUNG_CAP_DE : Form
     {
         #region Members
         DataEntryFormMode m_e_form_mode;
@@ -19,7 +19,7 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region Public Interfaces
-        public f800_DM_NHA_CUNG_CAP_DE()
+        public f801_DM_NHA_CUNG_CAP_DE()
         {
             InitializeComponent();
         }

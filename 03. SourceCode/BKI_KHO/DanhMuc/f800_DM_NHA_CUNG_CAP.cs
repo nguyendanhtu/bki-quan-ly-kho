@@ -282,7 +282,7 @@ namespace BKI_KHO
 
 
 		private void insert_dm_nha_cung_cap(){
-            f800_DM_NHA_CUNG_CAP_DE v_fDE = new f800_DM_NHA_CUNG_CAP_DE();								
+            f801_DM_NHA_CUNG_CAP_DE v_fDE = new f801_DM_NHA_CUNG_CAP_DE();								
 			v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
@@ -291,7 +291,7 @@ namespace BKI_KHO
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;			
 			grid2us_object(m_us, m_dgv.Row);
-			f800_DM_NHA_CUNG_CAP_DE v_fDE = new f800_DM_NHA_CUNG_CAP_DE();
+			f801_DM_NHA_CUNG_CAP_DE v_fDE = new f801_DM_NHA_CUNG_CAP_DE();
 			v_fDE.display_for_update(m_us);
 			load_data_2_grid();
 		}
@@ -320,7 +320,7 @@ namespace BKI_KHO
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
 			grid2us_object(m_us, m_dgv.Row);
-		//	f800_DM_NHA_CUNG_CAP_DE v_fDE = new f800_DM_NHA_CUNG_CAP_DE();			
+		//	f801_DM_NHA_CUNG_CAP_DE v_fDE = new f801_DM_NHA_CUNG_CAP_DE();			
 		//	v_fDE.display(m_us);
 		}
 		private void set_define_events(){

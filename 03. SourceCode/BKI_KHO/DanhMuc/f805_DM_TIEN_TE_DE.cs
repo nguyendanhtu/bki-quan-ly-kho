@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace BKI_KHO.DanhMuc
 {
-    public partial class f802_DM_TIEN_TE_DE : Form
+    public partial class f805_DM_TIEN_TE_DE : Form
     {
         #region Members
         DataEntryFormMode m_e_form_mode;
@@ -19,7 +19,7 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region Public Interfaces
-        public f802_DM_TIEN_TE_DE()
+        public f805_DM_TIEN_TE_DE()
         {
             InitializeComponent();
         }

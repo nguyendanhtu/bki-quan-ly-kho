@@ -27,7 +27,7 @@ using C1.Win.C1FlexGrid;
 
 namespace BKI_KHO
 {
-	public class f802_DM_TIEN_TE : System.Windows.Forms.Form
+	public class f804_DM_TIEN_TE : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
 		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
@@ -39,7 +39,7 @@ namespace BKI_KHO
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
 		private System.ComponentModel.IContainer components;
 
-		public f802_DM_TIEN_TE()
+		public f804_DM_TIEN_TE()
 		{
 			//
 			// Required for Windows Form Designer support
@@ -75,7 +75,7 @@ namespace BKI_KHO
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f802_DM_TIEN_TE));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f804_DM_TIEN_TE));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -214,14 +214,14 @@ namespace BKI_KHO
             this.m_dgv.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_dgv.Styles"));
             this.m_dgv.TabIndex = 20;
             // 
-            // f802_DM_TIEN_TE
+            // f804_DM_TIEN_TE
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
             this.Controls.Add(this.m_dgv);
             this.Controls.Add(this.m_pnl_out_place_dm);
-            this.Name = "f802_DM_TIEN_TE";
-            this.Text = "f802_DM_TIEN_TE";
+            this.Name = "f804_DM_TIEN_TE";
+            this.Text = "f804_DM_TIEN_TE";
             this.Load += new System.EventHandler(this.f802_DM_TIEN_TE_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_dgv)).EndInit();
@@ -308,7 +308,7 @@ namespace BKI_KHO
 
 
 		private void insert_dm_tien_te(){			
-			f802_DM_TIEN_TE_DE v_fDE = new  f802_DM_TIEN_TE_DE();								
+			f805_DM_TIEN_TE_DE v_fDE = new  f805_DM_TIEN_TE_DE();								
 			v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
@@ -317,7 +317,7 @@ namespace BKI_KHO
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;			
 			grid2us_object(m_us, m_dgv.Row);
-			f802_DM_TIEN_TE_DE v_fDE = new f802_DM_TIEN_TE_DE();
+			f805_DM_TIEN_TE_DE v_fDE = new f805_DM_TIEN_TE_DE();
 			v_fDE.display_for_update(m_us);
 			load_data_2_grid();
 		}
