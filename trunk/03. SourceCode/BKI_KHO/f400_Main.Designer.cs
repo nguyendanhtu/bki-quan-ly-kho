@@ -535,6 +535,7 @@ namespace BKI_KHO
             this.m_menuitem_nhanvien.Name = "m_menuitem_nhanvien";
             this.m_menuitem_nhanvien.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_nhanvien.Text = "Nhân &viên";
+            this.m_menuitem_nhanvien.Click += new System.EventHandler(this.m_menuitem_nhanvien_Click);
             // 
             // toolStripSeparator11
             // 
