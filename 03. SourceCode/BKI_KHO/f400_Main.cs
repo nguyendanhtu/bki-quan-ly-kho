@@ -384,6 +384,12 @@ namespace BKI_KHO
            // f102_dm_khach_hang.ShowDialog();
         }
 
+        private void m_menuitem_nhanvien_Click(object sender, EventArgs e)
+        {
+            f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
+            frm.ShowDialog();
+        }
+
 
 
     }
