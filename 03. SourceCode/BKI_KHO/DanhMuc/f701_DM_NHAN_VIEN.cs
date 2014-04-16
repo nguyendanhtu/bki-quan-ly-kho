@@ -219,7 +219,14 @@ namespace BKI_KHO
 
 		#region Data Structure
 		private enum e_col_Number{
-			MA_NHAN_VIEN = 1,SO_DIEN_THOAI = 4,HO_DEM = 2,DIA_CHI = 6,CMND = 7,EMAIL = 5,TEN = 3
+			MA_NHAN_VIEN = 1
+,SO_DIEN_THOAI = 4
+,HO_DEM = 2
+,DIA_CHI = 6
+,CMND = 7
+,EMAIL = 5
+,TEN = 3
+
 		}			
 		#endregion
 
@@ -244,7 +251,14 @@ namespace BKI_KHO
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(DM_NHAN_VIEN.MA_NHAN_VIEN, e_col_Number.MA_NHAN_VIEN);			v_htb.Add(DM_NHAN_VIEN.SO_DIEN_THOAI, e_col_Number.SO_DIEN_THOAI);			v_htb.Add(DM_NHAN_VIEN.HO_DEM, e_col_Number.HO_DEM);			v_htb.Add(DM_NHAN_VIEN.DIA_CHI, e_col_Number.DIA_CHI);			v_htb.Add(DM_NHAN_VIEN.CMND, e_col_Number.CMND);			v_htb.Add(DM_NHAN_VIEN.EMAIL, e_col_Number.EMAIL);			v_htb.Add(DM_NHAN_VIEN.TEN, e_col_Number.TEN);									
+			v_htb.Add(DM_NHAN_VIEN.MA_NHAN_VIEN, e_col_Number.MA_NHAN_VIEN);
+			v_htb.Add(DM_NHAN_VIEN.SO_DIEN_THOAI, e_col_Number.SO_DIEN_THOAI);
+			v_htb.Add(DM_NHAN_VIEN.HO_DEM, e_col_Number.HO_DEM);
+			v_htb.Add(DM_NHAN_VIEN.DIA_CHI, e_col_Number.DIA_CHI);
+			v_htb.Add(DM_NHAN_VIEN.CMND, e_col_Number.CMND);
+			v_htb.Add(DM_NHAN_VIEN.EMAIL, e_col_Number.EMAIL);
+			v_htb.Add(DM_NHAN_VIEN.TEN, e_col_Number.TEN);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.DM_NHAN_VIEN.NewRow());
 			return v_obj_trans;			
 		}
