@@ -28,102 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.m_tbo_ma_loai_ct = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_ghi_chu = new System.Windows.Forms.Label();
-            this.m_tbo_ghi_chu = new System.Windows.Forms.TextBox();
-            this.m_bto_them = new System.Windows.Forms.Button();
-            this.m_bto_huy = new System.Windows.Forms.Button();
+            this.m_lbl_ma_loai_chung_tu = new System.Windows.Forms.Label();
+            this.m_lbl_ten_loai_chung_tu = new System.Windows.Forms.Label();
+            this.m_txt_ghi_chu = new System.Windows.Forms.TextBox();
+            this.m_txt_ten_loai_chung_tu = new System.Windows.Forms.TextBox();
+            this.m_cmd_close = new System.Windows.Forms.Button();
+            this.m_cmd_save = new System.Windows.Forms.Button();
+            this.m_txt_ma_loai_chung_tu = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // m_tbo_ma_loai_ct
-            // 
-            this.m_tbo_ma_loai_ct.BackColor = System.Drawing.Color.Ivory;
-            this.m_tbo_ma_loai_ct.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_tbo_ma_loai_ct.Location = new System.Drawing.Point(143, 34);
-            this.m_tbo_ma_loai_ct.Name = "m_tbo_ma_loai_ct";
-            this.m_tbo_ma_loai_ct.Size = new System.Drawing.Size(172, 22);
-            this.m_tbo_ma_loai_ct.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã loại chứng từ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 14);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "f500 - DE - THÊM CHỨNG TỪ";
             // 
             // m_lbl_ghi_chu
             // 
             this.m_lbl_ghi_chu.AutoSize = true;
-            this.m_lbl_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(72, 79);
+            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(46, 29);
             this.m_lbl_ghi_chu.Name = "m_lbl_ghi_chu";
-            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(52, 14);
-            this.m_lbl_ghi_chu.TabIndex = 3;
-            this.m_lbl_ghi_chu.Text = "Ghi chú";
+            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(45, 13);
+            this.m_lbl_ghi_chu.TabIndex = 0;
+            this.m_lbl_ghi_chu.Text = "Ghi Chú";
             // 
-            // m_tbo_ghi_chu
+            // m_lbl_ma_loai_chung_tu
             // 
-            this.m_tbo_ghi_chu.BackColor = System.Drawing.Color.Ivory;
-            this.m_tbo_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_tbo_ghi_chu.Location = new System.Drawing.Point(142, 71);
-            this.m_tbo_ghi_chu.Name = "m_tbo_ghi_chu";
-            this.m_tbo_ghi_chu.Size = new System.Drawing.Size(172, 22);
-            this.m_tbo_ghi_chu.TabIndex = 4;
+            this.m_lbl_ma_loai_chung_tu.AutoSize = true;
+            this.m_lbl_ma_loai_chung_tu.Location = new System.Drawing.Point(46, 77);
+            this.m_lbl_ma_loai_chung_tu.Name = "m_lbl_ma_loai_chung_tu";
+            this.m_lbl_ma_loai_chung_tu.Size = new System.Drawing.Size(95, 13);
+            this.m_lbl_ma_loai_chung_tu.TabIndex = 1;
+            this.m_lbl_ma_loai_chung_tu.Text = "Mã Loại Chứng Từ";
             // 
-            // m_bto_them
+            // m_lbl_ten_loai_chung_tu
             // 
-            this.m_bto_them.Location = new System.Drawing.Point(143, 120);
-            this.m_bto_them.Name = "m_bto_them";
-            this.m_bto_them.Size = new System.Drawing.Size(70, 25);
-            this.m_bto_them.TabIndex = 7;
-            this.m_bto_them.Text = "Thêm";
-            this.m_bto_them.UseVisualStyleBackColor = true;
-            this.m_bto_them.Click += new System.EventHandler(this.m_bto_them_Click);
+            this.m_lbl_ten_loai_chung_tu.AutoSize = true;
+            this.m_lbl_ten_loai_chung_tu.Location = new System.Drawing.Point(46, 124);
+            this.m_lbl_ten_loai_chung_tu.Name = "m_lbl_ten_loai_chung_tu";
+            this.m_lbl_ten_loai_chung_tu.Size = new System.Drawing.Size(99, 13);
+            this.m_lbl_ten_loai_chung_tu.TabIndex = 2;
+            this.m_lbl_ten_loai_chung_tu.Text = "Tên Loại Chứng Từ";
             // 
-            // m_bto_huy
+            // m_txt_ghi_chu
             // 
-            this.m_bto_huy.Location = new System.Drawing.Point(244, 120);
-            this.m_bto_huy.Name = "m_bto_huy";
-            this.m_bto_huy.Size = new System.Drawing.Size(70, 25);
-            this.m_bto_huy.TabIndex = 8;
-            this.m_bto_huy.Text = "Hủy";
-            this.m_bto_huy.UseVisualStyleBackColor = true;
-            this.m_bto_huy.Click += new System.EventHandler(this.m_bto_huy_Click);
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(208, 21);
+            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
+            this.m_txt_ghi_chu.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_ghi_chu.TabIndex = 3;
+            // 
+            // m_txt_ten_loai_chung_tu
+            // 
+            this.m_txt_ten_loai_chung_tu.Location = new System.Drawing.Point(208, 116);
+            this.m_txt_ten_loai_chung_tu.Name = "m_txt_ten_loai_chung_tu";
+            this.m_txt_ten_loai_chung_tu.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_ten_loai_chung_tu.TabIndex = 4;
+            // 
+            // m_cmd_close
+            // 
+            this.m_cmd_close.Location = new System.Drawing.Point(263, 188);
+            this.m_cmd_close.Name = "m_cmd_close";
+            this.m_cmd_close.Size = new System.Drawing.Size(92, 35);
+            this.m_cmd_close.TabIndex = 6;
+            this.m_cmd_close.Text = "Close";
+            this.m_cmd_close.UseVisualStyleBackColor = true;
+            this.m_cmd_close.Click += new System.EventHandler(this.m_cmd_close_Click);
+            // 
+            // m_cmd_save
+            // 
+            this.m_cmd_save.Location = new System.Drawing.Point(131, 188);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(82, 35);
+            this.m_cmd_save.TabIndex = 7;
+            this.m_cmd_save.Text = "Save";
+            this.m_cmd_save.UseVisualStyleBackColor = true;
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            // 
+            // m_txt_ma_loai_chung_tu
+            // 
+            this.m_txt_ma_loai_chung_tu.Location = new System.Drawing.Point(208, 69);
+            this.m_txt_ma_loai_chung_tu.Name = "m_txt_ma_loai_chung_tu";
+            this.m_txt_ma_loai_chung_tu.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_ma_loai_chung_tu.TabIndex = 8;
             // 
             // f500_DM_LOAI_CHUNG_TU_DE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(338, 163);
-            this.Controls.Add(this.m_bto_huy);
-            this.Controls.Add(this.m_bto_them);
-            this.Controls.Add(this.m_tbo_ghi_chu);
+            this.ClientSize = new System.Drawing.Size(397, 251);
+            this.Controls.Add(this.m_txt_ma_loai_chung_tu);
+            this.Controls.Add(this.m_cmd_save);
+            this.Controls.Add(this.m_cmd_close);
+            this.Controls.Add(this.m_txt_ten_loai_chung_tu);
+            this.Controls.Add(this.m_txt_ghi_chu);
+            this.Controls.Add(this.m_lbl_ten_loai_chung_tu);
+            this.Controls.Add(this.m_lbl_ma_loai_chung_tu);
             this.Controls.Add(this.m_lbl_ghi_chu);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_tbo_ma_loai_ct);
-            this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Brown;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "f500_DM_LOAI_CHUNG_TU_DE";
-            this.ShowInTaskbar = false;
+            this.Text = "f500_DM_LOAI_CHUNG_TU_DE";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +128,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox m_tbo_ma_loai_ct;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label m_lbl_ghi_chu;
-        private System.Windows.Forms.TextBox m_tbo_ghi_chu;
-        private System.Windows.Forms.Button m_bto_them;
-        private System.Windows.Forms.Button m_bto_huy;
+        private System.Windows.Forms.Label m_lbl_ma_loai_chung_tu;
+        private System.Windows.Forms.Label m_lbl_ten_loai_chung_tu;
+        private System.Windows.Forms.TextBox m_txt_ghi_chu;
+        private System.Windows.Forms.TextBox m_txt_ten_loai_chung_tu;
+        private System.Windows.Forms.Button m_cmd_close;
+        private System.Windows.Forms.Button m_cmd_save;
+        private System.Windows.Forms.TextBox m_txt_ma_loai_chung_tu;
     }
 }

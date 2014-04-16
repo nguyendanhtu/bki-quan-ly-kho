@@ -62,11 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_HANG_HOA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS_DM_KHACH_HANG.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DS_DM_KHACH_HANG.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS_DM_KHO.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,17 +177,6 @@
     </None>
     <None Include="DS_DM_KHO.xss">
       <DependentUpon>DS_DM_KHO.xsd</DependentUpon>
-    </None>
-    <None Include="DS_DM_KHACH_HANG.xsc">
-      <DependentUpon>DS_DM_KHACH_HANG.xsd</DependentUpon>
-    </None>
-    <None Include="DS_DM_KHACH_HANG.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_DM_KHACH_HANG.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DS_DM_KHACH_HANG.xss">
-      <DependentUpon>DS_DM_KHACH_HANG.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_LOAI_CHUNG_TU.xsc">
       <DependentUpon>DS_DM_LOAI_CHUNG_TU.xsd</DependentUpon>

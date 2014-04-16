@@ -1,6 +1,6 @@
 ﻿namespace BKI_KHO.DanhMuc
 {
-	partial class f501_DM_KHO_DE_THEM
+	partial class f501_DM_KHO_DE
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -37,14 +37,14 @@
             this.m_lbl_so_dien_thoai = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi = new System.Windows.Forms.Label();
             this.m_grb = new System.Windows.Forms.GroupBox();
+            this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
+            this.m_lbl_ten_kho = new System.Windows.Forms.Label();
             this.m_lbl_ma_kho = new System.Windows.Forms.Label();
             this.m_txt_ma_kho = new System.Windows.Forms.TextBox();
-            this.m_cmd_them = new System.Windows.Forms.Button();
+            this.m_cmd_save = new System.Windows.Forms.Button();
             this.m_cmd_xoa_trang = new System.Windows.Forms.Button();
             this.m_cmd_thoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.m_lbl_ten_kho = new System.Windows.Forms.Label();
-            this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
             this.m_grb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,9 +75,9 @@
             // 
             // m_txt_ma_nv
             // 
-            this.m_txt_ma_nv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_txt_ma_nv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.m_txt_ma_nv.BackColor = System.Drawing.SystemColors.Info;
             this.m_txt_ma_nv.Location = new System.Drawing.Point(152, 9);
             this.m_txt_ma_nv.Name = "m_txt_ma_nv";
@@ -141,6 +141,23 @@
             this.m_grb.TabIndex = 37;
             this.m_grb.TabStop = false;
             // 
+            // m_txt_ten_kho
+            // 
+            this.m_txt_ten_kho.BackColor = System.Drawing.SystemColors.Info;
+            this.m_txt_ten_kho.Location = new System.Drawing.Point(152, 123);
+            this.m_txt_ten_kho.Name = "m_txt_ten_kho";
+            this.m_txt_ten_kho.Size = new System.Drawing.Size(155, 20);
+            this.m_txt_ten_kho.TabIndex = 20;
+            // 
+            // m_lbl_ten_kho
+            // 
+            this.m_lbl_ten_kho.AutoSize = true;
+            this.m_lbl_ten_kho.Location = new System.Drawing.Point(80, 133);
+            this.m_lbl_ten_kho.Name = "m_lbl_ten_kho";
+            this.m_lbl_ten_kho.Size = new System.Drawing.Size(47, 13);
+            this.m_lbl_ten_kho.TabIndex = 19;
+            this.m_lbl_ten_kho.Text = "Tên kho";
+            // 
             // m_lbl_ma_kho
             // 
             this.m_lbl_ma_kho.AutoSize = true;
@@ -158,15 +175,15 @@
             this.m_txt_ma_kho.Size = new System.Drawing.Size(155, 20);
             this.m_txt_ma_kho.TabIndex = 17;
             // 
-            // m_cmd_them
+            // m_cmd_save
             // 
-            this.m_cmd_them.Location = new System.Drawing.Point(374, 177);
-            this.m_cmd_them.Name = "m_cmd_them";
-            this.m_cmd_them.Size = new System.Drawing.Size(75, 23);
-            this.m_cmd_them.TabIndex = 38;
-            this.m_cmd_them.Text = "Thêm";
-            this.m_cmd_them.UseVisualStyleBackColor = true;
-            this.m_cmd_them.Click += new System.EventHandler(this.m_cmd_them_Click);
+            this.m_cmd_save.Location = new System.Drawing.Point(374, 177);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(75, 23);
+            this.m_cmd_save.TabIndex = 38;
+            this.m_cmd_save.Text = "Save";
+            this.m_cmd_save.UseVisualStyleBackColor = true;
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_them_Click);
             // 
             // m_cmd_xoa_trang
             // 
@@ -198,24 +215,7 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "F501 - DANH MỤC KHO - THÊM MỚI";
             // 
-            // m_lbl_ten_kho
-            // 
-            this.m_lbl_ten_kho.AutoSize = true;
-            this.m_lbl_ten_kho.Location = new System.Drawing.Point(80, 133);
-            this.m_lbl_ten_kho.Name = "m_lbl_ten_kho";
-            this.m_lbl_ten_kho.Size = new System.Drawing.Size(47, 13);
-            this.m_lbl_ten_kho.TabIndex = 19;
-            this.m_lbl_ten_kho.Text = "Tên kho";
-            // 
-            // m_txt_ten_kho
-            // 
-            this.m_txt_ten_kho.BackColor = System.Drawing.SystemColors.Info;
-            this.m_txt_ten_kho.Location = new System.Drawing.Point(152, 123);
-            this.m_txt_ten_kho.Name = "m_txt_ten_kho";
-            this.m_txt_ten_kho.Size = new System.Drawing.Size(155, 20);
-            this.m_txt_ten_kho.TabIndex = 20;
-            // 
-            // f501_DM_KHO_DE_THEM
+            // f501_DM_KHO_DE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,11 +223,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_cmd_thoat);
             this.Controls.Add(this.m_cmd_xoa_trang);
-            this.Controls.Add(this.m_cmd_them);
+            this.Controls.Add(this.m_cmd_save);
             this.Controls.Add(this.m_grb);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "f501_DM_KHO_DE_THEM";
+            this.Name = "f501_DM_KHO_DE";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.m_grb.ResumeLayout(false);
@@ -248,7 +248,7 @@
 		private System.Windows.Forms.Label m_lbl_so_dien_thoai;
 		private System.Windows.Forms.Label m_lbl_dia_chi;
 		private System.Windows.Forms.GroupBox m_grb;
-		private System.Windows.Forms.Button m_cmd_them;
+		private System.Windows.Forms.Button m_cmd_save;
 		private System.Windows.Forms.Button m_cmd_xoa_trang;
 		private System.Windows.Forms.Button m_cmd_thoat;
 		private System.Windows.Forms.Label label1;

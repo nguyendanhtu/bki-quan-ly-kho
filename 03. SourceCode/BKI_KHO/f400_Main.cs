@@ -347,8 +347,8 @@ namespace BKI_KHO
         {
             try
             {
-                f802_DM_NHOM_HANG f801 = new f802_DM_NHOM_HANG();
-                f801.ShowDialog();
+                //f802_DM_NHOM_HANG f801 = new f802_DM_NHOM_HANG();
+                //f801.ShowDialog();
             }
             catch (Exception v_e)
             {
@@ -380,8 +380,8 @@ namespace BKI_KHO
 
         private void m_menuitem_khachhang_Click(object sender, EventArgs e)
         {
-            f102_DM_KHACH_HANG f102_dm_khach_hang = new f102_DM_KHACH_HANG();
-            f102_dm_khach_hang.ShowDialog();
+            //f102_DM_KHACH_HANG f102_dm_khach_hang = new f102_DM_KHACH_HANG();
+           // f102_dm_khach_hang.ShowDialog();
         }
 
 
