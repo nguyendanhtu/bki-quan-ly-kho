@@ -581,10 +581,11 @@ namespace BKI_KHO.DS.CDBNames
         public const string ID = "ID";
         public const string GHI_CHU = "GHI_CHU";
         public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
     }
     public class DM_KHO
     {
-        public const string ID_KHO = "ID_KHO";
+        public const string ID = "ID";
         public const string MA_KHO = "MA_KHO";
         public const string TEN_KHO = "TEN_KHO";
         public const string DIA_CHI = "DIA_CHI";
@@ -635,43 +636,4 @@ namespace BKI_KHO.DS.CDBNames
         public const string DANG_THAP_PHAN = "DANG_THAP_PHAN";
         public const string GHI_CHU = "GHI_CHU";
     }
-
-    public class DM_KHACH_HANG
-    {
-        public const string ID = "ID";
-        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
-        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
-        public const string NGAY_SINH = "NGAY_SINH";
-        public const string TEN_CONG_TY = "TEN_CONG_TY";
-        public const string DIA_CHI = "DIA_CHI";
-        public const string MA_BUU_DIEN = "MA_BUU_DIEN";
-        public const string THANH_PHO = "THANH_PHO";
-        public const string DIEN_THOAI = "DIEN_THOAI";
-        public const string FAX = "FAX";
-        public const string DIEN_THOAI_1 = "DIEN_THOAI_1";
-        public const string DIEN_THOAI_2 = "DIEN_THOAI_2";
-        public const string DI_DONG = "DI_DONG";
-        public const string EMAIL = "EMAIL";
-        public const string WEBSITE = "WEBSITE";
-        public const string MA_SO_THUE = "MA_SO_THUE";
-        public const string CreditLimit = "CreditLimit";
-        public const string ID_KIEU_KHACH_HANG = "ID_KIEU_KHACH_HANG";
-        public const string ID_KHO = "ID_KHO";
-        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
-        public const string ID_SHIP = "ID_SHIP";
-        public const string ID_KIEU_MUA_HANG = "ID_KIEU_MUA_HANG";
-        public const string ID_KIEU_THANH_TOAN = "ID_KIEU_THANH_TOAN";
-        public const string ID_TIEN_TE = "ID_TIEN_TE";
-        public const string NGAY_THAM_GIA = "NGAY_THAM_GIA";
-        public const string NGAY_THAM_GIA_GAN_NHAT = "NGAY_THAM_GIA_GAN_NHAT";
-        public const string ID_USER = "ID_USER";
-        public const string TIMESTAMP = "TIMESTAMP";
-        public const string ID_NGUOI_DUNG_MOI_NHAT = "ID_NGUOI_DUNG_MOI_NHAT";
-        public const string THOI_GIAN_GAN_NHAT = "THOI_GIAN_GAN_NHAT";
-        public const string TRANG_THAI = "TRANG_THAI";
-        public const string GHI_CHU = "GHI_CHU";
-    }
-
-
-
 }

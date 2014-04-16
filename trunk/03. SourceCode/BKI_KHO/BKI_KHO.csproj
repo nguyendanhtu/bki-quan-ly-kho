@@ -99,15 +99,6 @@
     <Compile Include="DanhMuc\f101_DM_THUE_DE.Designer.cs">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f102_DM_KHACH_HANG.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f102_DM_KHACH_HANG_DE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f102_DM_KHACH_HANG_DE.Designer.cs">
-      <DependentUpon>f102_DM_KHACH_HANG_DE.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\f300_V_DM_HANG_HOA_DE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,20 +126,14 @@
     <Compile Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE.Designer.cs">
       <DependentUpon>f500_DM_LOAI_CHUNG_TU_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE_UPDATE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE_UPDATE.Designer.cs">
-      <DependentUpon>f500_DM_LOAI_CHUNG_TU_DE_UPDATE.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\f501_DM_KHO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f501_DM_KHO_DE_THEM.cs">
+    <Compile Include="DanhMuc\f501_DM_KHO_DE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f501_DM_KHO_DE_THEM.Designer.cs">
-      <DependentUpon>f501_DM_KHO_DE_THEM.cs</DependentUpon>
+    <Compile Include="DanhMuc\f501_DM_KHO_DE.Designer.cs">
+      <DependentUpon>f501_DM_KHO_DE.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f800_DM_NHA_CUNG_CAP.cs">
       <SubType>Form</SubType>
@@ -197,11 +182,11 @@
     <EmbeddedResource Include="DanhMuc\f101_DM_THUE_DE.resx">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f102_DM_KHACH_HANG.resx">
-      <DependentUpon>f102_DM_KHACH_HANG.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU.resx">
+      <DependentUpon>f500_DM_LOAI_CHUNG_TU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f102_DM_KHACH_HANG_DE.resx">
-      <DependentUpon>f102_DM_KHACH_HANG_DE.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE.resx">
+      <DependentUpon>f500_DM_LOAI_CHUNG_TU_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f100_DM_THUE.resx" />
     <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA_DE.resx">
@@ -216,20 +201,11 @@
     <EmbeddedResource Include="DanhMuc\f301_DM_DON_VI_DE.resx">
       <DependentUpon>f301_DM_DON_VI_DE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU.resx">
-      <DependentUpon>f500_DM_LOAI_CHUNG_TU.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE.resx">
-      <DependentUpon>f500_DM_LOAI_CHUNG_TU_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU_DE_UPDATE.resx">
-      <DependentUpon>f500_DM_LOAI_CHUNG_TU_DE_UPDATE.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f501_DM_KHO.resx">
       <DependentUpon>f501_DM_KHO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f501_DM_KHO_DE_THEM.resx">
-      <DependentUpon>f501_DM_KHO_DE_THEM.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\f501_DM_KHO_DE.resx">
+      <DependentUpon>f501_DM_KHO_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f800_DM_NHA_CUNG_CAP.resx">
       <DependentUpon>f800_DM_NHA_CUNG_CAP.cs</DependentUpon>

@@ -28,8 +28,6 @@ using C1.Win.C1FlexGrid;
 namespace BKI_KHO
 {
 
-
-
 	public class f100_DM_THUE : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
