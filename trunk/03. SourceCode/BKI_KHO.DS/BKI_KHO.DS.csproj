@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_NHAN_VIEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NHAN_VIEN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_DM_TAI_KHOAN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,6 +205,17 @@
     </None>
     <None Include="DS_DM_NGUOI_DUNG.xss">
       <DependentUpon>DS_DM_NGUOI_DUNG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHAN_VIEN.xsc">
+      <DependentUpon>DS_DM_NHAN_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHAN_VIEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NHAN_VIEN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NHAN_VIEN.xss">
+      <DependentUpon>DS_DM_NHAN_VIEN.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_TAI_KHOAN.xsc">
       <DependentUpon>DS_DM_TAI_KHOAN.xsd</DependentUpon>
