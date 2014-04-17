@@ -138,6 +138,12 @@
     <Compile Include="DanhMuc\f701_DM_NHAN_VIEN.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DanhMuc\f701_DM_NHAN_VIEN_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f701_DM_NHAN_VIEN_DE.Designer.cs">
+      <DependentUpon>f701_DM_NHAN_VIEN_DE.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f800_DM_NHA_CUNG_CAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,7 +200,9 @@
     <EmbeddedResource Include="DanhMuc\f701_DM_NHAN_VIEN.resx">
       <DependentUpon>f701_DM_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f100_DM_THUE.resx" />
+    <EmbeddedResource Include="DanhMuc\f701_DM_NHAN_VIEN_DE.resx">
+      <DependentUpon>f701_DM_NHAN_VIEN_DE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA_DE.resx">
       <DependentUpon>f300_V_DM_HANG_HOA_DE.cs</DependentUpon>
     </EmbeddedResource>

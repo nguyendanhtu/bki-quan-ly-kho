@@ -226,5 +226,19 @@ namespace BKI_KHO.US
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
+
+        public void FillDatasetSearchByMaNhanVien(DS_DM_NHAN_VIEN op_ds, string ip_str_ma_nhan_vien)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_DM_NHAN_VIEN_Search_By_Ma_Nhan_Vien");
+            v_sp.addNVarcharInputParam("@MA_NHAN_VIEN", ip_str_ma_nhan_vien);
+            v_sp.fillDataSetByCommand(this, op_ds);
+        }
+
+        public void FillDataSetByKeyword(DS_DM_NHAN_VIEN op_ds, string ip_str_keyword)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_DM_NHAN_VIEN_Search");
+            v_sp.addNVarcharInputParam("@keyword", ip_str_keyword);
+            v_sp.fillDataSetByCommand(this, op_ds);
+        }
     }
 }
