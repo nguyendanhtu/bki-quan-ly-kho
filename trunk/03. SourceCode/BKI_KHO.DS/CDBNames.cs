@@ -529,13 +529,6 @@ namespace BKI_KHO.DS.CDBNames
         public const string GIA_BAN = "GIA_BAN";
         public const string GIA_BAN_LE = "GIA_BAN_LE";
     }
-    public class DM_NHOM_HANG
-    {
-        public const string ID = "ID";
-        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
-        public const string TEN = "TEN";
-        public const string MO_TA = "MO_TA";
-    }
    
     public class DM_DON_VI
     {
@@ -621,6 +614,19 @@ namespace BKI_KHO.DS.CDBNames
     }
 
     #endregion TONGDV_NAMESPACE
+
+    public class DM_NHAN_VIEN
+    {
+        public const string ID = "ID";
+        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN = "TEN";
+        public const string SO_DIEN_THOAI = "SO_DIEN_THOAI";
+        public const string EMAIL = "EMAIL";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string CMND = "CMND";
+    }
+
     public class DM_NHA_CUNG_CAP
     {
         public const string ID = "ID";
@@ -648,4 +654,15 @@ namespace BKI_KHO.DS.CDBNames
         public const string DANG_THAP_PHAN = "DANG_THAP_PHAN";
         public const string GHI_CHU = "GHI_CHU";
     }
+
+    public class DM_NHOM_HANG
+    {
+        public const string ID = "ID";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN = "TEN";
+        public const string MO_TA = "MO_TA";
+        public const string STT = "STT";
+        public const string LEVEL_MODE = "LEVEL_MODE";
+    }
+
 }
