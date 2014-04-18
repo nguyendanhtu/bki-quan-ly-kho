@@ -34,5 +34,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=HNC\TNT;Initial Catalog=BKI_KHO;User ID=sa;Password=sa</Value>
     </Setting>
+    <Setting Name="masterConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DATATSRV;Initial Catalog=master;Persist Security Info=True;User ID=bkindex;Password=bkindex&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DATATSRV;Initial Catalog=master;Persist Security Info=True;User ID=bkindex;Password=bkindex</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
