@@ -486,6 +486,7 @@ namespace BKI_KHO.DS {
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnTEN.AllowDBNull = false;
                 this.columnTEN.MaxLength = 50;
@@ -1006,7 +1007,7 @@ SELECT ID, ID_NHOM_CHA, TEN, MO_TA, STT, LEVEL_MODE FROM DM_NHOM_HANG WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::BKI_KHO.DS.Properties.Settings.Default.masterConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

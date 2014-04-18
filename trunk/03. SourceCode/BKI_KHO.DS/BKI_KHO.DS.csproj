@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_NHAN_VIEN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_NHOM_HANG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_DM_TAI_KHOAN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,6 +221,17 @@
     </None>
     <None Include="DS_DM_NHAN_VIEN.xss">
       <DependentUpon>DS_DM_NHAN_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xsc">
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NHOM_HANG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NHOM_HANG.xss">
+      <DependentUpon>DS_DM_NHOM_HANG.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_TAI_KHOAN.xsc">
       <DependentUpon>DS_DM_TAI_KHOAN.xsd</DependentUpon>
