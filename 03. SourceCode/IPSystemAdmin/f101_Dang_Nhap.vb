@@ -80,7 +80,7 @@ Public Class f101_Dang_Nhap
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Maroon
+        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel1.Controls.Add(Me.m_btnOK)
         Me.Panel1.Controls.Add(Me.m_btnCancel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -185,7 +185,7 @@ Public Class f101_Dang_Nhap
         Me.GroupBox1.Size = New System.Drawing.Size(302, 162)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý nhân sự"
+        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý kho"
         '
         'Panel2
         '
@@ -212,7 +212,7 @@ Public Class f101_Dang_Nhap
         'f101_Dang_Nhap
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.BackColor = System.Drawing.Color.Maroon
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(302, 205)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
