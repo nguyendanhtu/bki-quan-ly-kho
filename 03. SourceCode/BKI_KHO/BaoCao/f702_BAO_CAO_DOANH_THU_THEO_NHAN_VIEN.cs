@@ -91,19 +91,19 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_export_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.m_lbl_count_record = new System.Windows.Forms.Label();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+            this.m_txt_search = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.m_txt_search = new System.Windows.Forms.TextBox();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.m_lbl_count_record = new System.Windows.Forms.Label();
-            this.m_cmd_export_excel = new SIS.Controls.Button.SiSButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -180,6 +180,21 @@ namespace BKI_KHO
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
             // 
+            // m_cmd_export_excel
+            // 
+            this.m_cmd_export_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_export_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_export_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_export_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_export_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_export_excel.ImageIndex = 19;
+            this.m_cmd_export_excel.ImageList = this.ImageList;
+            this.m_cmd_export_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_export_excel.Name = "m_cmd_export_excel";
+            this.m_cmd_export_excel.Size = new System.Drawing.Size(112, 28);
+            this.m_cmd_export_excel.TabIndex = 21;
+            this.m_cmd_export_excel.Text = "Xuất Excel";
+            // 
             // m_cmd_delete
             // 
             this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -236,23 +251,43 @@ namespace BKI_KHO
             this.panel1.Size = new System.Drawing.Size(847, 101);
             this.panel1.TabIndex = 21;
             // 
-            // label1
+            // m_lbl_count_record
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Từ ngày";
+            this.m_lbl_count_record.AutoSize = true;
+            this.m_lbl_count_record.Location = new System.Drawing.Point(317, 62);
+            this.m_lbl_count_record.Name = "m_lbl_count_record";
+            this.m_lbl_count_record.Size = new System.Drawing.Size(0, 13);
+            this.m_lbl_count_record.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // m_cmd_search
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.ImageList = this.ImageList;
+            this.m_cmd_search.Location = new System.Drawing.Point(718, 15);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_search.TabIndex = 25;
+            this.m_cmd_search.Text = "Tìm kiếm";
+            // 
+            // m_txt_search
+            // 
+            this.m_txt_search.Location = new System.Drawing.Point(372, 20);
+            this.m_txt_search.Name = "m_txt_search";
+            this.m_txt_search.Size = new System.Drawing.Size(331, 20);
+            this.m_txt_search.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(317, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tìm kiếm";
             // 
             // dateTimePicker2
             // 
@@ -272,58 +307,23 @@ namespace BKI_KHO
             this.label2.TabIndex = 2;
             this.label2.Text = "Đến ngày";
             // 
-            // label3
+            // dateTimePicker1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tìm kiếm";
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(122, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // m_txt_search
+            // label1
             // 
-            this.m_txt_search.Location = new System.Drawing.Point(372, 20);
-            this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(331, 20);
-            this.m_txt_search.TabIndex = 5;
-            // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(718, 15);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 25;
-            this.m_cmd_search.Text = "Tìm kiếm";
-            // 
-            // m_lbl_count_record
-            // 
-            this.m_lbl_count_record.AutoSize = true;
-            this.m_lbl_count_record.Location = new System.Drawing.Point(317, 62);
-            this.m_lbl_count_record.Name = "m_lbl_count_record";
-            this.m_lbl_count_record.Size = new System.Drawing.Size(0, 13);
-            this.m_lbl_count_record.TabIndex = 26;
-            // 
-            // m_cmd_export_excel
-            // 
-            this.m_cmd_export_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_export_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_export_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_export_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_export_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_export_excel.ImageIndex = 19;
-            this.m_cmd_export_excel.ImageList = this.ImageList;
-            this.m_cmd_export_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_export_excel.Name = "m_cmd_export_excel";
-            this.m_cmd_export_excel.Size = new System.Drawing.Size(112, 28);
-            this.m_cmd_export_excel.TabIndex = 21;
-            this.m_cmd_export_excel.Text = "Xuất Excel";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Từ ngày";
             // 
             // f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
             // 
