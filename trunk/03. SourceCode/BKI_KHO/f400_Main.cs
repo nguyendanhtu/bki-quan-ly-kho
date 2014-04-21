@@ -335,8 +335,8 @@ namespace BKI_KHO
         }
         private void m_menuitem_hanghoa_Click(object sender, EventArgs e)
         {
-            f300_V_DM_HANG_HOA f300_v_dm_hang_hoa = new f300_V_DM_HANG_HOA();
-            f300_v_dm_hang_hoa.ShowDialog();
+            //f300_V_DM_HANG_HOA f300_v_dm_hang_hoa = new f300_V_DM_HANG_HOA();
+            //f300_v_dm_hang_hoa.ShowDialog();
         }
         private void m_menuitem_donvitinh_Click(object sender, EventArgs e)
         {
