@@ -486,7 +486,6 @@ namespace BKI_KHO.DS {
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnTEN.AllowDBNull = false;
                 this.columnTEN.MaxLength = 50;

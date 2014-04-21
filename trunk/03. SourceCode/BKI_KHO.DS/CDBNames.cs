@@ -512,6 +512,15 @@ namespace BKI_KHO.DS.CDBNames
     }
    
     //Begin TuyenNT
+    public class V_DM_NHOM_HANG
+    {
+        public const string STT = "STT";
+        public const string ID = "ID";
+        public const string TEN = "TEN";
+        public const string TEN_NHOM_CHA = "TEN_NHOM_CHA";
+        public const string LEVEL_MODE = "LEVEL_MODE";
+        public const string MO_TA = "MO_TA";
+    }
     public class DM_HANG_HOA
     {
         public const string ID = "ID";
@@ -528,7 +537,9 @@ namespace BKI_KHO.DS.CDBNames
         public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
         public const string GIA_BAN_LE = "GIA_BAN_LE";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
     }
+
    
     public class DM_DON_VI
     {
@@ -540,19 +551,26 @@ namespace BKI_KHO.DS.CDBNames
     public class V_DM_HANG_HOA
     {
         public const string ID = "ID";
-        public const string ID_NHOM_GOC = "ID_NHOM_GOC";
-        public const string ID_NHOM = "ID_NHOM";
         public const string MA_HANG = "MA_HANG";
+        public const string ID_NHOM = "ID_NHOM";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string TEN_NHOM_CHA = "TEN_NHOM_CHA";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string TEN_NHA_CUNG_CAP = "TEN_NHA_CUNG_CAP";
+        public const string ID_DON_VI = "ID_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
         public const string TEN_HANG_VN = "TEN_HANG_VN";
         public const string TEN_HANG_EN = "TEN_HANG_EN";
-        public const string IMAGE = "IMAGE";
-        public const string MO_TA = "MO_TA";
-        public const string GIA_NHAP = "GIA_NHAP";
+        public const string ANH = "ANH";
+        public const string MA_VACH = "MA_VACH";
+        public const string GiA_NHAP = "GiA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
         public const string GIA_BAN_LE = "GIA_BAN_LE";
-        public const string DON_VI = "DON_VI";
-        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string MO_TA = "MO_TA";
+        public const string TRANG_THAI = "TRANG_THAI";
     }
+
 
     public class DM_THUE
     {

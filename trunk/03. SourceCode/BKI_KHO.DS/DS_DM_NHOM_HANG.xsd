@@ -91,10 +91,10 @@ SELECT ID, ID_NHOM_CHA, TEN, MO_TA, STT, LEVEL_MODE FROM DM_NHOM_HANG WHERE (ID 
   <xs:element name="DS_DM_NHOM_HANG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_DM_NHOM_HANG" msprop:Generator_UserDSName="DS_DM_NHOM_HANG">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DM_NHOM_HANG" msprop:Generator_TableClassName="DM_NHOM_HANGDataTable" msprop:Generator_TableVarName="tableDM_NHOM_HANG" msprop:Generator_TablePropName="DM_NHOM_HANG" msprop:Generator_RowDeletingName="DM_NHOM_HANGRowDeleting" msprop:Generator_RowChangingName="DM_NHOM_HANGRowChanging" msprop:Generator_RowEvHandlerName="DM_NHOM_HANGRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_NHOM_HANGRowDeleted" msprop:Generator_UserTableName="DM_NHOM_HANG" msprop:Generator_RowChangedName="DM_NHOM_HANGRowChanged" msprop:Generator_RowEvArgName="DM_NHOM_HANGRowChangeEvent" msprop:Generator_RowClassName="DM_NHOM_HANGRow">
+        <xs:element name="DM_NHOM_HANG" msprop:Generator_TableClassName="DM_NHOM_HANGDataTable" msprop:Generator_TableVarName="tableDM_NHOM_HANG" msprop:Generator_RowChangedName="DM_NHOM_HANGRowChanged" msprop:Generator_TablePropName="DM_NHOM_HANG" msprop:Generator_RowDeletingName="DM_NHOM_HANGRowDeleting" msprop:Generator_RowChangingName="DM_NHOM_HANGRowChanging" msprop:Generator_RowEvHandlerName="DM_NHOM_HANGRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_NHOM_HANGRowDeleted" msprop:Generator_RowClassName="DM_NHOM_HANGRow" msprop:Generator_UserTableName="DM_NHOM_HANG" msprop:Generator_RowEvArgName="DM_NHOM_HANGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
               <xs:element name="ID_NHOM_CHA" msprop:Generator_ColumnVarNameInTable="columnID_NHOM_CHA" msprop:Generator_ColumnPropNameInRow="ID_NHOM_CHA" msprop:Generator_ColumnPropNameInTable="ID_NHOM_CHAColumn" msprop:Generator_UserColumnName="ID_NHOM_CHA" type="xs:decimal" minOccurs="0" />
               <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN">
                 <xs:simpleType>
@@ -124,7 +124,7 @@ SELECT ID, ID_NHOM_CHA, TEN, MO_TA, STT, LEVEL_MODE FROM DM_NHOM_HANG WHERE (ID 
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_DM_CATEGORY_DM_CATEGORY" msdata:parent="DM_NHOM_HANG" msdata:child="DM_NHOM_HANG" msdata:parentkey="ID" msdata:childkey="ID_NHOM_CHA" msprop:Generator_UserChildTable="DM_NHOM_HANG" msprop:Generator_ChildPropName="GetDM_NHOM_HANGRows" msprop:Generator_UserRelationName="FK_DM_CATEGORY_DM_CATEGORY" msprop:Generator_RelationVarName="relationFK_DM_CATEGORY_DM_CATEGORY" msprop:Generator_UserParentTable="DM_NHOM_HANG" msprop:Generator_ParentPropName="DM_NHOM_HANGRowParent" />
+      <msdata:Relationship name="FK_DM_CATEGORY_DM_CATEGORY" msdata:parent="DM_NHOM_HANG" msdata:child="DM_NHOM_HANG" msdata:parentkey="ID" msdata:childkey="ID_NHOM_CHA" msprop:Generator_UserChildTable="DM_NHOM_HANG" msprop:Generator_ChildPropName="GetDM_NHOM_HANGRows" msprop:Generator_UserRelationName="FK_DM_CATEGORY_DM_CATEGORY" msprop:Generator_ParentPropName="DM_NHOM_HANGRowParent" msprop:Generator_RelationVarName="relationFK_DM_CATEGORY_DM_CATEGORY" msprop:Generator_UserParentTable="DM_NHOM_HANG" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
