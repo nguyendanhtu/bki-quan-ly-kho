@@ -60,5 +60,11 @@ namespace Form_menu
             f302_V_DM_NHOM_HANG f302 = new f302_V_DM_NHOM_HANG();
             f302.ShowDialog();
         }
+
+        private void m_cmd_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e)
+        {
+            f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
+            frm.ShowDialog();
+        }
     }
 }
