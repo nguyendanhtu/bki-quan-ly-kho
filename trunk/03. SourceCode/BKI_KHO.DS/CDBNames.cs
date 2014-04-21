@@ -645,6 +645,16 @@ namespace BKI_KHO.DS.CDBNames
         public const string CMND = "CMND";
     }
 
+    public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
+    {
+        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN = "TEN";
+        public const string NHAP = "NHAP";
+        public const string XUAT = "XUAT";
+        public const string SUA_CHUA = "SUA_CHUA";
+    }
+
     public class DM_NHA_CUNG_CAP
     {
         public const string ID = "ID";
