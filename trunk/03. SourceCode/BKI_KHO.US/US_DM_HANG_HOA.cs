@@ -307,7 +307,27 @@ public class US_DM_HANG_HOA : US_Object
 	public void SetGIA_BAN_LENull() {
 		pm_objDR["GIA_BAN_LE"] = System.Convert.DBNull;
 	}
+    public decimal dcID_TRANG_THAI
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_TRANG_THAI", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_TRANG_THAI"] = value;
+        }
+    }
 
+    public bool IsID_TRANG_THAINull()
+    {
+        return pm_objDR.IsNull("ID_TRANG_THAI");
+    }
+
+    public void SetID_TRANG_THAINull()
+    {
+        pm_objDR["ID_TRANG_THAI"] = System.Convert.DBNull;
+    }
 #endregion
 #region "Init Functions"
 	public US_DM_HANG_HOA() 

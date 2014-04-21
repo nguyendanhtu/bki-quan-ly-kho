@@ -184,5 +184,12 @@ namespace BKI_KHO.US
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
+
+        public void fillDatasetById(DS_DM_NHOM_HANG op_ds, decimal ip_dc_id)
+        {
+            CStoredProc v_stored_proc = new CStoredProc("pr_DM_NHOM_HANG_FillDatasetById");
+            v_stored_proc.addDecimalInputParam("@ID", ip_dc_id);
+            v_stored_proc.fillDataSetByCommand(this, op_ds);
+        }
     }
 }
