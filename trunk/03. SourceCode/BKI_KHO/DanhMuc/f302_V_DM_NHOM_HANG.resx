@@ -261,69 +261,17 @@
 </value>
   </data>
   <data name="m_fg.ColumnInfo" xml:space="preserve">
-    <value>11,1,0,0,0,85,Columns:0{Width:13;}	1{Width:91;Caption:"Mã hàng";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	2{Width:143;Caption:"Tên hàng";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	3{Width:139;Caption:"Tên nhóm hàng";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	4{Width:128;Caption:"Tên nhóm cha";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	5{Width:98;Caption:"Nhà cung cấp";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	6{Width:66;Caption:"Đơn vị tính";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	7{Width:111;Caption:"Giá nhập";DataType:System.Decimal;Format:"#,###.00 VNĐ";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}	8{Width:114;Caption:"Giá bán";DataType:System.Decimal;Format:"#,###.00 VNĐ";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}	9{Width:245;Caption:"Mô tả";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	10{Width:66;Caption:"Trạng thái";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	</value>
+    <value>6,1,0,0,0,85,Columns:0{Width:13;}	1{Width:135;Caption:"Tên nhóm cha";Visible:False;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	2{Width:102;AllowSorting:False;Caption:"STT";DataType:System.Decimal;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}	3{Width:191;AllowSorting:False;Caption:"Tên nhóm";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	4{Width:72;AllowSorting:False;Caption:"Level_mode";Visible:False;DataType:System.Decimal;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}	5{Width:297;AllowSorting:False;Caption:"Mô tả";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	</value>
   </data>
   <data name="m_fg.Styles" xml:space="preserve">
     <value>Normal{Font:Microsoft Sans Serif, 8.25pt;}	Alternate{BackColor:Info;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_ptb_anh.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
+  <metadata name="m_sfd_save_cv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>536, 17</value>
+  </metadata>
+  <metadata name="m_ofd_chon_anh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>665, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

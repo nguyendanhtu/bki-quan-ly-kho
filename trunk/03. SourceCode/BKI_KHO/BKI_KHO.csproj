@@ -50,6 +50,10 @@
     <Reference Include="C1.Win.C1Input">
       <HintPath>..\DLL\C1.Win.C1Input.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\SiSButton.dll</HintPath>
@@ -99,14 +103,14 @@
     <Compile Include="DanhMuc\f101_DM_THUE_DE.Designer.cs">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f300_V_DM_HANG_HOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f300_V_DM_HANG_HOA_DE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f300_V_DM_HANG_HOA_DE.Designer.cs">
       <DependentUpon>f300_V_DM_HANG_HOA_DE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\f300_V_DM_HANG_HOA.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f301_DM_DON_VI.cs">
       <SubType>Form</SubType>
@@ -116,6 +120,15 @@
     </Compile>
     <Compile Include="DanhMuc\f301_DM_DON_VI_DE.Designer.cs">
       <DependentUpon>f301_DM_DON_VI_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f302_V_DM_NHOM_HANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f302_V_DM_NHOM_HANG_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f302_V_DM_NHOM_HANG_DE.Designer.cs">
+      <DependentUpon>f302_V_DM_NHOM_HANG_DE.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f500_DM_LOAI_CHUNG_TU.cs">
       <SubType>Form</SubType>
@@ -162,6 +175,12 @@
     <Compile Include="DanhMuc\f805_DM_TIEN_TE_DE.Designer.cs">
       <DependentUpon>f805_DM_TIEN_TE_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="f399_MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f399_MainMenu.designer.cs">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +210,18 @@
     <EmbeddedResource Include="DanhMuc\f101_DM_THUE_DE.resx">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA.resx">
+      <DependentUpon>f300_V_DM_HANG_HOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA_DE.resx">
+      <DependentUpon>f300_V_DM_HANG_HOA_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f302_V_DM_NHOM_HANG.resx">
+      <DependentUpon>f302_V_DM_NHOM_HANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f302_V_DM_NHOM_HANG_DE.resx">
+      <DependentUpon>f302_V_DM_NHOM_HANG_DE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f500_DM_LOAI_CHUNG_TU.resx">
       <DependentUpon>f500_DM_LOAI_CHUNG_TU.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,12 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f701_DM_NHAN_VIEN_DE.resx">
       <DependentUpon>f701_DM_NHAN_VIEN_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA_DE.resx">
-      <DependentUpon>f300_V_DM_HANG_HOA_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f300_V_DM_HANG_HOA.resx">
-      <DependentUpon>f300_V_DM_HANG_HOA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f301_DM_DON_VI.resx">
       <DependentUpon>f301_DM_DON_VI.cs</DependentUpon>
@@ -232,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f805_DM_TIEN_TE_DE.resx">
       <DependentUpon>f805_DM_TIEN_TE_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f399_MainMenu.resx">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>

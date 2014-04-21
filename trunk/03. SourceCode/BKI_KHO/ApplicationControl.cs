@@ -7,6 +7,7 @@ using IP.Core.IPSystemAdmin;
 using IP.Core.IPBusinessService;
 using IP.Core.IPUserService;
 using BKI_KHO;
+using Form_menu;
 
 
 
@@ -48,7 +49,7 @@ namespace BKI_KHO
                 {
                     CAppContext_201.InitializeContext(v_obj_login_info);
                     CAppContext_201.LoadDecentralizationByUserLogin();		
-                    f400_Main v_frm_main = new f400_Main();
+                    f399_MainMenu v_frm_main = new f399_MainMenu();
                     v_frm_main.display(ref v_exitmode);
                     v_frm_main.Dispose();
                     // sau main form hiện thì login hoặc thóat
