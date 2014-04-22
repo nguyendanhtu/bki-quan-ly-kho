@@ -693,4 +693,17 @@ namespace BKI_KHO.DS.CDBNames
         public const string LEVEL_MODE = "LEVEL_MODE";
     }
 
+
+    public class V_DM_KHO
+    {
+        public const string ID = "ID";
+        public const string MA_KHO = "MA_KHO";
+        public const string TEN_KHO = "TEN_KHO";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string DIEN_THOAI = "DIEN_THOAI";
+        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN = "TEN";
+    }
 }
