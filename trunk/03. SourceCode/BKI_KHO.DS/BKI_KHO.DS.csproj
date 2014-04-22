@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_HANG_HOA.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_KHO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_KHO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_NHOM_HANG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,9 +196,9 @@
       <DependentUpon>DS_DM_KHO.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_KHO.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DS_DM_KHO.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="DS_DM_KHO.xss">
       <DependentUpon>DS_DM_KHO.xsd</DependentUpon>
@@ -352,6 +357,17 @@
     </None>
     <None Include="DS_V_DM_HANG_HOA.xss">
       <DependentUpon>DS_V_DM_HANG_HOA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_KHO.xsc">
+      <DependentUpon>DS_V_DM_KHO.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_KHO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_KHO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_KHO.xss">
+      <DependentUpon>DS_V_DM_KHO.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_NHOM_HANG.xsc">
       <DependentUpon>DS_V_DM_NHOM_HANG.xsd</DependentUpon>

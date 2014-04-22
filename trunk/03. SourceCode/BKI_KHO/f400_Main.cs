@@ -362,8 +362,9 @@ namespace BKI_KHO
         }
         private void m_menuitem_khohang_Click(object sender, EventArgs e)
         {
-            f501_DM_KHO f501 = new f501_DM_KHO();
-            f501.display();
+            //f110_DM_KHO frm = new f110_DM_KHO();
+            
+            
         }
 
         private void thuếToolStripMenuItem_Click(object sender, EventArgs e)

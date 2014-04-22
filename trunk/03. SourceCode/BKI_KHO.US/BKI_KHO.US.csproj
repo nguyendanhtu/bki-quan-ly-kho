@@ -69,6 +69,7 @@
     <Compile Include="US_HT_USER_GROUP.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.cs" />
     <Compile Include="US_V_DM_HANG_HOA.cs" />
+    <Compile Include="US_V_DM_KHO.cs" />
     <Compile Include="US_V_DM_NHOM_HANG.cs" />
   </ItemGroup>
   <ItemGroup>
