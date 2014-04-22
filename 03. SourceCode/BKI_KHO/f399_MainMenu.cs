@@ -66,5 +66,17 @@ namespace Form_menu
             f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
             frm.ShowDialog();
         }
+
+        private void m_cmd_nhan_vien_Click(object sender, EventArgs e)
+        {
+            f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
+            frm.ShowDialog();
+        }
+
+        private void m_cmd_kho_Click(object sender, EventArgs e)
+        {
+            f110_V_DM_KHO frm = new f110_V_DM_KHO();
+            frm.ShowDialog();
+        }
     }
 }
