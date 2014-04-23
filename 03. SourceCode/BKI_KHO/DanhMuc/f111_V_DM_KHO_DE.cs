@@ -24,6 +24,7 @@ namespace BKI_KHO.DanhMuc
         public f111_V_DM_KHO_DE()
         {
             InitializeComponent();
+            load_data_2_combox();
         }
 
         public void display_for_insert()
@@ -32,11 +33,11 @@ namespace BKI_KHO.DanhMuc
             this.ShowDialog();
         }
 
-        public void display_for_update(US_V_DM_KHO ip_m_us_v_dm_kho)
+        public void display_for_update(US_DM_KHO ip_m_us_dm_kho)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            us_object_2_form(ip_m_us_v_dm_kho);
-            m_v_us = ip_m_us_v_dm_kho;
+            us_object_2_form(ip_m_us_dm_kho);
+            m_us = ip_m_us_dm_kho;
             this.ShowDialog();
         }
 
@@ -50,35 +51,44 @@ namespace BKI_KHO.DanhMuc
             m_us.strGHI_CHU = m_txt_ghi_chu.Text.Trim();
             m_us.strMA_KHO = m_txt_ma_kho.Text.Trim();
             m_us.strTEN_KHO = m_txt_ten_kho.Text.Trim();
-            m_v_us.strHO_DEM = m_txt_ho_dem.Text.Trim();
-            m_v_us.strTEN = m_txt_ten.Text.Trim();
+            m_us.dcID_NHAN_VIEN = CIPConvert.ToDecimal(m_cbo_ten.SelectedValue);
+
         }
 
-        private void us_object_2_form(US_V_DM_KHO ip_us_v_dm_kho)
+        private void us_object_2_form(US_DM_KHO ip_us_dm_kho)
         {
-            m_txt_dia_chi.Text = ip_us_v_dm_kho.strDIA_CHI;
-            m_txt_dien_thoai.Text = ip_us_v_dm_kho.strDIEN_THOAI;
-            m_txt_ghi_chu.Text = ip_us_v_dm_kho.strGHI_CHU;
-            m_txt_ma_kho.Text = ip_us_v_dm_kho.strMA_KHO;
-            m_txt_ten_kho.Text = ip_us_v_dm_kho.strTEN_KHO;
-            m_txt_ten.Text = m_v_us.strTEN;
-            m_txt_ho_dem.Text = m_v_us.strHO_DEM;
+            m_txt_dia_chi.Text = ip_us_dm_kho.strDIA_CHI;
+            m_txt_dien_thoai.Text = ip_us_dm_kho.strDIEN_THOAI;
+            m_txt_ghi_chu.Text = ip_us_dm_kho.strGHI_CHU;
+            m_txt_ma_kho.Text = ip_us_dm_kho.strMA_KHO;
+            m_txt_ten_kho.Text = ip_us_dm_kho.strTEN_KHO;
+            m_cbo_ten.SelectedValue = ip_us_dm_kho.dcID_NHAN_VIEN;
+        }
+
+        private void load_data_2_combox()
+        {
+            US_DM_NHAN_VIEN m_us = new US_DM_NHAN_VIEN();
+            DS_DM_NHAN_VIEN m_ds = new DS_DM_NHAN_VIEN();
+            m_us.FillDataset(m_ds);
+            m_cbo_ten.DataSource = m_ds.DM_NHAN_VIEN;
+            m_cbo_ten.ValueMember = DM_NHAN_VIEN.ID;
+            m_cbo_ten.DisplayMember = DM_NHAN_VIEN.TEN;
         }
         #endregion
 
         #region Members
         DataEntryFormMode m_e_form_mode;
-        US_DM_KHO m_us_1 = new US_DM_KHO();
         US_V_DM_KHO m_v_us = new US_V_DM_KHO();
         DS_V_DM_KHO m_v_ds = new DS_V_DM_KHO();
         US_DM_KHO m_us = new US_DM_KHO();
         DS_DM_KHO m_ds = new DS_DM_KHO();
         #endregion
 
+        #region Events
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
             form_2_us_object();
-            switch(m_e_form_mode)
+            switch (m_e_form_mode)
             {
                 case DataEntryFormMode.InsertDataState:
                     m_us.Insert();
@@ -97,12 +107,20 @@ namespace BKI_KHO.DanhMuc
             }
         }
 
-        private void Close_Click(object sender, EventArgs e)
+        private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        #region Events
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            m_txt_dia_chi.Text = "";
+            m_txt_dien_thoai.Text = "";
+            m_txt_ghi_chu.Text = "";
+            m_txt_ma_kho.Text = "";
+            m_txt_ten_kho.Text = "";
+        }
         #endregion
+
+        
     }
 }
