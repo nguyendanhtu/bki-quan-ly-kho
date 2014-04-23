@@ -98,5 +98,29 @@ namespace Form_menu
             f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
             frm.ShowDialog();
         }
+
+        private void m_cmd_khach_hang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e)
+        {
+            f303_DM_DON_VI frm = new f303_DM_DON_VI();
+            frm.ShowDialog();
+        }
+
+        private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f304_DM_NHA_SX v_f = new f304_DM_NHA_SX();
+                v_f.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }
