@@ -4,6 +4,12 @@ using System.Text;
 
 namespace BKI_KHO.DS.CDBNames
 {
+    public class PHIEU_NHAP_KHO_DETAIL
+    {
+        public const string LOAI_HANG_HOA = "LOAI_HANG_HOA";
+        public const string SO_LUONG = "SO_LUONG";
+        public const string SO_TIEN = "SO_TIEN";
+    }
     public enum e_loai_tu_dien
     {
         PHAN_QUYEN = 1
@@ -633,17 +639,7 @@ namespace BKI_KHO.DS.CDBNames
 
     #endregion TONGDV_NAMESPACE
 
-    public class DM_NHAN_VIEN
-    {
-        public const string ID = "ID";
-        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
-        public const string HO_DEM = "HO_DEM";
-        public const string TEN = "TEN";
-        public const string SO_DIEN_THOAI = "SO_DIEN_THOAI";
-        public const string EMAIL = "EMAIL";
-        public const string DIA_CHI = "DIA_CHI";
-        public const string CMND = "CMND";
-    }
+    
 
     public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
     {
