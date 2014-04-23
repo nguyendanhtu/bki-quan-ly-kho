@@ -279,17 +279,17 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_KY_HOP_DONG = "NGAY_KY_HOP_DONG";
     }
 
-    //public class DM_NHAN_VIEN
-    //{
-    //    public const string ID = "ID";
-    //    public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
-    //    public const string HO_DEM = "HO_DEM";
-    //    public const string TEN = "TEN";
-    //    public const string SO_DIEN_THOAI = "SO_DIEN_THOAI";
-    //    public const string EMAIL = "EMAIL";
-    //    public const string DIA_CHI = "DIA_CHI";
-    //    public const string CMND = "CMND";
-    //}
+    public class DM_NHAN_VIEN
+    {
+        public const string ID = "ID";
+        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN = "TEN";
+        public const string SO_DIEN_THOAI = "SO_DIEN_THOAI";
+        public const string EMAIL = "EMAIL";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string CMND = "CMND";
+    }
 
     public class DM_NHAN_SU
     {

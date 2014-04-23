@@ -67,7 +67,7 @@ namespace BKI_KHO.DanhMuc
 			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.SO_TIEN, e_col_Number.SO_TIEN);
 			
 									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_DM_HANG_HOA.NewRow());
+			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds_kho.DM_KHO.NewDM_KHORow());
 			return v_obj_trans;			
 		}
 		private void load_data_2_grid(){						
@@ -86,7 +86,7 @@ namespace BKI_KHO.DanhMuc
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
 			
 		}
-		#endregion
+		
 
         private void m_cmd_exit_Click(object sender, EventArgs e) {
 			try{
