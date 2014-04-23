@@ -373,8 +373,8 @@ namespace BKI_KHO
         }
         private void loạiChứngTừToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            f500_DM_LOAI_CHUNG_TU f500 = new f500_DM_LOAI_CHUNG_TU();
-            f500.display();
+            //f500_DM_LOAI_CHUNG_TU f500 = new f500_DM_LOAI_CHUNG_TU();
+            //f500.display();
         }
         private void m_menuitem_khohang_Click(object sender, EventArgs e)
         {

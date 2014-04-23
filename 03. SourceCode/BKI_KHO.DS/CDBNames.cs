@@ -605,13 +605,6 @@ namespace BKI_KHO.DS.CDBNames
     /// <summary>
     /// DM_LOAI CHUNG TU
     /// </summary>
-    public class DM_LOAI_CHUNG_TU
-    {
-        public const string ID = "ID";
-        public const string GHI_CHU = "GHI_CHU";
-        public const string MA_LOAI_CT = "MA_LOAI_CT";
-        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
-    }
     public class DM_KHO
     {
         public const string ID = "ID";
@@ -701,5 +694,13 @@ namespace BKI_KHO.DS.CDBNames
         public const string GHI_CHU = "GHI_CHU";
         public const string HO_DEM = "HO_DEM";
         public const string TEN = "TEN";
+    }
+
+    public class DM_LOAI_CHUNG_TU
+    {
+        public const string ID = "ID";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
     }
 }
