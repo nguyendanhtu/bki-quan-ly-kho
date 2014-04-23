@@ -57,12 +57,28 @@ namespace BKI_KHO
         private void set_define_events()
         {
             this.m_menuitem_tudien.Click += new EventHandler(m_mnu_tu_dien_he_thong_Click);
+            m_menuitem_nhapkho.Click += m_menuitem_nhapkho_Click;
             //this.m_menuitem_user.Click += new EventHandler(m_mnu_quan_ly_nguoi_su_dung_Click);
             //this.m_menuitem_thoat.Click += new EventHandler(m_menuitem_thoat_Click);
             //this.m_menuitem_qldonvi.Click += new EventHandler(m_menuitem_qldonvi_Click);
             //this.m_menu_dsnhansu.Click += new EventHandler(m_menu_dsnhansu_Click);
             //this.m_menuitem_traCuuNhanSuChung.Click += new EventHandler(m_menuitem_traCuuNhanSuChung_Click);
             //m_menuitem_nhan_su_theo_phong_ban.Click += new System.EventHandler(m_menuitem_nhan_su_theo_phong_ban_Click);
+        }
+
+        void m_menuitem_nhapkho_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+                //if (m_can_user_form.CanUseControl(v_frm.Name, v_frm.Name, ""))
+                v_frm.display();
+                //else BaseMessages.MsgBox_Infor("Bạn không có quyền sử dụng chức năng này.");
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_menu_dsnhansu_Click(object sender, EventArgs e)

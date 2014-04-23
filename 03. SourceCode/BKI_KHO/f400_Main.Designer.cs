@@ -192,6 +192,8 @@ namespace BKI_KHO
             this.m_cmd_thoat = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.m_sst_main = new System.Windows.Forms.StatusStrip();
+            this.m_menuitem_nhapkho = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_menuitem_xuatkho = new System.Windows.Forms.ToolStripMenuItem();
             this.m_mst_menu.SuspendLayout();
             this.m_tst_menu.SuspendLayout();
             this.SuspendLayout();
@@ -495,6 +497,9 @@ namespace BKI_KHO
             // 
             // m_menuitem_khohang
             // 
+            this.m_menuitem_khohang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m_menuitem_nhapkho,
+            this.m_menuitem_xuatkho});
             this.m_menuitem_khohang.Name = "m_menuitem_khohang";
             this.m_menuitem_khohang.Size = new System.Drawing.Size(210, 22);
             this.m_menuitem_khohang.Text = "&Kho hàng";
@@ -1437,6 +1442,18 @@ namespace BKI_KHO
             this.m_sst_main.TabIndex = 5;
             this.m_sst_main.Text = "statusStrip1";
             // 
+            // m_menuitem_nhapkho
+            // 
+            this.m_menuitem_nhapkho.Name = "m_menuitem_nhapkho";
+            this.m_menuitem_nhapkho.Size = new System.Drawing.Size(152, 22);
+            this.m_menuitem_nhapkho.Text = "Nhập kho";
+            // 
+            // m_menuitem_xuatkho
+            // 
+            this.m_menuitem_xuatkho.Name = "m_menuitem_xuatkho";
+            this.m_menuitem_xuatkho.Size = new System.Drawing.Size(152, 22);
+            this.m_menuitem_xuatkho.Text = "Xuất kho";
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1627,5 +1644,7 @@ namespace BKI_KHO
         private ToolStripMenuItem loạiChứngTừToolStripMenuItem;
         private ToolStripMenuItem thuếToolStripMenuItem;
         private ToolStripMenuItem ngườiDùngToolStripMenuItem;
+        private ToolStripMenuItem m_menuitem_nhapkho;
+        private ToolStripMenuItem m_menuitem_xuatkho;
     }
 }
