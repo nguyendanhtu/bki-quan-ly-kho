@@ -54,9 +54,9 @@
     </Compile>
     <Compile Include="US_DM_DON_VI.cs" />
     <Compile Include="US_DM_HANG_HOA.cs" />
+    <Compile Include="US_DM_KHO.cs" />
     <Compile Include="US_DM_LOAI_CHUNG_TU.cs" />
     <Compile Include="US_DM_NGUOI_DUNG.cs" />
-    <Compile Include="US_DM_KHO.cs" />
     <Compile Include="US_DM_NHAN_VIEN.cs" />
     <Compile Include="US_DM_NHA_CUNG_CAP.cs" />
     <Compile Include="US_DM_NHOM_HANG.cs" />
