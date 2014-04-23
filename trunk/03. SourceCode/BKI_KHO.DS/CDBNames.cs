@@ -518,6 +518,20 @@ namespace BKI_KHO.DS.CDBNames
     }
    
     //Begin TuyenNT
+    public class DM_NHA_SX
+    {
+        public const string ID = "ID";
+        public const string MA_NSX = "MA_NSX";
+        public const string TEN_NSX = "TEN_NSX";
+        public const string NGUOI_DAI_DIEN = "NGUOI_DAI_DIEN";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string MOBILE = "MOBILE";
+        public const string FAX = "FAX";
+        public const string EMAIL = "EMAIL";
+        public const string WEBSITE = "WEBSITE";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
     public class V_DM_NHOM_HANG
     {
         public const string STT = "STT";
