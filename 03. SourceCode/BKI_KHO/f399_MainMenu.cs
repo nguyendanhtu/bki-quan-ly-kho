@@ -78,5 +78,25 @@ namespace Form_menu
             f110_V_DM_KHO frm = new f110_V_DM_KHO();
             frm.ShowDialog();
         }
+
+        private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e)
+        {
+            f300_V_DM_HANG_HOA frm = new f300_V_DM_HANG_HOA();     
+            //frm.m_cmd_view.Visible = false;
+            //frm.m_cmd_insert.Visible = false;
+            //frm.m_cmd_update.Visible = false;
+            //frm.m_cmd_exit.Visible = false;
+            //frm.m_cmd_delete.Visible = false;
+            frm.m_pnl_out_place_dm.Visible = false;
+            frm.m_tab_thong_tin_dm_hang_hoa.Visible = false;
+            frm.Size = new System.Drawing.Size(1241, 450);
+            frm.ShowDialog();
+        }
+
+        private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e)
+        {
+            f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
+            frm.ShowDialog();
+        }
     }
 }
