@@ -44,6 +44,7 @@ namespace BKI_KHO.DanhMuc
             m_cbo_nhom.DataSource = v_ds.DM_NHOM_HANG;
             m_cbo_nhom.ValueMember = DM_NHOM_HANG.ID;
             m_cbo_nhom.DisplayMember = DM_NHOM_HANG.TEN;
+
           
             /*Do du lieu len combobox Nha cung cap*/
             US_DM_NHA_CUNG_CAP v_us_ncc = new US_DM_NHA_CUNG_CAP();
@@ -122,6 +123,14 @@ namespace BKI_KHO.DanhMuc
             m_txt_gia_ban.Text = CIPConvert.ToStr(ip_us_dm_hang_hoa.dcGIA_BAN);
             m_cbo_trang_thai.SelectedValue = ip_us_dm_hang_hoa.dcID_TRANG_THAI;
         }
+        private void xoa_trang()
+        {
+            m_txt_ma_hang.Text = null;
+            m_txt_ten_hang.Text = null;
+            m_txt_mo_ta.Text = null;
+            m_txt_gia_ban.Text = null;
+            m_txt_gia_nhap.Text = null;
+        }
         #endregion
 
         #region Events
@@ -148,6 +157,20 @@ namespace BKI_KHO.DanhMuc
             }
         }      
         #endregion
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                xoa_trang();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        
 
 
         

@@ -546,7 +546,7 @@ namespace BKI_KHO.DS.CDBNames
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
     }
 
-   
+
     public class DM_DON_VI
     {
         public const string ID = "ID";
@@ -554,6 +554,7 @@ namespace BKI_KHO.DS.CDBNames
         public const string TEN = "TEN";
         public const string GHI_CHU = "GHI_CHU";
     }
+
     public class V_DM_HANG_HOA
     {
         public const string ID = "ID";

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_V_DM_HANG_HOA_DE));
             this.m_grb_detail = new System.Windows.Forms.GroupBox();
+            this.m_cbo_trang_thai = new System.Windows.Forms.ComboBox();
+            this.m_lbl_trang_thai = new System.Windows.Forms.Label();
             this.m_cbo_nhom = new System.Windows.Forms.ComboBox();
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
             this.m_lbl_mo_ta = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.m_cmd_refresh = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.m_lbl_trang_thai = new System.Windows.Forms.Label();
-            this.m_cbo_trang_thai = new System.Windows.Forms.ComboBox();
             this.m_grb_detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_ptb_anh_hang)).BeginInit();
             this.panel1.SuspendLayout();
@@ -87,6 +87,25 @@
             this.m_grb_detail.TabIndex = 85;
             this.m_grb_detail.TabStop = false;
             this.m_grb_detail.Text = "Hàng hóa";
+            // 
+            // m_cbo_trang_thai
+            // 
+            this.m_cbo_trang_thai.FormattingEnabled = true;
+            this.m_cbo_trang_thai.Location = new System.Drawing.Point(313, 24);
+            this.m_cbo_trang_thai.Name = "m_cbo_trang_thai";
+            this.m_cbo_trang_thai.Size = new System.Drawing.Size(132, 21);
+            this.m_cbo_trang_thai.Sorted = true;
+            this.m_cbo_trang_thai.TabIndex = 106;
+            this.m_cbo_trang_thai.Text = "--Chọn trạng thái--";
+            // 
+            // m_lbl_trang_thai
+            // 
+            this.m_lbl_trang_thai.AutoSize = true;
+            this.m_lbl_trang_thai.Location = new System.Drawing.Point(241, 25);
+            this.m_lbl_trang_thai.Name = "m_lbl_trang_thai";
+            this.m_lbl_trang_thai.Size = new System.Drawing.Size(55, 13);
+            this.m_lbl_trang_thai.TabIndex = 104;
+            this.m_lbl_trang_thai.Text = "Trạng thái";
             // 
             // m_cbo_nhom
             // 
@@ -313,6 +332,7 @@
             this.m_cmd_refresh.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_refresh.TabIndex = 35;
             this.m_cmd_refresh.Text = "L&àm lại";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // m_cmd_exit
             // 
@@ -340,25 +360,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // m_lbl_trang_thai
-            // 
-            this.m_lbl_trang_thai.AutoSize = true;
-            this.m_lbl_trang_thai.Location = new System.Drawing.Point(241, 25);
-            this.m_lbl_trang_thai.Name = "m_lbl_trang_thai";
-            this.m_lbl_trang_thai.Size = new System.Drawing.Size(55, 13);
-            this.m_lbl_trang_thai.TabIndex = 104;
-            this.m_lbl_trang_thai.Text = "Trạng thái";
-            // 
-            // m_cbo_trang_thai
-            // 
-            this.m_cbo_trang_thai.FormattingEnabled = true;
-            this.m_cbo_trang_thai.Location = new System.Drawing.Point(313, 24);
-            this.m_cbo_trang_thai.Name = "m_cbo_trang_thai";
-            this.m_cbo_trang_thai.Size = new System.Drawing.Size(132, 21);
-            this.m_cbo_trang_thai.Sorted = true;
-            this.m_cbo_trang_thai.TabIndex = 106;
-            this.m_cbo_trang_thai.Text = "--Chọn trạng thái--";
             // 
             // f300_V_DM_HANG_HOA_DE
             // 

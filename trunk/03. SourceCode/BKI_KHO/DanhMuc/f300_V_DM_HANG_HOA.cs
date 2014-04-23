@@ -66,7 +66,7 @@ namespace BKI_KHO
         private Label m_lbl_mo_ta;
         private Label m_lbl_gia_ban;
         private Label m_lbl_gia_nhap;
-        private TabControl m_tab_thong_tin_dm_hang_hoa;
+        internal TabControl m_tab_thong_tin_dm_hang_hoa;
 		private System.ComponentModel.IContainer components;
 
 		public f300_V_DM_HANG_HOA()
@@ -294,6 +294,8 @@ namespace BKI_KHO
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(587, 20);
             this.m_txt_tim_kiem.TabIndex = 29;
             this.m_txt_tim_kiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.m_txt_tim_kiem_MouseClick);
+            this.m_txt_tim_kiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_tim_kiem_KeyDown);
+            this.m_txt_tim_kiem.MouseLeave += new System.EventHandler(this.m_txt_tim_kiem_MouseLeave);
             // 
             // m_cmd_search
             // 
@@ -308,6 +310,7 @@ namespace BKI_KHO
             this.m_cmd_search.Size = new System.Drawing.Size(101, 28);
             this.m_cmd_search.TabIndex = 30;
             this.m_cmd_search.Text = "&Tìm kiếm";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // m_lbl_1
             // 
@@ -539,7 +542,6 @@ namespace BKI_KHO
             // m_tab_thong_tin_dm_hang_hoa
             // 
             this.m_tab_thong_tin_dm_hang_hoa.Controls.Add(this.m_tpg_thong_tin);
-            this.m_tab_thong_tin_dm_hang_hoa.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_tab_thong_tin_dm_hang_hoa.Location = new System.Drawing.Point(0, 404);
             this.m_tab_thong_tin_dm_hang_hoa.Name = "m_tab_thong_tin_dm_hang_hoa";
             this.m_tab_thong_tin_dm_hang_hoa.SelectedIndex = 0;
@@ -622,7 +624,6 @@ namespace BKI_KHO
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
 			load_data_2_grid();
-            //String.Format("{0:0,0 VNĐ}", m_ds.Tables[0].Columns["GIA_NHAP"].ToString()).Replace(",", ".");
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
@@ -813,20 +814,20 @@ namespace BKI_KHO
             }           
         }
 
-        private void m_txt_tim_kiem_MouseClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                if (m_txt_tim_kiem.Text == m_str_message_tim_kiem)
-                    load_data_2_grid();
-                else
-                    load_data_2_grid_search();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //private void m_txt_tim_kiem_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (m_txt_tim_kiem.Text == m_str_message_tim_kiem)
+        //            load_data_2_grid();
+        //        else
+        //            load_data_2_grid_search();
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         private void load_data_2_grid_search()
         {
@@ -838,14 +839,62 @@ namespace BKI_KHO
             m_fg.Redraw = true;
         }
 
-       
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (m_txt_tim_kiem.Text == m_str_message_tim_kiem)
+                    load_data_2_grid();
+                else
+                    load_data_2_grid_search();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-        
+        private void m_txt_tim_kiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                m_txt_tim_kiem.Text = "";
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }           
+        }
 
-        
+        private void m_txt_tim_kiem_MouseLeave(object sender, EventArgs e)
+        {
+        //    try
+        //    {
+        //        if (m_txt_tim_kiem.Text.Trim() == "")
+        //            m_txt_tim_kiem.Text = "Nhập mã chức vụ, tên chức vụ";
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        }
 
-       
+        private void m_txt_tim_kiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    load_data_2_grid_search();
 
-	}
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+    }
 }
 
