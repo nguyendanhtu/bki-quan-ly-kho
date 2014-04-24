@@ -1,4 +1,4 @@
-﻿namespace BKI_KHO.DanhMuc
+﻿namespace BKI_KHO
 {
     partial class f600_phieu_nhap_kho
     {

@@ -486,7 +486,7 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_fg);
             m_v_ds.Clear();
-            m_v_us.FillDatasetSearch(m_v_ds, m_txt_message_tim_kiem.Text.Trim());
+           // m_v_us.FillDatasetSearch(m_v_ds, m_txt_message_tim_kiem.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;

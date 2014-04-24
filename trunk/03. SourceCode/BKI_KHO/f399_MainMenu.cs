@@ -46,9 +46,17 @@ namespace Form_menu
         #endregion
         // Event handlers
         private void set_define_events()
-        {          
+        {
+            m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
         }
 
+        void m_cmd_nhap_kho_Click(object sender, EventArgs e)
+        {
+            f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+            v_frm.display();
+            
+        }
+        
         private void m_cmd_mat_hang_Click(object sender, EventArgs e)
         {
             f300_V_DM_HANG_HOA f300 = new f300_V_DM_HANG_HOA();

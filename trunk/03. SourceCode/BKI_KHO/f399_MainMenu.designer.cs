@@ -137,7 +137,7 @@ namespace Form_menu
             this.m_rbc_menu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.m_rbc_menu.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.m_rbc_menu.Size = new System.Drawing.Size(1194, 190);
+            this.m_rbc_menu.Size = new System.Drawing.Size(1170, 190);
             this.m_rbc_menu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbc_menu.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.m_rbc_menu.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -171,7 +171,7 @@ namespace Form_menu
             this.ribbonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1194, 130);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1170, 130);
             // 
             // 
             // 
@@ -185,6 +185,7 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = true;
             // 
             // m_rbb_khac
             // 
@@ -1053,7 +1054,7 @@ namespace Form_menu
             this.m_pnl_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_pnl_main.Location = new System.Drawing.Point(5, 191);
             this.m_pnl_main.Name = "m_pnl_main";
-            this.m_pnl_main.Size = new System.Drawing.Size(1194, 215);
+            this.m_pnl_main.Size = new System.Drawing.Size(1170, 239);
             this.m_pnl_main.TabIndex = 1;
             // 
             // pictureBox1
@@ -1062,7 +1063,7 @@ namespace Form_menu
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1194, 215);
+            this.pictureBox1.Size = new System.Drawing.Size(1170, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1081,7 +1082,7 @@ namespace Form_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 408);
+            this.ClientSize = new System.Drawing.Size(1180, 432);
             this.Controls.Add(this.m_pnl_main);
             this.Controls.Add(this.m_rbc_menu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

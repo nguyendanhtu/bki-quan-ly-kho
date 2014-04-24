@@ -12,7 +12,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_KHO.DS;
 using BKI_KHO.US;
-namespace BKI_KHO.DanhMuc
+namespace BKI_KHO
 {
     public partial class f600_phieu_nhap_kho : Form
     {
@@ -20,6 +20,7 @@ namespace BKI_KHO.DanhMuc
         {
             InitializeComponent();
             format_controls();
+
         }
         #region Public Interface
         public void display()
