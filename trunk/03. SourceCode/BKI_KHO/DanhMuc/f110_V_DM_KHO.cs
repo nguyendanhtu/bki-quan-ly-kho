@@ -51,6 +51,7 @@ namespace BKI_KHO
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
+            m_cmd_view.Enabled = false;
 
 			//
 			// TODO: Add any constructor code after InitializeComponent call
@@ -265,7 +266,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f110_V_DM_KHO";
-            this.Text = "f110_V_DM_KHO";
+            this.Text = "f110 Danh Mục Kho";
             this.Load += new System.EventHandler(this.f110_V_DM_KHO_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
