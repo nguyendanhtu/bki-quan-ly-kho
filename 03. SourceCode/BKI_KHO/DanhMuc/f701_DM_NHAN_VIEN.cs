@@ -92,10 +92,10 @@ namespace BKI_KHO
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_pn_top = new System.Windows.Forms.Panel();
+            this.m_lbl_total_record = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
-            this.m_lbl_total_record = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pn_top.SuspendLayout();
@@ -239,6 +239,14 @@ namespace BKI_KHO
             this.m_pn_top.Size = new System.Drawing.Size(900, 83);
             this.m_pn_top.TabIndex = 21;
             // 
+            // m_lbl_total_record
+            // 
+            this.m_lbl_total_record.AutoSize = true;
+            this.m_lbl_total_record.Location = new System.Drawing.Point(12, 61);
+            this.m_lbl_total_record.Name = "m_lbl_total_record";
+            this.m_lbl_total_record.Size = new System.Drawing.Size(0, 13);
+            this.m_lbl_total_record.TabIndex = 26;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -278,14 +286,6 @@ namespace BKI_KHO
             this.m_txt_tim_kiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.m_txt_tim_kiem_MouseClick);
             this.m_txt_tim_kiem.Leave += new System.EventHandler(this.m_txt_tim_kiem_Leave);
             // 
-            // m_lbl_total_record
-            // 
-            this.m_lbl_total_record.AutoSize = true;
-            this.m_lbl_total_record.Location = new System.Drawing.Point(12, 61);
-            this.m_lbl_total_record.Name = "m_lbl_total_record";
-            this.m_lbl_total_record.Size = new System.Drawing.Size(0, 13);
-            this.m_lbl_total_record.TabIndex = 26;
-            // 
             // f701_DM_NHAN_VIEN
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -294,7 +294,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f701_DM_NHAN_VIEN";
-            this.Text = "f701 Danh mục nhân viên";
+            this.Text = "f701 - Danh mục nhân viên";
             this.Load += new System.EventHandler(this.f701_DM_NHAN_VIEN_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
