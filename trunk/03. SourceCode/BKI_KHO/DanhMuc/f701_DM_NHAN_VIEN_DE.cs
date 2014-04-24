@@ -58,7 +58,13 @@ namespace BKI_KHO.DanhMuc
         #region Private Methods
         private void xoa_trang()
         {
-
+            m_txt_ma_nhan_vien.Text = "";
+            m_txt_ho_dem.Text = "";
+            m_txt_so_dien_thoai.Text = "";
+            m_txt_ten.Text = "";
+            m_txt_cmnd.Text = "";
+            m_txt_email.Text = "";
+            m_txt_dia_chi.Text = "";
         }
 
         private void save_data()
@@ -117,6 +123,24 @@ namespace BKI_KHO.DanhMuc
 
         private bool check_data_is_ok()
         {
+            if (m_txt_ma_nhan_vien.Text.Trim().Length == 0)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập mã nhân viên");
+                return false;
+            }
+
+            if (m_txt_ho_dem.Text.Trim().Length == 0)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập họ đệm");
+                return false;
+            }
+
+            if (m_txt_ten.Text.Trim().Length == 0)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập tên");
+                return false;
+            }
+
             return true;
         }
 
