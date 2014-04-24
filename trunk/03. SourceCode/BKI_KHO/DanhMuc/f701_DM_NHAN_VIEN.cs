@@ -151,7 +151,7 @@ namespace BKI_KHO
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(434, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(319, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(138, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -166,7 +166,7 @@ namespace BKI_KHO
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(572, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(457, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(148, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -178,6 +178,7 @@ namespace BKI_KHO
             this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_view.Enabled = false;
             this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_view.ImageIndex = 18;
             this.m_cmd_view.ImageList = this.ImageList;
@@ -196,9 +197,9 @@ namespace BKI_KHO
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(720, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(605, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(141, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
             // 
@@ -211,9 +212,9 @@ namespace BKI_KHO
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(808, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(746, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(150, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -294,6 +295,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f701_DM_NHAN_VIEN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f701 - Danh mục nhân viên";
             this.Load += new System.EventHandler(this.f701_DM_NHAN_VIEN_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
