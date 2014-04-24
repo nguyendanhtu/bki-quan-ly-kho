@@ -41,23 +41,30 @@ namespace BKI_KHO.DanhMuc
         #region Events
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
-            form_2_us_obj();
-            switch (m_e_form_mode)
+            try
             {
-                case DataEntryFormMode.InsertDataState:
-                    m_us_dm_khach_hang.Insert();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.SelectDataState:
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_khach_hang.Update();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.ViewDataState:
-                    break;
-                default:
-                    break;
+                form_2_us_obj();
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us_dm_khach_hang.Insert();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_dm_khach_hang.Update();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
