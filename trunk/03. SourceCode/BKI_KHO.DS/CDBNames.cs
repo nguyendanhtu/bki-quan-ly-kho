@@ -659,6 +659,15 @@ namespace BKI_KHO.DS.CDBNames
         public const string SUA_CHUA = "SUA_CHUA";
     }
 
+    public class V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN
+    {
+        public const string NGAY_CT = "NGAY_CT";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string MA_CT = "MA_CT";
+    }
+
     public class DM_NHA_CUNG_CAP
     {
         public const string ID = "ID";
