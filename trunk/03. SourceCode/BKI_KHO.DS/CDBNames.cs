@@ -651,6 +651,7 @@ namespace BKI_KHO.DS.CDBNames
 
     public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
     {
+        public const string ID = "ID";
         public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
         public const string HO_DEM = "HO_DEM";
         public const string TEN = "TEN";
