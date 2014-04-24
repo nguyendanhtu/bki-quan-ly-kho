@@ -131,5 +131,12 @@ public class US_DM_LOAI_CHUNG_TU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_DM_LOAI_CHUNG_TU m_ds, string i_str_search)
+    {
+        CStoredProc v_ds = new CStoredProc("pr_DM_LOAI_CHUNG_TU_search");
+        v_ds.addNVarcharInputParam("@STR_SEARCH", i_str_search);
+        v_ds.fillDataSetByCommand(this, m_ds);
+    }
+}
 }

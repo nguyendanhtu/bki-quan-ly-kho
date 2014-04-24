@@ -123,6 +123,15 @@
     <Compile Include="DanhMuc\f101_DM_THUE_DE.Designer.cs">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f105_DM_KHACH_HANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f105_DM_KHACH_HANG_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f105_DM_KHACH_HANG_DE.Designer.cs">
+      <DependentUpon>f105_DM_KHACH_HANG_DE.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f110_V_DM_KHO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f101_DM_THUE_DE.resx">
       <DependentUpon>f101_DM_THUE_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f105_DM_KHACH_HANG.resx">
+      <DependentUpon>f105_DM_KHACH_HANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f105_DM_KHACH_HANG_DE.resx">
+      <DependentUpon>f105_DM_KHACH_HANG_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f110_V_DM_KHO.resx">
       <DependentUpon>f110_V_DM_KHO.cs</DependentUpon>
