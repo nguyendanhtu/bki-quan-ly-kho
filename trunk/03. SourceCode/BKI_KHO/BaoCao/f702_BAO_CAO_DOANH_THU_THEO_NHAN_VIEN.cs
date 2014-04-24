@@ -149,7 +149,7 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 473);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(796, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(731, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -161,7 +161,7 @@ namespace BKI_KHO
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(360, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(295, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -176,7 +176,7 @@ namespace BKI_KHO
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(448, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(383, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -207,7 +207,7 @@ namespace BKI_KHO
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(536, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(471, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -222,7 +222,7 @@ namespace BKI_KHO
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(624, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(559, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(168, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -235,7 +235,7 @@ namespace BKI_KHO
             this.m_fg.Location = new System.Drawing.Point(0, 149);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Fixed = 2;
-            this.m_fg.Size = new System.Drawing.Size(796, 324);
+            this.m_fg.Size = new System.Drawing.Size(731, 324);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -253,7 +253,7 @@ namespace BKI_KHO
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(796, 149);
+            this.panel1.Size = new System.Drawing.Size(731, 149);
             this.panel1.TabIndex = 21;
             // 
             // m_txt_search
@@ -262,7 +262,7 @@ namespace BKI_KHO
             this.m_txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_search.Location = new System.Drawing.Point(183, 88);
             this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(737, 20);
+            this.m_txt_search.Size = new System.Drawing.Size(370, 20);
             this.m_txt_search.TabIndex = 5;
             // 
             // m_lbl_count_record
@@ -280,7 +280,7 @@ namespace BKI_KHO
             this.m_lbl_title.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(796, 31);
+            this.m_lbl_title.Size = new System.Drawing.Size(731, 31);
             this.m_lbl_title.TabIndex = 28;
             this.m_lbl_title.Text = "BÁO CÁO DOANH THU THEO NHÂN VIÊN";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,7 +302,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 16;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(926, 83);
+            this.m_cmd_search.Location = new System.Drawing.Point(559, 83);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(122, 28);
             this.m_cmd_search.TabIndex = 25;
@@ -312,7 +312,7 @@ namespace BKI_KHO
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(609, 45);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(431, 34);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(150, 20);
             this.m_dat_den_ngay.TabIndex = 3;
@@ -320,7 +320,7 @@ namespace BKI_KHO
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(550, 51);
+            this.label2.Location = new System.Drawing.Point(372, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -330,7 +330,7 @@ namespace BKI_KHO
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(384, 45);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(206, 34);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(150, 20);
             this.m_dat_tu_ngay.TabIndex = 1;
@@ -338,7 +338,7 @@ namespace BKI_KHO
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 51);
+            this.label1.Location = new System.Drawing.Point(154, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
@@ -347,7 +347,7 @@ namespace BKI_KHO
             // f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(796, 509);
+            this.ClientSize = new System.Drawing.Size(731, 509);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
