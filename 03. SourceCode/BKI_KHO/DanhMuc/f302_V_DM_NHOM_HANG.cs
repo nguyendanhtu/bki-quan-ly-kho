@@ -129,10 +129,10 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 395);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 309);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(510, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(558, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -144,7 +144,7 @@ namespace BKI_KHO
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(154, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(202, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace BKI_KHO
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(242, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(290, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -189,7 +189,7 @@ namespace BKI_KHO
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(330, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(378, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -204,7 +204,7 @@ namespace BKI_KHO
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(418, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(466, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -215,13 +215,12 @@ namespace BKI_KHO
             this.m_fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.Light3D;
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 57);
+            this.m_fg.Location = new System.Drawing.Point(0, -29);
             this.m_fg.Name = "m_fg";
             this.m_fg.ShowSort = false;
-            this.m_fg.Size = new System.Drawing.Size(510, 338);
+            this.m_fg.Size = new System.Drawing.Size(558, 338);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
-            //this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
             // 
             // m_pnl_grid
             // 
@@ -229,7 +228,7 @@ namespace BKI_KHO
             this.m_pnl_grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_pnl_grid.Location = new System.Drawing.Point(0, 0);
             this.m_pnl_grid.Name = "m_pnl_grid";
-            this.m_pnl_grid.Size = new System.Drawing.Size(510, 395);
+            this.m_pnl_grid.Size = new System.Drawing.Size(558, 309);
             this.m_pnl_grid.TabIndex = 21;
             // 
             // m_ofd_chon_anh
@@ -245,7 +244,7 @@ namespace BKI_KHO
             this.m_pnl_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_pnl_header.Location = new System.Drawing.Point(0, 0);
             this.m_pnl_header.Name = "m_pnl_header";
-            this.m_pnl_header.Size = new System.Drawing.Size(510, 51);
+            this.m_pnl_header.Size = new System.Drawing.Size(558, 51);
             this.m_pnl_header.TabIndex = 23;
             // 
             // m_cmd_search
@@ -285,7 +284,7 @@ namespace BKI_KHO
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(510, 431);
+            this.ClientSize = new System.Drawing.Size(558, 345);
             this.Controls.Add(this.m_pnl_header);
             this.Controls.Add(this.m_pnl_grid);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -354,7 +353,8 @@ namespace BKI_KHO
 			set_define_events();
 			this.KeyPreview = true;		
 		}
-		private void set_initial_form_load(){           			
+		private void set_initial_form_load(){
+            m_cmd_view.Enabled = false;		
 			m_obj_trans = get_trans_object(m_fg);
 			load_data_2_grid();   
 		}
