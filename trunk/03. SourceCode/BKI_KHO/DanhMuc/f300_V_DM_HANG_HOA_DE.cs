@@ -10,6 +10,7 @@ using IP.Core.IPCommon;
 using BKI_KHO.US;
 using BKI_KHO.DS;
 using BKI_KHO.DS.CDBNames;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_KHO.DanhMuc
 {
@@ -26,7 +27,10 @@ namespace BKI_KHO.DanhMuc
         public f300_V_DM_HANG_HOA_DE()
         {
             InitializeComponent();
+            format_control();
         }
+
+        
         public void display_for_insert()
         {
             /*Thay đổi trạng thái sang insert*/
@@ -35,17 +39,31 @@ namespace BKI_KHO.DanhMuc
             this.ShowDialog();
         }
 
+        
+        public void display_for_update(US_DM_HANG_HOA us_dm_hang_hoa)
+        {
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            us_obj_2_form(us_dm_hang_hoa);
+            this.ShowDialog();
+        }
+        #endregion          
+
+        #region Private Methods
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+        }
         private void load_data_to_combox()
-        {   
+        {
             /*Do du lieu len combobox Nhom*/
             US_DM_NHOM_HANG v_us = new US_DM_NHOM_HANG();
-            DS_DM_NHOM_HANG v_ds = new DS_DM_NHOM_HANG();           
+            DS_DM_NHOM_HANG v_ds = new DS_DM_NHOM_HANG();
             v_us.FillDataset(v_ds);
             m_cbo_nhom.DataSource = v_ds.DM_NHOM_HANG;
             m_cbo_nhom.ValueMember = DM_NHOM_HANG.ID;
             m_cbo_nhom.DisplayMember = DM_NHOM_HANG.TEN;
 
-          
+
             /*Do du lieu len combobox Nha cung cap*/
             US_DM_NHA_CUNG_CAP v_us_ncc = new US_DM_NHA_CUNG_CAP();
             DS_DM_NHA_CUNG_CAP v_ds_ncc = new DS_DM_NHA_CUNG_CAP();
@@ -75,15 +93,6 @@ namespace BKI_KHO.DanhMuc
             m_cbo_trang_thai.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             m_cbo_trang_thai.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
-        public void display_for_update(US_DM_HANG_HOA us_dm_hang_hoa)
-        {
-            m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            us_obj_2_form(us_dm_hang_hoa);
-            this.ShowDialog();
-        }
-        #endregion          
-
-        #region Private Methods
         private void save_data()
         {
             /* If(check_da_ta_is_ok) */
@@ -138,6 +147,7 @@ namespace BKI_KHO.DanhMuc
         {
             try
             {
+                m_cmd_refresh.Visible = false;
                 load_data_to_combox(); /*Load dữ liệu từ lưới vào combobox*/
             }
             catch (System.Exception v_e)
@@ -155,9 +165,7 @@ namespace BKI_KHO.DanhMuc
             {
             	CSystemLog_301.ExceptionHandle(v_e);
             }
-        }      
-        #endregion
-
+        }
         private void m_cmd_refresh_Click(object sender, EventArgs e)
         {
             try
@@ -169,6 +177,9 @@ namespace BKI_KHO.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        #endregion
+
+        
 
         
 

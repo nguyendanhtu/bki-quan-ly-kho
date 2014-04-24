@@ -47,7 +47,6 @@
             this.m_txt_ten_hang = new System.Windows.Forms.TextBox();
             this.m_lbl_ma_hang_hoa = new System.Windows.Forms.Label();
             this.m_txt_ma_hang = new System.Windows.Forms.TextBox();
-            this.m_lbl_ma_vach = new System.Windows.Forms.Label();
             this.m_ptb_anh_hang = new System.Windows.Forms.PictureBox();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -78,7 +77,6 @@
             this.m_grb_detail.Controls.Add(this.m_txt_ten_hang);
             this.m_grb_detail.Controls.Add(this.m_lbl_ma_hang_hoa);
             this.m_grb_detail.Controls.Add(this.m_txt_ma_hang);
-            this.m_grb_detail.Controls.Add(this.m_lbl_ma_vach);
             this.m_grb_detail.Controls.Add(this.m_ptb_anh_hang);
             this.m_grb_detail.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.m_grb_detail.Location = new System.Drawing.Point(12, 12);
@@ -241,19 +239,11 @@
             this.m_txt_ma_hang.Size = new System.Drawing.Size(101, 20);
             this.m_txt_ma_hang.TabIndex = 87;
             // 
-            // m_lbl_ma_vach
-            // 
-            this.m_lbl_ma_vach.AutoSize = true;
-            this.m_lbl_ma_vach.Location = new System.Drawing.Point(54, 217);
-            this.m_lbl_ma_vach.Name = "m_lbl_ma_vach";
-            this.m_lbl_ma_vach.Size = new System.Drawing.Size(49, 13);
-            this.m_lbl_ma_vach.TabIndex = 86;
-            this.m_lbl_ma_vach.Text = "Mã vạch";
-            // 
             // m_ptb_anh_hang
             // 
             this.m_ptb_anh_hang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_ptb_anh_hang.ErrorImage = ((System.Drawing.Image)(resources.GetObject("m_ptb_anh_hang.ErrorImage")));
+            this.m_ptb_anh_hang.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_ptb_anh_hang.InitialImage")));
             this.m_ptb_anh_hang.Location = new System.Drawing.Point(684, 25);
             this.m_ptb_anh_hang.Name = "m_ptb_anh_hang";
             this.m_ptb_anh_hang.Size = new System.Drawing.Size(147, 186);
@@ -370,7 +360,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_grb_detail);
             this.Name = "f300_V_DM_HANG_HOA_DE";
-            this.Text = "f300 - Thêm/Sửa";
+            this.Text = "f300 - Cập nhật chi tiết thông tin hàng hóa";
             this.Load += new System.EventHandler(this.f300_V_DM_HANG_HOA_DE_Load);
             this.m_grb_detail.ResumeLayout(false);
             this.m_grb_detail.PerformLayout();
@@ -396,7 +386,6 @@
         private System.Windows.Forms.TextBox m_txt_ten_hang;
         private System.Windows.Forms.Label m_lbl_ma_hang_hoa;
         private System.Windows.Forms.TextBox m_txt_ma_hang;
-        private System.Windows.Forms.Label m_lbl_ma_vach;
         private System.Windows.Forms.PictureBox m_ptb_anh_hang;
         internal System.Windows.Forms.ImageList ImageList;
         private System.Windows.Forms.Panel panel1;
