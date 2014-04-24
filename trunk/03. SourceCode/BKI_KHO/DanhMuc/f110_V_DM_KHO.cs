@@ -299,10 +299,9 @@ namespace BKI_KHO
 
 		#region Members
 		ITransferDataRow m_obj_trans;		
-		DS_V_DM_KHO m_v_ds = new DS_V_DM_KHO();
-		US_V_DM_KHO m_v_us = new US_V_DM_KHO();
-        US_DM_KHO m_us = new US_DM_KHO();
-        DS_DM_KHO m_ds = new DS_DM_KHO();
+		DS_V_DM_KHO m_ds_v_dm_kho = new DS_V_DM_KHO();
+		US_V_DM_KHO m_us_v_dm_kho = new US_V_DM_KHO();
+      
 		#endregion
 
 		#region Private Methods
@@ -330,22 +329,22 @@ namespace BKI_KHO
 			v_htb.Add(V_DM_KHO.DIA_CHI, e_col_Number.DIA_CHI);
 			v_htb.Add(V_DM_KHO.MA_KHO, e_col_Number.MA_KHO);
 									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_v_ds.V_DM_KHO.NewRow());
+			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds_v_dm_kho.V_DM_KHO.NewRow());
 			return v_obj_trans;			
 		}
 		private void load_data_2_grid(){						
-			m_v_ds = new DS_V_DM_KHO();			
-			m_v_us.FillDataset(m_v_ds);
+			m_ds_v_dm_kho = new DS_V_DM_KHO();			
+			m_us_v_dm_kho.FillDataset(m_ds_v_dm_kho);
 			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+			CGridUtils.Dataset2C1Grid(m_ds_v_dm_kho, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
 		}
-		private void grid2us_object(US_DM_KHO i_us
+		private void grid2us_object(US_V_DM_KHO i_us
 			, int i_grid_row) {
 			DataRow v_dr;
 			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-            m_us = new US_DM_KHO((decimal)v_dr.ItemArray[0]);
-            m_v_us = new US_V_DM_KHO((decimal)v_dr.ItemArray[0]);
+           
+            m_us_v_dm_kho = new US_V_DM_KHO((decimal)v_dr.ItemArray[0]);
 		}
 
 	
@@ -366,9 +365,9 @@ namespace BKI_KHO
 		private void update_v_dm_kho(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
+			grid2us_object(m_us_v_dm_kho, m_fg.Row);
 			f111_V_DM_KHO_DE v_fDE = new f111_V_DM_KHO_DE();
-			v_fDE.display_for_update(m_us);
+			v_fDE.display_for_update(m_us_v_dm_kho);
 			load_data_2_grid();
 		}
 				
@@ -377,15 +376,15 @@ namespace BKI_KHO
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
 			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
 			//US_V_DM_KHO v_us = new US_V_DM_KHO();
-			grid2us_object(m_us, m_fg.Row);
+			grid2us_object(m_us_v_dm_kho, m_fg.Row);
 			try {			
-				m_us.BeginTransaction();    											
-				m_us.Delete();                      								
-				m_us.CommitTransaction();
+				m_us_v_dm_kho.BeginTransaction();    											
+				m_us_v_dm_kho.Delete();                      								
+				m_us_v_dm_kho.CommitTransaction();
 				m_fg.Rows.Remove(m_fg.Row);				
 			}
 			catch (Exception v_e) {
-				m_us.Rollback();
+				m_us_v_dm_kho.Rollback();
 				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
 					new CDBClientDBExceptionInterpret());
 				v_objErrHandler.showErrorMessage();
@@ -395,7 +394,7 @@ namespace BKI_KHO
 		private void view_v_dm_kho(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
+			grid2us_object(m_us_v_dm_kho, m_fg.Row);
 			//f111_V_DM_KHO_DE v_fDE = new f111_V_DM_KHO_DE();			
 			//v_fDE.display_for_view(m_us);
 		}
@@ -486,10 +485,10 @@ namespace BKI_KHO
         private void load_data_2_grid_search()
         {
             m_obj_trans = get_trans_object(m_fg);
-            m_v_ds.Clear();
+            m_ds_v_dm_kho.Clear();
            // m_v_us.FillDatasetSearch(m_v_ds, m_txt_message_tim_kiem.Text.Trim());
             m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+            CGridUtils.Dataset2C1Grid(m_ds_v_dm_kho, m_fg, m_obj_trans);
             m_fg.Redraw = true;
         }
 
