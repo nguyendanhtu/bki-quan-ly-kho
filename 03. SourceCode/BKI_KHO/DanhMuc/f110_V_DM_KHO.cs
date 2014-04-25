@@ -280,6 +280,14 @@ namespace BKI_KHO
 		public void display(){			
 			this.ShowDialog();
 		}
+
+        public DialogResult display_select_f250(US_V_DM_KHO i_us)
+        {
+            m_us_v_dm_kho = i_us;
+            m_e_form_mode = DataEntryFormMode.SelectDataState;
+            this.ShowDialog();
+            return m_dlg_result;
+        }
 		#endregion
 
 		#region Data Structure
@@ -301,7 +309,8 @@ namespace BKI_KHO
 		ITransferDataRow m_obj_trans;		
 		DS_V_DM_KHO m_ds_v_dm_kho = new DS_V_DM_KHO();
 		US_V_DM_KHO m_us_v_dm_kho = new US_V_DM_KHO();
-      
+        DialogResult m_dlg_result;
+        DataEntryFormMode m_e_form_mode;
 		#endregion
 
 		#region Private Methods
@@ -404,7 +413,25 @@ namespace BKI_KHO
 			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
 			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
 			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_fg.DoubleClick += m_fg_DoubleClick;
 		}
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us_v_dm_kho, m_fg.Row);
+            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            {
+                m_dlg_result = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        void f110_V_DM_KHO_DoubleClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 		#endregion
 
 //
