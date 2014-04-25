@@ -32,8 +32,8 @@ namespace BKI_KHO
         #region Data Structure
         private enum e_col_Number
         {
-           LOAI_HANG_HOA=1
-            ,SO_LUONG=2
+            MA_HANG_HOA=1
+           ,SO_LUONG=2
             ,SO_TIEN=3
         }
         #endregion
@@ -41,52 +41,100 @@ namespace BKI_KHO
         #region Members
         ITransferDataRow m_obj_trans;
 
-        DS_DM_KHO m_ds_kho=new DS_DM_KHO ();
-        US_DM_KHO m_us_kho=new US_DM_KHO ();
-        
+        DS_V_DM_KHO m_ds_kho = new DS_V_DM_KHO();
+        US_V_DM_KHO m_us_kho = new US_V_DM_KHO();
+
+        DS_GD_CHUNG_TU v_ds_chung_tu = new DS_GD_CHUNG_TU();
+        US_GD_CHUNG_TU v_us_chung_tu = new US_GD_CHUNG_TU();
 
         #endregion
 
+        #region Methods
         private void format_controls(){
 			CControlFormat.setFormStyle(this, new CAppContext_201());
 			CControlFormat.setC1FlexFormat(m_fg);
 			CGridUtils.AddSave_Excel_Handlers(m_fg);
-            			CGridUtils.AddSearch_Handlers(m_fg);
-
+            CGridUtils.AddSearch_Handlers(m_fg);
+            this.MinimizeBox = true;
+            this.MaximizeBox = true;
 			set_define_events();
 			this.KeyPreview = true;		
 		}
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
-			load_data_2_grid();
+            load_cbo_ten_hang_hoa_on_grid();
+			//load_data_2_grid();
             //String.Format("{0:0,0 VNĐ}", m_ds.Tables[0].Columns["GIA_NHAP"].ToString()).Replace(",", ".");
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.LOAI_HANG_HOA, e_col_Number.LOAI_HANG_HOA);
+			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.LOAI_HANG_HOA, e_col_Number.MA_HANG_HOA);
 			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.SO_LUONG, e_col_Number.SO_LUONG);
 			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.SO_TIEN, e_col_Number.SO_TIEN);
-			
-									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds_kho.DM_KHO.NewDM_KHORow());
+
+
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_chung_tu.GD_CHUNG_TU.NewGD_CHUNG_TURow());
 			return v_obj_trans;			
 		}
-		private void load_data_2_grid(){						
-			
-            
-			m_fg.Redraw = false;
-			//CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-			m_fg.Redraw = true;
-            
-		}
 		
+        private Hashtable get_mapping_col_muc_dich()
+        {
+            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+            Hashtable v_hst = new Hashtable();
+            try
+            {
+                //v_us_hang_hoa.open_connection();
 
+                //v_us_hang_hoa.FillDataset(v_ds_hang_hoa,"order by ma_hang");
+                //v_us_hang_hoa.commit_close_connection();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            foreach (DataRow v_dr in v_ds_hang_hoa.DM_HANG_HOA.Rows)
+            {
+                v_hst.Add(v_dr[DM_HANG_HOA.ID], v_dr[DM_HANG_HOA.MA_HANG]);
+            }
+            return v_hst;
+        }
+        private void load_cbo_ten_hang_hoa_on_grid()
+        {
+            m_fg.Cols[(int)e_col_Number.MA_HANG_HOA].DataMap = get_mapping_col_muc_dich();
+        }
+        
 
 		
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			
+            m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
+            this.Load += f600_phieu_nhap_kho_Load;
 		}
+        #endregion
+
+
+        void f600_phieu_nhap_kho_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_chon_kho_Click(object sender, EventArgs e)
+        {
+            f110_V_DM_KHO v_frm = new f110_V_DM_KHO();
+            DialogResult v_dlg_result = v_frm.display_select_f250(m_us_kho);
+            if (v_dlg_result == DialogResult.OK)
+            {
+                m_txt_ten_kho.Text = m_us_kho.strMA_KHO;
+            }
+        }
 		
 
         private void m_cmd_exit_Click(object sender, EventArgs e) {

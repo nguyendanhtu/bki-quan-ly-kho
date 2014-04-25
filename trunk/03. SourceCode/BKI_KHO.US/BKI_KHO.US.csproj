@@ -65,6 +65,7 @@
     <Compile Include="US_DM_TAI_KHOAN.cs" />
     <Compile Include="US_DM_THUE.cs" />
     <Compile Include="US_DM_TIEN_TE.cs" />
+    <Compile Include="US_GD_CHUNG_TU.cs" />
     <Compile Include="US_HT_NHOM_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
