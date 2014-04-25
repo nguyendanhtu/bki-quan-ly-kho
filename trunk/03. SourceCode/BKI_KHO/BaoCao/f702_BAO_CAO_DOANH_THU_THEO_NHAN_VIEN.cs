@@ -414,8 +414,8 @@ namespace BKI_KHO
         private void format_fixed_rows_in_grid()
         {
             m_fg.AllowMerging = AllowMergingEnum.FixedOnly;
-            m_fg.Cols[(int) e_col_Number.HO_DEM].AllowMerging = true;
-            m_fg[0, (int) e_col_Number.HO_DEM] = "Họ đệm";
+            m_fg.Cols[(int)e_col_Number.HO_DEM].AllowMerging = true;
+            m_fg[0, (int)e_col_Number.HO_DEM] = "Họ đệm";
             m_fg[1, (int)e_col_Number.HO_DEM] = "Họ đệm";
 
             m_fg.Cols[(int)e_col_Number.TEN].AllowMerging = true;
@@ -466,7 +466,7 @@ namespace BKI_KHO
                 AggregateEnum.Sum
                 , 0
                 , -1
-                , (int) e_col_Number.NHAP
+                , (int)e_col_Number.NHAP
                 , "Tổng");
 
             m_fg.Subtotal(
@@ -554,7 +554,11 @@ namespace BKI_KHO
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            if (m_fg.Rows[m_fg.Row].IsNode) return;
             grid2us_object(m_us, m_fg.Row);
+
+            var frm = new F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN();
+            frm.display(m_us);
         }
 
         private void auto_suggest_text()
