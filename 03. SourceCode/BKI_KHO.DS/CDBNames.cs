@@ -720,7 +720,6 @@ namespace BKI_KHO.DS.CDBNames
         public const string LEVEL_MODE = "LEVEL_MODE";
     }
 
-
     public class V_DM_KHO
     {
         public const string ID = "ID";
@@ -778,4 +777,13 @@ namespace BKI_KHO.DS.CDBNames
         public const string GHI_CHU = "GHI_CHU";
     }
 
+    public class RPT_XUAT_NHAP_TON
+    {
+        public const string ID = "ID";
+        public const string TEN_NHOM_HANG = "TEN_NHOM_HANG";
+        public const string SO_DU_DAU_KY = "SO_DU_DAU_KY";
+        public const string PHAT_SINH_TANG = "PHAT_SINH_TANG";
+        public const string PHAT_SINH_GIAM = "PHAT_SINH_GIAM";
+        public const string SO_DU_CUOI_KY = "SO_DU_CUOI_KY";
+    }
 }

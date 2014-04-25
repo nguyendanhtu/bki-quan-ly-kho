@@ -96,6 +96,9 @@
     <Compile Include="BaoCao\F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f806_RPT_XUAT_NHAP_TON.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +225,15 @@
     <Compile Include="DanhMuc\f801_DM_NHA_CUNG_CAP_DE.Designer.cs">
       <DependentUpon>f801_DM_NHA_CUNG_CAP_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f802_DM_NHOM_HANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f803_DM_NHOM_HANG_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f803_DM_NHOM_HANG_DE.Designer.cs">
+      <DependentUpon>f803_DM_NHOM_HANG_DE.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f804_DM_TIEN_TE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.resx">
       <DependentUpon>F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f806_RPT_XUAT_NHAP_TON.resx">
+      <DependentUpon>f806_RPT_XUAT_NHAP_TON.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.resx">
       <DependentUpon>f100_DM_NGUOI_DUNG_DE.cs</DependentUpon>
@@ -334,6 +349,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f801_DM_NHA_CUNG_CAP_DE.resx">
       <DependentUpon>f801_DM_NHA_CUNG_CAP_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f802_DM_NHOM_HANG.resx">
+      <DependentUpon>f802_DM_NHOM_HANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f803_DM_NHOM_HANG_DE.resx">
+      <DependentUpon>f803_DM_NHOM_HANG_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f804_DM_TIEN_TE.resx">
       <DependentUpon>f804_DM_TIEN_TE.cs</DependentUpon>
