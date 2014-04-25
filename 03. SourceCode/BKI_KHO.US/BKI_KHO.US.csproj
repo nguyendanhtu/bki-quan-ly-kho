@@ -75,6 +75,7 @@
     <Compile Include="US_V_DM_HANG_HOA.cs" />
     <Compile Include="US_V_DM_KHO.cs" />
     <Compile Include="US_V_DM_NHOM_HANG.cs" />
+    <Compile Include="US_V_GD_CHUNG_TU.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_KHO.DS\BKI_KHO.DS.csproj">
