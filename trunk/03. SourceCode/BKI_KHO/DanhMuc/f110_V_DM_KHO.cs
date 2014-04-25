@@ -284,8 +284,10 @@ namespace BKI_KHO
         public DialogResult display_select_f250(US_V_DM_KHO i_us)
         {
             m_us_v_dm_kho = i_us;
+            // m_us_v_dm_kho = i_us;
             m_e_form_mode = DataEntryFormMode.SelectDataState;
             this.ShowDialog();
+
             return m_dlg_result;
         }
 		#endregion
@@ -352,8 +354,9 @@ namespace BKI_KHO
 			, int i_grid_row) {
 			DataRow v_dr;
 			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-           
-            m_us_v_dm_kho = new US_V_DM_KHO((decimal)v_dr.ItemArray[0]);
+            m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
+            i_us.DataRow2Me(v_dr);
+           // m_us_v_dm_kho = new US_V_DM_KHO((decimal)v_dr.ItemArray[0]);
 		}
 
 	
@@ -421,6 +424,7 @@ namespace BKI_KHO
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us_v_dm_kho, m_fg.Row);
+            //string a = m_us_v_dm_kho.strMA_KHO;
             if (m_e_form_mode == DataEntryFormMode.SelectDataState)
             {
                 m_dlg_result = DialogResult.OK;

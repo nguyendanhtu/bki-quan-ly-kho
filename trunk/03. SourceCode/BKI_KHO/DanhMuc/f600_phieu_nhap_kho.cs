@@ -44,9 +44,11 @@ namespace BKI_KHO
         DS_V_DM_KHO m_ds_kho = new DS_V_DM_KHO();
         US_V_DM_KHO m_us_kho = new US_V_DM_KHO();
 
-        DS_GD_CHUNG_TU v_ds_chung_tu = new DS_GD_CHUNG_TU();
-        US_GD_CHUNG_TU v_us_chung_tu = new US_GD_CHUNG_TU();
+        DS_V_GD_CHUNG_TU v_ds_chung_tu = new DS_V_GD_CHUNG_TU();
+        US_V_GD_CHUNG_TU v_us_chung_tu = new US_V_GD_CHUNG_TU();
 
+        US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+        DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
         #endregion
 
         #region Methods
@@ -68,25 +70,24 @@ namespace BKI_KHO
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.LOAI_HANG_HOA, e_col_Number.MA_HANG_HOA);
-			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.SO_LUONG, e_col_Number.SO_LUONG);
-			v_htb.Add(PHIEU_NHAP_KHO_DETAIL.SO_TIEN, e_col_Number.SO_TIEN);
+			v_htb.Add(v_gd_chung_tu.MA_HANG, e_col_Number.MA_HANG_HOA);
+            v_htb.Add(v_gd_chung_tu.SO_LUONG, e_col_Number.SO_LUONG);
+            v_htb.Add(v_gd_chung_tu.GIA_NHAP, e_col_Number.SO_TIEN);
 
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_chung_tu.GD_CHUNG_TU.NewGD_CHUNG_TURow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_chung_tu.v_gd_chung_tu.Newv_gd_chung_tuRow());
 			return v_obj_trans;			
 		}
 		
         private Hashtable get_mapping_col_muc_dich()
         {
-            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
-            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+            
             Hashtable v_hst = new Hashtable();
             try
             {
                 //v_us_hang_hoa.open_connection();
 
-                //v_us_hang_hoa.FillDataset(v_ds_hang_hoa,"order by ma_hang");
+                //v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "order by ma_hang");
                 //v_us_hang_hoa.commit_close_connection();
             }
             catch (Exception v_e)

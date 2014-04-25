@@ -172,6 +172,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_NHOM_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_GD_CHUNG_TU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_CHUNG_TU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -459,6 +464,17 @@
     </None>
     <None Include="DS_V_DM_NHOM_HANG.xss">
       <DependentUpon>DS_V_DM_NHOM_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_CHUNG_TU.xsc">
+      <DependentUpon>DS_V_GD_CHUNG_TU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_CHUNG_TU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_CHUNG_TU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_CHUNG_TU.xss">
+      <DependentUpon>DS_V_GD_CHUNG_TU.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
