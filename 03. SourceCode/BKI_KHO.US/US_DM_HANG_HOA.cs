@@ -15,7 +15,6 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-
 namespace BKI_KHO.US{
 
 public class US_DM_HANG_HOA : US_Object

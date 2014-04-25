@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_GD_CHI_TIET_CHUNG_TU.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_GD_CHUNG_TU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_CHUNG_TU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_NHOM_NGUOI_SU_DUNG1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -344,6 +349,17 @@
     </None>
     <None Include="DS_GD_CHI_TIET_CHUNG_TU.xss">
       <DependentUpon>DS_GD_CHI_TIET_CHUNG_TU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_CHUNG_TU.xsc">
+      <DependentUpon>DS_GD_CHUNG_TU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_CHUNG_TU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_CHUNG_TU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_CHUNG_TU.xss">
+      <DependentUpon>DS_GD_CHUNG_TU.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_NHOM_NGUOI_SU_DUNG.xsc">
       <DependentUpon>DS_HT_NHOM_NGUOI_SU_DUNG.xsd</DependentUpon>
