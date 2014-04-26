@@ -47,8 +47,7 @@ namespace BKI_KHO
         DS_V_GD_CHUNG_TU v_ds_chung_tu = new DS_V_GD_CHUNG_TU();
         US_V_GD_CHUNG_TU v_us_chung_tu = new US_V_GD_CHUNG_TU();
 
-        US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
-        DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+        
         #endregion
 
         #region Methods
@@ -60,6 +59,7 @@ namespace BKI_KHO
             this.MinimizeBox = true;
             this.MaximizeBox = true;
 			set_define_events();
+            m_fg.AllowEditing = true;
 			this.KeyPreview = true;		
 		}
 		private void set_initial_form_load(){						
@@ -81,14 +81,15 @@ namespace BKI_KHO
 		
         private Hashtable get_mapping_col_muc_dich()
         {
-            
+            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
             Hashtable v_hst = new Hashtable();
             try
             {
-                //v_us_hang_hoa.open_connection();
+                v_us_hang_hoa.BeginTransaction();
 
-                //v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "order by ma_hang");
-                //v_us_hang_hoa.commit_close_connection();
+                v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "order by ma_hang");
+                v_us_hang_hoa.CommitTransaction();
             }
             catch (Exception v_e)
             {
@@ -111,7 +112,27 @@ namespace BKI_KHO
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
             this.Load += f600_phieu_nhap_kho_Load;
+            m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
 		}
+
+        void m_txt_tong_tien_Leave(object sender, EventArgs e)
+        {
+            string v_str_tien_chu = "";
+            if (m_txt_tong_tien.Text == "") return;
+            try
+            {
+                //m_us_phieu_thu_chi.open_connection();
+                //m_us_phieu_thu_chi.so_tien_bang_chu(CIPConvert.ToStr(m_txt_tong_tien.Value), ref v_str_tien_chu);
+                //m_us_phieu_thu_chi.commit_close_connection();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            m_lab_tien_bang_chu.Text = v_str_tien_chu;
+        }
+
+       
         #endregion
 
 
