@@ -266,6 +266,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f110_V_DM_KHO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f110 Danh Mục Kho";
             this.Load += new System.EventHandler(this.f110_V_DM_KHO_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);

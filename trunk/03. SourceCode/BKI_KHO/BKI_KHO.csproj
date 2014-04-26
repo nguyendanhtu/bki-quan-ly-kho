@@ -141,6 +141,9 @@
     <Compile Include="DanhMuc\f105_DM_KHACH_HANG_DE.Designer.cs">
       <DependentUpon>f105_DM_KHACH_HANG_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f107_V_DM_BAO_HANH.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f110_V_DM_KHO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +302,9 @@
     <EmbeddedResource Include="DanhMuc\f105_DM_KHACH_HANG_DE.resx">
       <DependentUpon>f105_DM_KHACH_HANG_DE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f107_V_DM_BAO_HANH.resx">
+      <DependentUpon>f107_V_DM_BAO_HANH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f110_V_DM_KHO.resx">
       <DependentUpon>f110_V_DM_KHO.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,9 +455,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NghiepVu\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\manager_icon_by_sniffels_4714_1854.jpg" />
+    <None Include="Resources\Capture.PNG" />
     <Content Include="SQL_Procedure\TextFile1.txt" />
     <Content Include="SQL_Procedure\TuyenNT.txt" />
   </ItemGroup>
