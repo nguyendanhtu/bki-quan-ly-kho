@@ -177,6 +177,7 @@
             this.Name = "f112_DM_LOAI_CHUNG_TU_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f112 Cập Nhật Danh Sách Loại Chứng Từ";
+            this.Load += new System.EventHandler(this.f112_DM_LOAI_CHUNG_TU_DE_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

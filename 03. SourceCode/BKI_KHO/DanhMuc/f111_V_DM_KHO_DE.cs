@@ -26,7 +26,6 @@ namespace BKI_KHO.DanhMuc
         }
         #region public interface
       
-
         public void display_for_insert()
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
@@ -76,12 +75,12 @@ namespace BKI_KHO.DanhMuc
 
         private void load_data_2_combox()
         {
-            US_DM_NHAN_VIEN m_us = new US_DM_NHAN_VIEN();
-            DS_DM_NHAN_VIEN m_ds = new DS_DM_NHAN_VIEN();
+            US_V_DM_NHAN_VIEN m_us = new US_V_DM_NHAN_VIEN();
+            DS_V_DM_NHAN_VIEN m_ds = new DS_V_DM_NHAN_VIEN();
             m_us.FillDataset(m_ds);
-            m_cbo_ten.DataSource = m_ds.DM_NHAN_VIEN;
-            m_cbo_ten.ValueMember = DM_NHAN_VIEN.ID;
-            m_cbo_ten.DisplayMember = DM_NHAN_VIEN.TEN;
+            m_cbo_ten.DataSource = m_ds.V_DM_NHAN_VIEN;
+            m_cbo_ten.ValueMember = V_DM_NHAN_VIEN.ID;
+            m_cbo_ten.DisplayMember = V_DM_NHAN_VIEN.HO_TEN;
         }
 
         private bool is_validate_data_ok()
@@ -159,7 +158,20 @@ namespace BKI_KHO.DanhMuc
             m_txt_ma_kho.Text = "";
             m_txt_ten_kho.Text = "";
         }
+        private void m_cmd_save_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                save_data();
+            }
+            catch(Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         #endregion
+
+        
 
     }
 }

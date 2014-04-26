@@ -83,8 +83,15 @@ namespace Form_menu
 
         private void m_cmd_kho_Click(object sender, EventArgs e)
         {
-            f110_V_DM_KHO frm = new f110_V_DM_KHO();
-            frm.ShowDialog();
+            try
+            {
+                f110_V_DM_KHO frm = new f110_V_DM_KHO();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e)
@@ -103,13 +110,28 @@ namespace Form_menu
 
         private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e)
         {
-            f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
-            frm.ShowDialog();
+            try
+            {
+                f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_khach_hang_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                f105_DM_KHACH_HANG frm = new f105_DM_KHACH_HANG();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e)
@@ -128,6 +150,45 @@ namespace Form_menu
             catch (System.Exception v_e)
             {
             	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bao_hanh_seri_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f107_V_DM_BAO_HANH frm = new f107_V_DM_BAO_HANH();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_xuat_nhap_ton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f806_RPT_XUAT_NHAP_TON frm = new f806_RPT_XUAT_NHAP_TON();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_loi_nhuan_gop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f807_RPT_LOI_NHUAN frm = new f807_RPT_LOI_NHUAN();
+                frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
     }

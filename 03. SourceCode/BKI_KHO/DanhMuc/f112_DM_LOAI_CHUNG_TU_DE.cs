@@ -42,24 +42,7 @@ namespace BKI_KHO.DanhMuc
         {
             try
             {
-                form_2_us_object();
-                switch (m_e_form_mode)
-                {
-                    case DataEntryFormMode.InsertDataState:
-                        m_us_dm_loai_chung_tu.Insert();
-                        this.Close();
-                        break;
-                    case DataEntryFormMode.SelectDataState:
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
-                        m_us_dm_loai_chung_tu.Update();
-                        this.Close();
-                        break;
-                    case DataEntryFormMode.ViewDataState:
-                        break;
-                    default:
-                        break;
-                }
+                save_data();
             }
             catch (Exception v_e)
             {
@@ -76,8 +59,17 @@ namespace BKI_KHO.DanhMuc
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
+
+        
         #endregion
 
         #region Members
@@ -86,18 +78,62 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region private method
+        private void save_data()
+        {
+            if (is_validate_data_ok() == false)
+                return;
+            form_2_us_object();
+            switch (m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us_dm_loai_chung_tu.Insert();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.SelectDataState:
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_dm_loai_chung_tu.Update();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.ViewDataState:
+                    break;
+                default:
+                    break;
+            }
+        }
         private void us_object_2_form()
         {
             m_txt_ten_loai_chung_tu.Text = m_us_dm_loai_chung_tu.strTEN_LOAI_CT;
             m_txt_ma_loai_chung_tu.Text = m_us_dm_loai_chung_tu.strMA_LOAI_CT;
             m_txt_ghi_chu.Text = m_us_dm_loai_chung_tu.strGHI_CHU;
         }
+
         private void form_2_us_object()
         {
             m_us_dm_loai_chung_tu.strGHI_CHU = m_txt_ghi_chu.Text;
             m_us_dm_loai_chung_tu.strMA_LOAI_CT = m_txt_ma_loai_chung_tu.Text;
             m_us_dm_loai_chung_tu.strTEN_LOAI_CT = m_txt_ten_loai_chung_tu.Text;
         }
+
+        private bool is_validate_data_ok()
+        {
+            if (!CValidateTextBox.IsValid(
+                m_txt_ma_loai_chung_tu
+                , DataType.StringType
+                , allowNull.NO
+                , true)) return false;
+            if (!CValidateTextBox.IsValid(
+                m_txt_ten_loai_chung_tu
+                , DataType.StringType
+                , allowNull.NO
+                , true)) return false;
+            return true;
+        }
         #endregion
+
+        private void f112_DM_LOAI_CHUNG_TU_DE_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

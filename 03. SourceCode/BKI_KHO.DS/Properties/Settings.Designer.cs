@@ -86,5 +86,15 @@ namespace BKI_KHO.DS.Properties {
                 return ((string)(this["BKI_KHOConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=QUYETNT-PC\\SQLEXPRESS;Initial Catalog=BKI_KHO;User ID=sa;Password=sa")]
+        public string BKI_KHOConnectionString5 {
+            get {
+                return ((string)(this["BKI_KHOConnectionString5"]));
+            }
+        }
     }
 }
