@@ -786,4 +786,13 @@ namespace BKI_KHO.DS.CDBNames
         public const string PHAT_SINH_GIAM = "PHAT_SINH_GIAM";
         public const string SO_DU_CUOI_KY = "SO_DU_CUOI_KY";
     }
+
+    public class RPT_LOI_NHUAN
+    {
+        public const string ID = "ID";
+        public const string TEN_NHOM_HANG = "TEN_NHOM_HANG";
+        public const string LOI_NHUAN = "LOI_NHUAN";
+        public const string DOANH_THU_THUAN = "DOANH_THU_THUAN";
+        public const string GIA_VON_HANG_BAN = "GIA_VON_HANG_BAN";
+    }
 }
