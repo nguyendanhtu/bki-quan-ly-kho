@@ -44,9 +44,8 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cbo_ten = new System.Windows.Forms.ComboBox();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_chon_nhan_vien = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,17 +184,21 @@
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(545, 36);
             this.m_pnl_out_place_dm.TabIndex = 22;
             // 
-            // m_cmd_chon_nhan_vien
+            // m_cmd_save
             // 
-            this.m_cmd_chon_nhan_vien.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_chon_nhan_vien.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_chon_nhan_vien.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_chon_nhan_vien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_chon_nhan_vien.Location = new System.Drawing.Point(348, 111);
-            this.m_cmd_chon_nhan_vien.Name = "m_cmd_chon_nhan_vien";
-            this.m_cmd_chon_nhan_vien.Size = new System.Drawing.Size(88, 20);
-            this.m_cmd_chon_nhan_vien.TabIndex = 23;
-            this.m_cmd_chon_nhan_vien.Text = "&Lưu";
+            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_save.ImageIndex = 10;
+            this.m_cmd_save.ImageList = this.ImageList;
+            this.m_cmd_save.Location = new System.Drawing.Point(365, 4);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_save.TabIndex = 24;
+            this.m_cmd_save.Text = "&Lưu";
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
             // 
             // m_cmd_exit
             // 
@@ -214,29 +217,12 @@
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
-            // m_cmd_save
-            // 
-            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_save.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_save.ImageIndex = 10;
-            this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(365, 4);
-            this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 24;
-            this.m_cmd_save.Text = "&Lưu";
-            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
-            // 
             // f111_V_DM_KHO_DE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 249);
             this.Controls.Add(this.m_pnl_out_place_dm);
-            this.Controls.Add(this.m_cmd_chon_nhan_vien);
             this.Controls.Add(this.m_cbo_ten);
             this.Controls.Add(this.m_txt_ten_kho);
             this.Controls.Add(this.m_txt_dia_chi);
@@ -275,7 +261,6 @@
         private System.Windows.Forms.ComboBox m_cbo_ten;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        internal SIS.Controls.Button.SiSButton m_cmd_chon_nhan_vien;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
     }
 }
