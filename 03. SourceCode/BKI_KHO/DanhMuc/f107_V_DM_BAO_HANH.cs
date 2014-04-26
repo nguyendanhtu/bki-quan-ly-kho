@@ -37,6 +37,7 @@ namespace BKI_KHO
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private TextBox m_txt_tim_kiem;
+        private Label label1;
 		private System.ComponentModel.IContainer components;
 
 		public f107_V_DM_BAO_HANH()
@@ -82,6 +83,7 @@ namespace BKI_KHO
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -141,9 +143,9 @@ namespace BKI_KHO
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 51);
+            this.m_fg.Location = new System.Drawing.Point(0, 81);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 322);
+            this.m_fg.Size = new System.Drawing.Size(686, 292);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -155,7 +157,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(483, 12);
+            this.m_cmd_search.Location = new System.Drawing.Point(490, 47);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 25;
@@ -164,16 +166,30 @@ namespace BKI_KHO
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(179, 12);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(183, 47);
             this.m_txt_tim_kiem.Multiline = true;
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(287, 28);
             this.m_txt_tim_kiem.TabIndex = 26;
+            this.m_txt_tim_kiem.TextChanged += new System.EventHandler(this.m_txt_tim_kiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(249, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 26);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Tra cứu bảo hành";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // f107_V_DM_BAO_HANH
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.m_cmd_search);
             this.Controls.Add(this.m_fg);
@@ -396,6 +412,16 @@ namespace BKI_KHO
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_txt_tim_kiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 	}
