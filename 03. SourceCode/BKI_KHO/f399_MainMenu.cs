@@ -42,6 +42,8 @@ namespace Form_menu
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             this.ShowInTaskbar = true;
+            m_cmd_dang_nhap.Enabled = false;
+            m_cmd_thong_tin.Enabled = false;
         }
         #endregion
         // Event handlers
@@ -164,7 +166,7 @@ namespace Form_menu
         {
             try
             {
-                f107_V_DM_BAO_HANH frm = new f107_V_DM_BAO_HANH();
+                f107_V_BAO_CAO_BAO_HANH frm = new f107_V_BAO_CAO_BAO_HANH();
                 frm.ShowDialog();
             }
             catch (Exception v_e)

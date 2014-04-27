@@ -456,6 +456,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "f105_DM_KHACH_HANG_DE";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F105 Chi tiết khách hàng";
             this.Load += new System.EventHandler(this.f105_DM_KHACH_HANG_DE_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
