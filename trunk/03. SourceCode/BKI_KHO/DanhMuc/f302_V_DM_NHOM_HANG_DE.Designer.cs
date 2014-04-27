@@ -183,7 +183,7 @@
             this.Controls.Add(this.m_lbl_mo_ta);
             this.Controls.Add(this.m_txt_ten_nhom);
             this.Name = "f302_V_DM_NHOM_HANG_DE";
-            this.Text = "f302 - Thêm/Sửa";
+            this.Text = "F302 - Cập nhật thông tin nhóm hàng";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

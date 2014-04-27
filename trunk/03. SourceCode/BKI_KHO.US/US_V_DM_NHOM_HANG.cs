@@ -172,6 +172,13 @@ public class US_V_DM_NHOM_HANG : US_Object
 	}
 #endregion
 
-    
+
+
+    public void FillDatasetSearch(DS_V_DM_NHOM_HANG op_ds, string i_str_search)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_DM_NHOM_HANG_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_search);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
 }
 }

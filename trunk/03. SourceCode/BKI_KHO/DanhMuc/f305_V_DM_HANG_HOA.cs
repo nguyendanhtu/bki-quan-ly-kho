@@ -439,7 +439,10 @@ namespace BKI_KHO
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row))
                 return;
             if (m_fg.Rows[m_fg.Row].IsNode == true)
+            {
+                BaseMessages.MsgBox_Error("Không được xóa nhóm cha!");
                 return;
+            }
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)
                 return;
             US_V_DM_HANG_HOA v_us = new US_V_DM_HANG_HOA();
@@ -581,7 +584,14 @@ namespace BKI_KHO
             m_us.FillDatasetSearch(m_ds, m_txt_tim_kiem.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            m_fg.Subtotal(
+              AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+               , 0
+               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
+               , (int)e_col_Number.MA_HANG // chỗ này là tên trường mà mình Count
+               , "{0}");
             m_fg.Redraw = true;
+            
         }
         private void m_txt_tim_kiem_KeyDown(object sender, KeyEventArgs e)
         {
