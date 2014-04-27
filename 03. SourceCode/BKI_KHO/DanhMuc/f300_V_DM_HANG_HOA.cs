@@ -495,7 +495,7 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_fg);
             m_ds_v_dm_hang_hoa.Clear();
-           // m_us_v_dm_hang_hoa.FillDatasetSearch(m_ds_v_dm_hang_hoa, m_txt_tim_kiem.Text.Trim());
+           m_us_v_dm_hang_hoa.FillDatasetSearch(m_ds_v_dm_hang_hoa, m_txt_tim_kiem.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds_v_dm_hang_hoa, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -535,7 +535,6 @@ namespace BKI_KHO
                 if (e.KeyData == Keys.Enter)
                 {
                     load_data_2_grid_search();
-
                 }
             }
             catch (Exception v_e)

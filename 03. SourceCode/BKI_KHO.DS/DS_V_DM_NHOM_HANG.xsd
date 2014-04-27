@@ -2,17 +2,18 @@
 <xs:schema id="DS_V_DM_NHOM_HANG" targetNamespace="http://tempuri.org/DS_V_DM_NHOM_HANG.xsd" xmlns:mstns="http://tempuri.org/DS_V_DM_NHOM_HANG.xsd" xmlns="http://tempuri.org/DS_V_DM_NHOM_HANG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DM_NHOM_HANGTableAdapter" GeneratorDataComponentClassName="V_DM_NHOM_HANGTableAdapter" Name="V_DM_NHOM_HANG" UserDataComponentName="V_DM_NHOM_HANGTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_KHOConnectionString2 (Settings)" DbObjectName="BKI_KHO.dbo.V_DM_NHOM_HANG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_KHOConnectionString4 (Settings)" DbObjectName="BKI_KHO.dbo.V_DM_NHOM_HANG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT STT, ID, TEN, TEN_NHOM_CHA, LEVEL_MODE, MO_TA FROM dbo.V_DM_NHOM_HANG</CommandText>
+                    <CommandText>SELECT STT, ID, TEN, ID_NHOM_CHA, TEN_NHOM_CHA, LEVEL_MODE, MO_TA FROM dbo.V_DM_NHOM_HANG</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,6 +23,7 @@
               <Mapping SourceColumn="STT" DataSetColumn="STT" />
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
+              <Mapping SourceColumn="ID_NHOM_CHA" DataSetColumn="ID_NHOM_CHA" />
               <Mapping SourceColumn="TEN_NHOM_CHA" DataSetColumn="TEN_NHOM_CHA" />
               <Mapping SourceColumn="LEVEL_MODE" DataSetColumn="LEVEL_MODE" />
               <Mapping SourceColumn="MO_TA" DataSetColumn="MO_TA" />
@@ -48,7 +50,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN_NHOM_CHA" msprop:Generator_ColumnVarNameInTable="columnTEN_NHOM_CHA" msprop:Generator_ColumnPropNameInRow="TEN_NHOM_CHA" msprop:Generator_ColumnPropNameInTable="TEN_NHOM_CHAColumn" msprop:Generator_UserColumnName="TEN_NHOM_CHA">
+              <xs:element name="ID_NHOM_CHA" msprop:Generator_ColumnVarNameInTable="columnID_NHOM_CHA" msprop:Generator_ColumnPropNameInRow="ID_NHOM_CHA" msprop:Generator_ColumnPropNameInTable="ID_NHOM_CHAColumn" msprop:Generator_UserColumnName="ID_NHOM_CHA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TEN_NHOM_CHA" msprop:Generator_ColumnVarNameInTable="columnTEN_NHOM_CHA" msprop:Generator_ColumnPropNameInRow="TEN_NHOM_CHA" msprop:Generator_ColumnPropNameInTable="TEN_NHOM_CHAColumn" msprop:Generator_UserColumnName="TEN_NHOM_CHA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

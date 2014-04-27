@@ -40,9 +40,7 @@
             this.m_txt_ten_nhom = new System.Windows.Forms.TextBox();
             this.m_lbl_mo_ta = new System.Windows.Forms.Label();
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
-            this.m_grb_nhom_hang = new System.Windows.Forms.GroupBox();
             this.m_pnl_out_place_dm.SuspendLayout();
-            this.m_grb_nhom_hang.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -77,10 +75,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_save);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 268);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 178);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(629, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(428, 36);
             this.m_pnl_out_place_dm.TabIndex = 22;
             // 
             // m_cmd_save
@@ -93,9 +91,9 @@
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(378, 4);
+            this.m_cmd_save.Location = new System.Drawing.Point(202, 4);
             this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(131, 28);
+            this.m_cmd_save.Size = new System.Drawing.Size(112, 28);
             this.m_cmd_save.TabIndex = 12;
             this.m_cmd_save.Text = "&Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
@@ -109,9 +107,9 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(509, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(314, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(116, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(110, 28);
             this.m_cmd_exit.TabIndex = 14;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
@@ -119,7 +117,7 @@
             // m_lbl_ten_nhom
             // 
             this.m_lbl_ten_nhom.AutoSize = true;
-            this.m_lbl_ten_nhom.Location = new System.Drawing.Point(80, 37);
+            this.m_lbl_ten_nhom.Location = new System.Drawing.Point(29, 29);
             this.m_lbl_ten_nhom.Name = "m_lbl_ten_nhom";
             this.m_lbl_ten_nhom.Size = new System.Drawing.Size(55, 13);
             this.m_lbl_ten_nhom.TabIndex = 57;
@@ -128,7 +126,7 @@
             // m_lbl_ten_nhom_cha
             // 
             this.m_lbl_ten_nhom_cha.AutoSize = true;
-            this.m_lbl_ten_nhom_cha.Location = new System.Drawing.Point(59, 86);
+            this.m_lbl_ten_nhom_cha.Location = new System.Drawing.Point(29, 69);
             this.m_lbl_ten_nhom_cha.Name = "m_lbl_ten_nhom_cha";
             this.m_lbl_ten_nhom_cha.Size = new System.Drawing.Size(76, 13);
             this.m_lbl_ten_nhom_cha.TabIndex = 69;
@@ -136,21 +134,18 @@
             // 
             // m_cbo_ten_nhom_cha
             // 
-            this.m_cbo_ten_nhom_cha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.m_cbo_ten_nhom_cha.BackColor = System.Drawing.SystemColors.Info;
             this.m_cbo_ten_nhom_cha.FormattingEnabled = true;
-            this.m_cbo_ten_nhom_cha.Location = new System.Drawing.Point(165, 83);
+            this.m_cbo_ten_nhom_cha.Location = new System.Drawing.Point(123, 66);
             this.m_cbo_ten_nhom_cha.Name = "m_cbo_ten_nhom_cha";
             this.m_cbo_ten_nhom_cha.Size = new System.Drawing.Size(181, 21);
             this.m_cbo_ten_nhom_cha.TabIndex = 70;
-            this.m_cbo_ten_nhom_cha.Text = "--Chọn nhóm cha--";
             // 
             // m_txt_ten_nhom
             // 
-            this.m_txt_ten_nhom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.m_txt_ten_nhom.BackColor = System.Drawing.SystemColors.Info;
             this.m_txt_ten_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_ten_nhom.Location = new System.Drawing.Point(165, 35);
+            this.m_txt_ten_nhom.Location = new System.Drawing.Point(123, 27);
             this.m_txt_ten_nhom.Name = "m_txt_ten_nhom";
             this.m_txt_ten_nhom.Size = new System.Drawing.Size(181, 20);
             this.m_txt_ten_nhom.TabIndex = 71;
@@ -158,7 +153,7 @@
             // m_lbl_mo_ta
             // 
             this.m_lbl_mo_ta.AutoSize = true;
-            this.m_lbl_mo_ta.Location = new System.Drawing.Point(101, 133);
+            this.m_lbl_mo_ta.Location = new System.Drawing.Point(29, 109);
             this.m_lbl_mo_ta.Name = "m_lbl_mo_ta";
             this.m_lbl_mo_ta.Size = new System.Drawing.Size(34, 13);
             this.m_lbl_mo_ta.TabIndex = 72;
@@ -166,45 +161,32 @@
             // 
             // m_txt_mo_ta
             // 
-            this.m_txt_mo_ta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.m_txt_mo_ta.BackColor = System.Drawing.SystemColors.Info;
             this.m_txt_mo_ta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_mo_ta.Location = new System.Drawing.Point(165, 131);
+            this.m_txt_mo_ta.Location = new System.Drawing.Point(123, 107);
             this.m_txt_mo_ta.Multiline = true;
             this.m_txt_mo_ta.Name = "m_txt_mo_ta";
-            this.m_txt_mo_ta.Size = new System.Drawing.Size(393, 88);
+            this.m_txt_mo_ta.Size = new System.Drawing.Size(275, 51);
             this.m_txt_mo_ta.TabIndex = 73;
-            // 
-            // m_grb_nhom_hang
-            // 
-            this.m_grb_nhom_hang.Controls.Add(this.m_lbl_ten_nhom);
-            this.m_grb_nhom_hang.Controls.Add(this.m_txt_mo_ta);
-            this.m_grb_nhom_hang.Controls.Add(this.m_lbl_ten_nhom_cha);
-            this.m_grb_nhom_hang.Controls.Add(this.m_lbl_mo_ta);
-            this.m_grb_nhom_hang.Controls.Add(this.m_cbo_ten_nhom_cha);
-            this.m_grb_nhom_hang.Controls.Add(this.m_txt_ten_nhom);
-            this.m_grb_nhom_hang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_grb_nhom_hang.Location = new System.Drawing.Point(0, 0);
-            this.m_grb_nhom_hang.Name = "m_grb_nhom_hang";
-            this.m_grb_nhom_hang.Size = new System.Drawing.Size(629, 268);
-            this.m_grb_nhom_hang.TabIndex = 74;
-            this.m_grb_nhom_hang.TabStop = false;
-            this.m_grb_nhom_hang.Text = "Danh mục nhóm hàng";
             // 
             // f302_V_DM_NHOM_HANG_DE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(629, 304);
-            this.Controls.Add(this.m_grb_nhom_hang);
+            this.ClientSize = new System.Drawing.Size(428, 214);
+            this.Controls.Add(this.m_lbl_ten_nhom);
+            this.Controls.Add(this.m_txt_mo_ta);
             this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_lbl_ten_nhom_cha);
+            this.Controls.Add(this.m_cbo_ten_nhom_cha);
+            this.Controls.Add(this.m_lbl_mo_ta);
+            this.Controls.Add(this.m_txt_ten_nhom);
             this.Name = "f302_V_DM_NHOM_HANG_DE";
             this.Text = "f302 - Thêm/Sửa";
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            this.m_grb_nhom_hang.ResumeLayout(false);
-            this.m_grb_nhom_hang.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,6 +202,5 @@
         private System.Windows.Forms.TextBox m_txt_ten_nhom;
         private System.Windows.Forms.Label m_lbl_mo_ta;
         private System.Windows.Forms.TextBox m_txt_mo_ta;
-        private System.Windows.Forms.GroupBox m_grb_nhom_hang;
     }
 }
