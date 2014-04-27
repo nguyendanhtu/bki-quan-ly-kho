@@ -51,6 +51,7 @@ namespace BKI_KHO.DanhMuc
         private void format_control()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            m_cbo_trang_thai.Enabled = false;
         }
         private void load_data_to_combox()
         {
@@ -62,6 +63,12 @@ namespace BKI_KHO.DanhMuc
             US_DM_NHOM_HANG v_us = new US_DM_NHOM_HANG();
             DS_DM_NHOM_HANG v_ds = new DS_DM_NHOM_HANG();
             v_us.FillDataset(v_ds);
+
+            DataRow v_dr = v_ds.DM_NHOM_HANG.NewRow();
+            v_dr[DM_NHOM_HANG.ID] = -1;
+            v_dr[DM_NHOM_HANG.TEN] = "Không có nhóm";
+            v_ds.DM_NHOM_HANG.Rows.InsertAt(v_dr, 0);
+
             m_cbo_nhom.DataSource = v_ds.DM_NHOM_HANG;
             m_cbo_nhom.ValueMember = DM_NHOM_HANG.ID;
             m_cbo_nhom.DisplayMember = DM_NHOM_HANG.TEN;
@@ -126,7 +133,8 @@ namespace BKI_KHO.DanhMuc
         {
             m_us_v_dm_hang_hoa.strTEN_HANG_VN = m_txt_ten_hang.Text.Trim();
             m_us_v_dm_hang_hoa.strMA_HANG = m_txt_ma_hang.Text.Trim();
-            m_us_v_dm_hang_hoa.dcID_NHOM = CIPConvert.ToDecimal(m_cbo_nhom.SelectedValue);          
+            if(CIPConvert.ToDecimal(m_cbo_nhom.SelectedValue) != -1)
+                m_us_v_dm_hang_hoa.dcID_NHOM = CIPConvert.ToDecimal(m_cbo_nhom.SelectedValue);          
             m_us_v_dm_hang_hoa.dcGiA_NHAP = CIPConvert.ToDecimal(m_txt_gia_nhap.Text);
             m_us_v_dm_hang_hoa.dcGIA_BAN = CIPConvert.ToDecimal(m_txt_gia_ban.Text);
             m_us_v_dm_hang_hoa.strTRANG_THAI= CIPConvert.ToStr(m_cbo_trang_thai.SelectedValue);

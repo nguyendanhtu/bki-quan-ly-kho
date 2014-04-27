@@ -11,6 +11,7 @@ using BKI_KHO.US;
 using IP.Core.IPCommon;
 using BKI_KHO.DS;
 using IP.Core.IPSystemAdmin;
+using BKI_KHO.DS.CDBNames;
 
 namespace BKI_KHO.DanhMuc
 {
@@ -78,10 +79,15 @@ namespace BKI_KHO.DanhMuc
 
             v_us.FillDataset(v_ds);
 
+            DataRow v_dr = v_ds.DM_NHOM_HANG.NewRow();
+            v_dr[DM_NHOM_HANG.ID] = -1;
+            v_dr[DM_NHOM_HANG.TEN] = "Không có nhóm cha";
+            v_ds.DM_NHOM_HANG.Rows.InsertAt(v_dr, 0);
             m_cbo_ten_nhom_cha.DataSource = v_ds.DM_NHOM_HANG;
             m_cbo_ten_nhom_cha.ValueMember = "ID";
             m_cbo_ten_nhom_cha.DisplayMember = "TEN";
 
+            
             m_cbo_ten_nhom_cha.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             m_cbo_ten_nhom_cha.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
@@ -97,9 +103,11 @@ namespace BKI_KHO.DanhMuc
         }
 
         private void form_2_us_obj()
-        {                 
-                m_us_dm_nhom_hang.strTEN = m_txt_ten_nhom.Text;       
-                m_us_dm_nhom_hang.dcID_NHOM_CHA = CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue);
+        {                
+                m_us_dm_nhom_hang.strTEN = m_txt_ten_nhom.Text;
+                if (CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue) != -1)
+                    m_us_dm_nhom_hang.dcID_NHOM_CHA = CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue);
+
                 m_us_dm_nhom_hang.strMO_TA = m_txt_mo_ta.Text;                                        
         }
         private void us_obj_2_form()
