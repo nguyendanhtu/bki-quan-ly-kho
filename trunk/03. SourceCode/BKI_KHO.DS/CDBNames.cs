@@ -805,15 +805,15 @@ namespace BKI_KHO.DS.CDBNames
         public const string HO_TEN = "HO_TEN";
     }
 
-    public class V_DM_BAO_HANH
+    public class V_BAO_CAO_BAO_HANH
     {
         public const string ID_HANG_HOA = "ID_HANG_HOA";
-        public const string ID_CHUNG_TU = "ID_CHUNG_TU";
         public const string THOI_GIAN_BH = "THOI_GIAN_BH";
         public const string MA_HANG = "MA_HANG";
         public const string TEN_HANG_VN = "TEN_HANG_VN";
         public const string TEN = "TEN";
         public const string ID_NHOM_CHA = "ID_NHOM_CHA";
         public const string NGAY_CT = "NGAY_CT";
+        public const string MA_CT = "MA_CT";
     }
 }
