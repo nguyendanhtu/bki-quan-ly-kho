@@ -64,7 +64,7 @@
             this.label2.Location = new System.Drawing.Point(14, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Tên kho";
             // 
             // label3
@@ -73,7 +73,7 @@
             this.label3.Location = new System.Drawing.Point(14, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ kho";
             // 
             // label4
@@ -82,7 +82,7 @@
             this.label4.Location = new System.Drawing.Point(14, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 8;
             this.label4.Text = "Điện Thoại";
             // 
             // label6
@@ -91,7 +91,7 @@
             this.label6.Location = new System.Drawing.Point(14, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 13);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 6;
             this.label6.Text = "Họ và tên người quản lý";
             // 
             // label7
@@ -100,7 +100,7 @@
             this.label7.Location = new System.Drawing.Point(14, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 10;
             this.label7.Text = "Ghi Chú";
             // 
             // m_txt_ma_kho
@@ -108,35 +108,35 @@
             this.m_txt_ma_kho.Location = new System.Drawing.Point(142, 22);
             this.m_txt_ma_kho.Name = "m_txt_ma_kho";
             this.m_txt_ma_kho.Size = new System.Drawing.Size(120, 20);
-            this.m_txt_ma_kho.TabIndex = 7;
+            this.m_txt_ma_kho.TabIndex = 1;
             // 
             // m_txt_ghi_chu
             // 
             this.m_txt_ghi_chu.Location = new System.Drawing.Point(142, 177);
             this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
             this.m_txt_ghi_chu.Size = new System.Drawing.Size(358, 20);
-            this.m_txt_ghi_chu.TabIndex = 9;
+            this.m_txt_ghi_chu.TabIndex = 11;
             // 
             // m_txt_dien_thoai
             // 
             this.m_txt_dien_thoai.Location = new System.Drawing.Point(143, 144);
             this.m_txt_dien_thoai.Name = "m_txt_dien_thoai";
             this.m_txt_dien_thoai.Size = new System.Drawing.Size(172, 20);
-            this.m_txt_dien_thoai.TabIndex = 14;
+            this.m_txt_dien_thoai.TabIndex = 9;
             // 
             // m_txt_dia_chi
             // 
             this.m_txt_dia_chi.Location = new System.Drawing.Point(143, 81);
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(358, 20);
-            this.m_txt_dia_chi.TabIndex = 15;
+            this.m_txt_dia_chi.TabIndex = 5;
             // 
             // m_txt_ten_kho
             // 
             this.m_txt_ten_kho.Location = new System.Drawing.Point(142, 48);
             this.m_txt_ten_kho.Name = "m_txt_ten_kho";
             this.m_txt_ten_kho.Size = new System.Drawing.Size(242, 20);
-            this.m_txt_ten_kho.TabIndex = 16;
+            this.m_txt_ten_kho.TabIndex = 3;
             // 
             // ImageList
             // 
@@ -171,7 +171,7 @@
             this.m_cbo_ten.Location = new System.Drawing.Point(142, 111);
             this.m_cbo_ten.Name = "m_cbo_ten";
             this.m_cbo_ten.Size = new System.Drawing.Size(173, 21);
-            this.m_cbo_ten.TabIndex = 17;
+            this.m_cbo_ten.TabIndex = 7;
             // 
             // m_pnl_out_place_dm
             // 
@@ -182,7 +182,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(545, 36);
-            this.m_pnl_out_place_dm.TabIndex = 22;
+            this.m_pnl_out_place_dm.TabIndex = 12;
             // 
             // m_cmd_save
             // 
@@ -196,7 +196,7 @@
             this.m_cmd_save.Location = new System.Drawing.Point(365, 4);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 24;
+            this.m_cmd_save.TabIndex = 0;
             this.m_cmd_save.Text = "&Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
             // 
@@ -213,7 +213,7 @@
             this.m_cmd_exit.Location = new System.Drawing.Point(453, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 

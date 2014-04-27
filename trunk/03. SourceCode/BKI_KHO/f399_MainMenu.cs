@@ -44,6 +44,17 @@ namespace Form_menu
             this.ShowInTaskbar = true;
             m_cmd_dang_nhap.Enabled = false;
             m_cmd_thong_tin.Enabled = false;
+            m_cmd_sao_luu.Enabled = false;
+            m_cmd_phuc_hoi.Enabled = false;
+            m_cmd_mat_khau.Enabled = false;
+            m_cmd_nhat_ky_he_thong.Enabled = false;
+            m_cmd_mua_hang.Enabled = false;
+            m_cmd_ban_hang.Enabled = false;
+            m_cmd_nhap_tu_excel.Enabled = false;
+            m_cmd_tien_te.Enabled = false;
+            m_cmd_thue.Enabled = false;
+            m_cmd_tai_khoan.Enabled = false;
+            m_cmd_nha_cung_cap.Enabled = false;
         }
         #endregion
         // Event handlers
@@ -196,6 +207,33 @@ namespace Form_menu
             }
             catch (Exception v_e)
             {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_phan_quyen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f999_ht_nguoi_su_dung frm999 = new f999_ht_nguoi_su_dung();
+                frm999.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+                
+            }
+        }
+
+        private void m_cmd_thoat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
