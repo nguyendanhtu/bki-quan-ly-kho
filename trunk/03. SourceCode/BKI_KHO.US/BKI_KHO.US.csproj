@@ -70,6 +70,7 @@
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
+    <Compile Include="US_RPT_CHUNG_TU_THEO_NHOM.cs" />
     <Compile Include="US_RPT_LOI_NHUAN.cs" />
     <Compile Include="US_RPT_XUAT_NHAP_TON.cs" />
     <Compile Include="US_V_BAO_CAO_BAO_HANH.cs" />

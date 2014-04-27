@@ -147,6 +147,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_RPT_CHUNG_TU_THEO_NHOM.cs">
+      <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RPT_CHUNG_TU_THEO_NHOM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_RPT_LOI_NHUAN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -429,6 +437,17 @@
     </None>
     <None Include="DS_HT_USER_GROUP.xss">
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RPT_CHUNG_TU_THEO_NHOM.xsc">
+      <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RPT_CHUNG_TU_THEO_NHOM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RPT_CHUNG_TU_THEO_NHOM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RPT_CHUNG_TU_THEO_NHOM.xss">
+      <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
     </None>
     <None Include="DS_RPT_LOI_NHUAN.xsc">
       <DependentUpon>DS_RPT_LOI_NHUAN.xsd</DependentUpon>

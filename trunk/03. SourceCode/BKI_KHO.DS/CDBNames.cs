@@ -816,4 +816,16 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_CT = "NGAY_CT";
         public const string MA_CT = "MA_CT";
     }
+
+    public class RPT_CHUNG_TU_THEO_NHOM
+    {
+        public const string ID = "ID";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string MA_CT = "MA_CT";
+        public const string NGAY_CT = "NGAY_CT";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string SO_LUONG = "SO_LUONG";
+        public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
+        public const string TONG_TIEN = "TONG_TIEN";
+    }
 }
