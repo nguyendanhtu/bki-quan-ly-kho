@@ -459,5 +459,12 @@ public class US_V_DM_HANG_HOA : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_V_DM_HANG_HOA op_ds, string i_str_search)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_DM_HANG_HOA_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_search);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
+}
 }

@@ -10,11 +10,19 @@ using BKI_KHO.US;
 //using IP.Core.IPCommon.MessageForms;
 using IP.Core.IPCommon;
 using BKI_KHO.DS;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_KHO.DanhMuc
 {
     public partial class f302_V_DM_NHOM_HANG_DE : Form
     {
+        public f302_V_DM_NHOM_HANG_DE()
+        {
+            InitializeComponent();
+            format_control();
+        }
+
+        
         #region Members
         DataEntryFormMode m_e_form_mode;
         DS_V_DM_NHOM_HANG m_ds = new DS_V_DM_NHOM_HANG();
@@ -25,11 +33,11 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region Public Interface
-        public f302_V_DM_NHOM_HANG_DE()
-        {
-            InitializeComponent();
-        }
 
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+        }
         public void display_for_insert()
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
@@ -77,12 +85,19 @@ namespace BKI_KHO.DanhMuc
             m_cbo_ten_nhom_cha.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             m_cbo_ten_nhom_cha.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
-        private void form_2_us_obj()
+        private bool is_validate_data_ok()
         {
-            if (m_txt_ten_nhom.Text == null || m_txt_ten_nhom.Text == "")
-            {
-                MessageBox.Show("Bạn đã nhập sai, nhập lại nhé!");
-            }          
+            if (!CValidateTextBox.IsValid(
+                m_txt_ten_nhom
+                , DataType.StringType
+                , allowNull.NO
+                , true))
+                return false;                   
+            return true;
+        }
+
+        private void form_2_us_obj()
+        {                 
                 m_us_dm_nhom_hang.strTEN = m_txt_ten_nhom.Text;       
                 m_us_dm_nhom_hang.dcID_NHOM_CHA = CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue);
                 m_us_dm_nhom_hang.strMO_TA = m_txt_mo_ta.Text;                                        
@@ -102,6 +117,8 @@ namespace BKI_KHO.DanhMuc
         {   
             try
             {
+                if (!is_validate_data_ok())
+                    return;
                 form_2_us_obj();
 
                 switch (m_e_form_mode)
