@@ -73,7 +73,8 @@ namespace BKI_KHO.DS.CDBNames
         LOAI_HO_SO_GV_CM = 25
             ,
         LOAI_HO_SO_GV_HD = 26
-            , DV_TO_CHUC_SK = 27
+            ,
+        DV_TO_CHUC_SK = 27
     }
 
     public class LOAI_TU_DIEN
@@ -105,7 +106,8 @@ namespace BKI_KHO.DS.CDBNames
         PO = 4
             ,
         ADMIN = 5
-            , GIANG_VIEN = 6
+            ,
+        GIANG_VIEN = 6
     }
 
 
@@ -530,7 +532,7 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
         public const string NGAY_KET_THUC = "NGAY_KET_THUC";
     }
-   
+
     //Begin TuyenNT
     public class DM_NHA_SX
     {
@@ -582,7 +584,6 @@ namespace BKI_KHO.DS.CDBNames
         public const string TEN = "TEN";
         public const string GHI_CHU = "GHI_CHU";
     }
-
     public class V_DM_HANG_HOA
     {
         public const string ID = "ID";
@@ -604,7 +605,9 @@ namespace BKI_KHO.DS.CDBNames
         public const string GIA_BAN_LE = "GIA_BAN_LE";
         public const string MO_TA = "MO_TA";
         public const string TRANG_THAI = "TRANG_THAI";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
     }
+
 
 
     public class DM_THUE
@@ -661,7 +664,7 @@ namespace BKI_KHO.DS.CDBNames
 
     #endregion TONGDV_NAMESPACE
 
-    
+
 
     public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
     {
