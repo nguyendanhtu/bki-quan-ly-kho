@@ -22,14 +22,15 @@ namespace BKI_KHO
 	//*  - nếu trở lại từ main theo kiểu "exit from system" thì thoát
 	//*********************************************************************************
 #endregion
-	public class ApplicationControl
+   
+
+    public class ApplicationControl
 	{
         [STAThread]
 		static void Main(){
 
             try
             {
-
                 IP.Core.IPSystemAdmin.f101_Dang_Nhap v_frm_login_form = new f101_Dang_Nhap();
                 US_HT_NGUOI_SU_DUNG v_us_user = new US_HT_NGUOI_SU_DUNG();
                 CLoginInformation_302 v_obj_login_info = new CLoginInformation_302(v_us_user);
@@ -48,7 +49,7 @@ namespace BKI_KHO
                 while (!v_UserWant2ExitFromSystem)
                 {
                     CAppContext_201.InitializeContext(v_obj_login_info);
-                    CAppContext_201.LoadDecentralizationByUserLogin();		
+                    CAppContext_201.LoadDecentralizationByUserLogin();
                     f399_MainMenu v_frm_main = new f399_MainMenu();
                     v_frm_main.display(ref v_exitmode);
                     v_frm_main.Dispose();
