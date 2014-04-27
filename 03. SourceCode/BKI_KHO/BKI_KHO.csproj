@@ -93,6 +93,12 @@
     <Compile Include="BaoCao\f107_V_BAO_CAO_BAO_HANH.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f107_V_PHIEU_BAO_HANH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f107_V_PHIEU_BAO_HANH.Designer.cs">
+      <DependentUpon>f107_V_PHIEU_BAO_HANH.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\f107_V_BAO_CAO_BAO_HANH.resx">
       <DependentUpon>f107_V_BAO_CAO_BAO_HANH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f107_V_PHIEU_BAO_HANH.resx">
+      <DependentUpon>f107_V_PHIEU_BAO_HANH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.resx">
       <DependentUpon>f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.cs</DependentUpon>
