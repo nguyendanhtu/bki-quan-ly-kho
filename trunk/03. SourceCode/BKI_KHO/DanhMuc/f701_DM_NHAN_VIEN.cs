@@ -221,10 +221,10 @@ namespace BKI_KHO
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 89);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 83);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(900, 284);
+            this.m_fg.Size = new System.Drawing.Size(900, 290);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -291,8 +291,8 @@ namespace BKI_KHO
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(900, 409);
-            this.Controls.Add(this.m_pn_top);
             this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_pn_top);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f701_DM_NHAN_VIEN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

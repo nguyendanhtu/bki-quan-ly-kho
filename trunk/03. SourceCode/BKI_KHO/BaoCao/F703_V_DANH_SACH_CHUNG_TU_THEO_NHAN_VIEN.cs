@@ -403,18 +403,28 @@ namespace BKI_KHO
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Subtotal(
-                AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
-                 , 0
-                 , (int)e_col_Number.TEN_LOAI_CT // chỗ này là tên trường mà mình nhóm
-                 , (int)e_col_Number.MA_CT // chỗ này là tên trường mà mình Count
-                 , "{0}");
-
-            m_fg.Subtotal(
                 AggregateEnum.Sum
                 , 0
                 , 1
                 , (int)e_col_Number.TONG_TIEN
-                , "");
+                , "{0}");
+            for (int v_i_curent_row = m_fg.Rows.Fixed; v_i_curent_row < m_fg.Rows.Count; v_i_curent_row++)
+            {
+                if (m_fg[v_i_curent_row, (int)e_col_Number.MA_CT].ToString() == "Phiếu nhập")
+                {
+                    m_fg[v_i_curent_row, (int) e_col_Number.MA_CT] = "Tổng giá trị hàng nhập";
+                }
+
+                if (m_fg[v_i_curent_row, (int)e_col_Number.MA_CT].ToString() == "Phiếu xuất")
+                {
+                    m_fg[v_i_curent_row, (int)e_col_Number.MA_CT] = "Tổng doanh thu từ hàng bán";
+                }
+
+                if (m_fg[v_i_curent_row, (int)e_col_Number.MA_CT].ToString() == "Phiếu sửa chữa")
+                {
+                    m_fg[v_i_curent_row, (int)e_col_Number.MA_CT] = "Tổng doanh thu từ sửa chữa";
+                }
+            }
 
             m_fg.Redraw = true;
         }
