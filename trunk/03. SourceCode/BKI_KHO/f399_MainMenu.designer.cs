@@ -94,6 +94,7 @@ namespace Form_menu
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.m_pnl_main = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -1080,6 +1081,16 @@ namespace Form_menu
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // m_cmd_nha_san_xuat
+            // 
+            this.m_cmd_nha_san_xuat.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_nha_san_xuat.Icon")));
+            this.m_cmd_nha_san_xuat.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_nha_san_xuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_nha_san_xuat.Name = "m_cmd_nha_san_xuat";
+            this.m_cmd_nha_san_xuat.SubItemsExpandWidth = 14;
+            this.m_cmd_nha_san_xuat.Text = "Nhà sản xuất";
+            this.m_cmd_nha_san_xuat.Click += new System.EventHandler(this.m_cmd_nha_san_xuat_Click);
+            // 
             // f399_MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1169,6 +1180,7 @@ namespace Form_menu
         private PictureBox pictureBox1;
         private DevComponents.DotNetBar.ButtonItem m_cmd_ma_vach;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nha_san_xuat;
+        private OpenFileDialog openFileDialog1;
 
     }
 }

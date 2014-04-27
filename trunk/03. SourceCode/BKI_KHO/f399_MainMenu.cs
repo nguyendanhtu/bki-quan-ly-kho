@@ -59,8 +59,15 @@ namespace Form_menu
         
         private void m_cmd_mat_hang_Click(object sender, EventArgs e)
         {
-            f300_V_DM_HANG_HOA f300 = new f300_V_DM_HANG_HOA();
-            f300.ShowDialog();
+            try
+            {
+                f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
+                v_f.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_nhom_hang_Click(object sender, EventArgs e)
@@ -103,7 +110,7 @@ namespace Form_menu
             //frm.m_cmd_exit.Visible = false;
             //frm.m_cmd_delete.Visible = false;
             frm.m_pnl_out_place_dm.Visible = false;
-            frm.m_tab_thong_tin_dm_hang_hoa.Visible = false;
+            //frm.m_tab_thong_tin_dm_hang_hoa.Visible = false;
             frm.Size = new System.Drawing.Size(1241, 450);
             frm.ShowDialog();
         }
