@@ -63,23 +63,23 @@ namespace BKI_KHO.DanhMuc
 
         private void us_obj_2_form()
         {
-            m_dat_ngay_sinh.Value=m_us_dm_khach_hang.datNGAY_SINH;
-            m_dat_ngay_tham_gia.Value=m_us_dm_khach_hang.datNGAY_THAM_GIA;
-            m_dat_ngay_tham_gia_gan_nhat.Value=m_us_dm_khach_hang.datNGAY_THAM_GIA_GAN_NHAT;
-            m_txt_di_dong.Text=m_us_dm_khach_hang.strDI_DONG;
-            m_txt_dia_chi.Text=m_us_dm_khach_hang.strDIA_CHI;
-            m_txt_dien_thoai.Text=m_us_dm_khach_hang.strDIEN_THOAI;
-            m_txt_email.Text=m_us_dm_khach_hang.strEMAIL;
-            m_txt_fax.Text=m_us_dm_khach_hang.strFAX;
-            m_txt_ghi_chu.Text=m_us_dm_khach_hang.strGHI_CHU;
-            m_txt_ma_so_thue.Text=m_us_dm_khach_hang.strMA_SO_THUE;
-            m_txt_thanh_pho.Text=m_us_dm_khach_hang.strTHANH_PHO;
-            m_txt_trang_thai.Text=m_us_dm_khach_hang.strTRANG_THAI;
-            m_txt_website.Text=m_us_dm_khach_hang.strWEBSITE;
-            m_txt_ten_cong_ty.Text=m_us_dm_khach_hang.strTEN_CONG_TY;
-            m_txt_ten_khach_hang.Text=m_us_dm_khach_hang.strTEN_KHACH_HANG;
-            m_txt_ma_buu_dien.Text=m_us_dm_khach_hang.strMA_BUU_DIEN;
-            m_txt_ma_khach_hang.Text=m_us_dm_khach_hang.strMA_KHACH_HANG;
+            m_dat_ngay_sinh.Value = m_us_dm_khach_hang.datNGAY_SINH;
+            m_dat_ngay_tham_gia.Value = m_us_dm_khach_hang.datNGAY_THAM_GIA;
+            m_dat_ngay_tham_gia_gan_nhat.Value = m_us_dm_khach_hang.datNGAY_THAM_GIA_GAN_NHAT;
+            m_txt_di_dong.Text = m_us_dm_khach_hang.strDI_DONG;
+            m_txt_dia_chi.Text = m_us_dm_khach_hang.strDIA_CHI;
+            m_txt_dien_thoai.Text = m_us_dm_khach_hang.strDIEN_THOAI;
+            m_txt_email.Text = m_us_dm_khach_hang.strEMAIL;
+            m_txt_fax.Text = m_us_dm_khach_hang.strFAX;
+            m_txt_ghi_chu.Text = m_us_dm_khach_hang.strGHI_CHU;
+            m_txt_ma_so_thue.Text = m_us_dm_khach_hang.strMA_SO_THUE;
+            m_txt_thanh_pho.Text = m_us_dm_khach_hang.strTHANH_PHO;
+            m_txt_trang_thai.Text = m_us_dm_khach_hang.strTRANG_THAI;
+            m_txt_website.Text = m_us_dm_khach_hang.strWEBSITE;
+            m_txt_ten_cong_ty.Text = m_us_dm_khach_hang.strTEN_CONG_TY;
+            m_txt_ten_khach_hang.Text = m_us_dm_khach_hang.strTEN_KHACH_HANG;
+            m_txt_ma_buu_dien.Text = m_us_dm_khach_hang.strMA_BUU_DIEN;
+            m_txt_ma_khach_hang.Text = m_us_dm_khach_hang.strMA_KHACH_HANG;
         }
 
         private void save_data()
