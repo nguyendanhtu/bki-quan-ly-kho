@@ -9,11 +9,18 @@ using System.Windows.Forms;
 using BKI_KHO.DS;
 using BKI_KHO.US;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_KHO.DanhMuc
 {
     public partial class f304_DM_NHA_SX_DE : Form
     {
+        public f304_DM_NHA_SX_DE()
+        {
+            InitializeComponent();
+            format_control();
+        }
+
         #region Members
         DataEntryFormMode m_e_form_mode = new DataEntryFormMode();
         DS_DM_NHA_SX m_ds = new DS_DM_NHA_SX();
@@ -21,9 +28,13 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region Public Interface
-        public f304_DM_NHA_SX_DE()
+        
+
+        public void display_for_update(US_DM_NHA_SX m_us)
         {
-            InitializeComponent();
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            us_obj_2_form(m_us);
+            this.ShowDialog();
         }
 
 
@@ -35,6 +46,26 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
         #region  Private Methods
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+        }
+        private bool is_validate_data_ok()
+        {
+            if (!CValidateTextBox.IsValid(
+                m_txt_ma_nha_sx
+                , DataType.StringType
+                , allowNull.NO
+                , true))
+                return false;
+            if (!CValidateTextBox.IsValid(
+                m_txt_ten_nha_sx
+                , DataType.StringType
+                , allowNull.NO
+                , true))
+                return false;
+            return true;
+        }
         private void form_2_us_obj()
         {
             m_us.strMA_NSX = m_txt_ma_nha_sx.Text;
@@ -68,6 +99,8 @@ namespace BKI_KHO.DanhMuc
         {
             try
             {
+                if (!is_validate_data_ok())
+                    return;
                 form_2_us_obj();
 
                 switch (m_e_form_mode)
@@ -91,11 +124,6 @@ namespace BKI_KHO.DanhMuc
         #endregion
 
 
-        public void display_for_update(US_DM_NHA_SX m_us)
-        {
-            m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            us_obj_2_form(m_us);
-            this.ShowDialog();
-        }
+        
     }
 }
