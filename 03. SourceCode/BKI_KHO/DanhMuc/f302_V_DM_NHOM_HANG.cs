@@ -214,10 +214,10 @@ namespace BKI_KHO
             this.m_fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.Light3D;
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 98);
+            this.m_fg.Location = new System.Drawing.Point(0, 76);
             this.m_fg.Name = "m_fg";
             this.m_fg.ShowSort = false;
-            this.m_fg.Size = new System.Drawing.Size(639, 246);
+            this.m_fg.Size = new System.Drawing.Size(639, 268);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -232,9 +232,9 @@ namespace BKI_KHO
             this.m_pnl_header.Controls.Add(this.m_txt_tim_kiem);
             this.m_pnl_header.Controls.Add(this.m_lbl_tim_kiem);
             this.m_pnl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_pnl_header.Location = new System.Drawing.Point(0, 47);
+            this.m_pnl_header.Location = new System.Drawing.Point(0, 31);
             this.m_pnl_header.Name = "m_pnl_header";
-            this.m_pnl_header.Size = new System.Drawing.Size(639, 51);
+            this.m_pnl_header.Size = new System.Drawing.Size(639, 45);
             this.m_pnl_header.TabIndex = 23;
             // 
             // m_cmd_search
@@ -276,11 +276,11 @@ namespace BKI_KHO
             // m_lbl_title
             // 
             this.m_lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_title.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(639, 47);
+            this.m_lbl_title.Size = new System.Drawing.Size(639, 31);
             this.m_lbl_title.TabIndex = 42;
             this.m_lbl_title.Text = "DANH MỤC NHÓM HÀNG";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -355,7 +355,7 @@ namespace BKI_KHO
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
