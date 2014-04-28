@@ -67,9 +67,15 @@ namespace Form_menu
 
         void m_cmd_nhap_kho_Click(object sender, EventArgs e)
         {
-            f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
-            v_frm.display();
-            
+            try
+            {
+                f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }                   
         }
         
         private void m_cmd_mat_hang_Click(object sender, EventArgs e)
@@ -87,20 +93,41 @@ namespace Form_menu
 
         private void m_cmd_nhom_hang_Click(object sender, EventArgs e)
         {
-            f302_V_DM_NHOM_HANG f302 = new f302_V_DM_NHOM_HANG();
-            f302.ShowDialog();
+            try
+            {
+                f302_V_DM_NHOM_HANG f302 = new f302_V_DM_NHOM_HANG();
+                f302.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e)
         {
-            f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
-            frm.ShowDialog();
+            try
+            {
+                f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
+                frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }            
         }
 
         private void m_cmd_nhan_vien_Click(object sender, EventArgs e)
         {
-            f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
-            frm.ShowDialog();
+            try
+            {
+                f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
+                frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }          
         }
 
         private void m_cmd_kho_Click(object sender, EventArgs e)
@@ -157,8 +184,15 @@ namespace Form_menu
 
         private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e)
         {
-            f303_DM_DON_VI frm = new f303_DM_DON_VI();
-            frm.ShowDialog();
+            try
+            {
+                f301_DM_DON_VI frm = new f301_DM_DON_VI();
+                frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }         
         }
 
         private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e)
