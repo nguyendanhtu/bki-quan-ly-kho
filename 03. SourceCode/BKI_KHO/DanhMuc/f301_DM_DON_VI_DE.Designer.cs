@@ -142,9 +142,9 @@
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(164, 0);
+            this.m_cmd_save.Location = new System.Drawing.Point(146, 0);
             this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(62, 30);
+            this.m_cmd_save.Size = new System.Drawing.Size(73, 30);
             this.m_cmd_save.TabIndex = 34;
             this.m_cmd_save.Text = "&Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
@@ -158,9 +158,9 @@
             this.m_cmd_refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_refresh.ImageIndex = 9;
             this.m_cmd_refresh.ImageList = this.ImageList;
-            this.m_cmd_refresh.Location = new System.Drawing.Point(226, 0);
+            this.m_cmd_refresh.Location = new System.Drawing.Point(219, 0);
             this.m_cmd_refresh.Name = "m_cmd_refresh";
-            this.m_cmd_refresh.Size = new System.Drawing.Size(61, 30);
+            this.m_cmd_refresh.Size = new System.Drawing.Size(68, 30);
             this.m_cmd_refresh.TabIndex = 35;
             this.m_cmd_refresh.Text = "L&àm lại";
             // 
@@ -205,7 +205,7 @@
             this.Controls.Add(this.m_lbl_ten_don_vi);
             this.Controls.Add(this.m_lbl_ma_don_vi);
             this.Name = "f301_DM_DON_VI_DE";
-            this.Text = "f301_DM_DON_VI_DE";
+            this.Text = "Cập nhật chi tiết đơn vị tính";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
