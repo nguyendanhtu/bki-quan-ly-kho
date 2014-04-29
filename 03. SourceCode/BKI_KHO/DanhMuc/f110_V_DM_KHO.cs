@@ -524,6 +524,8 @@ namespace BKI_KHO
             m_fg.Redraw = true;
         }
 
+        
+
 	}
 }
 

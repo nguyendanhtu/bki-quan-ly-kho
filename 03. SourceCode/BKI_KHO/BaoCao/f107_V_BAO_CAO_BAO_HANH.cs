@@ -21,6 +21,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_KHO.US;
 using BKI_KHO.DS;
 using BKI_KHO.DS.CDBNames;
+using BKI_KHO.BaoCao;
 
 using C1.Win.C1FlexGrid;
 
@@ -92,10 +93,10 @@ namespace BKI_KHO
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_lbl_title = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+            this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_lbl_title = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -226,6 +227,7 @@ namespace BKI_KHO
             this.m_fg.Size = new System.Drawing.Size(686, 267);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
+            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
             // 
             // panel1
             // 
@@ -239,33 +241,6 @@ namespace BKI_KHO
             this.panel1.Size = new System.Drawing.Size(686, 100);
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // m_lbl_title
-            // 
-            this.m_lbl_title.AutoSize = true;
-            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_title.Location = new System.Drawing.Point(226, 19);
-            this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(235, 26);
-            this.m_lbl_title.TabIndex = 0;
-            this.m_lbl_title.Text = "BÁO CÁO BẢO HÀNH";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tìm kiếm";
-            // 
-            // m_txt_tim_kiem
-            // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(150, 52);
-            this.m_txt_tim_kiem.Multiline = true;
-            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 28);
-            this.m_txt_tim_kiem.TabIndex = 2;
             // 
             // m_cmd_search
             // 
@@ -281,6 +256,33 @@ namespace BKI_KHO
             this.m_cmd_search.TabIndex = 27;
             this.m_cmd_search.Text = "Tìm kiếm";
             this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
+            // 
+            // m_txt_tim_kiem
+            // 
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(150, 52);
+            this.m_txt_tim_kiem.Multiline = true;
+            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 28);
+            this.m_txt_tim_kiem.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(76, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tìm kiếm";
+            // 
+            // m_lbl_title
+            // 
+            this.m_lbl_title.AutoSize = true;
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_title.Location = new System.Drawing.Point(226, 19);
+            this.m_lbl_title.Name = "m_lbl_title";
+            this.m_lbl_title.Size = new System.Drawing.Size(235, 26);
+            this.m_lbl_title.TabIndex = 0;
+            this.m_lbl_title.Text = "BÁO CÁO BẢO HÀNH";
             // 
             // f107_V_BAO_CAO_BAO_HANH
             // 
@@ -531,6 +533,22 @@ namespace BKI_KHO
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
+        }
+
+        private void m_fg_Click(object sender, EventArgs e)
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            f107_V_PHIEU_BAO_HANH v_fDE = new f107_V_PHIEU_BAO_HANH();
+            v_fDE.display_infor(m_us);
+        }
+
+        private void us_obj_2_form()
+        {
+           
+
+            
         }
 
 	}
