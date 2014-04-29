@@ -100,7 +100,7 @@
             // 
             this.m_txt_nguoi_thu.BackColor = System.Drawing.SystemColors.Window;
             this.m_txt_nguoi_thu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(193, 177);
+            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(193, 182);
             this.m_txt_nguoi_thu.MaxLength = 10;
             this.m_txt_nguoi_thu.Name = "m_txt_nguoi_thu";
             this.m_txt_nguoi_thu.Size = new System.Drawing.Size(167, 20);
@@ -109,11 +109,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(97, 181);
+            this.label9.Location = new System.Drawing.Point(97, 186);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.Size = new System.Drawing.Size(72, 13);
             this.label9.TabIndex = 65;
-            this.label9.Text = "Người thu tiền";
+            this.label9.Text = "Mã nhân viên";
             // 
             // m_group_lap_phieu
             // 
@@ -229,7 +229,7 @@
             this.m_txt_tong_tien.CustomFormat = "###,###,###,###0";
             this.m_txt_tong_tien.DataType = typeof(decimal);
             this.m_txt_tong_tien.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat;
-            this.m_txt_tong_tien.Location = new System.Drawing.Point(193, 74);
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(193, 78);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.NullText = "0";
             this.m_txt_tong_tien.Size = new System.Drawing.Size(167, 17);
@@ -268,7 +268,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 133);
+            this.label4.Location = new System.Drawing.Point(97, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 22;
@@ -277,7 +277,7 @@
             // m_txt_noi_dung
             // 
             this.m_txt_noi_dung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_noi_dung.Location = new System.Drawing.Point(193, 131);
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(193, 133);
             this.m_txt_noi_dung.Multiline = true;
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Size = new System.Drawing.Size(471, 35);
@@ -287,7 +287,7 @@
             // 
             this.m_lab_tien_bang_chu.AutoSize = true;
             this.m_lab_tien_bang_chu.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lab_tien_bang_chu.Location = new System.Drawing.Point(193, 94);
+            this.m_lab_tien_bang_chu.Location = new System.Drawing.Point(193, 101);
             this.m_lab_tien_bang_chu.Name = "m_lab_tien_bang_chu";
             this.m_lab_tien_bang_chu.Size = new System.Drawing.Size(457, 13);
             this.m_lab_tien_bang_chu.TabIndex = 18;
@@ -297,7 +297,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(97, 95);
+            this.label10.Location = new System.Drawing.Point(97, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 17;
@@ -306,7 +306,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(97, 76);
+            this.label6.Location = new System.Drawing.Point(97, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 14;
@@ -333,7 +333,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 31;
+            this.m_fg.Rows.Count = 32;
             this.m_fg.Size = new System.Drawing.Size(803, 221);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;

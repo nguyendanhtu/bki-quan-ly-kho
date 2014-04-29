@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="CConstantValues.cs" />
     <Compile Include="CHelperCore.cs" />
+    <Compile Include="Oracle.cs" />
+    <Compile Include="OracleParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -65,7 +67,9 @@
     <Compile Include="US_DM_TAI_KHOAN.cs" />
     <Compile Include="US_DM_THUE.cs" />
     <Compile Include="US_DM_TIEN_TE.cs" />
+    <Compile Include="US_GD_CHI_TIET_CHUNG_TU.cs" />
     <Compile Include="US_GD_CHUNG_TU.cs" />
+    <Compile Include="US_GD_CHUNG_TU_NHAN_VIEN.cs" />
     <Compile Include="US_HT_NHOM_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
