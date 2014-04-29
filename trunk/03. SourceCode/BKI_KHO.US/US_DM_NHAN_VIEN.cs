@@ -226,7 +226,37 @@ namespace BKI_KHO.US
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
+        #region Methods
+       
+        //public decimal get_id_nhan_vien(decimal ma_nhan_vien,ref decimal id_nhan_vien)
+        //{
+        //    decimal v_dc_so_du = 0;
+        //    CStoredProc v_str_proc = new CStoredProc("pr_DM_NHAN_VIEN_FillDatasetByMA_NHAN_VIEN");
+        //    v_str_proc.addDecimalInputParam("@ma_nhan_vien", ma_nhan_vien);
+        //    v_str_proc.ExecuteCommand(this);
 
+        //    v_dc_so_du = ((Oracle.DataAccess.Types.OracleDecimal)v_obj_so_du.Value).Value;
+        //    return v_dc_so_du;
+        //}
+        public bool trung_nhan_vien(string i_str_ma_nhan_vien,ref decimal id_nhan_vien)
+        {
+            DS_DM_NHAN_VIEN v_ds_nhan_vien = new DS_DM_NHAN_VIEN();
+            IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(v_ds_nhan_vien, v_ds_nhan_vien.DM_NHAN_VIEN.TableName);
+            v_obj_make_cmd.AddCondition("MA_NHAN_VIEN", i_str_ma_nhan_vien, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
+            this.FillDatasetByCommand(v_ds_nhan_vien, v_obj_make_cmd.getSelectCmd());
+            US_DM_NHAN_VIEN v_us = new US_DM_NHAN_VIEN();
+            DataRow v_dr = (DataRow)v_ds_nhan_vien.DM_NHAN_VIEN.Rows[0];
+            v_us.DataRow2Me(v_dr);
+            id_nhan_vien = v_us.dcID;
+            if (v_ds_nhan_vien.DM_NHAN_VIEN.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void FillDatasetSearchByMaNhanVien(DS_DM_NHAN_VIEN op_ds, string ip_str_ma_nhan_vien)
         {
             CStoredProc v_sp = new CStoredProc("pr_DM_NHAN_VIEN_Search_By_Ma_Nhan_Vien");
@@ -240,5 +270,6 @@ namespace BKI_KHO.US
             v_sp.addNVarcharInputParam("@keyword", ip_str_keyword);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
+        #endregion
     }
 }

@@ -355,5 +355,22 @@ public class US_GD_CHUNG_TU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+    #region Methods
+    public bool trung_so_chung_tu(string i_str_so_chung_tu)
+    {
+        DS_GD_CHUNG_TU v_ds_chung_tu = new DS_GD_CHUNG_TU();
+        IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(v_ds_chung_tu, v_ds_chung_tu.GD_CHUNG_TU.TableName);
+        v_obj_make_cmd.AddCondition("MA_CT", i_str_so_chung_tu, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
+        this.FillDatasetByCommand(v_ds_chung_tu, v_obj_make_cmd.getSelectCmd());
+        if (v_ds_chung_tu.GD_CHUNG_TU.Rows.Count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    #endregion
+}
 }
