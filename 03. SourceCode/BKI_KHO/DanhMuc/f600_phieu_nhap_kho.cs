@@ -47,7 +47,7 @@ namespace BKI_KHO
         US_V_DM_KHO m_us_kho = new US_V_DM_KHO();
 
         DS_V_GD_CHUNG_TU v_ds_chung_tu = new DS_V_GD_CHUNG_TU();
-        US_V_GD_CHUNG_TU v_us_chung_tu = new US_V_GD_CHUNG_TU();
+        US_V_GD_CHUNG_TU m_v_us_chung_tu = new US_V_GD_CHUNG_TU();
         decimal id_nhan_vien = 0;
         US_GD_CHUNG_TU v_us_gd_chung_tu = new US_GD_CHUNG_TU();
         US_GD_CHI_TIET_CHUNG_TU v_us_gd_chung_tu_detail = new US_GD_CHI_TIET_CHUNG_TU();
@@ -59,10 +59,14 @@ namespace BKI_KHO
         #region Methods
         private void format_controls(){
 			CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_ten_phieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			CControlFormat.setC1FlexFormat(m_fg);
 			CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             CGridUtils.ClearDataInGrid(m_fg);
+            m_fg.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.None;
+            m_fg.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
+            m_fg.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
             this.MinimizeBox = true;
             this.MaximizeBox = true;
 			set_define_events();
@@ -72,6 +76,7 @@ namespace BKI_KHO
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
             load_cbo_ten_hang_hoa_on_grid();
+            m_dat_ngay_lap.Value = CIPConvert.ToStr( CAppContext_201.getCurentDate());
 			//load_data_2_grid();
             //String.Format("{0:0,0 VNĐ}", m_ds.Tables[0].Columns["GIA_NHAP"].ToString()).Replace(",", ".");
 		}	
@@ -112,11 +117,11 @@ namespace BKI_KHO
         {
             m_fg.Cols[(int)e_col_Number.MA_HANG_HOA].DataMap = get_mapping_col_muc_dich();
         }
-        private bool check_validate()
+        private bool check_validate_is_ok()
         {
-            if (!CValidateTextBox.IsValid(m_txt_so_phieu_thu_chi, DataType.StringType, allowNull.NO, true))
+            if (!CValidateTextBox.IsValid(m_txt_so_phieu_thu_chi, DataType.StringType, allowNull.NO, false))
             {
-                BaseMessages.MsgBox_Error("Số chứng từ không được để trống.");
+                BaseMessages.MsgBox_Error("Số chứng từ không được để trống!");
                 return false;
             }
 
@@ -131,22 +136,24 @@ namespace BKI_KHO
             }
             if (m_txt_ten_kho.Text.Length == 0)
             {
-                BaseMessages.MsgBox_Error("Bạn phải chọn học viên");
+                BaseMessages.MsgBox_Error("Bạn phải chọn kho để nhập hàng hóa");
                 m_txt_ten_kho.Focus();
                 return false;
             }
+            if (!check_so_chung_tu_is_not_exits_db()) return false;
+            if (!check_ma_nhan_vien()) return false;
+            if (!check_value_phieu_detail()) return false;
 
+            if (!check_tong_tien()) return false;
             return true;
         }
-        private bool check_so_chung_tu()
+        private bool check_so_chung_tu_is_not_exits_db()
         {
             US_GD_CHUNG_TU v_gd_chung_tu = new US_GD_CHUNG_TU();
             bool v_bol_trung = false;
-            try
-            {
-                v_gd_chung_tu.BeginTransaction();
+           
                 v_bol_trung = v_gd_chung_tu.trung_so_chung_tu(m_txt_so_phieu_thu_chi.Text.Trim());
-                v_gd_chung_tu.CommitTransaction();
+               
                 if (v_bol_trung)
                 {
                     BaseMessages.MsgBox_Error("Số chứng từ đã tồn tại, không thể dùng số chứng từ " + m_txt_so_phieu_thu_chi.Text);
@@ -154,23 +161,15 @@ namespace BKI_KHO
                     return false;
                 }
                 return true;
-            }
-            catch (Exception v_e)
-            {
-                v_gd_chung_tu.Rollback();
-                throw v_e;
-            }
+           
         }
         private bool check_ma_nhan_vien()
         {
             US_DM_NHAN_VIEN v_nhan_vien = new US_DM_NHAN_VIEN();
             bool v_bol_trung = false;
-            
-            try
-            {
-                v_nhan_vien.BeginTransaction();
+           
                 v_bol_trung = v_nhan_vien.trung_nhan_vien(m_txt_nguoi_thu.Text.Trim(),ref  id_nhan_vien);
-                v_nhan_vien.CommitTransaction();
+               
                 if (!v_bol_trung)
                 {
                     BaseMessages.MsgBox_Error("Không tồn tại nhân viên có mã nhân viên " + m_txt_nguoi_thu.Text);
@@ -178,12 +177,7 @@ namespace BKI_KHO
                     return false;
                 }
                 return true;
-            }
-            catch (Exception v_e)
-            {
-                v_nhan_vien.Rollback();
-                throw v_e;
-            }
+           
         }
         private bool check_value_phieu_detail()
         {
@@ -196,6 +190,7 @@ namespace BKI_KHO
                 }
                 else if (m_fg[i, (int)e_col_Number.MA_HANG_HOA] == null || m_fg[i, (int)e_col_Number.SO_LUONG] == null || m_fg[i, (int)e_col_Number.SO_TIEN] == null)
                 {
+                    BaseMessages.MsgBox_Infor("Các bút toán cần được nhập đầy đủ!");
                     return false;
                 }
             }
@@ -204,7 +199,10 @@ namespace BKI_KHO
         private bool check_tong_tien()
         {
             decimal v_dc_tong_tien = CIPConvert.ToDecimal(m_txt_tong_tien.Value);
-            if (v_dc_tong_tien != get_tong_tien_nhap()) return false;
+            if (v_dc_tong_tien != get_tong_tien_nhap()) {
+                 BaseMessages.MsgBox_Infor("Tổng số tiền chứng từ không bằng tổng số tiền chi tiết");
+                return false;
+            }
             return true;
         }
         private decimal get_tong_tien_nhap()
@@ -218,59 +216,57 @@ namespace BKI_KHO
         }
         private void save_data_2db()
         {
-            int i = 1;
+            if (!check_validate_is_ok()) return;
+          
+          
+        
+            
             //lay id nhan vien lap phieu nhap kho
 
-            form_2_us_object();
+            form_2_us_gd_chung_tu();
             try
             {
+               
                 //1. insert ban ghi vao phieu_thu_chid
                 v_us_gd_chung_tu.BeginTransaction();
                 v_us_gd_chung_tu.Insert();
-                v_us_gd_chung_tu.CommitTransaction();
+               // v_us_gd_chung_tu.CommitTransaction();
                
                 //2. insert ban ghi vao phieu_thu_chi_detail
-                for (i = 1; i <= m_fg.Rows.Count - 2; i++)
+                v_us_gd_chung_tu_detail.UseTransOfUSObject(v_us_gd_chung_tu);
+                for (int v_i_cur_grid_row = m_fg.Rows.Fixed; v_i_cur_grid_row <= m_fg.Rows.Count - 2; v_i_cur_grid_row++)
                 {
-                    v_us_gd_chung_tu_detail.dcID_CHUNG_TU = v_us_gd_chung_tu.dcID;
-                    v_us_gd_chung_tu_detail.dcID_HANG_HOA = CIPConvert.ToDecimal(m_fg[i, (int)e_col_Number.MA_HANG_HOA]);
-                    v_us_gd_chung_tu_detail.dcSO_LUONG = CIPConvert.ToDecimal(m_fg[i, (int)e_col_Number.SO_LUONG]);
-                    v_us_gd_chung_tu_detail.dcGIA_GIAO_DICH = CIPConvert.ToDecimal(m_fg[i, (int)e_col_Number.SO_TIEN]);
-                    v_us_gd_chung_tu_detail.SetID_DON_VI_TINHNull();
-                    v_us_gd_chung_tu_detail.SetSO_SERINull();
-                    v_us_gd_chung_tu_detail.SetTHOI_GIAN_BHNull();
-                    v_us_gd_chung_tu_detail.SetID_DVT_THOI_GIANNull();
-                    try
-                    {
-                        //v_us_gd_chung_tu_detail.BeginTransaction();
-                        v_us_gd_chung_tu_detail.Insert();
-                       // v_us_gd_chung_tu_detail.CommitTransaction();
 
-                    }
-                    catch (Exception v_e)
-                    {
-                        v_us_gd_chung_tu_detail.Rollback();
-                        throw v_e;
-                    }
+                    grid_row_2_us_gd_chi_tiet_chung_tu(
+                        v_i_cur_grid_row
+                        , v_us_gd_chung_tu_detail);
+                        v_us_gd_chung_tu_detail.Insert();
+                }
                     //2. insert gd chứng từ nhân viên
+                v_us_chung_tu_nv.UseTransOfUSObject(v_us_gd_chung_tu);
                     v_us_chung_tu_nv.dcID_CHUNG_TU = v_us_gd_chung_tu.dcID;
                     v_us_chung_tu_nv.dcID_NHAN_VIEN = id_nhan_vien;
+                    v_us_chung_tu_nv.dcSO_TIEN = v_us_gd_chung_tu.dcTONG_TIEN;
+
 
                     //v_us_chung_tu_nv.BeginTransaction();
                     v_us_chung_tu_nv.Insert();
                     // v_us_chung_tu_nv.CommitTransaction();
-                }
+                    v_us_gd_chung_tu.CommitTransaction();
                 BaseMessages.MsgBox_Infor("Đã lập phiếu nhập kho thành công.");
 
             }
             catch (Exception v_e)
             {
-                v_us_gd_chung_tu.Rollback();
+                if (v_us_gd_chung_tu.is_having_transaction())
+                {
+                    v_us_gd_chung_tu.Rollback();
+                }
                 throw v_e;
             }
 
         }
-        private void form_2_us_object()
+        private void form_2_us_gd_chung_tu()
         {
             //GD chứng từ
             string v_str_ngay_thu_chi = CIPConvert.ToStr(m_dat_ngay_lap.Value, "dd/MM/yyyy");
@@ -291,6 +287,22 @@ namespace BKI_KHO
             //gd chứng từ chi tiết
             
         }
+
+        private void grid_row_2_us_gd_chi_tiet_chung_tu(
+            int ip_grid_row
+            , US_GD_CHI_TIET_CHUNG_TU ip_us_gd_chi_tiet_chung_tu)
+        {
+            ip_us_gd_chi_tiet_chung_tu.dcID_CHUNG_TU = v_us_gd_chung_tu.dcID;
+            ip_us_gd_chi_tiet_chung_tu.dcID_HANG_HOA = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.MA_HANG_HOA]);
+            ip_us_gd_chi_tiet_chung_tu.dcSO_LUONG = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.SO_LUONG]);
+            ip_us_gd_chi_tiet_chung_tu.dcGIA_GIAO_DICH = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.SO_TIEN]);
+            ip_us_gd_chi_tiet_chung_tu.SetID_DON_VI_TINHNull();
+            ip_us_gd_chi_tiet_chung_tu.SetSO_SERINull();
+            ip_us_gd_chi_tiet_chung_tu.SetTHOI_GIAN_BHNull();
+            ip_us_gd_chi_tiet_chung_tu.SetID_DVT_THOI_GIANNull();
+                    
+        }
+
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
@@ -299,27 +311,12 @@ namespace BKI_KHO
             m_cmd_insert.Click += m_cmd_insert_Click;
 		}
 
+        #endregion
         void m_cmd_insert_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!check_validate()) return;
-                if (!check_so_chung_tu()) return;
-                if (!check_ma_nhan_vien()) return;
-                if (!check_value_phieu_detail())
-                {
-                    BaseMessages.MsgBox_Infor("Các bút toán cần được nhập đầy đủ!");
-                    return;
-                }
-                if (!check_tong_tien())
-                {
-                    BaseMessages.MsgBox_Infor("Tổng số tiền không bằng nhau");
-                    return;
-                }
-                if (BaseMessages.MsgBox_Confirm("Bạn có chắc chắn lập phiếu thu này không?") == false)
-                {
-                    return;
-                }
+               
                 //if(m_str_loai_phieu=="PC") // Neu la phieu chi thi moi can kiem tra so du
                 //    if(!check_so_du_tai_khoan()) return;
                 save_data_2db();
@@ -348,8 +345,7 @@ namespace BKI_KHO
             m_lab_tien_bang_chu.Text = v_str_tien_chu;
         }
 
-       
-        #endregion
+    
 
         void f600_phieu_nhap_kho_Load(object sender, EventArgs e)
         {
