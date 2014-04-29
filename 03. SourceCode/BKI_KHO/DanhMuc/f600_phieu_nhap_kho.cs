@@ -351,7 +351,6 @@ namespace BKI_KHO
        
         #endregion
 
-
         void f600_phieu_nhap_kho_Load(object sender, EventArgs e)
         {
             try
