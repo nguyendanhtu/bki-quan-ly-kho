@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using IP.Core.IPCommon;
 using BKI_KHO;
 //using DevComponents.DotNetBar;
+using IP.Core.IPSystemAdmin;
 
 namespace Form_menu
 {
@@ -54,7 +55,7 @@ namespace Form_menu
             m_cmd_tien_te.Enabled = false;
             m_cmd_thue.Enabled = false;
             m_cmd_tai_khoan.Enabled = false;
-            m_cmd_nha_cung_cap.Enabled = false;
+            //m_cmd_nha_cung_cap.Enabled = false;
             m_cmd_nhap_so_du_dau.Enabled = false;
             m_cmd_ma_vach.Enabled = false;
         }
@@ -270,6 +271,19 @@ namespace Form_menu
             catch (Exception v_e)
             {
 
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_tu_dien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f100_TuDien frm100 = new f100_TuDien();
+                frm100.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
