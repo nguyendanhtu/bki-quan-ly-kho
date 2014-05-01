@@ -12,6 +12,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using BKI_KHO.DanhMuc;
+using BKI_KHO.NghiepVu;
 using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
@@ -136,7 +137,7 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 437);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(900, 36);
@@ -178,7 +179,6 @@ namespace BKI_KHO
             this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.Enabled = false;
             this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_view.ImageIndex = 18;
             this.m_cmd_view.ImageList = this.ImageList;
@@ -224,7 +224,7 @@ namespace BKI_KHO
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 83);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(900, 290);
+            this.m_fg.Size = new System.Drawing.Size(900, 354);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -290,7 +290,7 @@ namespace BKI_KHO
             // f701_DM_NHAN_VIEN
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(900, 409);
+            this.ClientSize = new System.Drawing.Size(900, 473);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pn_top);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -449,6 +449,8 @@ namespace BKI_KHO
             grid2us_object(m_us, m_fg.Row);
             //	f701_DM_NHAN_VIEN_DE v_fDE = new f701_DM_NHAN_VIEN_DE();			
             //	v_fDE.display(m_us);
+            F704_V_BAO_HANH_SUA_CHUA frm = new F704_V_BAO_HANH_SUA_CHUA();
+            frm.ShowDialog();
         }
         private void set_define_events()
         {

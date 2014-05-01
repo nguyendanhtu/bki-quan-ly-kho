@@ -79,6 +79,7 @@
     <Compile Include="US_RPT_XUAT_NHAP_TON.cs" />
     <Compile Include="US_V_BAO_CAO_BAO_HANH.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.cs" />
+    <Compile Include="US_V_BAO_HANH_SUA_CHUA.cs" />
     <Compile Include="US_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.cs" />
     <Compile Include="US_V_DM_HANG_HOA.cs" />
     <Compile Include="US_V_DM_KHO.cs" />
