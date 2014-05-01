@@ -322,5 +322,12 @@ namespace BKI_KHO.US
             v_sp.addDecimalInputParam("@loai_chung_tu", ip_dc_loai_chung_tu);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
+
+        public void FillDatasetByIDChungTu(DS_V_BAO_HANH_SUA_CHUA op_ds, decimal ip_dc_id_chung_tu)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_V_BAO_HANH_SUA_CHUA_by_id_chung_tu");
+            v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
+            v_sp.fillDataSetByCommand(this, op_ds);
+        }
     }
 }
