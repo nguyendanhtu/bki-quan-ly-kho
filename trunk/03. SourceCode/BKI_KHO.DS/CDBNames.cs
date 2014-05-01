@@ -747,6 +747,17 @@ namespace BKI_KHO.DS.CDBNames
         public const string TEN = "TEN";
     }
 
+    public class GD_CHUNG_TU
+    {
+        public const string NGAY_CT = "NGAY_CT";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string MA_CT = "MA_CT";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
+    }
+
     public class DM_LOAI_CHUNG_TU
     {
         public const string ID = "ID";
