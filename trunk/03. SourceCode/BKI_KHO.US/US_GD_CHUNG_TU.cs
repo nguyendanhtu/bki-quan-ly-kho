@@ -398,11 +398,18 @@ namespace BKI_KHO.US
         }
         #endregion
 
-        
-            public void FillDatasetByMaChungTu(DS_GD_CHUNG_TU op_ds, string ip_str_ma_chung_tu)
+
+        public void FillDatasetByMaChungTu(DS_GD_CHUNG_TU op_ds, string ip_str_ma_chung_tu)
         {
             CStoredProc v_sp = new CStoredProc("pr_GD_CHUNG_TU_Search_by_ma_chung_tu");
             v_sp.addNVarcharInputParam("@ma_chung_tu", ip_str_ma_chung_tu);
+            v_sp.fillDataSetByCommand(this, op_ds);
+        }
+
+        public void FillDatasetByLoaiChungTu(DS_GD_CHUNG_TU op_ds, string ip_str_keyword)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_GD_CHUNG_TU_Search_by_loai_chung_tu");
+            v_sp.addNVarcharInputParam("@keyword", ip_str_keyword);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
     }
