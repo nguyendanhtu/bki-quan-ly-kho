@@ -450,7 +450,7 @@ namespace BKI_KHO
             //	f701_DM_NHAN_VIEN_DE v_fDE = new f701_DM_NHAN_VIEN_DE();			
             //	v_fDE.display(m_us);
             F704_V_BAO_HANH_SUA_CHUA frm = new F704_V_BAO_HANH_SUA_CHUA();
-            frm.ShowDialog();
+            frm.display_for_insert();
         }
         private void set_define_events()
         {

@@ -385,7 +385,7 @@ namespace BKI_KHO
         {
             m_ds = new DS_V_BAO_HANH_SUA_CHUA();
             m_us.FillDatasetByLoaiChungTu(m_ds, m_txt_tim_kiem.Text, 37);
-            
+
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -395,12 +395,12 @@ namespace BKI_KHO
         {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.strMA_CT = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_CT].ToString();
-            i_us.strMA_NHAN_VIEN = m_fg.Rows[i_grid_row][(int) e_col_Number.MA_NHAN_VIEN].ToString();
+            i_us.strMA_NHAN_VIEN = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_NHAN_VIEN].ToString();
             i_us.datNGAY_CT = DateTime.Parse(m_fg.Rows[i_grid_row][(int)e_col_Number.NGAY_CT].ToString());
             i_us.dcSO_TIEN = decimal.Parse(m_fg.Rows[i_grid_row][(int)e_col_Number.SO_TIEN].ToString());
-            i_us.strHO_TEN = m_fg.Rows[i_grid_row][(int) e_col_Number.HO_TEN].ToString();
+            i_us.strHO_TEN = m_fg.Rows[i_grid_row][(int)e_col_Number.HO_TEN].ToString();
             i_us.strDIEN_GIAI = v_dr.ItemArray[10].ToString();
-            i_us.strGHI_CHU_2 = m_fg.Rows[i_grid_row][(int) e_col_Number.GHI_CHU_2].ToString();
+            i_us.strGHI_CHU_2 = m_fg.Rows[i_grid_row][(int)e_col_Number.GHI_CHU_2].ToString();
             //m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             //i_us.DataRow2Me(v_dr);
         }
@@ -428,7 +428,7 @@ namespace BKI_KHO
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
             var v_fDE = new F704_V_BAO_HANH_SUA_CHUA();
-            v_fDE.display_for_update(m_us);
+            //v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 
