@@ -16,361 +16,394 @@ using System.Data;
 
 
 
-namespace BKI_KHO.US{
-
-public class US_GD_CHUNG_TU : US_Object
+namespace BKI_KHO.US
 {
-	private const string c_TableName = "GD_CHUNG_TU";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
-
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_LOAI_CT 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_LOAI_CT", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_LOAI_CT"] = value;
-		}
-	}
-
-	public bool IsID_LOAI_CTNull()	{
-		return pm_objDR.IsNull("ID_LOAI_CT");
-	}
-
-	public void SetID_LOAI_CTNull() {
-		pm_objDR["ID_LOAI_CT"] = System.Convert.DBNull;
-	}
-
-	public string strMA_CT 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MA_CT", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MA_CT"] = value;
-		}
-	}
-
-	public bool IsMA_CTNull() 
-	{
-		return pm_objDR.IsNull("MA_CT");
-	}
-
-	public void SetMA_CTNull() {
-		pm_objDR["MA_CT"] = System.Convert.DBNull;
-	}
-
-	public DateTime datNGAY_CT
-	{
-		get   
-		{
-			return CNull.RowNVLDate(pm_objDR, "NGAY_CT", IPConstants.c_DefaultDate);
-		}
-		set   
-		{
-			pm_objDR["NGAY_CT"] = value;
-		}
-	}
-
-	public bool IsNGAY_CTNull()
-	{
-		return pm_objDR.IsNull("NGAY_CT");
-	}
-
-	public void SetNGAY_CTNull()
-	{
-		pm_objDR["NGAY_CT"] = System.Convert.DBNull;
-	}
-
-	public string strDIEN_GIAI 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "DIEN_GIAI", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["DIEN_GIAI"] = value;
-		}
-	}
-
-	public bool IsDIEN_GIAINull() 
-	{
-		return pm_objDR.IsNull("DIEN_GIAI");
-	}
-
-	public void SetDIEN_GIAINull() {
-		pm_objDR["DIEN_GIAI"] = System.Convert.DBNull;
-	}
-
-	public decimal dcTONG_TIEN 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "TONG_TIEN", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["TONG_TIEN"] = value;
-		}
-	}
-
-	public bool IsTONG_TIENNull()	{
-		return pm_objDR.IsNull("TONG_TIEN");
-	}
-
-	public void SetTONG_TIENNull() {
-		pm_objDR["TONG_TIEN"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_TO_CHUC_NGUON 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_TO_CHUC_NGUON", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_TO_CHUC_NGUON"] = value;
-		}
-	}
-
-	public bool IsID_TO_CHUC_NGUONNull()	{
-		return pm_objDR.IsNull("ID_TO_CHUC_NGUON");
-	}
-
-	public void SetID_TO_CHUC_NGUONNull() {
-		pm_objDR["ID_TO_CHUC_NGUON"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_NGUOI_GIAO_DICH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_GIAO_DICH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGUOI_GIAO_DICH"] = value;
-		}
-	}
-
-	public bool IsID_NGUOI_GIAO_DICHNull()	{
-		return pm_objDR.IsNull("ID_NGUOI_GIAO_DICH");
-	}
-
-	public void SetID_NGUOI_GIAO_DICHNull() {
-		pm_objDR["ID_NGUOI_GIAO_DICH"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_TO_CHUC_DICH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_TO_CHUC_DICH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_TO_CHUC_DICH"] = value;
-		}
-	}
-
-	public bool IsID_TO_CHUC_DICHNull()	{
-		return pm_objDR.IsNull("ID_TO_CHUC_DICH");
-	}
-
-	public void SetID_TO_CHUC_DICHNull() {
-		pm_objDR["ID_TO_CHUC_DICH"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_NGUOI_NHAP 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_NHAP", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGUOI_NHAP"] = value;
-		}
-	}
-
-	public bool IsID_NGUOI_NHAPNull()	{
-		return pm_objDR.IsNull("ID_NGUOI_NHAP");
-	}
-
-	public void SetID_NGUOI_NHAPNull() {
-		pm_objDR["ID_NGUOI_NHAP"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_NGAY_NHAP 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGAY_NHAP", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGAY_NHAP"] = value;
-		}
-	}
-
-	public bool IsID_NGAY_NHAPNull()	{
-		return pm_objDR.IsNull("ID_NGAY_NHAP");
-	}
-
-	public void SetID_NGAY_NHAPNull() {
-		pm_objDR["ID_NGAY_NHAP"] = System.Convert.DBNull;
-	}
-
-	public decimal dcID_NGAY_NHAP_CUOI 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGAY_NHAP_CUOI", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGAY_NHAP_CUOI"] = value;
-		}
-	}
-
-	public bool IsID_NGAY_NHAP_CUOINull()	{
-		return pm_objDR.IsNull("ID_NGAY_NHAP_CUOI");
-	}
-
-	public void SetID_NGAY_NHAP_CUOINull() {
-		pm_objDR["ID_NGAY_NHAP_CUOI"] = System.Convert.DBNull;
-	}
-
-	public string strGHI_CHU_1 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "GHI_CHU_1", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["GHI_CHU_1"] = value;
-		}
-	}
-
-	public bool IsGHI_CHU_1Null() 
-	{
-		return pm_objDR.IsNull("GHI_CHU_1");
-	}
-
-	public void SetGHI_CHU_1Null() {
-		pm_objDR["GHI_CHU_1"] = System.Convert.DBNull;
-	}
-
-	public string strGHI_CHU_2 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "GHI_CHU_2", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["GHI_CHU_2"] = value;
-		}
-	}
-
-	public bool IsGHI_CHU_2Null() 
-	{
-		return pm_objDR.IsNull("GHI_CHU_2");
-	}
-
-	public void SetGHI_CHU_2Null() {
-		pm_objDR["GHI_CHU_2"] = System.Convert.DBNull;
-	}
-
-	public string strGHI_CHU_3 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "GHI_CHU_3", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["GHI_CHU_3"] = value;
-		}
-	}
-
-	public bool IsGHI_CHU_3Null() 
-	{
-		return pm_objDR.IsNull("GHI_CHU_3");
-	}
-
-	public void SetGHI_CHU_3Null() {
-		pm_objDR["GHI_CHU_3"] = System.Convert.DBNull;
-	}
-
-#endregion
-#region "Init Functions"
-	public US_GD_CHUNG_TU() 
-	{
-		pm_objDS = new DS_GD_CHUNG_TU();
-		pm_strTableName = c_TableName;
-		pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
-	}
-
-	public US_GD_CHUNG_TU(DataRow i_objDR): this()
-	{
-		this.DataRow2Me(i_objDR);
-	}
-
-	public US_GD_CHUNG_TU(decimal i_dbID) 
-	{
-		pm_objDS = new DS_GD_CHUNG_TU();
-		pm_strTableName = c_TableName;
-		IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
-		v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
-		SqlCommand v_cmdSQL;
-		v_cmdSQL = v_objMkCmd.getSelectCmd();
-		this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
-		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
-	}
-#endregion
-    #region Methods
-    public bool trung_so_chung_tu(string i_str_so_chung_tu)
+    public class US_GD_CHUNG_TU : US_Object
     {
-        DS_GD_CHUNG_TU v_ds_chung_tu = new DS_GD_CHUNG_TU();
-        IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(v_ds_chung_tu, v_ds_chung_tu.GD_CHUNG_TU.TableName);
-        v_obj_make_cmd.AddCondition("MA_CT", i_str_so_chung_tu, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
-        this.FillDatasetByCommand(v_ds_chung_tu, v_obj_make_cmd.getSelectCmd());
-        if (v_ds_chung_tu.GD_CHUNG_TU.Rows.Count > 0)
+        private const string c_TableName = "GD_CHUNG_TU";
+        #region "Public Properties"
+        public decimal dcID
         {
-            return true;
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID"] = value;
+            }
         }
-        else
+
+        public bool IsIDNull()
         {
-            return false;
+            return pm_objDR.IsNull("ID");
+        }
+
+        public void SetIDNull()
+        {
+            pm_objDR["ID"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_LOAI_CT
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_LOAI_CT", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_LOAI_CT"] = value;
+            }
+        }
+
+        public bool IsID_LOAI_CTNull()
+        {
+            return pm_objDR.IsNull("ID_LOAI_CT");
+        }
+
+        public void SetID_LOAI_CTNull()
+        {
+            pm_objDR["ID_LOAI_CT"] = System.Convert.DBNull;
+        }
+
+        public string strMA_CT
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MA_CT", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MA_CT"] = value;
+            }
+        }
+
+        public bool IsMA_CTNull()
+        {
+            return pm_objDR.IsNull("MA_CT");
+        }
+
+        public void SetMA_CTNull()
+        {
+            pm_objDR["MA_CT"] = System.Convert.DBNull;
+        }
+
+        public DateTime datNGAY_CT
+        {
+            get
+            {
+                return CNull.RowNVLDate(pm_objDR, "NGAY_CT", IPConstants.c_DefaultDate);
+            }
+            set
+            {
+                pm_objDR["NGAY_CT"] = value;
+            }
+        }
+
+        public bool IsNGAY_CTNull()
+        {
+            return pm_objDR.IsNull("NGAY_CT");
+        }
+
+        public void SetNGAY_CTNull()
+        {
+            pm_objDR["NGAY_CT"] = System.Convert.DBNull;
+        }
+
+        public string strDIEN_GIAI
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "DIEN_GIAI", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["DIEN_GIAI"] = value;
+            }
+        }
+
+        public bool IsDIEN_GIAINull()
+        {
+            return pm_objDR.IsNull("DIEN_GIAI");
+        }
+
+        public void SetDIEN_GIAINull()
+        {
+            pm_objDR["DIEN_GIAI"] = System.Convert.DBNull;
+        }
+
+        public decimal dcTONG_TIEN
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "TONG_TIEN", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["TONG_TIEN"] = value;
+            }
+        }
+
+        public bool IsTONG_TIENNull()
+        {
+            return pm_objDR.IsNull("TONG_TIEN");
+        }
+
+        public void SetTONG_TIENNull()
+        {
+            pm_objDR["TONG_TIEN"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_TO_CHUC_NGUON
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_TO_CHUC_NGUON", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_TO_CHUC_NGUON"] = value;
+            }
+        }
+
+        public bool IsID_TO_CHUC_NGUONNull()
+        {
+            return pm_objDR.IsNull("ID_TO_CHUC_NGUON");
+        }
+
+        public void SetID_TO_CHUC_NGUONNull()
+        {
+            pm_objDR["ID_TO_CHUC_NGUON"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_NGUOI_GIAO_DICH
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_GIAO_DICH", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGUOI_GIAO_DICH"] = value;
+            }
+        }
+
+        public bool IsID_NGUOI_GIAO_DICHNull()
+        {
+            return pm_objDR.IsNull("ID_NGUOI_GIAO_DICH");
+        }
+
+        public void SetID_NGUOI_GIAO_DICHNull()
+        {
+            pm_objDR["ID_NGUOI_GIAO_DICH"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_TO_CHUC_DICH
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_TO_CHUC_DICH", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_TO_CHUC_DICH"] = value;
+            }
+        }
+
+        public bool IsID_TO_CHUC_DICHNull()
+        {
+            return pm_objDR.IsNull("ID_TO_CHUC_DICH");
+        }
+
+        public void SetID_TO_CHUC_DICHNull()
+        {
+            pm_objDR["ID_TO_CHUC_DICH"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_NGUOI_NHAP
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_NHAP", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGUOI_NHAP"] = value;
+            }
+        }
+
+        public bool IsID_NGUOI_NHAPNull()
+        {
+            return pm_objDR.IsNull("ID_NGUOI_NHAP");
+        }
+
+        public void SetID_NGUOI_NHAPNull()
+        {
+            pm_objDR["ID_NGUOI_NHAP"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_NGAY_NHAP
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGAY_NHAP", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGAY_NHAP"] = value;
+            }
+        }
+
+        public bool IsID_NGAY_NHAPNull()
+        {
+            return pm_objDR.IsNull("ID_NGAY_NHAP");
+        }
+
+        public void SetID_NGAY_NHAPNull()
+        {
+            pm_objDR["ID_NGAY_NHAP"] = System.Convert.DBNull;
+        }
+
+        public decimal dcID_NGAY_NHAP_CUOI
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGAY_NHAP_CUOI", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGAY_NHAP_CUOI"] = value;
+            }
+        }
+
+        public bool IsID_NGAY_NHAP_CUOINull()
+        {
+            return pm_objDR.IsNull("ID_NGAY_NHAP_CUOI");
+        }
+
+        public void SetID_NGAY_NHAP_CUOINull()
+        {
+            pm_objDR["ID_NGAY_NHAP_CUOI"] = System.Convert.DBNull;
+        }
+
+        public string strGHI_CHU_1
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "GHI_CHU_1", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["GHI_CHU_1"] = value;
+            }
+        }
+
+        public bool IsGHI_CHU_1Null()
+        {
+            return pm_objDR.IsNull("GHI_CHU_1");
+        }
+
+        public void SetGHI_CHU_1Null()
+        {
+            pm_objDR["GHI_CHU_1"] = System.Convert.DBNull;
+        }
+
+        public string strGHI_CHU_2
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "GHI_CHU_2", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["GHI_CHU_2"] = value;
+            }
+        }
+
+        public bool IsGHI_CHU_2Null()
+        {
+            return pm_objDR.IsNull("GHI_CHU_2");
+        }
+
+        public void SetGHI_CHU_2Null()
+        {
+            pm_objDR["GHI_CHU_2"] = System.Convert.DBNull;
+        }
+
+        public string strGHI_CHU_3
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "GHI_CHU_3", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["GHI_CHU_3"] = value;
+            }
+        }
+
+        public bool IsGHI_CHU_3Null()
+        {
+            return pm_objDR.IsNull("GHI_CHU_3");
+        }
+
+        public void SetGHI_CHU_3Null()
+        {
+            pm_objDR["GHI_CHU_3"] = System.Convert.DBNull;
+        }
+
+        #endregion
+        #region "Init Functions"
+        public US_GD_CHUNG_TU()
+        {
+            pm_objDS = new DS_GD_CHUNG_TU();
+            pm_strTableName = c_TableName;
+            pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
+        }
+
+        public US_GD_CHUNG_TU(DataRow i_objDR)
+            : this()
+        {
+            this.DataRow2Me(i_objDR);
+        }
+
+        public US_GD_CHUNG_TU(decimal i_dbID)
+        {
+            pm_objDS = new DS_GD_CHUNG_TU();
+            pm_strTableName = c_TableName;
+            IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
+            v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
+            SqlCommand v_cmdSQL;
+            v_cmdSQL = v_objMkCmd.getSelectCmd();
+            this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
+            pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
+        }
+        #endregion
+        #region Methods
+        public bool trung_so_chung_tu(string i_str_so_chung_tu)
+        {
+            DS_GD_CHUNG_TU v_ds_chung_tu = new DS_GD_CHUNG_TU();
+            IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(v_ds_chung_tu, v_ds_chung_tu.GD_CHUNG_TU.TableName);
+            v_obj_make_cmd.AddCondition("MA_CT", i_str_so_chung_tu, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
+            this.FillDatasetByCommand(v_ds_chung_tu, v_obj_make_cmd.getSelectCmd());
+            if (v_ds_chung_tu.GD_CHUNG_TU.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        
+            public void FillDatasetByMaChungTu(DS_GD_CHUNG_TU op_ds, string ip_str_ma_chung_tu)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_GD_CHUNG_TU_Search_by_ma_chung_tu");
+            v_sp.addNVarcharInputParam("@ma_chung_tu", ip_str_ma_chung_tu);
+            v_sp.fillDataSetByCommand(this, op_ds);
         }
     }
-    #endregion
-}
 }
