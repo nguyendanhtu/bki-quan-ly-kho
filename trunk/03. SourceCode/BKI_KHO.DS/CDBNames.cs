@@ -685,6 +685,17 @@ namespace BKI_KHO.DS.CDBNames
         public const string MA_CT = "MA_CT";
     }
 
+    public class V_BAO_HANH_SUA_CHUA
+    {
+        public const string NGAY_CT = "NGAY_CT";
+        public const string HO_TEN = "HO_TEN";
+        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
+        public const string SO_TIEN = "SO_TIEN";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string MA_CT = "MA_CT";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+    }
+
     public class DM_NHA_CUNG_CAP
     {
         public const string ID = "ID";
