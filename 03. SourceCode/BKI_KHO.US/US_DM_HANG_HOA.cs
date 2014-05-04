@@ -353,12 +353,19 @@ public class US_DM_HANG_HOA : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-
+    #region MEthods
     public void FillDatasetById(DS_DM_HANG_HOA op_ds, decimal ip_dc_id)
     {
         CStoredProc v_stored_proc = new CStoredProc("pr_DM_HANG_HOA_FillDatasetById");
         v_stored_proc.addDecimalInputParam("@ID", ip_dc_id);
         v_stored_proc.fillDataSetByCommand(this, op_ds);
     }
+    public void FillDatasetById_hang_hoa(DS_DM_HANG_HOA op_ds)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("get_gia_nhap_by_id_hang");
+        //v_stored_proc.addDecimalInputParam("@ID", ip_dc_id_hang_hoa);
+        v_stored_proc.fillDataSetByCommand(this, op_ds);
+    }
+    #endregion
 }
 }

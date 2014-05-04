@@ -34,6 +34,7 @@
             this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.m_group_lap_phieu = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_lbl_ten_phieu = new System.Windows.Forms.Label();
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
             this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
@@ -53,12 +54,11 @@
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_context = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.m_cmd_delete_detail = new System.Windows.Forms.ToolStripMenuItem();
-            this.m_cmd_in_phieu = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xem = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.m_group_lap_phieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).BeginInit();
@@ -140,6 +140,15 @@
             this.m_group_lap_phieu.TabIndex = 0;
             this.m_group_lap_phieu.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(363, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "VNĐ";
+            // 
             // m_lbl_ten_phieu
             // 
             this.m_lbl_ten_phieu.AutoSize = true;
@@ -189,7 +198,7 @@
             this.m_cmd_chon_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_kho.ImageIndex = 14;
             this.m_cmd_chon_kho.ImageList = this.imageList1;
-            this.m_cmd_chon_kho.Location = new System.Drawing.Point(366, 222);
+            this.m_cmd_chon_kho.Location = new System.Drawing.Point(366, 188);
             this.m_cmd_chon_kho.Name = "m_cmd_chon_kho";
             this.m_cmd_chon_kho.Size = new System.Drawing.Size(32, 28);
             this.m_cmd_chon_kho.TabIndex = 14;
@@ -333,7 +342,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 34;
+            this.m_fg.Rows.Count = 36;
             this.m_fg.Size = new System.Drawing.Size(803, 227);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -351,26 +360,25 @@
             this.m_cmd_delete_detail.Size = new System.Drawing.Size(94, 22);
             this.m_cmd_delete_detail.Text = "Xóa";
             // 
-            // m_cmd_in_phieu
+            // m_cmd_xem
             // 
-            this.m_cmd_in_phieu.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_in_phieu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_in_phieu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_in_phieu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_in_phieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_in_phieu.ImageIndex = 15;
-            this.m_cmd_in_phieu.ImageList = this.imageList1;
-            this.m_cmd_in_phieu.Location = new System.Drawing.Point(635, 4);
-            this.m_cmd_in_phieu.Name = "m_cmd_in_phieu";
-            this.m_cmd_in_phieu.Size = new System.Drawing.Size(82, 26);
-            this.m_cmd_in_phieu.TabIndex = 2;
-            this.m_cmd_in_phieu.Text = "&In phiếu";
-            this.toolTip1.SetToolTip(this.m_cmd_in_phieu, "In phiếu thu / chi cho học viên");
-            this.m_cmd_in_phieu.Visible = false;
+            this.m_cmd_xem.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xem.ImageIndex = 10;
+            this.m_cmd_xem.ImageList = this.imageList1;
+            this.m_cmd_xem.Location = new System.Drawing.Point(100, 4);
+            this.m_cmd_xem.Name = "m_cmd_xem";
+            this.m_cmd_xem.Size = new System.Drawing.Size(82, 26);
+            this.m_cmd_xem.TabIndex = 2;
+            this.m_cmd_xem.Text = "&In phiếu";
+            this.toolTip1.SetToolTip(this.m_cmd_xem, "In phiếu thu / chi cho học viên");
             // 
             // m_pnl_out_place_dm
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_in_phieu);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xem);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -410,15 +418,6 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 26);
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(363, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "VNĐ";
             // 
             // f600_phieu_nhap_kho
             // 
@@ -468,7 +467,7 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.ContextMenuStrip m_context;
         private System.Windows.Forms.ToolStripMenuItem m_cmd_delete_detail;
-        internal SIS.Controls.Button.SiSButton m_cmd_in_phieu;
+        internal SIS.Controls.Button.SiSButton m_cmd_xem;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
