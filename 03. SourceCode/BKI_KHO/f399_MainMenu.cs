@@ -64,6 +64,20 @@ namespace Form_menu
         private void set_define_events()
         {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
+            m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
+        }
+
+        void m_cmd_xuat_kho_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_nhap_kho_Click(object sender, EventArgs e)
