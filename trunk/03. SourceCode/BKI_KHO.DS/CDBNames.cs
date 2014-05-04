@@ -4,19 +4,21 @@ using System.Text;
 
 namespace BKI_KHO.DS.CDBNames
 {
-    public class v_gd_chung_tu
+    public class V_GD_CHUNG_TU
     {
-        public const string ID_LOAI_CT = "ID_LOAI_CT";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
         public const string MA_CT = "MA_CT";
         public const string NGAY_CT = "NGAY_CT";
-        public const string TONG_TIEN = "TONG_TIEN";
-        public const string ID_HANG_HOA = "ID_HANG_HOA";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string TEN_HANG_EN = "TEN_HANG_EN";
+        public const string GIA_NHAP = "GIA_NHAP";
         public const string SO_LUONG = "SO_LUONG";
         public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
         public const string SO_SERI = "SO_SERI";
-        public const string MA_HANG = "MA_HANG";
-        public const string TEN_HANG_EN = "TEN_HANG_EN";
-        public const string GIA_NHAP = "GIA_NHAP";
     }
     public class PHIEU_NHAP_KHO_DETAIL
     {

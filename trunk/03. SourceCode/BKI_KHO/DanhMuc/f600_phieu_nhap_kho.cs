@@ -96,9 +96,9 @@ namespace BKI_KHO
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(v_gd_chung_tu.MA_HANG, e_col_Number.MA_HANG_HOA);
+            v_htb.Add(V_GD_CHUNG_TU.MA_HANG, e_col_Number.MA_HANG_HOA);
             //v_htb.Add(v_gd_chung_tu.SO_LUONG, e_col_Number.SO_LUONG);
-            v_htb.Add(v_gd_chung_tu.GIA_NHAP, e_col_Number.SO_TIEN);
+            v_htb.Add(V_GD_CHUNG_TU.GIA_NHAP, e_col_Number.SO_TIEN);
 
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_chung_tu.v_gd_chung_tu.Newv_gd_chung_tuRow());
@@ -396,8 +396,14 @@ namespace BKI_KHO
             this.Load += f600_phieu_nhap_kho_Load;
             m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
             m_cmd_insert.Click += m_cmd_insert_Click;
-            
+            m_cmd_xem.Click += m_cmd_xem_Click;
 		}
+
+        void m_cmd_xem_Click(object sender, EventArgs e)
+        {
+            f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
+            v_frm.display();
+        }
 
         #endregion
 

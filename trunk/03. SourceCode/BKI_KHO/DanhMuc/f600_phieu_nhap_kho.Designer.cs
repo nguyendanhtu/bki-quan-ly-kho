@@ -371,9 +371,9 @@
             this.m_cmd_xem.ImageList = this.imageList1;
             this.m_cmd_xem.Location = new System.Drawing.Point(100, 4);
             this.m_cmd_xem.Name = "m_cmd_xem";
-            this.m_cmd_xem.Size = new System.Drawing.Size(82, 26);
+            this.m_cmd_xem.Size = new System.Drawing.Size(157, 26);
             this.m_cmd_xem.TabIndex = 2;
-            this.m_cmd_xem.Text = "&In phiếu";
+            this.m_cmd_xem.Text = "Xem danh sách phiếu";
             this.toolTip1.SetToolTip(this.m_cmd_xem, "In phiếu thu / chi cho học viên");
             // 
             // m_pnl_out_place_dm
