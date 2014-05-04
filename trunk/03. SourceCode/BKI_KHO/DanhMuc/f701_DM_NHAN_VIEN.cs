@@ -312,6 +312,15 @@ namespace BKI_KHO
         {
             this.ShowDialog();
         }
+        public DialogResult display_select_f250(US_DM_NHAN_VIEN i_us)
+        {
+            m_us = i_us;
+            // m_us_v_dm_kho = i_us;
+            m_e_form_mode = DataEntryFormMode.SelectDataState;
+            this.ShowDialog();
+
+            return m_dlg_result;
+        }
         #endregion
 
         #region Data Structure
@@ -334,6 +343,8 @@ namespace BKI_KHO
         #endregion
 
         #region Members
+        DataEntryFormMode m_e_form_mode;
+        DialogResult m_dlg_result;
         ITransferDataRow m_obj_trans;
         DS_DM_NHAN_VIEN m_ds = new DS_DM_NHAN_VIEN();
         US_DM_NHAN_VIEN m_us = new US_DM_NHAN_VIEN();
@@ -459,6 +470,20 @@ namespace BKI_KHO
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //string a = m_us_v_dm_kho.strMA_KHO;
+            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            {
+                m_dlg_result = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void auto_suggest_text()
