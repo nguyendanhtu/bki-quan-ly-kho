@@ -398,10 +398,22 @@ namespace BKI_KHO
         {
             m_cmd_exit.Click += m_cmd_exit_Click;
             m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
-            //this.Load += f600_phieu_nhap_kho_Load;
+            this.Load += f604_phieu_xuat_kho_Load;
             //m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
             //m_cmd_insert.Click += m_cmd_insert_Click;
             //m_cmd_xem.Click += m_cmd_xem_Click;
+        }
+
+        void f604_phieu_xuat_kho_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_exit_Click(object sender, EventArgs e)

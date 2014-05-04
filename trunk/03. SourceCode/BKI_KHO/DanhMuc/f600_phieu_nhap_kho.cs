@@ -174,7 +174,7 @@ namespace BKI_KHO
         private void load_cbo_gia_nhap_hang_hoa_on_grid()
         {
             m_fg.Cols[(int)e_col_Number.SO_TIEN].DataMap = get_mapping_col_gia_nhap();
-
+             
         }
         private void load_cbo_ten_hang_hoa_on_grid()
         {
