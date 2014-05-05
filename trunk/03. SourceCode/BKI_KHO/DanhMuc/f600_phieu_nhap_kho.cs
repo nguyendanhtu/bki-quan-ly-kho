@@ -28,6 +28,15 @@ namespace BKI_KHO
         {
             this.ShowDialog();
         }
+        public DialogResult display_detail_chung_tu(US_V_GD_CHUNG_TU i_us)
+        {
+            m_us = i_us;
+            // m_us_v_dm_kho = i_us;
+            m_e_form_mode = DataEntryFormMode.SelectDataState;
+            this.ShowDialog();
+
+            return m_dlg_result;
+        }
         #endregion
 
         #region Data Structure
@@ -42,6 +51,8 @@ namespace BKI_KHO
         #endregion
 
         #region Members
+        DataEntryFormMode m_e_form_mode;
+        DialogResult m_dlg_result;
         ITransferDataRow m_obj_trans;
         decimal m_dc_tong_tien = 0;
         decimal v_dc_id = 0;
@@ -80,6 +91,7 @@ namespace BKI_KHO
             m_fg.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
             this.MinimizeBox = true;
             this.MaximizeBox = true;
+            m_txt_nguoi_thu.Enabled = false;
 			set_define_events();
             m_fg.AllowEditing = true;
 			this.KeyPreview = true;		
@@ -468,7 +480,7 @@ namespace BKI_KHO
             if (v_dlg_result == DialogResult.OK)
             {
                 m_txt_nguoi_thu.Text = v_us_nhan_vien.strHO_DEM + " " + v_us_nhan_vien.strTEN;
-                m_txt_nguoi_thu.Enabled = false;
+                
             }
         }
 		
