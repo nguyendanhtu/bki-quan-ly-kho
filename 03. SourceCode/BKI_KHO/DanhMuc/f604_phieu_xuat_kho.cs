@@ -19,6 +19,7 @@ namespace BKI_KHO
         public f604_phieu_xuat_kho()
         {
             InitializeComponent();
+            format_controls();
         }
 
         #region Public Interface
@@ -83,6 +84,7 @@ namespace BKI_KHO
             this.MinimizeBox = true;
             this.MaximizeBox = true;
             set_define_events();
+            m_txt_nguoi_thu.Enabled = false;
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
         }
@@ -132,7 +134,7 @@ namespace BKI_KHO
         {
 
             Hashtable v_hst = new Hashtable();
-
+            //decimal a = CIPConvert.ToDecimal(m_fg[1, (int)e_col_Number.NHOM_HANG]);
             try
             {
                 v_us_hang_hoa.BeginTransaction();
@@ -141,7 +143,7 @@ namespace BKI_KHO
                     v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "order by ten_hang_vn");
                 }
                 else
-                    v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_nhom = 0 or id_nhom =" + v_us_hang_hoa.dcID_NHOM + "order by ma_hang");
+                    v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_nhom =" + v_us_hang_hoa.dcID_NHOM + "order by ma_hang");
                 v_us_hang_hoa.CommitTransaction();
             }
             catch (Exception v_e)
@@ -183,7 +185,7 @@ namespace BKI_KHO
         private void load_cbo_ten_hang_hoa_on_grid()
         {
             m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].DataMap = get_mapping_col_muc_dich();
-
+           // m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].
         }
         private void load_cbo_nhom_hang_hoa_on_grid()
         {
@@ -346,7 +348,7 @@ namespace BKI_KHO
             //GD chứng từ
             string v_str_ngay_thu_chi = CIPConvert.ToStr(m_dat_ngay_lap.Value, "dd/MM/yyyy");
             v_us_gd_chung_tu.strDIEN_GIAI = m_txt_noi_dung.Text;
-            v_us_gd_chung_tu.dcID_LOAI_CT = 1;//phiếu nhập kho
+            v_us_gd_chung_tu.dcID_LOAI_CT = 2;//phiếu nhập kho
             v_us_gd_chung_tu.strMA_CT = m_txt_so_phieu_thu_chi.Text;
             v_us_gd_chung_tu.datNGAY_CT = IP.Core.IPSystemAdmin.CAppContext_201.getCurentDate();
             v_us_gd_chung_tu.dcTONG_TIEN = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
@@ -400,8 +402,46 @@ namespace BKI_KHO
             m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
             this.Load += f604_phieu_xuat_kho_Load;
             //m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
-            //m_cmd_insert.Click += m_cmd_insert_Click;
-            //m_cmd_xem.Click += m_cmd_xem_Click;
+            m_cmd_insert.Click += m_cmd_insert_Click;
+            m_cmd_xem.Click += m_cmd_xem_Click;
+            m_fg.TextChanged += m_fg_TextChanged;
+           // m_fg.Leave += m_fg_Leave;
+        }
+
+        void m_fg_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_cbo_ten_hang_hoa_on_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_fg_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                load_cbo_ten_hang_hoa_on_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_fg_AfterEdit(object sender, C1.Win.C1FlexGrid.RowColEventArgs e)
+        {
+            try
+            {
+                load_cbo_ten_hang_hoa_on_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f604_phieu_xuat_kho_Load(object sender, EventArgs e)
@@ -431,7 +471,7 @@ namespace BKI_KHO
         {
             try
             {
-
+                
                 //if(m_str_loai_phieu=="PC") // Neu la phieu chi thi moi can kiem tra so du
                 //    if(!check_so_du_tai_khoan()) return;
                 save_data_2db();
@@ -493,7 +533,7 @@ namespace BKI_KHO
         }
         void m_cmd_xem_Click(object sender, EventArgs e)
         {
-            f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
+            f806_RPT_XUAT_NHAP_TON v_frm = new f806_RPT_XUAT_NHAP_TON();
             v_frm.display();
         }
 
