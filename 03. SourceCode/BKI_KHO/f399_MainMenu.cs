@@ -22,6 +22,9 @@ namespace Form_menu
             InitializeComponent();
             format_controls();
         }
+#region Members
+        int trangthaiweb = 1;
+#endregion
         #region Public Interface
         public void display(ref IP.Core.IPCommon.IPConstants.HowUserWantTo_Exit_MainForm v_exitmode)
         {
@@ -78,7 +81,7 @@ namespace Form_menu
             catch (System.Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            } 
+            }
         }
 
         void m_cmd_nhap_kho_Click(object sender, EventArgs e)
@@ -90,10 +93,10 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
-            }                   
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
-        
+
         private void m_cmd_mat_hang_Click(object sender, EventArgs e)
         {
             try
@@ -103,7 +106,7 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -116,7 +119,7 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -129,8 +132,8 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
-            }            
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_nhan_vien_Click(object sender, EventArgs e)
@@ -142,8 +145,8 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
-            }          
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_kho_Click(object sender, EventArgs e)
@@ -161,15 +164,15 @@ namespace Form_menu
 
         private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e)
         {
-           try
-           {
-               f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
-               v_f.ShowDialog();
-           }
-           catch (System.Exception v_e)
-           {
-           	CSystemLog_301.ExceptionHandle(v_e);
-           }
+            try
+            {
+                f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
+                v_f.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e)
@@ -207,8 +210,8 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
-            }         
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e)
@@ -220,7 +223,7 @@ namespace Form_menu
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -273,7 +276,7 @@ namespace Form_menu
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-                
+
             }
         }
 
@@ -306,16 +309,37 @@ namespace Form_menu
         private void f399_MainMenu_Load(object sender, EventArgs e)
         {
             string url = @"http://bkindex.com/home/";
-             webBrowser1.Url = new Uri(url);
-             webBrowser1.ScriptErrorsSuppressed = true;
-        }
-        public void Validate(string url)
-        {
-            
-        }
+            webBrowser1.Url = new Uri(url);
+            webBrowser1.ScriptErrorsSuppressed = true;
+            m_cmd_browser.Text = "Tắt duyệt web";
+        }       
         private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    string url = null;
+                    if (toolStripTextBox1.Text.Contains("http://"))
+                    {
+                        url = toolStripTextBox1.Text.Trim();
+
+                    }
+                    else
+                        url = "http://" + toolStripTextBox1.Text.Trim();
+
+                    webBrowser1.Url = new Uri(url);
+                }
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            try
             {
                 string url = null;
                 if (toolStripTextBox1.Text.Contains("http://"))
@@ -324,15 +348,77 @@ namespace Form_menu
 
                 }
                 else
-                    url = "http://"+toolStripTextBox1.Text.Trim();
+                    url = "http://" + toolStripTextBox1.Text.Trim();
 
-               webBrowser1.Url = new Uri(url);
-            }           
+                webBrowser1.Url = new Uri(url);
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                webBrowser1.GoBack();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                webBrowser1.GoForward();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                webBrowser1.Refresh();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_browser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (trangthaiweb)
+                {
+                    case 1:
+                        webBrowser1.Dispose();
+                        webBrowser1.Visible = false;
+                        toolStrip1.Visible = false;
+                        trangthaiweb = 0;
+                        m_cmd_browser.Text = "Bật duyệt web";
+                        break;
+                    case 0:
+                        webBrowser1.Visible = true;
+                        toolStrip1.Visible = true;
+                        trangthaiweb = 1;
+                        m_cmd_browser.Text = "Tắt duyệt web";
+                        break;
+                }
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
     }
 }
