@@ -56,7 +56,7 @@ namespace Form_menu
             m_cmd_thue.Enabled = false;
             m_cmd_tai_khoan.Enabled = false;
             //m_cmd_nha_cung_cap.Enabled = false;
-            m_cmd_nhap_so_du_dau.Enabled = false;
+            //m_cmd_nhap_so_du_dau.Enabled = false;
             m_cmd_ma_vach.Enabled = false;
         }
         #endregion
