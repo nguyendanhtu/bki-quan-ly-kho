@@ -11,6 +11,7 @@ using IP.Core.IPCommon;
 using BKI_KHO;
 //using DevComponents.DotNetBar;
 using IP.Core.IPSystemAdmin;
+using System.Security.Policy;
 
 namespace Form_menu
 {
@@ -300,6 +301,38 @@ namespace Form_menu
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void f399_MainMenu_Load(object sender, EventArgs e)
+        {
+            string url = @"http://bkindex.com/home/";
+             webBrowser1.Url = new Uri(url);
+             webBrowser1.ScriptErrorsSuppressed = true;
+        }
+        public void Validate(string url)
+        {
+            
+        }
+        private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string url = null;
+                if (toolStripTextBox1.Text.Contains("http://"))
+                {
+                    url = toolStripTextBox1.Text.Trim();
+
+                }
+                else
+                    url = "http://"+toolStripTextBox1.Text.Trim();
+
+               webBrowser1.Url = new Uri(url);
+            }           
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
