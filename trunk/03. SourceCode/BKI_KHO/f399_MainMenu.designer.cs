@@ -96,11 +96,12 @@ namespace Form_menu
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_cmd_browser = new System.Windows.Forms.Button();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -1072,6 +1073,7 @@ namespace Form_menu
             // 
             // m_pnl_main
             // 
+            this.m_pnl_main.Controls.Add(this.m_cmd_browser);
             this.m_pnl_main.Controls.Add(this.webBrowser1);
             this.m_pnl_main.Controls.Add(this.toolStrip1);
             this.m_pnl_main.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1112,6 +1114,7 @@ namespace Form_menu
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -1121,6 +1124,7 @@ namespace Form_menu
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -1130,6 +1134,7 @@ namespace Form_menu
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripTextBox1
             // 
@@ -1148,6 +1153,16 @@ namespace Form_menu
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // m_cmd_browser
+            // 
+            this.m_cmd_browser.Location = new System.Drawing.Point(404, -1);
+            this.m_cmd_browser.Name = "m_cmd_browser";
+            this.m_cmd_browser.Size = new System.Drawing.Size(119, 23);
+            this.m_cmd_browser.TabIndex = 3;
+            this.m_cmd_browser.Text = "Tắt duyệt web";
+            this.m_cmd_browser.UseVisualStyleBackColor = true;
+            this.m_cmd_browser.Click += new System.EventHandler(this.m_cmd_browser_Click);
             // 
             // f399_MainMenu
             // 
@@ -1248,6 +1263,7 @@ namespace Form_menu
         private ToolStripButton toolStripButton3;
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripButton toolStripButton4;
+        private Button m_cmd_browser;
 
     }
 }
