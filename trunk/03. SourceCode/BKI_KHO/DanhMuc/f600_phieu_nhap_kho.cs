@@ -30,9 +30,11 @@ namespace BKI_KHO
         }
         public DialogResult display_detail_chung_tu(US_V_GD_CHUNG_TU i_us)
         {
-            m_us = i_us;
+            m_v_us_chung_tu = i_us;
             // m_us_v_dm_kho = i_us;
+
             m_e_form_mode = DataEntryFormMode.SelectDataState;
+            us_2_form_objects(m_v_us_chung_tu);
             this.ShowDialog();
 
             return m_dlg_result;
@@ -347,6 +349,11 @@ namespace BKI_KHO
                 throw v_e;
             }
 
+        }
+        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
+        {
+            m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
+            //m_txt_tong_tien.Value=i_us.
         }
         private void form_2_us_gd_chung_tu()
         {

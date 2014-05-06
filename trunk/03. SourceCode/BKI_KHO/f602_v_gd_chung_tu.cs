@@ -246,6 +246,8 @@ namespace BKI_KHO
 		#endregion
 
 		#region Members
+        DialogResult m_dlg_result;
+        DataEntryFormMode m_e_form_mode;
 		ITransferDataRow m_obj_trans;		
 		DS_V_GD_CHUNG_TU m_ds = new DS_V_GD_CHUNG_TU();
 		US_V_GD_CHUNG_TU m_us = new US_V_GD_CHUNG_TU();
@@ -360,7 +362,29 @@ namespace BKI_KHO
 			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
 			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
 			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_fg.DoubleClick += m_fg_DoubleClick;
 		}
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //string a = m_us_v_dm_kho.strMA_KHO;
+            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            {
+                m_dlg_result = DialogResult.OK;
+                this.Close();
+            }
+            f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+            v_frm.display_detail_chung_tu(m_us);
+        }
+
+        void m_fg_Click(object sender, EventArgs e)
+        {
+            
+
+        }
 		#endregion
 
 //

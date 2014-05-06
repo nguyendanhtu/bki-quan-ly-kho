@@ -44,6 +44,8 @@ namespace BKI_KHO
         #endregion
 
         #region Members
+        DialogResult m_dlg_result;
+        DataEntryFormMode m_e_form_mode;
         ITransferDataRow m_obj_trans;
         decimal m_dc_tong_tien = 0;
         decimal v_dc_id = 0;
@@ -395,7 +397,26 @@ namespace BKI_KHO
             ip_us_gd_chi_tiet_chung_tu.SetID_DVT_THOI_GIANNull();
 
         }
-
+        private void grid2us_object(US_V_GD_CHUNG_TU i_us
+            , int i_grid_row)
+        {
+            DataRow v_dr;
+            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
+            i_us.DataRow2Me(v_dr);
+            // m_us_v_dm_kho = new US_V_DM_KHO((decimal)v_dr.ItemArray[0]);
+        }
+        private void calculate_total_amount()
+        {
+            decimal v_dc_total_price = 0;
+            //for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
+            //{
+            //    if (m_fg[v_i_cur_row, (int)e_col_Number.AMMOUNT] == null) continue;
+            //    if (CIPConvert.is_valid_number(m_fg[v_i_cur_row, (int)e_col_Number.AMMOUNT]) == false) continue;
+            //    v_dc_total_price += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_Number.AMMOUNT]);
+            //}
+            //m_txt_total_price.Text = CIPConvert.ToStr(v_dc_total_price, "#,###");
+        }
         private void set_define_events()
         {
             m_cmd_exit.Click += m_cmd_exit_Click;
@@ -404,8 +425,61 @@ namespace BKI_KHO
             //m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xem.Click += m_cmd_xem_Click;
-            m_fg.TextChanged += m_fg_TextChanged;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+            m_fg.CellChanged += m_fg_CellChanged;
            // m_fg.Leave += m_fg_Leave;
+        }
+
+        void m_fg_CellChanged(object sender, C1.Win.C1FlexGrid.RowColEventArgs e)
+        {
+            try
+            {
+                //1. Tự động đưa thông tin về tên sản phẩm và giá thành
+
+                // Nếu cột có dữ liệu thay đổi là Cột product_code
+                if (e.Col == (int)e_col_Number.NHOM_HANG)
+                {
+                    m_fg[e.Row, (int)e_col_Number.NHOM_HANG] = m_fg[e.Row, (int)e_col_Number.NHOM_HANG].ToString().ToUpper();
+                    DataRow[] v_dr_product = v_ds_hang_hoa.DM_HANG_HOA.Select(DM_HANG_HOA.ID_NHOM + " = " +CIPConvert.ToDecimal( m_fg[e.Row, (int)e_col_Number.NHOM_HANG]));
+                    if (v_dr_product.Length == 0)
+                    {
+                        BaseMessages.MsgBox_Error("Không có hàng hóa nào nằm trong nhóm này");
+                        return;// Neu khong co' trong ban PRODUCT thi phai thoat luon? Nhung cha'c cha'n la sai do'
+                    }
+                    m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = v_dr_product[0][DM_HANG_HOA.TEN_HANG_VN];
+                    m_fg[e.Row, (int)e_col_Number.SO_TIEN] = v_dr_product[0][DM_HANG_HOA.GIA_NHAP];
+                    // Focus vào cột nào(tương ứng với dòng nào)
+                }
+
+                if (m_fg[e.Row, (int)e_col_Number.SO_TIEN] == null) return;
+                if (m_fg[e.Row, (int)e_col_Number.DON_VI_TINH] == null) return;
+                if (CIPConvert.is_valid_number(m_fg[e.Row, (int)e_col_Number.SO_TIEN]) == false) return;
+                if (CIPConvert.is_valid_number(m_fg[e.Row, (int)e_col_Number.DON_VI_TINH]) == false) return;
+
+                // 2. Tự động tính thông tin thành tiền trên từng dòng
+                //m_fg[e.Row, (int)e_col_Number.AMMOUNT]
+                //    = CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.UNIT_PRICE])
+                //        * CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.QUANTITY]);
+                //3. Tự động tính tổng tiền bán
+                //calculate_total_amount();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_v_us_chung_tu, m_fg.Row);
+            //string a = m_us_v_dm_kho.strMA_KHO;
+            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            {
+                m_dlg_result = DialogResult.OK;
+                this.Close();
+            }
         }
 
         void m_fg_TextChanged(object sender, EventArgs e)
