@@ -12,6 +12,7 @@ using BKI_KHO;
 //using DevComponents.DotNetBar;
 using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
+using BKI_KHO.NghiepVu;
 
 namespace Form_menu
 {
@@ -414,6 +415,19 @@ namespace Form_menu
                         m_cmd_browser.Text = "Tắt duyệt web";
                         break;
                 }
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_nhap_so_du_dau_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f300_NHAP_SO_DU_DAU v_f = new f300_NHAP_SO_DU_DAU();
+                v_f.ShowDialog();
             }
             catch (System.Exception v_e)
             {
