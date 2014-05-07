@@ -1091,17 +1091,19 @@ namespace Form_menu
             this.m_cmd_browser.TabIndex = 3;
             this.m_cmd_browser.Text = "Tắt duyệt web";
             this.m_cmd_browser.UseVisualStyleBackColor = true;
+            this.m_cmd_browser.Visible = false;
             this.m_cmd_browser.Click += new System.EventHandler(this.m_cmd_browser_Click);
             // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 25);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1170, 214);
+            this.webBrowser1.Size = new System.Drawing.Size(1170, 239);
             this.webBrowser1.TabIndex = 1;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
+            this.webBrowser1.Visible = false;
             // 
             // toolStrip1
             // 
@@ -1116,6 +1118,7 @@ namespace Form_menu
             this.toolStrip1.Size = new System.Drawing.Size(1170, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Visible = false;
             // 
             // toolStripButton1
             // 
