@@ -426,8 +426,8 @@ namespace Form_menu
         {
             try
             {
-                f300_NHAP_SO_DU_DAU v_f = new f300_NHAP_SO_DU_DAU();
-                v_f.ShowDialog();
+                //f300_NHAP_SO_DU_DAU v_f = new f300_NHAP_SO_DU_DAU();
+                //v_f.ShowDialog();
             }
             catch (System.Exception v_e)
             {
