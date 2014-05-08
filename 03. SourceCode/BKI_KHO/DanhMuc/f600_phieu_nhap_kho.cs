@@ -456,7 +456,7 @@ namespace BKI_KHO
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-            m_lab_tien_bang_chu.Text = v_str_tien_chu;
+            //m_lab_tien_bang_chu.Text = v_str_tien_chu;
         }
 
     
