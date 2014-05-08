@@ -354,6 +354,12 @@ public class US_DM_HANG_HOA : US_Object
 	}
 #endregion
     #region MEthods
+    public void FillDsHHByIDNhomHang(DS_DM_HANG_HOA op_ds, decimal ip_dc_id_nhom_hang)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("get_hang_hoa_by_id_nhom");
+        v_stored_proc.addDecimalInputParam("@id_nhom_hang", ip_dc_id_nhom_hang);
+        v_stored_proc.fillDataSetByCommand(this, op_ds);
+    }
     public void FillDatasetById(DS_DM_HANG_HOA op_ds, decimal ip_dc_id)
     {
         CStoredProc v_stored_proc = new CStoredProc("pr_DM_HANG_HOA_FillDatasetById");

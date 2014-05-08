@@ -47,8 +47,6 @@
             this.m_lab_so_phieu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_noi_dung = new System.Windows.Forms.TextBox();
-            this.m_lab_tien_bang_chu = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -130,8 +128,6 @@
             this.m_group_lap_phieu.Controls.Add(this.m_lab_so_phieu);
             this.m_group_lap_phieu.Controls.Add(this.label4);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_noi_dung);
-            this.m_group_lap_phieu.Controls.Add(this.m_lab_tien_bang_chu);
-            this.m_group_lap_phieu.Controls.Add(this.label10);
             this.m_group_lap_phieu.Controls.Add(this.label6);
             this.m_group_lap_phieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_group_lap_phieu.Location = new System.Drawing.Point(0, 0);
@@ -292,26 +288,6 @@
             this.m_txt_noi_dung.Size = new System.Drawing.Size(471, 35);
             this.m_txt_noi_dung.TabIndex = 9;
             // 
-            // m_lab_tien_bang_chu
-            // 
-            this.m_lab_tien_bang_chu.AutoSize = true;
-            this.m_lab_tien_bang_chu.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lab_tien_bang_chu.Location = new System.Drawing.Point(193, 115);
-            this.m_lab_tien_bang_chu.Name = "m_lab_tien_bang_chu";
-            this.m_lab_tien_bang_chu.Size = new System.Drawing.Size(457, 13);
-            this.m_lab_tien_bang_chu.TabIndex = 7;
-            this.m_lab_tien_bang_chu.Text = "................................................................................." +
-    ".....................................................................";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(97, 124);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Bằng chữ";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -342,7 +318,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 36;
+            this.m_fg.Rows.Count = 37;
             this.m_fg.Size = new System.Drawing.Size(803, 227);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -460,8 +436,6 @@
         private System.Windows.Forms.Label m_lab_so_phieu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_txt_noi_dung;
-        private System.Windows.Forms.Label m_lab_tien_bang_chu;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;

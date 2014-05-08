@@ -94,7 +94,7 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_fg);
             load_cbo_nhom_hang_hoa_on_grid();
-            load_cbo_ten_hang_hoa_on_grid();
+            load_cbo_ten_hang_hoa_on_grid(0);
             load_cbo_gia_nhap_hang_hoa_on_grid();
             load_data_kho();
             m_dat_ngay_lap.Value = CIPConvert.ToStr(CAppContext_201.getCurentDate());
@@ -132,21 +132,21 @@ namespace BKI_KHO
             }
             return v_hst;
         }
-        private Hashtable get_mapping_col_muc_dich()
+        private Hashtable get_mapping_col_muc_dich( decimal ip_id_nhom_hang)
         {
 
             Hashtable v_hst = new Hashtable();
             //decimal a = CIPConvert.ToDecimal(m_fg[1, (int)e_col_Number.NHOM_HANG]);
             try
             {
-                v_us_hang_hoa.BeginTransaction();
-                if (v_us_hang_hoa.dcID_NHOM == 0)
+                //v_us_hang_hoa.BeginTransaction();
+                if (ip_id_nhom_hang == 0)
                 {
-                    v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "order by ten_hang_vn");
+                    v_us_hang_hoa.FillDsHHByIDNhomHang(v_ds_hang_hoa, ip_id_nhom_hang);
                 }
                 else
-                    v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_nhom =" + v_us_hang_hoa.dcID_NHOM + "order by ma_hang");
-                v_us_hang_hoa.CommitTransaction();
+                    v_us_hang_hoa.FillDsHHByIDNhomHang(v_ds_hang_hoa, ip_id_nhom_hang);
+               // v_us_hang_hoa.CommitTransaction();
             }
             catch (Exception v_e)
             {
@@ -184,9 +184,9 @@ namespace BKI_KHO
             m_fg.Cols[(int)e_col_Number.SO_TIEN].DataMap = get_mapping_col_gia_nhap();
 
         }
-        private void load_cbo_ten_hang_hoa_on_grid()
+        private void load_cbo_ten_hang_hoa_on_grid(decimal i )
         {
-            m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].DataMap = get_mapping_col_muc_dich();
+            m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].DataMap = get_mapping_col_muc_dich (i);
            // m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].
         }
         private void load_cbo_nhom_hang_hoa_on_grid()
@@ -446,15 +446,31 @@ namespace BKI_KHO
                         BaseMessages.MsgBox_Error("Không có hàng hóa nào nằm trong nhóm này");
                         return;// Neu khong co' trong ban PRODUCT thi phai thoat luon? Nhung cha'c cha'n la sai do'
                     }
-                    m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = v_dr_product[0][DM_HANG_HOA.TEN_HANG_VN];
+                    //decimal a = CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.NHOM_HANG]);
+                    load_cbo_ten_hang_hoa_on_grid(CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.NHOM_HANG]));
+                    //m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = v_dr_product[0][DM_HANG_HOA.TEN_HANG_VN];
+                    //m_fg[e.Row, (int)e_col_Number.SO_TIEN] = v_dr_product[0][DM_HANG_HOA.GIA_NHAP];
+                    // Focus vào cột nào(tương ứng với dòng nào)
+                }
+                if (e.Col == (int)e_col_Number.TEN_HANG_HOA)
+                {
+                    m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA].ToString().ToUpper();
+                    DataRow[] v_dr_product = v_ds_hang_hoa.DM_HANG_HOA.Select(DM_HANG_HOA.ID + " = " + CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA]));
+                    if (v_dr_product.Length == 0)
+                    {
+                        BaseMessages.MsgBox_Error("Không có hàng hóa nào nằm trong nhóm này");
+                        return;// Neu khong co' trong ban PRODUCT thi phai thoat luon? Nhung cha'c cha'n la sai do'
+                    }
+                    decimal a = CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA]);
+                    
                     m_fg[e.Row, (int)e_col_Number.SO_TIEN] = v_dr_product[0][DM_HANG_HOA.GIA_NHAP];
                     // Focus vào cột nào(tương ứng với dòng nào)
                 }
-
+                
                 if (m_fg[e.Row, (int)e_col_Number.SO_TIEN] == null) return;
-                if (m_fg[e.Row, (int)e_col_Number.DON_VI_TINH] == null) return;
+               // if (m_fg[e.Row, (int)e_col_Number.DON_VI_TINH] == null) return;
                 if (CIPConvert.is_valid_number(m_fg[e.Row, (int)e_col_Number.SO_TIEN]) == false) return;
-                if (CIPConvert.is_valid_number(m_fg[e.Row, (int)e_col_Number.DON_VI_TINH]) == false) return;
+               // if (CIPConvert.is_valid_number(m_fg[e.Row, (int)e_col_Number.DON_VI_TINH]) == false) return;
 
                 // 2. Tự động tính thông tin thành tiền trên từng dòng
                 //m_fg[e.Row, (int)e_col_Number.AMMOUNT]
@@ -482,42 +498,9 @@ namespace BKI_KHO
             }
         }
 
-        void m_fg_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                load_cbo_ten_hang_hoa_on_grid();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+       
 
-        void m_fg_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                load_cbo_ten_hang_hoa_on_grid();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        void m_fg_AfterEdit(object sender, C1.Win.C1FlexGrid.RowColEventArgs e)
-        {
-            try
-            {
-                load_cbo_ten_hang_hoa_on_grid();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
+       
         void f604_phieu_xuat_kho_Load(object sender, EventArgs e)
         {
             try
@@ -571,7 +554,7 @@ namespace BKI_KHO
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-            m_lab_tien_bang_chu.Text = v_str_tien_chu;
+            //m_lab_tien_bang_chu.Text = v_str_tien_chu;
         }
 
 
