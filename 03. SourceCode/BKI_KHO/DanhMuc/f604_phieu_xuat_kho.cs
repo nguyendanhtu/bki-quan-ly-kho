@@ -139,14 +139,9 @@ namespace BKI_KHO
             //decimal a = CIPConvert.ToDecimal(m_fg[1, (int)e_col_Number.NHOM_HANG]);
             try
             {
-                //v_us_hang_hoa.BeginTransaction();
-                if (ip_id_nhom_hang == 0)
-                {
+               
                     v_us_hang_hoa.FillDsHHByIDNhomHang(v_ds_hang_hoa, ip_id_nhom_hang);
-                }
-                else
-                    v_us_hang_hoa.FillDsHHByIDNhomHang(v_ds_hang_hoa, ip_id_nhom_hang);
-               // v_us_hang_hoa.CommitTransaction();
+               
             }
             catch (Exception v_e)
             {
@@ -350,7 +345,7 @@ namespace BKI_KHO
             //GD chứng từ
             string v_str_ngay_thu_chi = CIPConvert.ToStr(m_dat_ngay_lap.Value, "dd/MM/yyyy");
             v_us_gd_chung_tu.strDIEN_GIAI = m_txt_noi_dung.Text;
-            v_us_gd_chung_tu.dcID_LOAI_CT = 2;//phiếu nhập kho
+            v_us_gd_chung_tu.dcID_LOAI_CT = 2;//phiếu xuất kho
             v_us_gd_chung_tu.strMA_CT = m_txt_so_phieu_thu_chi.Text;
             v_us_gd_chung_tu.datNGAY_CT = IP.Core.IPSystemAdmin.CAppContext_201.getCurentDate();
             v_us_gd_chung_tu.dcTONG_TIEN = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
@@ -425,7 +420,7 @@ namespace BKI_KHO
             //m_txt_tong_tien.Leave += m_txt_tong_tien_Leave;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xem.Click += m_cmd_xem_Click;
-            m_fg.DoubleClick += m_fg_DoubleClick;
+           // m_fg.DoubleClick += m_fg_DoubleClick;
             m_fg.CellChanged += m_fg_CellChanged;
            // m_fg.Leave += m_fg_Leave;
         }
@@ -487,15 +482,15 @@ namespace BKI_KHO
 
         void m_fg_DoubleClick(object sender, EventArgs e)
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_v_us_chung_tu, m_fg.Row);
-            //string a = m_us_v_dm_kho.strMA_KHO;
-            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
-            {
-                m_dlg_result = DialogResult.OK;
-                this.Close();
-            }
+            //if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            //if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            //grid2us_object(m_v_us_chung_tu, m_fg.Row);
+            ////string a = m_us_v_dm_kho.strMA_KHO;
+            //if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            //{
+            //    m_dlg_result = DialogResult.OK;
+            //    this.Close();
+            //}
         }
 
        
@@ -590,8 +585,10 @@ namespace BKI_KHO
         }
         void m_cmd_xem_Click(object sender, EventArgs e)
         {
-            f806_RPT_XUAT_NHAP_TON v_frm = new f806_RPT_XUAT_NHAP_TON();
-            v_frm.display();
+            f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
+            v_frm.display(2);
+            //f806_RPT_XUAT_NHAP_TON v_frm = new f806_RPT_XUAT_NHAP_TON();
+            //v_frm.display();
         }
 
         #endregion

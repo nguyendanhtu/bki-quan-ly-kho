@@ -233,7 +233,9 @@ namespace BKI_KHO
 		#endregion
 
 		#region Public Interface
-		public void display(){			
+        public void display(decimal ip_id_loai_ct)
+        {
+            id_loai_ct = ip_id_loai_ct;
 			this.ShowDialog();
 		}
 		#endregion
@@ -246,6 +248,7 @@ namespace BKI_KHO
 		#endregion
 
 		#region Members
+        decimal id_loai_ct;
         DialogResult m_dlg_result;
         DataEntryFormMode m_e_form_mode;
 		ITransferDataRow m_obj_trans;		
@@ -266,7 +269,7 @@ namespace BKI_KHO
 		}
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
-			load_data_2_grid();		
+            load_data_2_grid(id_loai_ct);		
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
@@ -274,9 +277,10 @@ namespace BKI_KHO
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.v_gd_chung_tu.NewRow());
 			return v_obj_trans;			
 		}
-		private void load_data_2_grid(){						
-			m_ds = new DS_V_GD_CHUNG_TU();			
-			m_us.FillDataset(m_ds);
+		private void load_data_2_grid(decimal ip_id_loai_chung_tu){						
+			m_ds = new DS_V_GD_CHUNG_TU();
+
+            m_us.FillDataset(m_ds, "where ID_LOAI_CT=" + ip_id_loai_chung_tu);
 			m_fg.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
@@ -317,7 +321,7 @@ namespace BKI_KHO
 		private void insert_v_gd_chung_tu(){			
 		//	f602_v_gd_chung_tu_DE v_fDE = new  f602_v_gd_chung_tu_DE();								
 		//	v_fDE.display();
-			load_data_2_grid();
+			//load_data_2_grid();
 		}
 
 		private void update_v_gd_chung_tu(){			
@@ -326,7 +330,7 @@ namespace BKI_KHO
 			grid2us_object(m_us, m_fg.Row);
 		//	f602_v_gd_chung_tu_DE v_fDE = new f602_v_gd_chung_tu_DE();
 		//	v_fDE.display(m_us);
-			load_data_2_grid();
+			//load_data_2_grid();
 		}
 				
 		private void delete_v_gd_chung_tu(){
