@@ -387,7 +387,7 @@ namespace BKI_KHO
         private void form_2_us_gd_chung_tu()
         {
             //GD chứng từ
-            string v_str_ngay_thu_chi = CIPConvert.ToStr(m_dat_ngay_lap.Value, "dd/MM/yyyy");
+            //string v_str_ngay_thu_chi = CIPConvert.ToStr(m_dat_ngay_lap.Value, "dd/MM/yyyy");
             v_us_gd_chung_tu.strDIEN_GIAI = m_txt_noi_dung.Text;
             v_us_gd_chung_tu.dcID_LOAI_CT = 1;//phiếu nhập kho
             v_us_gd_chung_tu.strMA_CT = m_txt_so_phieu_thu_chi.Text;
@@ -397,8 +397,8 @@ namespace BKI_KHO
             v_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
             v_us_gd_chung_tu.SetID_NGUOI_GIAO_DICHNull();
             v_us_gd_chung_tu.SetID_NGUOI_NHAPNull();
-            v_us_gd_chung_tu.SetID_NGAY_NHAPNull();
-            v_us_gd_chung_tu.SetID_NGAY_NHAP_CUOINull();
+            v_us_gd_chung_tu.SetNGAY_NHAPNull();
+            v_us_gd_chung_tu.SetNGAY_NHAP_CUOINull();
             v_us_gd_chung_tu.SetGHI_CHU_1Null();
             v_us_gd_chung_tu.SetGHI_CHU_2Null();
             v_us_gd_chung_tu.SetGHI_CHU_3Null();
