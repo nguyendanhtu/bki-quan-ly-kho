@@ -11,6 +11,14 @@ namespace BKI_KHO.US {
       
     }
 
+    public class CONST_ID_TRANG_THAI_HANG_HOA {
+        public const decimal ID_DA_NHAP = 691;
+    }
+
+    public class CONST_ID_DVT_THOI_GIAN {
+        public const decimal ID_THANG = 694;
+    }
+    
     public class MA_LOAI_TU_DIEN {
         public const string TRANG_THAI_CHUC_VU = "TRANG_THAI_CHUC_VU";
         public const string TRANG_THAI_LAO_DONG = "TRANG_THAI_LAO_DONG";
