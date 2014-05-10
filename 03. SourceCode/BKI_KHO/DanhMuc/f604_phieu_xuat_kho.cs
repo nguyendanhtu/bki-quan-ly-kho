@@ -94,7 +94,7 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_fg);
             load_cbo_nhom_hang_hoa_on_grid();
-            load_cbo_ten_hang_hoa_on_grid(0);
+            
             load_cbo_gia_nhap_hang_hoa_on_grid();
             load_data_kho();
             m_dat_ngay_lap.Value = CIPConvert.ToStr(CAppContext_201.getCurentDate());
@@ -132,27 +132,7 @@ namespace BKI_KHO
             }
             return v_hst;
         }
-        private Hashtable get_mapping_col_muc_dich( decimal ip_id_nhom_hang)
-        {
-
-            Hashtable v_hst = new Hashtable();
-            //decimal a = CIPConvert.ToDecimal(m_fg[1, (int)e_col_Number.NHOM_HANG]);
-            try
-            {
-               
-                    v_us_hang_hoa.FillDsHHByIDNhomHang(v_ds_hang_hoa, ip_id_nhom_hang);
-               
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-            foreach (DataRow v_dr in v_ds_hang_hoa.DM_HANG_HOA.Rows)
-            {
-                v_hst.Add(v_dr[DM_HANG_HOA.ID], v_dr[DM_HANG_HOA.TEN_HANG_VN]);
-            }
-            return v_hst;
-        }
+      
         private Hashtable get_mapping_col_nhom_hang_hoa()
         {
 
@@ -179,11 +159,7 @@ namespace BKI_KHO
             m_fg.Cols[(int)e_col_Number.SO_TIEN].DataMap = get_mapping_col_gia_nhap();
 
         }
-        private void load_cbo_ten_hang_hoa_on_grid(decimal i )
-        {
-            m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].DataMap = get_mapping_col_muc_dich (i);
-           // m_fg.Cols[(int)e_col_Number.TEN_HANG_HOA].
-        }
+     
         private void load_cbo_nhom_hang_hoa_on_grid()
         {
             m_fg.Cols[(int)e_col_Number.NHOM_HANG].DataMap = get_mapping_col_nhom_hang_hoa();
@@ -353,8 +329,8 @@ namespace BKI_KHO
             v_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
             v_us_gd_chung_tu.SetID_NGUOI_GIAO_DICHNull();
             v_us_gd_chung_tu.SetID_NGUOI_NHAPNull();
-            v_us_gd_chung_tu.SetID_NGAY_NHAPNull();
-            v_us_gd_chung_tu.SetID_NGAY_NHAP_CUOINull();
+            v_us_gd_chung_tu.SetNGAY_NHAPNull();
+            v_us_gd_chung_tu.SetNGAY_NHAP_CUOINull();
             v_us_gd_chung_tu.SetGHI_CHU_1Null();
             v_us_gd_chung_tu.SetGHI_CHU_2Null();
             v_us_gd_chung_tu.SetGHI_CHU_3Null();
@@ -442,7 +418,7 @@ namespace BKI_KHO
                         return;// Neu khong co' trong ban PRODUCT thi phai thoat luon? Nhung cha'c cha'n la sai do'
                     }
                     //decimal a = CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.NHOM_HANG]);
-                    load_cbo_ten_hang_hoa_on_grid(CIPConvert.ToDecimal(m_fg[e.Row, (int)e_col_Number.NHOM_HANG]));
+                    
                     //m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = v_dr_product[0][DM_HANG_HOA.TEN_HANG_VN];
                     //m_fg[e.Row, (int)e_col_Number.SO_TIEN] = v_dr_product[0][DM_HANG_HOA.GIA_NHAP];
                     // Focus vào cột nào(tương ứng với dòng nào)
