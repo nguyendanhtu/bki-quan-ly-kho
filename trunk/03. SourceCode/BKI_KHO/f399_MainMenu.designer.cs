@@ -115,9 +115,9 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -179,6 +179,7 @@ namespace Form_menu
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // m_rbb_kho
             // 
@@ -440,7 +441,6 @@ namespace Form_menu
             // 
             this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel5.TabIndex = 5;
-            this.ribbonPanel5.Visible = false;
             // 
             // m_rbb_tra_cuu
             // 
@@ -1040,7 +1040,6 @@ namespace Form_menu
             // 
             // m_rbtab_tab3
             // 
-            this.m_rbtab_tab3.Checked = true;
             this.m_rbtab_tab3.Name = "m_rbtab_tab3";
             this.m_rbtab_tab3.Panel = this.ribbonPanel3;
             this.m_rbtab_tab3.Text = "Nghiệp vụ";
@@ -1053,6 +1052,7 @@ namespace Form_menu
             // 
             // m_rbtab_tab5
             // 
+            this.m_rbtab_tab5.Checked = true;
             this.m_rbtab_tab5.Name = "m_rbtab_tab5";
             this.m_rbtab_tab5.Panel = this.ribbonPanel5;
             this.m_rbtab_tab5.Text = "Tra cứu";
@@ -1072,7 +1072,6 @@ namespace Form_menu
             this.Name = "f399_MainMenu";
             this.Text = "Phần mềm quản lý kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //this.Load += new System.EventHandler(this.f399_MainMenu_Load);
             this.m_rbc_menu.ResumeLayout(false);
             this.m_rbc_menu.PerformLayout();
             this.ribbonPanel3.ResumeLayout(false);
