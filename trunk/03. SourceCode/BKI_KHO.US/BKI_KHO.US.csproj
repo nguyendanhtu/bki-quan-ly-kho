@@ -85,6 +85,7 @@
     <Compile Include="US_V_DM_KHO.cs" />
     <Compile Include="US_V_DM_NHAN_VIEN.cs" />
     <Compile Include="US_V_DM_NHOM_HANG.cs" />
+    <Compile Include="US_V_GD_CHI_TIET_CHUNG_TU.cs" />
     <Compile Include="US_V_GD_CHUNG_TU.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,39 @@ using System.Text;
 
 namespace BKI_KHO.DS.CDBNames
 {
+    public class V_GD_CHI_TIET_CHUNG_TU
+    {
+        public const string ID = "ID";
+        public const string ID_CHUNG_TU = "ID_CHUNG_TU";
+        public const string MA_CT = "MA_CT";
+        public const string NGAY_CT = "NGAY_CT";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string ID_TO_CHUC_NGUON = "ID_TO_CHUC_NGUON";
+        public const string ID_NGUOI_GIAO_DICH = "ID_NGUOI_GIAO_DICH";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string NGAY_NHAP_PM = "NGAY_NHAP_PM";
+        public const string NGAY_NHAP_CUOI = "NGAY_NHAP_CUOI";
+        public const string ID_LOAI_CT = "ID_LOAI_CT";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string ID_NHOM = "ID_NHOM";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string ID_HANG_HOA = "ID_HANG_HOA";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string ID_DON_VI = "ID_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string GiA_NHAP = "GiA_NHAP";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string TRANG_THAI = "TRANG_THAI";
+        public const string SO_LUONG = "SO_LUONG";
+        public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
+        public const string THOI_GIAN_BH = "THOI_GIAN_BH";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string TEN = "TEN";
+    }
     public class V_GD_CHUNG_TU
     {
         public const string MA_LOAI_CT = "MA_LOAI_CT";
