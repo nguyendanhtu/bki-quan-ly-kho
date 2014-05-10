@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString4" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString4" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString4" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_KHOConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_KHOConnectionString6 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_KHO.DS.Properties.Settings.GlobalReference.Default.BKI_KHOConnectionString6" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
@@ -13,7 +13,7 @@
               <DbSource ConnectionRef="BKI_KHOConnectionString6 (Settings)" DbObjectName="BKI_KHO.dbo.v_gd_chung_tu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT MA_LOAI_CT, TEN_LOAI_CT, MA_CT, NGAY_CT, GHI_CHU_1, DIEN_GIAI, MA_HANG, TEN_HANG_VN, TEN_HANG_EN, GIA_NHAP, SO_LUONG, GIA_GIAO_DICH, SO_SERI FROM dbo.v_gd_chung_tu</CommandText>
+                    <CommandText>SELECT MA_LOAI_CT, TEN_LOAI_CT, MA_CT, NGAY_CT, GHI_CHU_1, TONG_TIEN, DIEN_GIAI, MA_HANG, TEN_HANG_VN, TEN_HANG_EN, GIA_NHAP, SO_LUONG, GIA_GIAO_DICH, SO_SERI, ID_LOAI_CT FROM dbo.v_gd_chung_tu</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -25,6 +25,7 @@
               <Mapping SourceColumn="MA_CT" DataSetColumn="MA_CT" />
               <Mapping SourceColumn="NGAY_CT" DataSetColumn="NGAY_CT" />
               <Mapping SourceColumn="GHI_CHU_1" DataSetColumn="GHI_CHU_1" />
+              <Mapping SourceColumn="TONG_TIEN" DataSetColumn="TONG_TIEN" />
               <Mapping SourceColumn="DIEN_GIAI" DataSetColumn="DIEN_GIAI" />
               <Mapping SourceColumn="MA_HANG" DataSetColumn="MA_HANG" />
               <Mapping SourceColumn="TEN_HANG_VN" DataSetColumn="TEN_HANG_VN" />
@@ -33,6 +34,7 @@
               <Mapping SourceColumn="SO_LUONG" DataSetColumn="SO_LUONG" />
               <Mapping SourceColumn="GIA_GIAO_DICH" DataSetColumn="GIA_GIAO_DICH" />
               <Mapping SourceColumn="SO_SERI" DataSetColumn="SO_SERI" />
+              <Mapping SourceColumn="ID_LOAI_CT" DataSetColumn="ID_LOAI_CT" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -76,6 +78,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TONG_TIEN" msprop:Generator_ColumnVarNameInTable="columnTONG_TIEN" msprop:Generator_ColumnPropNameInRow="TONG_TIEN" msprop:Generator_ColumnPropNameInTable="TONG_TIENColumn" msprop:Generator_UserColumnName="TONG_TIEN" type="xs:decimal" minOccurs="0" />
               <xs:element name="DIEN_GIAI" msprop:Generator_ColumnVarNameInTable="columnDIEN_GIAI" msprop:Generator_ColumnPropNameInRow="DIEN_GIAI" msprop:Generator_ColumnPropNameInTable="DIEN_GIAIColumn" msprop:Generator_UserColumnName="DIEN_GIAI" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -114,6 +117,9 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID_LOAI_CT" msprop:Generator_ColumnVarNameInTable="columnID_LOAI_CT" msprop:Generator_ColumnPropNameInRow="ID_LOAI_CT" msprop:Generator_ColumnPropNameInTable="ID_LOAI_CTColumn" msprop:Generator_UserColumnName="ID_LOAI_CT" type="xs:decimal" />
+              <xs:element name="ID_TO_CHUC_NGUON" msprop:Generator_ColumnVarNameInTable="columnID_TO_CHUC_NGUON" msprop:Generator_ColumnPropNameInRow="ID_TO_CHUC_NGUON" msprop:Generator_ColumnPropNameInTable="ID_TO_CHUC_NGUONColumn" msprop:Generator_UserColumnName="ID_TO_CHUC_NGUON" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_NGUOI_GIAO_DICH" msprop:Generator_ColumnVarNameInTable="columnID_NGUOI_GIAO_DICH" msprop:Generator_ColumnPropNameInRow="ID_NGUOI_GIAO_DICH" msprop:Generator_ColumnPropNameInTable="ID_NGUOI_GIAO_DICHColumn" msprop:Generator_UserColumnName="ID_NGUOI_GIAO_DICH" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
