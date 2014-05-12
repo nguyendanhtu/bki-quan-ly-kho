@@ -67,14 +67,26 @@ Public Class CExcelReport
     Public Sub Export2Grid(ByVal i_fg As C1FlexGrid _
                             , ByVal i_iSheetStartRow As Integer _
                             , ByVal i_iSheetCol As Integer _
-                            , ByVal i_iGridCol As Integer)
+                            , ByVal i_iGridCol As Integer _
+                            , ByVal i_b_is_grid_edited As Boolean)
+
+
         Try
             m_objExcelApp = New Excel.Application
             m_objExcelApp.Workbooks.Open(m_strTemplateFileNameWithPath)
             m_objExcelApp.Workbooks(1).Worksheets.Select(1)
             m_objExcelWorksheet = CType(m_objExcelApp.Workbooks(1).Worksheets(1), Excel.Worksheet)
             Dim v_iGridRow As Integer
-            For v_iGridRow = i_fg.Rows.Fixed To i_fg.Rows.Count - 1
+
+            Dim v_i_is_grid_edited As Integer
+            If i_b_is_grid_edited Then
+                v_i_is_grid_edited = 1
+
+            Else
+                v_i_is_grid_edited = 0
+            End If
+
+            For v_iGridRow = i_fg.Rows.Fixed To i_fg.Rows.Count - 1 - v_i_is_grid_edited
                 i_fg(v_iGridRow, i_iGridCol) = _
                 CType(m_objExcelWorksheet.Cells(i_iSheetStartRow + v_iGridRow - i_fg.Rows.Fixed, i_iSheetCol), Excel.Range).Value
 
