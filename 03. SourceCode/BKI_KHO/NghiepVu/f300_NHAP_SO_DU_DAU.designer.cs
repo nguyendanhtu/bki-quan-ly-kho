@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_NHAP_SO_DU_DAU));
             this.m_lbl_title = new System.Windows.Forms.Label();
             this.m_grb_header = new System.Windows.Forms.GroupBox();
-            this.m_cmd_del = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_ma_ct = new System.Windows.Forms.TextBox();
             this.m_lbl_ma_chung_tu = new System.Windows.Forms.Label();
@@ -40,11 +39,15 @@
             this.m_lbl_ngay_nhap_thuc_te = new System.Windows.Forms.Label();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_txt_so_ban_ghi = new System.Windows.Forms.TextBox();
             this.m_cmd_nhap_lo = new SIS.Controls.Button.SiSButton();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.button1 = new System.Windows.Forms.Button();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.m_obj_dialog = new System.Windows.Forms.OpenFileDialog();
+            this.m_cmd_del = new SIS.Controls.Button.SiSButton();
             this.m_grb_header.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -57,7 +60,7 @@
             this.m_lbl_title.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(972, 40);
+            this.m_lbl_title.Size = new System.Drawing.Size(952, 40);
             this.m_lbl_title.TabIndex = 0;
             this.m_lbl_title.Text = "NHẬP SỐ DƯ ĐẦU";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,20 +75,9 @@
             this.m_grb_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_grb_header.Location = new System.Drawing.Point(0, 40);
             this.m_grb_header.Name = "m_grb_header";
-            this.m_grb_header.Size = new System.Drawing.Size(972, 86);
+            this.m_grb_header.Size = new System.Drawing.Size(952, 86);
             this.m_grb_header.TabIndex = 1;
             this.m_grb_header.TabStop = false;
-            // 
-            // m_cmd_del
-            // 
-            this.m_cmd_del.ImageIndex = 4;
-            this.m_cmd_del.ImageList = this.imageList1;
-            this.m_cmd_del.Location = new System.Drawing.Point(901, 63);
-            this.m_cmd_del.Name = "m_cmd_del";
-            this.m_cmd_del.Size = new System.Drawing.Size(65, 23);
-            this.m_cmd_del.TabIndex = 4;
-            this.m_cmd_del.TabStop = false;
-            this.m_cmd_del.UseVisualStyleBackColor = true;
             // 
             // imageList1
             // 
@@ -119,7 +111,7 @@
             this.m_txt_ma_ct.Location = new System.Drawing.Point(419, 41);
             this.m_txt_ma_ct.Name = "m_txt_ma_ct";
             this.m_txt_ma_ct.Size = new System.Drawing.Size(200, 20);
-            this.m_txt_ma_ct.TabIndex = 2;
+            this.m_txt_ma_ct.TabIndex = 1;
             this.m_txt_ma_ct.Text = "SDD-";
             // 
             // m_lbl_ma_chung_tu
@@ -128,7 +120,7 @@
             this.m_lbl_ma_chung_tu.Location = new System.Drawing.Point(333, 44);
             this.m_lbl_ma_chung_tu.Name = "m_lbl_ma_chung_tu";
             this.m_lbl_ma_chung_tu.Size = new System.Drawing.Size(67, 13);
-            this.m_lbl_ma_chung_tu.TabIndex = 3;
+            this.m_lbl_ma_chung_tu.TabIndex = 1;
             this.m_lbl_ma_chung_tu.Text = "Mã chứng từ";
             // 
             // m_dat_ngay_nhap_thuc_te
@@ -138,7 +130,7 @@
             this.m_dat_ngay_nhap_thuc_te.Location = new System.Drawing.Point(419, 15);
             this.m_dat_ngay_nhap_thuc_te.Name = "m_dat_ngay_nhap_thuc_te";
             this.m_dat_ngay_nhap_thuc_te.Size = new System.Drawing.Size(200, 20);
-            this.m_dat_ngay_nhap_thuc_te.TabIndex = 1;
+            this.m_dat_ngay_nhap_thuc_te.TabIndex = 0;
             this.m_dat_ngay_nhap_thuc_te.Value = new System.DateTime(2014, 5, 7, 14, 52, 0, 0);
             // 
             // m_lbl_ngay_nhap_thuc_te
@@ -181,6 +173,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_txt_so_ban_ghi);
             this.panel1.Controls.Add(this.m_cmd_nhap_lo);
             this.panel1.Controls.Add(this.m_cmd_save);
             this.panel1.Controls.Add(this.m_cmd_exit);
@@ -188,8 +182,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 460);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 33);
+            this.panel1.Size = new System.Drawing.Size(952, 33);
             this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Số mặt hàng";
+            // 
+            // m_txt_so_ban_ghi
+            // 
+            this.m_txt_so_ban_ghi.Location = new System.Drawing.Point(183, 5);
+            this.m_txt_so_ban_ghi.Name = "m_txt_so_ban_ghi";
+            this.m_txt_so_ban_ghi.Size = new System.Drawing.Size(51, 20);
+            this.m_txt_so_ban_ghi.TabIndex = 1;
+            this.m_txt_so_ban_ghi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_cmd_nhap_lo
             // 
@@ -203,7 +214,7 @@
             this.m_cmd_nhap_lo.Location = new System.Drawing.Point(0, 0);
             this.m_cmd_nhap_lo.Name = "m_cmd_nhap_lo";
             this.m_cmd_nhap_lo.Size = new System.Drawing.Size(106, 31);
-            this.m_cmd_nhap_lo.TabIndex = 1;
+            this.m_cmd_nhap_lo.TabIndex = 2;
             this.m_cmd_nhap_lo.Text = "&Nhập từ Excel";
             // 
             // m_cmd_save
@@ -215,7 +226,7 @@
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(755, 0);
+            this.m_cmd_save.Location = new System.Drawing.Point(735, 0);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(112, 31);
             this.m_cmd_save.TabIndex = 0;
@@ -231,17 +242,17 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(867, 0);
+            this.m_cmd_exit.Location = new System.Drawing.Point(847, 0);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(103, 31);
-            this.m_cmd_exit.TabIndex = 2;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(970, 0);
+            this.button1.Location = new System.Drawing.Point(950, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(0, 31);
             this.button1.TabIndex = 0;
@@ -255,15 +266,33 @@
             this.m_fg.Location = new System.Drawing.Point(0, 126);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Count = 2;
-            this.m_fg.Size = new System.Drawing.Size(972, 334);
+            this.m_fg.Size = new System.Drawing.Size(952, 334);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 2;
+            // 
+            // m_obj_dialog
+            // 
+            this.m_obj_dialog.FileName = "openFileDialog1";
+            // 
+            // m_cmd_del
+            // 
+            this.m_cmd_del.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_del.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_del.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_del.ImageIndex = 4;
+            this.m_cmd_del.ImageList = this.ImageList;
+            this.m_cmd_del.Location = new System.Drawing.Point(863, 54);
+            this.m_cmd_del.Name = "m_cmd_del";
+            this.m_cmd_del.Size = new System.Drawing.Size(83, 26);
+            this.m_cmd_del.TabIndex = 3;
+            this.m_cmd_del.Text = "&Xóa hàng";
             // 
             // f300_NHAP_SO_DU_DAU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 493);
+            this.ClientSize = new System.Drawing.Size(952, 493);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_grb_header);
@@ -273,6 +302,7 @@
             this.m_grb_header.ResumeLayout(false);
             this.m_grb_header.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
 
@@ -294,6 +324,9 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal System.Windows.Forms.ImageList imageList1;
         internal SIS.Controls.Button.SiSButton m_cmd_nhap_lo;
-        private System.Windows.Forms.Button m_cmd_del;
+        private System.Windows.Forms.OpenFileDialog m_obj_dialog;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox m_txt_so_ban_ghi;
+        internal SIS.Controls.Button.SiSButton m_cmd_del;
     }
 }
