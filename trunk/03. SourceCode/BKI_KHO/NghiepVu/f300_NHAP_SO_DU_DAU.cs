@@ -21,15 +21,7 @@ namespace BKI_KHO.NghiepVu {
         }
 
         #region Members
-        ITransferDataRow m_obj_trans;
-
-
-
-
-
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
-        //DS_DM_DON_VI m_ds_dm_don_vi = new DS_DM_DON_VI();
-        //US_DM_DON_VI v_us_dm_don_vi = new US_DM_DON_VI();
         #endregion
 
         #region Public Interface
@@ -55,7 +47,7 @@ namespace BKI_KHO.NghiepVu {
             ,
             MA_HANG = 4
                 ,
-            DON_VI_TINH = 5
+            DON_VI_TINH = 8
                 ,
             GIA_NHAP = 6
 
@@ -63,8 +55,6 @@ namespace BKI_KHO.NghiepVu {
         #endregion
 
         #region Privates Methods
-
-
         private void format_control() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -79,15 +69,12 @@ namespace BKI_KHO.NghiepVu {
             m_fg.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.None;
             m_fg.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
             m_fg.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
-
-            CGridUtils.MakeSoTT(0, m_fg);
+          
             set_define_events();
 
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
         }
-
-
         private void set_initial_form_load() {
             load_cbo_nhom_hang_2_grid();
             load_cbo_don_vi_tinh_2_grid();
@@ -105,11 +92,9 @@ namespace BKI_KHO.NghiepVu {
                     break;
             }
         }
-
         private void load_cbo_don_vi_tinh_2_grid() {
             m_fg.Cols[(int) e_col_Number.DON_VI_TINH].DataMap = get_mapping_col_don_vi_tinh();
         }
-
         private Hashtable get_mapping_col_don_vi_tinh() {
             Hashtable v_hst = new Hashtable();
             DS_DM_DON_VI v_ds_dm_don_vi = new DS_DM_DON_VI();
@@ -123,8 +108,6 @@ namespace BKI_KHO.NghiepVu {
             }
             return v_hst;
         }
-
-
         private Hashtable get_mapping_col_excel_grid() {
             Hashtable v_hst = new Hashtable();
             v_hst.Add((int) e_col_Number.NHOM_HANG, (int) e_col_ExcelNumber.NHOM_HANG);
@@ -134,11 +117,9 @@ namespace BKI_KHO.NghiepVu {
             v_hst.Add((int) e_col_Number.GIA_NHAP, (int) e_col_ExcelNumber.GIA_NHAP);
             return v_hst;
         }
-
         private void load_cbo_nhom_hang_2_grid() {
             m_fg.Cols[(int) e_col_Number.NHOM_HANG].DataMap = get_mapping_col_nhom_hang();
         }
-
         private Hashtable get_mapping_col_nhom_hang() {
             Hashtable v_hst = new Hashtable();
 
@@ -161,11 +142,12 @@ namespace BKI_KHO.NghiepVu {
 
             return true;
         }
-
         private bool check_validate_grid_is_ok() {
+            if(!check_so_chung_tu_is_not_exits_db()) {
+                BaseMessages.MsgBox_Infor("Số chứng từ đã tồn tại, nhập số chứng từ khác");
+                m_txt_ma_ct.Select();
+            }
             for(int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++) {
-
-
                 if(m_fg[v_i_cur_row, (int) e_col_Number.NHOM_HANG] == null) {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin nhóm hàng ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int) e_col_Number.NHOM_HANG);
@@ -194,7 +176,6 @@ namespace BKI_KHO.NghiepVu {
             }
             return true;
         }
-
         private decimal get_tong_tien() {
             decimal v_dc_tong_tien = 0;
             for(int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++) {
@@ -203,7 +184,6 @@ namespace BKI_KHO.NghiepVu {
 
             return v_dc_tong_tien;
         }
-
         private void form_2_us_v_gd_chung_tu(US_GD_CHUNG_TU ip_us_gd_chung_tu) {
 
             ip_us_gd_chung_tu.dcID_LOAI_CT = CONST_ID_DM_LOAI_CHUNG_TU.ID_NHAP_SO_DU;
@@ -295,14 +275,13 @@ namespace BKI_KHO.NghiepVu {
 
             BaseMessages.MsgBox_Infor("Bạn đã cập nhật xong số dư đầu cho hàng hóa!");
         }
-
         private void excel_2_grid() {
             if(!CValidateTextBox.IsValid(m_txt_so_ban_ghi, DataType.NumberType, allowNull.NO, true))
                 return;
             m_obj_dialog = new System.Windows.Forms.OpenFileDialog();
             m_obj_dialog.ShowDialog();
 
-            m_fg.Rows.Count = int.Parse(m_txt_so_ban_ghi.Text)+2;
+            m_fg.Rows.Count = int.Parse(m_txt_so_ban_ghi.Text) + 2;
             Hashtable v_hst_excel_col = get_mapping_col_excel_grid();
 
             CExcelReport v_obj_excel_rpt = new CExcelReport(m_obj_dialog.FileName);
@@ -314,28 +293,38 @@ namespace BKI_KHO.NghiepVu {
                     , v_i_cur_col
                     , true);
             }
-
+            CGridUtils.MakeSoTT(0, m_fg);
         }
-
-
         private void set_define_events() {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             this.Load += f300_NHAP_SO_DU_DAU_Load;
             m_cmd_save.Click += m_cmd_save_Click;
             m_cmd_nhap_lo.Click += m_cmd_nhap_lo_Click;
             m_cmd_del.Click += m_cmd_del_Click;
+            m_fg.AfterAddRow += m_fg_AfterAddRow;
         }
+        private bool check_so_chung_tu_is_not_exits_db() {
+            DS_GD_CHUNG_TU v_ds_gd_chung_tu = new DS_GD_CHUNG_TU();
+            US_GD_CHUNG_TU v_us_gd_chung_tu = new US_GD_CHUNG_TU();
 
+            v_us_gd_chung_tu.FillDataset(v_ds_gd_chung_tu);
+
+            foreach(DataRow v_dr in v_ds_gd_chung_tu.GD_CHUNG_TU.Rows) {
+                if(v_dr["MA_CT"].ToString() == m_txt_ma_ct.Text.Trim())
+                    return false;
+            }
+            return true;
+        }
         #endregion
 
         #region Events
         void m_cmd_del_Click(object sender, EventArgs e) {
             try {
-                if(m_fg.Row == m_fg.Rows.Count - 2) {
+                if(m_fg.Rows.Count == 3) {
                     return;
                 }
                 m_fg.Rows.Remove(m_fg.Row);
-
+                CGridUtils.MakeSoTT(0, m_fg);
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -373,6 +362,9 @@ namespace BKI_KHO.NghiepVu {
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+        private void m_fg_AfterAddRow(object sender, C1.Win.C1FlexGrid.RowColEventArgs e) {
+            CGridUtils.MakeSoTT(0, m_fg);
         }
         #endregion
     }

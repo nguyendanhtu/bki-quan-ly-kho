@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_NHAP_SO_DU_DAU));
             this.m_lbl_title = new System.Windows.Forms.Label();
             this.m_grb_header = new System.Windows.Forms.GroupBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_cmd_del = new SIS.Controls.Button.SiSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_ma_ct = new System.Windows.Forms.TextBox();
             this.m_lbl_ma_chung_tu = new System.Windows.Forms.Label();
             this.m_dat_ngay_nhap_thuc_te = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_ngay_nhap_thuc_te = new System.Windows.Forms.Label();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.m_txt_so_ban_ghi = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_obj_dialog = new System.Windows.Forms.OpenFileDialog();
-            this.m_cmd_del = new SIS.Controls.Button.SiSButton();
             this.m_grb_header.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -79,68 +79,20 @@
             this.m_grb_header.TabIndex = 1;
             this.m_grb_header.TabStop = false;
             // 
-            // imageList1
+            // m_cmd_del
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "");
-            this.imageList1.Images.SetKeyName(1, "");
-            this.imageList1.Images.SetKeyName(2, "");
-            this.imageList1.Images.SetKeyName(3, "");
-            this.imageList1.Images.SetKeyName(4, "");
-            this.imageList1.Images.SetKeyName(5, "");
-            this.imageList1.Images.SetKeyName(6, "");
-            this.imageList1.Images.SetKeyName(7, "");
-            this.imageList1.Images.SetKeyName(8, "");
-            this.imageList1.Images.SetKeyName(9, "");
-            this.imageList1.Images.SetKeyName(10, "");
-            this.imageList1.Images.SetKeyName(11, "");
-            this.imageList1.Images.SetKeyName(12, "");
-            this.imageList1.Images.SetKeyName(13, "");
-            this.imageList1.Images.SetKeyName(14, "");
-            this.imageList1.Images.SetKeyName(15, "");
-            this.imageList1.Images.SetKeyName(16, "");
-            this.imageList1.Images.SetKeyName(17, "");
-            this.imageList1.Images.SetKeyName(18, "");
-            this.imageList1.Images.SetKeyName(19, "");
-            this.imageList1.Images.SetKeyName(20, "");
-            this.imageList1.Images.SetKeyName(21, "");
-            // 
-            // m_txt_ma_ct
-            // 
-            this.m_txt_ma_ct.Location = new System.Drawing.Point(419, 41);
-            this.m_txt_ma_ct.Name = "m_txt_ma_ct";
-            this.m_txt_ma_ct.Size = new System.Drawing.Size(200, 20);
-            this.m_txt_ma_ct.TabIndex = 1;
-            this.m_txt_ma_ct.Text = "SDD-";
-            // 
-            // m_lbl_ma_chung_tu
-            // 
-            this.m_lbl_ma_chung_tu.AutoSize = true;
-            this.m_lbl_ma_chung_tu.Location = new System.Drawing.Point(333, 44);
-            this.m_lbl_ma_chung_tu.Name = "m_lbl_ma_chung_tu";
-            this.m_lbl_ma_chung_tu.Size = new System.Drawing.Size(67, 13);
-            this.m_lbl_ma_chung_tu.TabIndex = 1;
-            this.m_lbl_ma_chung_tu.Text = "Mã chứng từ";
-            // 
-            // m_dat_ngay_nhap_thuc_te
-            // 
-            this.m_dat_ngay_nhap_thuc_te.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_ngay_nhap_thuc_te.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_ngay_nhap_thuc_te.Location = new System.Drawing.Point(419, 15);
-            this.m_dat_ngay_nhap_thuc_te.Name = "m_dat_ngay_nhap_thuc_te";
-            this.m_dat_ngay_nhap_thuc_te.Size = new System.Drawing.Size(200, 20);
-            this.m_dat_ngay_nhap_thuc_te.TabIndex = 0;
-            this.m_dat_ngay_nhap_thuc_te.Value = new System.DateTime(2014, 5, 7, 14, 52, 0, 0);
-            // 
-            // m_lbl_ngay_nhap_thuc_te
-            // 
-            this.m_lbl_ngay_nhap_thuc_te.AutoSize = true;
-            this.m_lbl_ngay_nhap_thuc_te.Location = new System.Drawing.Point(333, 21);
-            this.m_lbl_ngay_nhap_thuc_te.Name = "m_lbl_ngay_nhap_thuc_te";
-            this.m_lbl_ngay_nhap_thuc_te.Size = new System.Drawing.Size(62, 13);
-            this.m_lbl_ngay_nhap_thuc_te.TabIndex = 0;
-            this.m_lbl_ngay_nhap_thuc_te.Text = "Ngày nhập ";
+            this.m_cmd_del.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_del.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_del.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_del.ImageIndex = 4;
+            this.m_cmd_del.ImageList = this.ImageList;
+            this.m_cmd_del.Location = new System.Drawing.Point(863, 54);
+            this.m_cmd_del.Name = "m_cmd_del";
+            this.m_cmd_del.Size = new System.Drawing.Size(83, 26);
+            this.m_cmd_del.TabIndex = 3;
+            this.m_cmd_del.TabStop = false;
+            this.m_cmd_del.Text = "&Xóa hàng";
             // 
             // ImageList
             // 
@@ -168,6 +120,69 @@
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
+            // 
+            // m_txt_ma_ct
+            // 
+            this.m_txt_ma_ct.Location = new System.Drawing.Point(419, 41);
+            this.m_txt_ma_ct.Name = "m_txt_ma_ct";
+            this.m_txt_ma_ct.Size = new System.Drawing.Size(200, 20);
+            this.m_txt_ma_ct.TabIndex = 1;
+            this.m_txt_ma_ct.Text = "SDD-";
+            // 
+            // m_lbl_ma_chung_tu
+            // 
+            this.m_lbl_ma_chung_tu.AutoSize = true;
+            this.m_lbl_ma_chung_tu.Location = new System.Drawing.Point(333, 44);
+            this.m_lbl_ma_chung_tu.Name = "m_lbl_ma_chung_tu";
+            this.m_lbl_ma_chung_tu.Size = new System.Drawing.Size(65, 13);
+            this.m_lbl_ma_chung_tu.TabIndex = 1;
+            this.m_lbl_ma_chung_tu.Text = "Số chứng từ";
+            // 
+            // m_dat_ngay_nhap_thuc_te
+            // 
+            this.m_dat_ngay_nhap_thuc_te.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_ngay_nhap_thuc_te.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_ngay_nhap_thuc_te.Location = new System.Drawing.Point(419, 15);
+            this.m_dat_ngay_nhap_thuc_te.Name = "m_dat_ngay_nhap_thuc_te";
+            this.m_dat_ngay_nhap_thuc_te.Size = new System.Drawing.Size(200, 20);
+            this.m_dat_ngay_nhap_thuc_te.TabIndex = 0;
+            this.m_dat_ngay_nhap_thuc_te.Value = new System.DateTime(2014, 5, 7, 14, 52, 0, 0);
+            // 
+            // m_lbl_ngay_nhap_thuc_te
+            // 
+            this.m_lbl_ngay_nhap_thuc_te.AutoSize = true;
+            this.m_lbl_ngay_nhap_thuc_te.Location = new System.Drawing.Point(333, 21);
+            this.m_lbl_ngay_nhap_thuc_te.Name = "m_lbl_ngay_nhap_thuc_te";
+            this.m_lbl_ngay_nhap_thuc_te.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_ngay_nhap_thuc_te.TabIndex = 0;
+            this.m_lbl_ngay_nhap_thuc_te.Text = "Ngày nhập ";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "");
+            this.imageList1.Images.SetKeyName(1, "");
+            this.imageList1.Images.SetKeyName(2, "");
+            this.imageList1.Images.SetKeyName(3, "");
+            this.imageList1.Images.SetKeyName(4, "");
+            this.imageList1.Images.SetKeyName(5, "");
+            this.imageList1.Images.SetKeyName(6, "");
+            this.imageList1.Images.SetKeyName(7, "");
+            this.imageList1.Images.SetKeyName(8, "");
+            this.imageList1.Images.SetKeyName(9, "");
+            this.imageList1.Images.SetKeyName(10, "");
+            this.imageList1.Images.SetKeyName(11, "");
+            this.imageList1.Images.SetKeyName(12, "");
+            this.imageList1.Images.SetKeyName(13, "");
+            this.imageList1.Images.SetKeyName(14, "");
+            this.imageList1.Images.SetKeyName(15, "");
+            this.imageList1.Images.SetKeyName(16, "");
+            this.imageList1.Images.SetKeyName(17, "");
+            this.imageList1.Images.SetKeyName(18, "");
+            this.imageList1.Images.SetKeyName(19, "");
+            this.imageList1.Images.SetKeyName(20, "");
+            this.imageList1.Images.SetKeyName(21, "");
             // 
             // panel1
             // 
@@ -268,25 +283,12 @@
             this.m_fg.Rows.Count = 2;
             this.m_fg.Size = new System.Drawing.Size(952, 334);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 2;
+            this.m_fg.TabIndex = 3;
+            this.m_fg.TabStop = false;
             // 
             // m_obj_dialog
             // 
             this.m_obj_dialog.FileName = "openFileDialog1";
-            // 
-            // m_cmd_del
-            // 
-            this.m_cmd_del.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_del.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_del.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_del.ImageIndex = 4;
-            this.m_cmd_del.ImageList = this.ImageList;
-            this.m_cmd_del.Location = new System.Drawing.Point(863, 54);
-            this.m_cmd_del.Name = "m_cmd_del";
-            this.m_cmd_del.Size = new System.Drawing.Size(83, 26);
-            this.m_cmd_del.TabIndex = 3;
-            this.m_cmd_del.Text = "&Xóa hàng";
             // 
             // f300_NHAP_SO_DU_DAU
             // 
