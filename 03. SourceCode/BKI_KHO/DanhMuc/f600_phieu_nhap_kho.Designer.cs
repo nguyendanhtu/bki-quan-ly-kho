@@ -237,6 +237,7 @@
             this.m_txt_tong_tien.Location = new System.Drawing.Point(193, 83);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.NullText = "0";
+            this.m_txt_tong_tien.ReadOnly = true;
             this.m_txt_tong_tien.Size = new System.Drawing.Size(167, 17);
             this.m_txt_tong_tien.TabIndex = 5;
             this.m_txt_tong_tien.Tag = null;
@@ -318,7 +319,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 38;
+            this.m_fg.Rows.Count = 39;
             this.m_fg.Size = new System.Drawing.Size(803, 227);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;

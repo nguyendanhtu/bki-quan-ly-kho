@@ -39,19 +39,50 @@ namespace BKI_KHO.DS.CDBNames
     }
     public class V_GD_CHUNG_TU
     {
-        public const string MA_LOAI_CT = "MA_LOAI_CT";
-        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string ID_CHUNG_TU = "ID_CHUNG_TU";
+        public const string ID_LOAI_CT = "ID_LOAI_CT";
         public const string MA_CT = "MA_CT";
         public const string NGAY_CT = "NGAY_CT";
-        public const string GHI_CHU_1 = "GHI_CHU_1";
         public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string ID_TO_CHUC_NGUON = "ID_TO_CHUC_NGUON";
+        public const string ID_NGUOI_GIAO_DICH = "ID_NGUOI_GIAO_DICH";
+        public const string ID_TO_CHUC_DICH = "ID_TO_CHUC_DICH";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string NGAY_NHAP = "NGAY_NHAP";
+        public const string NGAY_NHAP_CUOI = "NGAY_NHAP_CUOI";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
+        public const string ID_CHUNG_TU_DETAIL = "ID_CHUNG_TU_DETAIL";
+        public const string ID_HANG_HOA = "ID_HANG_HOA";
+        public const string SO_LUONG = "SO_LUONG";
+        public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string SO_SERI = "SO_SERI";
+        public const string THOI_GIAN_BH = "THOI_GIAN_BH";
+        public const string ID_DVT_THOI_GIAN = "ID_DVT_THOI_GIAN";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string ID_NHOM_GOC = "ID_NHOM_GOC";
+        public const string ID_NHOM = "ID_NHOM";
         public const string MA_HANG = "MA_HANG";
         public const string TEN_HANG_VN = "TEN_HANG_VN";
         public const string TEN_HANG_EN = "TEN_HANG_EN";
+        public const string IMAGE = "IMAGE";
+        public const string MO_TA = "MO_TA";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string BARCODE = "BARCODE";
+        public const string ID_DON_VI = "ID_DON_VI";
         public const string GIA_NHAP = "GIA_NHAP";
-        public const string SO_LUONG = "SO_LUONG";
-        public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
-        public const string SO_SERI = "SO_SERI";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string GIA_BAN_LE = "GIA_BAN_LE";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN = "TEN";
+        public const string STT = "STT";
+        public const string LEVEL_MODE = "LEVEL_MODE";
     }
     public class PHIEU_NHAP_KHO_DETAIL
     {

@@ -354,6 +354,17 @@ public class US_DM_HANG_HOA : US_Object
 	}
 #endregion
     #region MEthods
+    public void update_gia_ban_hang(string @ma_hang_hoa, decimal @gia_ban,DS_DM_HANG_HOA i_ds,US_DM_HANG_HOA i_us)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("update_gia_ban");
+        v_stored_proc.addDecimalInputParam("@gia_ban", @gia_ban);
+        v_stored_proc.addNVarcharInputParam("@ma_hang_hoa", @ma_hang_hoa);
+        v_stored_proc.fillDataSetByCommand(this, i_ds);
+        
+        DataRow v_dr = (DataRow)i_ds.DM_HANG_HOA.Rows[0];
+        i_us.DataRow2Me(v_dr);
+        //id_hang_hoa = v_us.dcID;
+    }
     public void FillDsHHByIDNhomHang(DS_DM_HANG_HOA op_ds, decimal ip_dc_id_nhom_hang)
     {
         CStoredProc v_stored_proc = new CStoredProc("get_hang_hoa_by_id_nhom");
@@ -371,6 +382,25 @@ public class US_DM_HANG_HOA : US_Object
         CStoredProc v_stored_proc = new CStoredProc("get_gia_nhap_by_id_hang");
         //v_stored_proc.addDecimalInputParam("@ID", ip_dc_id_hang_hoa);
         v_stored_proc.fillDataSetByCommand(this, op_ds);
+    }
+    public bool exit_hang_hoa_yn(string i_str_ma_hang_hoa)
+    {
+        DS_DM_HANG_HOA m_ds_hang_hoa = new DS_DM_HANG_HOA();
+        IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(m_ds_hang_hoa, m_ds_hang_hoa.DM_HANG_HOA.TableName);
+        v_obj_make_cmd.AddCondition("MA_HANG", i_str_ma_hang_hoa, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
+        this.FillDatasetByCommand(m_ds_hang_hoa, v_obj_make_cmd.getSelectCmd());
+        //US_DM_NHAN_VIEN v_us = new US_DM_NHAN_VIEN();
+        //DataRow v_dr = (DataRow)m_ds_hang_hoa.DM_HANG_HOA.Rows[0];
+        //v_us.DataRow2Me(v_dr);
+        //id_hang_hoa = v_us.dcID;
+        if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     #endregion
 }

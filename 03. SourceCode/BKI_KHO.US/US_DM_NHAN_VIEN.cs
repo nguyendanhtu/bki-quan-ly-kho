@@ -238,17 +238,17 @@ namespace BKI_KHO.US
         //    v_dc_so_du = ((Oracle.DataAccess.Types.OracleDecimal)v_obj_so_du.Value).Value;
         //    return v_dc_so_du;
         //}
-        public bool trung_nhan_vien(string i_str_ma_nhan_vien,ref decimal id_nhan_vien)
+        public bool exit_hang_hoa_yn(string i_str_ma_hang_hoa)
         {
-            DS_DM_NHAN_VIEN v_ds_nhan_vien = new DS_DM_NHAN_VIEN();
-            IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(v_ds_nhan_vien, v_ds_nhan_vien.DM_NHAN_VIEN.TableName);
-            v_obj_make_cmd.AddCondition("MA_NHAN_VIEN", i_str_ma_nhan_vien, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
-            this.FillDatasetByCommand(v_ds_nhan_vien, v_obj_make_cmd.getSelectCmd());
-            US_DM_NHAN_VIEN v_us = new US_DM_NHAN_VIEN();
-            DataRow v_dr = (DataRow)v_ds_nhan_vien.DM_NHAN_VIEN.Rows[0];
-            v_us.DataRow2Me(v_dr);
-            id_nhan_vien = v_us.dcID;
-            if (v_ds_nhan_vien.DM_NHAN_VIEN.Rows.Count > 0)
+            DS_DM_HANG_HOA m_ds_hang_hoa = new DS_DM_HANG_HOA();
+            IMakeSelectCmd v_obj_make_cmd = new CMakeAndSelectCmd(m_ds_hang_hoa, m_ds_hang_hoa.DM_HANG_HOA.TableName);
+            v_obj_make_cmd.AddCondition("MA_HANG", i_str_ma_hang_hoa, eKieuDuLieu.KieuString, eKieuSoSanh.Bang);
+            this.FillDatasetByCommand(m_ds_hang_hoa, v_obj_make_cmd.getSelectCmd());
+            //US_DM_NHAN_VIEN v_us = new US_DM_NHAN_VIEN();
+            //DataRow v_dr = (DataRow)m_ds_hang_hoa.DM_HANG_HOA.Rows[0];
+            //v_us.DataRow2Me(v_dr);
+            //id_hang_hoa = v_us.dcID;
+            if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
             {
                 return true;
             }

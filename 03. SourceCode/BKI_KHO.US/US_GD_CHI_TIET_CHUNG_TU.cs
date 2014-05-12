@@ -248,12 +248,20 @@ namespace BKI_KHO.US
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
-
+        #region methods
+        //public void insert_gd_chung_tu_detail(US_GD_CHI_TIET_CHUNG_TU i_us, decimal ip_dc_id_chung_tu)
+        //{
+        //    CStoredProc v_sp = new CStoredProc("pr_GD_CHI_TIET_CHUNG_TU_Search_by_id_chung_tu");
+        //    v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
+        //    v_sp.fillDataSetByCommand(this, op_ds);
+        //}
         public void FillDatasetByIDChungTu(DS_GD_CHI_TIET_CHUNG_TU op_ds, decimal ip_dc_id_chung_tu)
         {
             CStoredProc v_sp = new CStoredProc("pr_GD_CHI_TIET_CHUNG_TU_Search_by_id_chung_tu");
             v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
+        
+        #endregion 
     }
 }
