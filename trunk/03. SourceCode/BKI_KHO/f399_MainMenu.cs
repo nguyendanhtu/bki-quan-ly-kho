@@ -14,27 +14,21 @@ using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
 using BKI_KHO.NghiepVu;
 
-namespace Form_menu
-{
-    public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm
-    {
-        public f399_MainMenu()
-        {
+namespace Form_menu {
+    public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm {
+        public f399_MainMenu() {
             InitializeComponent();
             format_controls();
         }
-#region Members
+        #region Members
         int trangthaiweb = 1;
-#endregion
+        #endregion
         #region Public Interface
-        public void display(ref IP.Core.IPCommon.IPConstants.HowUserWantTo_Exit_MainForm v_exitmode)
-        {
-            try
-            {
+        public void display(ref IP.Core.IPCommon.IPConstants.HowUserWantTo_Exit_MainForm v_exitmode) {
+            try {
                 this.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
@@ -43,8 +37,7 @@ namespace Form_menu
         #endregion
         #region Private Method
 
-        private void format_controls()
-        {
+        private void format_controls() {
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             this.ShowInTaskbar = true;
@@ -66,264 +59,201 @@ namespace Form_menu
         }
         #endregion
         // Event handlers
-        private void set_define_events()
-        {
+        private void set_define_events() {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
         }
 
-        void m_cmd_xuat_kho_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cmd_xuat_kho_Click(object sender, EventArgs e) {
+            try {
                 f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
                 v_frm.display();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_cmd_nhap_kho_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cmd_nhap_kho_Click(object sender, EventArgs e) {
+            try {
                 f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
                 v_frm.display();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_mat_hang_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_mat_hang_Click(object sender, EventArgs e) {
+            try {
                 f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
                 v_f.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_nhom_hang_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_nhom_hang_Click(object sender, EventArgs e) {
+            try {
                 f302_V_DM_NHOM_HANG f302 = new f302_V_DM_NHOM_HANG();
                 f302.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e) {
+            try {
                 f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
                 frm.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_nhan_vien_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_nhan_vien_Click(object sender, EventArgs e) {
+            try {
                 f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
                 frm.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_kho_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_kho_Click(object sender, EventArgs e) {
+            try {
                 f110_V_DM_KHO frm = new f110_V_DM_KHO();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e) {
+            try {
                 f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
                 v_f.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e) {
+            try {
                 f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_khach_hang_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_khach_hang_Click(object sender, EventArgs e) {
+            try {
                 f105_DM_KHACH_HANG frm = new f105_DM_KHACH_HANG();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e) {
+            try {
                 f301_DM_DON_VI frm = new f301_DM_DON_VI();
                 frm.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e) {
+            try {
                 f304_DM_NHA_SX v_f = new f304_DM_NHA_SX();
                 v_f.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
+            catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_bao_hanh_seri_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_bao_hanh_seri_Click(object sender, EventArgs e) {
+            try {
                 f107_V_BAO_CAO_BAO_HANH frm = new f107_V_BAO_CAO_BAO_HANH();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_xuat_nhap_ton_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_xuat_nhap_ton_Click(object sender, EventArgs e) {
+            try {
                 f806_RPT_XUAT_NHAP_TON frm = new f806_RPT_XUAT_NHAP_TON();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_loi_nhuan_gop_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_loi_nhuan_gop_Click(object sender, EventArgs e) {
+            try {
                 f807_RPT_LOI_NHUAN frm = new f807_RPT_LOI_NHUAN();
                 frm.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_phan_quyen_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_phan_quyen_Click(object sender, EventArgs e) {
+            try {
                 f999_ht_nguoi_su_dung frm999 = new f999_ht_nguoi_su_dung();
                 frm999.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
 
             }
         }
 
-        private void m_cmd_thoat_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_thoat_Click(object sender, EventArgs e) {
+            try {
                 this.Close();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_tu_dien_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_tu_dien_Click(object sender, EventArgs e) {
+            try {
                 f100_TuDien frm100 = new f100_TuDien();
                 frm100.ShowDialog();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-          
-     
-
-        
-        
-
-        private void m_cmd_nhap_so_du_dau_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_nhap_so_du_dau_Click(object sender, EventArgs e) {
+            try {
                 f300_NHAP_SO_DU_DAU v_f = new f300_NHAP_SO_DU_DAU();
                 v_f.ShowDialog();
             }
-            catch (System.Exception v_e)
-            {
-            	CSystemLog_301.ExceptionHandle(v_e);
+            catch(System.Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
+
         }
+
     }
 }
