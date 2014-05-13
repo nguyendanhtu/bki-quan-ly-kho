@@ -115,11 +115,11 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_rbc_menu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_rbtab_tab1,
@@ -182,7 +182,6 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // m_rbb_khac
             // 
@@ -213,6 +212,7 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_khac.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_khac.Visible = false;
             // 
             // m_cmd_tai_khoan
             // 
@@ -222,6 +222,7 @@ namespace Form_menu
             this.m_cmd_tai_khoan.Name = "m_cmd_tai_khoan";
             this.m_cmd_tai_khoan.SubItemsExpandWidth = 14;
             this.m_cmd_tai_khoan.Text = "Tài khoản";
+            this.m_cmd_tai_khoan.Visible = false;
             // 
             // m_cmd_thue
             // 
@@ -231,6 +232,7 @@ namespace Form_menu
             this.m_cmd_thue.Name = "m_cmd_thue";
             this.m_cmd_thue.SubItemsExpandWidth = 14;
             this.m_cmd_thue.Text = "Thuế";
+            this.m_cmd_thue.Visible = false;
             // 
             // m_rbb_to_chuc
             // 
@@ -272,6 +274,7 @@ namespace Form_menu
             this.m_cmd_nha_cung_cap.Name = "m_cmd_nha_cung_cap";
             this.m_cmd_nha_cung_cap.SubItemsExpandWidth = 14;
             this.m_cmd_nha_cung_cap.Text = "Nhà cung cấp";
+            this.m_cmd_nha_cung_cap.Visible = false;
             // 
             // m_cmd_nha_san_xuat
             // 
@@ -412,6 +415,7 @@ namespace Form_menu
             this.m_cmd_tien_te.Name = "m_cmd_tien_te";
             this.m_cmd_tien_te.SubItemsExpandWidth = 14;
             this.m_cmd_tien_te.Text = "Tiền tệ";
+            this.m_cmd_tien_te.Visible = false;
             // 
             // m_cmd_don_vi_tinh
             // 
@@ -432,6 +436,7 @@ namespace Form_menu
             this.m_cmd_tu_dien.Name = "m_cmd_tu_dien";
             this.m_cmd_tu_dien.SubItemsExpandWidth = 14;
             this.m_cmd_tu_dien.Text = "Từ điển";
+            this.m_cmd_tu_dien.Visible = false;
             // 
             // m_cmd_loai_chung_tu
             // 
@@ -451,6 +456,7 @@ namespace Form_menu
             this.m_cmd_ma_vach.Name = "m_cmd_ma_vach";
             this.m_cmd_ma_vach.SubItemsExpandWidth = 14;
             this.m_cmd_ma_vach.Text = "In mã vạch";
+            this.m_cmd_ma_vach.Visible = false;
             // 
             // m_rbb_excel
             // 
@@ -481,6 +487,7 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_excel.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_excel.Visible = false;
             // 
             // m_cmd_nhap_tu_excel
             // 
@@ -490,6 +497,7 @@ namespace Form_menu
             this.m_cmd_nhap_tu_excel.Name = "m_cmd_nhap_tu_excel";
             this.m_cmd_nhap_tu_excel.SubItemsExpandWidth = 14;
             this.m_cmd_nhap_tu_excel.Text = "Nhập vào từ excel";
+            this.m_cmd_nhap_tu_excel.Visible = false;
             // 
             // ribbonPanel3
             // 
@@ -515,6 +523,7 @@ namespace Form_menu
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // m_rbb_kho
             // 
@@ -619,6 +628,7 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_mua_ban.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_mua_ban.Visible = false;
             // 
             // m_cmd_mua_hang
             // 
@@ -887,6 +897,7 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_du_lieu.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_du_lieu.Visible = false;
             // 
             // m_cmd_sao_luu
             // 
@@ -957,6 +968,7 @@ namespace Form_menu
             this.m_cmd_mat_khau.Name = "m_cmd_mat_khau";
             this.m_cmd_mat_khau.SubItemsExpandWidth = 14;
             this.m_cmd_mat_khau.Text = "Đổi mật khẩu";
+            this.m_cmd_mat_khau.Visible = false;
             // 
             // m_cmd_nhat_ky_he_thong
             // 
@@ -966,6 +978,7 @@ namespace Form_menu
             this.m_cmd_nhat_ky_he_thong.Name = "m_cmd_nhat_ky_he_thong";
             this.m_cmd_nhat_ky_he_thong.SubItemsExpandWidth = 14;
             this.m_cmd_nhat_ky_he_thong.Text = "Nhật ký hệ thống";
+            this.m_cmd_nhat_ky_he_thong.Visible = false;
             // 
             // m_rbb_he_thong
             // 
@@ -1008,6 +1021,7 @@ namespace Form_menu
             this.m_cmd_dang_nhap.Name = "m_cmd_dang_nhap";
             this.m_cmd_dang_nhap.SubItemsExpandWidth = 14;
             this.m_cmd_dang_nhap.Text = "Đăng nhập";
+            this.m_cmd_dang_nhap.Visible = false;
             // 
             // m_cmd_thong_tin
             // 
@@ -1017,6 +1031,7 @@ namespace Form_menu
             this.m_cmd_thong_tin.Name = "m_cmd_thong_tin";
             this.m_cmd_thong_tin.SubItemsExpandWidth = 14;
             this.m_cmd_thong_tin.Text = "Thông tin";
+            this.m_cmd_thong_tin.Visible = false;
             // 
             // m_cmd_thoat
             // 
@@ -1036,13 +1051,13 @@ namespace Form_menu
             // 
             // m_rbtab_tab2
             // 
+            this.m_rbtab_tab2.Checked = true;
             this.m_rbtab_tab2.Name = "m_rbtab_tab2";
             this.m_rbtab_tab2.Panel = this.ribbonPanel2;
             this.m_rbtab_tab2.Text = "Danh mục";
             // 
             // m_rbtab_tab3
             // 
-            this.m_rbtab_tab3.Checked = true;
             this.m_rbtab_tab3.Name = "m_rbtab_tab3";
             this.m_rbtab_tab3.Panel = this.ribbonPanel3;
             this.m_rbtab_tab3.Text = "Nghiệp vụ";
