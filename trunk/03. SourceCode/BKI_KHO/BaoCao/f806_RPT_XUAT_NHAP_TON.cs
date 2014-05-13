@@ -380,7 +380,6 @@ namespace BKI_KHO
 
         }
 
-        private const String m_search_info_string = "Tên nhóm hàng";
         #endregion
 
         #region Members
@@ -394,7 +393,7 @@ namespace BKI_KHO
 
         private void format_controls()
         {
-            //CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_dgv);
             CGridUtils.AddSave_Excel_Handlers(m_dgv);
             CGridUtils.AddSearch_Handlers(m_dgv);
@@ -405,9 +404,6 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_dgv);
             load_data_2_grid();
-
-            m_txt_search.Text = m_search_info_string;
-            m_txt_search.ForeColor = Color.Silver;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -504,8 +500,30 @@ namespace BKI_KHO
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
 
-            m_txt_search.Enter += new EventHandler(m_txt_search_Enter);
-            m_txt_search.Leave += new EventHandler(m_txt_search_Leave);
+            m_dgv.DoubleClick += m_dgv_DoubleClick;
+        }
+
+        private void hang_hoa_theo_nhom_thoi_gian()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
+            if (m_dgv.Rows[m_dgv.Row].IsNode) return;
+            grid2us_object(m_us, m_dgv.Row);
+
+            var v_frm = new f809_RPT_HANG_HOA_XUAT_NHAP();
+            v_frm.display_with_data(m_us, m_dat_tu_ngay.Value, m_dat_den_ngay.Value);
+        }
+
+        private void m_dgv_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                hang_hoa_theo_nhom_thoi_gian();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
 
@@ -617,31 +635,11 @@ namespace BKI_KHO
         {
             try
             {
-                m_txt_search.Text = m_txt_search.Text == m_search_info_string ? String.Empty : m_txt_search.Text;
                 load_data_2_grid();
-                m_txt_search.Text = m_txt_search.Text == String.Empty ? m_search_info_string : m_txt_search.Text;
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_txt_search_Leave(object sender, EventArgs e)
-        {
-            if (m_txt_search.Text == String.Empty)
-            {
-                m_txt_search.Text = m_search_info_string;
-                m_txt_search.ForeColor = Color.Silver;
-            }
-        }
-
-        private void m_txt_search_Enter(object sender, EventArgs e)
-        {
-            if (m_txt_search.Text == m_search_info_string)
-            {
-                m_txt_search.Text = String.Empty;
-                m_txt_search.ForeColor = Color.Black;
             }
         }
     }
