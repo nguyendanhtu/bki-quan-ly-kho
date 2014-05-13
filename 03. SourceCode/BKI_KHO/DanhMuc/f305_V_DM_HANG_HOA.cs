@@ -353,8 +353,8 @@ namespace BKI_KHO
             CGridUtils.AddSearch_Handlers(m_fg);
             m_cmd_view.Visible = false;
             m_cmd_insert.Visible = false;
-            m_cmd_update.Visible = false;
-            m_cmd_delete.Visible = false;
+            //m_cmd_update.Visible = false;
+            //m_cmd_delete.Visible = false;
             CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, true);
             set_define_events();
             this.KeyPreview = true;
@@ -426,9 +426,13 @@ namespace BKI_KHO
                 return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row))
                 return;
+            if(m_fg.Rows[m_fg.Row].IsNode == true) {
+                BaseMessages.MsgBox_Error("Không được sửa nhóm cha!");
+                return;
+            }
             grid2us_object(m_us, m_fg.Row);
-            //	f305_V_DM_HANG_HOA_DE v_fDE = new f305_V_DM_HANG_HOA_DE();
-            //	v_fDE.display(m_us);
+            f305_V_DM_HANG_HOA_DE v_fDE = new f305_V_DM_HANG_HOA_DE();
+            v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 
