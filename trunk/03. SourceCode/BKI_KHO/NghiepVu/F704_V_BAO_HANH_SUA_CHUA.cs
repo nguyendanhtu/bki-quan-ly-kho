@@ -34,9 +34,9 @@ namespace BKI_KHO.NghiepVu
 
         #region Member
         private DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
-        ITransferDataRow m_obj_trans;       
+        ITransferDataRow m_obj_trans;
         US_V_BAO_HANH_SUA_CHUA m_us_v_bao_hanh_sua_chua = new US_V_BAO_HANH_SUA_CHUA();
-      
+
         #endregion
 
         #region Public method
@@ -46,7 +46,7 @@ namespace BKI_KHO.NghiepVu
             this.ShowDialog();
         }
 
-       
+
         #endregion
 
         #region Private method
@@ -54,7 +54,7 @@ namespace BKI_KHO.NghiepVu
         {
             m_obj_trans = get_trans_object(m_fg);
             load_cbo_nhan_vien_to_grid();
-          
+
         }
 
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -131,9 +131,9 @@ namespace BKI_KHO.NghiepVu
                 return false;
             }
             decimal v_dc_total = 0;
-            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count-1; v_i_cur_row++)
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
             {
-                v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int) e_col_number.SO_TIEN]);
+                v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
             }
             if (v_dc_total != CIPConvert.ToDecimal(m_txt_tien_sua_chua.Text))
             {
@@ -172,8 +172,8 @@ namespace BKI_KHO.NghiepVu
             DS_GD_CHI_TIET_CHUNG_TU v_ds_gd_ct_chung_tu = new DS_GD_CHI_TIET_CHUNG_TU();
             v_us_gd_ct_chung_tu.FillDatasetByIDChungTu(v_ds_gd_ct_chung_tu, ip_us_v_bao_hanh_sua_chua.dcID);
             m_txt_serial.Text = v_ds_gd_ct_chung_tu.GD_CHI_TIET_CHUNG_TU.Rows[0][GD_CHI_TIET_CHUNG_TU.SO_SERI].ToString();
-           
-            US_GD_CHUNG_TU_NHAN_VIEN v_us_ct_nhan_vien  = new US_GD_CHUNG_TU_NHAN_VIEN();
+
+            US_GD_CHUNG_TU_NHAN_VIEN v_us_ct_nhan_vien = new US_GD_CHUNG_TU_NHAN_VIEN();
             DS_GD_CHUNG_TU_NHAN_VIEN v_ds_ct_nhan_vien = new DS_GD_CHUNG_TU_NHAN_VIEN();
             v_us_ct_nhan_vien.FillDatasetByIDChungTu(
                 v_ds_ct_nhan_vien
@@ -197,15 +197,15 @@ namespace BKI_KHO.NghiepVu
                     op_us_ct_nhan_vien.DataRow2Me(v_dr);
                     break;
                 case DataEntryFormMode.InsertDataState:
-                      op_us_ct_nhan_vien.dcSO_TIEN
-                = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.SO_TIEN].ToString());
-            op_us_ct_nhan_vien.dcID_NHAN_VIEN
-                = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.HO_TEN]);
-            op_us_ct_nhan_vien.dcID_CHUNG_TU = ip_us_v_bh_sua_chua.dcID;
+                    op_us_ct_nhan_vien.dcSO_TIEN
+              = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.SO_TIEN].ToString());
+                    op_us_ct_nhan_vien.dcID_NHAN_VIEN
+                        = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.HO_TEN]);
+                    op_us_ct_nhan_vien.dcID_CHUNG_TU = ip_us_v_bh_sua_chua.dcID;
                     break;
             }
 
-          
+
         }
         private void form_2_us_gd_chi_tiet_chung_tu(
            US_V_BAO_HANH_SUA_CHUA ip_us_v_bh_sua_chua
@@ -252,36 +252,36 @@ namespace BKI_KHO.NghiepVu
                 US_GD_CHUNG_TU_NHAN_VIEN v_us_gd_ct_nhan_vien = new US_GD_CHUNG_TU_NHAN_VIEN();
                 v_us_gd_ct_nhan_vien.UseTransOfUSObject(m_us_v_bao_hanh_sua_chua);
                 v_us_gd_ct_nhan_vien.DeleteByIDChungTu(m_us_v_bao_hanh_sua_chua.dcID);
-                 for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count-1; v_i_cur_row++)
-            {
-                grid_row_2_us_gd_chung_tu_nhan_vien(v_i_cur_row
-                    , m_us_v_bao_hanh_sua_chua
-                    , v_us_gd_ct_nhan_vien);
-                        v_us_gd_ct_nhan_vien.Insert();
-            }
+                for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+                {
+                    grid_row_2_us_gd_chung_tu_nhan_vien(v_i_cur_row
+                        , m_us_v_bao_hanh_sua_chua
+                        , v_us_gd_ct_nhan_vien);
+                    v_us_gd_ct_nhan_vien.Insert();
+                }
                 m_us_v_bao_hanh_sua_chua.CommitTransaction();
-                 MessageBox.Show("Phiếu sửa chữa đã được lưu.");
+                MessageBox.Show("Phiếu sửa chữa đã được lưu.");
             }
             catch (Exception v_e)
             {
-                    if (m_us_v_bao_hanh_sua_chua.is_having_transaction())
-                    {
-                        m_us_v_bao_hanh_sua_chua.Rollback();
-                    }
+                if (m_us_v_bao_hanh_sua_chua.is_having_transaction())
+                {
+                    m_us_v_bao_hanh_sua_chua.Rollback();
+                }
                 throw v_e;
             }
 
 
-            
-          
-          
 
-         
+
+
+
+
         }
 
-       
 
-    
+
+
         #endregion
 
         #region Event
@@ -305,13 +305,13 @@ namespace BKI_KHO.NghiepVu
                 //1. Chọn phiếu bảo hành
                 F706_GD_PHIEU_BAO_HANH frm = new F706_GD_PHIEU_BAO_HANH();
                 US_V_BAO_HANH_SUA_CHUA v_us_bao_hanh = new US_V_BAO_HANH_SUA_CHUA();
-                if( frm.select_phieu_bao_hanh(v_us_bao_hanh) == DialogResult.OK)
+                if (frm.select_phieu_bao_hanh(v_us_bao_hanh) == DialogResult.OK)
                 {
                     //2. đưa thông tin phiếu bảo hành lên trên form
                     us_v_bao_hanh_sua_chua_2_form(v_us_bao_hanh);
                     m_e_form_mode = DataEntryFormMode.UpdateDataState;
                 }
-               
+
             }
             catch (Exception v_e)
             {
