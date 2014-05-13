@@ -40,6 +40,7 @@ namespace BKI_KHO
         private TextBox m_txt_tim_kiem;
         private Label label2;
         private Label m_lbl_title;
+        internal SIS.Controls.Button.SiSButton m_cmd_xoa_chung_tu;
 		private System.ComponentModel.IContainer components;
 
 		public f602_v_gd_chung_tu()
@@ -84,10 +85,11 @@ namespace BKI_KHO
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lbl_title = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_lbl_title = new System.Windows.Forms.Label();
+            this.m_cmd_xoa_chung_tu = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -122,6 +124,7 @@ namespace BKI_KHO
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xoa_chung_tu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 563);
@@ -167,6 +170,17 @@ namespace BKI_KHO
             this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 21;
             // 
+            // m_lbl_title
+            // 
+            this.m_lbl_title.AutoSize = true;
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_title.Location = new System.Drawing.Point(271, 26);
+            this.m_lbl_title.Name = "m_lbl_title";
+            this.m_lbl_title.Size = new System.Drawing.Size(495, 31);
+            this.m_lbl_title.TabIndex = 31;
+            this.m_lbl_title.Text = "DANH SÁCH PHIẾU XUẤT NHẬP KHO";
+            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // m_cmd_search
             // 
             this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -175,7 +189,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(622, 64);
+            this.m_cmd_search.Location = new System.Drawing.Point(622, 73);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(82, 28);
             this.m_cmd_search.TabIndex = 30;
@@ -183,7 +197,7 @@ namespace BKI_KHO
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(243, 64);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(243, 73);
             this.m_txt_tim_kiem.Multiline = true;
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 28);
@@ -192,22 +206,26 @@ namespace BKI_KHO
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 72);
+            this.label2.Location = new System.Drawing.Point(169, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tìm kiếm";
             // 
-            // m_lbl_title
+            // m_cmd_xoa_chung_tu
             // 
-            this.m_lbl_title.AutoSize = true;
-            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_title.Location = new System.Drawing.Point(271, 26);
-            this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(403, 26);
-            this.m_lbl_title.TabIndex = 31;
-            this.m_lbl_title.Text = "DANH SÁCH PHIẾU XUẤT NHẬP KHO";
-            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_cmd_xoa_chung_tu.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xoa_chung_tu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xoa_chung_tu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xoa_chung_tu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xoa_chung_tu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xoa_chung_tu.ImageIndex = 4;
+            this.m_cmd_xoa_chung_tu.ImageList = this.ImageList;
+            this.m_cmd_xoa_chung_tu.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xoa_chung_tu.Name = "m_cmd_xoa_chung_tu";
+            this.m_cmd_xoa_chung_tu.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xoa_chung_tu.TabIndex = 12;
+            this.m_cmd_xoa_chung_tu.Text = "Xóa chứng từ";
             // 
             // f602_v_gd_chung_tu
             // 
@@ -263,6 +281,8 @@ namespace BKI_KHO
 		ITransferDataRow m_obj_trans;		
 		DS_V_GD_CHUNG_TU m_ds = new DS_V_GD_CHUNG_TU();
 		US_V_GD_CHUNG_TU m_us = new US_V_GD_CHUNG_TU();
+
+        
 		#endregion
 
 		#region Private Methods
@@ -302,7 +322,7 @@ namespace BKI_KHO
 		private void load_data_2_grid(decimal ip_id_loai_chung_tu){						
 			//m_ds = new DS_V_GD_CHUNG_TU();
 
-            m_us.FillDataset(m_ds, "where ID_LOAI_CT=" + ip_id_loai_chung_tu);
+            m_us.Filldataset_by_search(ip_id_loai_chung_tu, m_txt_tim_kiem.Text, m_ds);    //.FillDataset(m_ds, "where ID_LOAI_CT=" + ip_id_loai_chung_tu);
 			m_fg.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
@@ -348,9 +368,11 @@ namespace BKI_KHO
 			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
 			US_V_GD_CHUNG_TU v_us = new US_V_GD_CHUNG_TU();
 			grid2us_object(v_us, m_fg.Row);
+           //xóa bang gd_chung_tu,gd_chi_tiet_chung_tu,gd_chung_tu_nhan_vien
+           // v_us.Delete();
 			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
+				v_us.BeginTransaction();
+                v_us.delete_v_gd_chung_tu(v_us.dcID_CHUNG_TU, v_us.dcID_CHUNG_TU_DETAIL, v_us.dcID_NGUOI_NHAP);                  								
 				v_us.CommitTransaction();
 				m_fg.Rows.Remove(m_fg.Row);				
 			}
@@ -366,14 +388,27 @@ namespace BKI_KHO
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_search.Click += m_cmd_search_Click;
+            m_cmd_xoa_chung_tu.Click += m_cmd_xoa_chung_tu_Click;
            // m_fg.DoubleClick += m_fg_DoubleClick;
 		}
+
+        void m_cmd_xoa_chung_tu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_gd_chung_tu();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
         void m_cmd_search_Click(object sender, EventArgs e)
         {
             try
             {
-                load_data_2_grid();
+                load_data_2_grid(id_loai_ct);
             }
             catch (Exception v_e)
             {

@@ -96,7 +96,8 @@ namespace BKI_KHO
             m_txt_nguoi_thu.Enabled = false;
 			set_define_events();
             m_fg.AllowEditing = true;
-			this.KeyPreview = true;		
+			this.KeyPreview = true;
+            m_txt_so_phieu_thu_chi.Text = "PN-";
 		}
 		private void set_initial_form_load(){	
             load_cbo_don_vi_on_grid();

@@ -82,6 +82,7 @@ namespace BKI_KHO
             m_txt_nguoi_thu.Enabled = false;
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
+            m_txt_so_phieu_thu_chi.Text = "PX-";
         }
         private void set_initial_form_load()
         {
