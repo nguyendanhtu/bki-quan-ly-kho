@@ -303,8 +303,8 @@ namespace BKI_KHO
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.m_txt_tim_kiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
@@ -323,7 +323,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "F706_GD_PHIEU_BAO_HANH";
             this.Text = "F706 - Danh sách phiếu bảo hành";
-            
+
             this.Load += new System.EventHandler(this.F706_GD_PHIEU_BAO_HANH_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
@@ -341,8 +341,8 @@ namespace BKI_KHO
         }
         public DialogResult select_phieu_bao_hanh(US_V_BAO_HANH_SUA_CHUA iop_us_bao_hanh)
         {
-             m_dgl_result = DialogResult.Cancel;
-            m_us_v_bao_hanh = iop_us_bao_hanh;   
+            m_dgl_result = DialogResult.Cancel;
+            m_us_v_bao_hanh = iop_us_bao_hanh;
             this.ShowDialog();
             return m_dgl_result;
         }
@@ -371,7 +371,7 @@ namespace BKI_KHO
         ITransferDataRow m_obj_trans;
         DialogResult m_dgl_result = DialogResult.Cancel;
         DS_V_BAO_HANH_SUA_CHUA m_ds_v_bao_hanh = new DS_V_BAO_HANH_SUA_CHUA();
- 
+
         US_V_BAO_HANH_SUA_CHUA m_us_v_bao_hanh = new US_V_BAO_HANH_SUA_CHUA();
 
         #endregion
@@ -461,7 +461,7 @@ namespace BKI_KHO
             grid2us_object(v_us, m_fg.Row);
             try
             {
-                v_us.BeginTransaction();      
+                v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
@@ -604,7 +604,7 @@ namespace BKI_KHO
             }
         }
 
-        
+
 
         private void m_cmd_select_Click(object sender, EventArgs e)
         {
