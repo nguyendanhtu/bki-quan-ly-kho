@@ -67,17 +67,6 @@ namespace BKI_KHO.NghiepVu
         {
             m_obj_trans = get_trans_object(m_fg);
             load_cbo_nhan_vien_to_grid();
-            load_cbo_hang_hoa();
-        }
-
-        private void load_cbo_hang_hoa()
-        {
-            US_DM_HANG_HOA v_us_dm_hang_hoa = new US_DM_HANG_HOA();
-            DS_DM_HANG_HOA v_ds_dm_hang_hoa = new DS_DM_HANG_HOA();
-            v_us_dm_hang_hoa.FillDataset(v_ds_dm_hang_hoa);
-            m_cbo_hang_hoa.DataSource = v_ds_dm_hang_hoa.DM_HANG_HOA;
-            m_cbo_hang_hoa.DisplayMember = DM_HANG_HOA.TEN_HANG_VN;
-            m_cbo_hang_hoa.ValueMember = DM_HANG_HOA.ID;
         }
 
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -147,12 +136,6 @@ namespace BKI_KHO.NghiepVu
                 MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng!");
                 return false;
             }
-
-            if (m_txt_serial.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập số serial.");
-                return false;
-            }
             if (m_txt_tien_sua_chua.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn chưa nhập số tiền sửa chữa!");
@@ -184,8 +167,6 @@ namespace BKI_KHO.NghiepVu
             m_txt_tien_sua_chua.Text = string.Format("{0:0,0}", ip_m_us_gd_chung_tu.dcTONG_TIEN);
 
             m_us_gd_chi_tiet_chung_tu.FillDatasetByIDChungTu(m_ds_gd_chi_tiet_chung_tu, ip_m_us_gd_chung_tu.dcID);
-            m_cbo_hang_hoa.SelectedValue = decimal.Parse(m_ds_gd_chi_tiet_chung_tu.Tables[0].Rows[0]["ID_HANG_HOA"].ToString());
-            m_txt_serial.Text = m_ds_gd_chi_tiet_chung_tu.Tables[0].Rows[0]["SO_SERI"].ToString();
 
             m_us_v_bao_hanh_sua_chua.FillDatasetByIDChungTu(m_ds_v_bao_hanh_sua_chua, ip_m_us_gd_chung_tu.dcID);
             m_fg.Redraw = false;
@@ -232,9 +213,6 @@ namespace BKI_KHO.NghiepVu
 
         private void form_2_us_gd_chi_tiet_chung_tu()
         {
-            m_us_gd_chi_tiet_chung_tu.dcID_HANG_HOA = (decimal)m_cbo_hang_hoa.SelectedValue;
-            m_us_gd_chi_tiet_chung_tu.dcSO_LUONG = 1;
-            m_us_gd_chi_tiet_chung_tu.dcGIA_GIAO_DICH = decimal.Parse(m_txt_tien_sua_chua.Text);
             m_us_gd_chi_tiet_chung_tu.strSO_SERI = m_txt_serial.Text;
         }
 
