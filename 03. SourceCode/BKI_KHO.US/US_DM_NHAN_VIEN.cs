@@ -263,7 +263,16 @@ namespace BKI_KHO.US
             v_sp.addNVarcharInputParam("@MA_NHAN_VIEN", ip_str_ma_nhan_vien);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
+        public void FillDatasetSearchByID(DS_DM_NHAN_VIEN op_ds, decimal ip_id_nhan_vien,ref string v_ho_ten)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_DM_NHAN_VIEN_Search_By_ID");
+            v_sp.addNVarcharInputParam("@ID", ip_id_nhan_vien);
+            v_sp.fillDataSetByCommand(this, op_ds);
 
+            DataRow v_dr = (DataRow)op_ds.DM_NHAN_VIEN.Rows[0];
+            this.DataRow2Me(v_dr);
+            v_ho_ten = this.strHO_DEM + this.strTEN;
+        }
         public void FillDataSetByKeyword(DS_DM_NHAN_VIEN op_ds, string ip_str_keyword)
         {
             CStoredProc v_sp = new CStoredProc("pr_DM_NHAN_VIEN_Search");
