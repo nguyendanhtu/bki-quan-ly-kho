@@ -431,14 +431,17 @@ namespace BKI_KHO
             }
             if (m_us.dcID_LOAI_CT == 1)
             {
+                this.Close();
                 f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
                 v_frm.display_detail_chung_tu(m_us);
+                
             }
             else
             {
                 f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
                 v_frm.display_detail_chung_tu(m_us);
             }
+            this.Close();
         }
 
         void m_fg_Click(object sender, EventArgs e)

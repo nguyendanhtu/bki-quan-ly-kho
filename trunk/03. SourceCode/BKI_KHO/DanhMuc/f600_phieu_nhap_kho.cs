@@ -37,6 +37,7 @@ namespace BKI_KHO
             this.ShowDialog();
             m_cmd_insert.Enabled = false;
             return m_dlg_result;
+            this.Close();
         }
         #endregion
 
@@ -322,13 +323,16 @@ namespace BKI_KHO
         }
         private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
         {
+            m_fg.Cols[(int)e_col_Number.NHOM_HANG].Visible = true;
             m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
-            m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
+            //m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
             m_dat_ngay_lap.Value = CIPConvert.ToDatetime(CIPConvert.ToStr( i_us.datNGAY_CT),"dd/MM/yyyy");
             m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
             m_txt_ten_kho.Text =CIPConvert.ToStr( i_us.dcID_TO_CHUC_NGUON);
             m_txt_nguoi_thu.Text = CIPConvert.ToStr(i_us.dcID_NGUOI_GIAO_DICH);
-            m_fg[2, (int)e_col_Number.MA_HANG_HOA] = i_us.strMA_HANG;
+
+           // m_fg[m_fg.Rows.Fixed+1, (int)e_col_Number.MA_HANG_HOA] = i_us.strMA_HANG;
+
         }
         private void form_2_us_gd_chung_tu()
         {
@@ -339,9 +343,9 @@ namespace BKI_KHO
             m_us_gd_chung_tu.dcTONG_TIEN = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
             m_us_gd_chung_tu.SetID_TO_CHUC_DICHNull();
             m_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
-            m_us_gd_chung_tu.SetID_NGUOI_GIAO_DICHNull();
-            m_us_gd_chung_tu.SetID_NGUOI_NHAPNull();
-            m_us_gd_chung_tu.SetNGAY_NHAPNull();
+            m_us_gd_chung_tu.dcID_NGUOI_GIAO_DICH = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.dcID_NGUOI_NHAP = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.datNGAY_NHAP = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.SetNGAY_NHAP_CUOINull();
             m_us_gd_chung_tu.SetGHI_CHU_1Null();
             m_us_gd_chung_tu.SetGHI_CHU_2Null();
