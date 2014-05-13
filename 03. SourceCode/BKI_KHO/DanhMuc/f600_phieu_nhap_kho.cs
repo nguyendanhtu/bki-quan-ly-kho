@@ -55,7 +55,7 @@ namespace BKI_KHO
 
         DataEntryFormMode m_e_form_mode;
         DialogResult m_dlg_result;
-       
+        decimal tong_tien = 0;
         decimal m_dc_tong_tien = 0;
         decimal m_dc_id = 0;
         decimal id_nhan_vien = 0;
@@ -399,12 +399,28 @@ namespace BKI_KHO
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
             this.Load += f600_phieu_nhap_kho_Load;
-           
+            m_fg.CellChanged += m_fg_CellChanged;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xem.Click += m_cmd_xem_Click;
            
 		}
+        void m_fg_CellChanged(object sender, C1.Win.C1FlexGrid.RowColEventArgs e)
+        {
+            try
+            {
 
+                if (e.Col == (int)e_col_Number.SO_TIEN)
+                {
+
+                    tong_tien += (CIPConvert.ToDecimal(m_fg[m_fg.Row, (int)e_col_Number.SO_TIEN]));
+                    m_txt_tong_tien.Value = CIPConvert.ToStr(tong_tien);
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         void m_cmd_xem_Click(object sender, EventArgs e)
         {
             f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
