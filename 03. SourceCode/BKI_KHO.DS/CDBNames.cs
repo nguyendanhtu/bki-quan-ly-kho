@@ -452,7 +452,13 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_KET_THUC = "NGAY_KET_THUC";
         public const string TRANG_THAI_SU_DUNG = "TRANG_THAI_SU_DUNG";
     }
-
+    public class GD_CHUNG_TU_NHAN_VIEN
+    {
+        public const string ID = "ID";
+        public const string ID_CHUNG_TU = "ID_CHUNG_TU";
+        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
+        public const string SO_TIEN = "SO_TIEN";
+    }
     public class V_DM_DU_AN_QUYET_DINH_TU_DIEN
     {
         public const string ID = "ID";
@@ -765,13 +771,27 @@ namespace BKI_KHO.DS.CDBNames
 
     public class V_BAO_HANH_SUA_CHUA
     {
-        public const string NGAY_CT = "NGAY_CT";
-        public const string HO_TEN = "HO_TEN";
-        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
-        public const string SO_TIEN = "SO_TIEN";
-        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string ID = "ID";
+        public const string ID_LOAI_CT = "ID_LOAI_CT";
         public const string MA_CT = "MA_CT";
+        public const string NGAY_CT = "NGAY_CT";
+        public const string DIEN_GIAI = "DIEN_GIAI";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string ID_TO_CHUC_NGUON = "ID_TO_CHUC_NGUON";
+        public const string ID_NGUOI_GIAO_DICH = "ID_NGUOI_GIAO_DICH";
+        public const string ID_TO_CHUC_DICH = "ID_TO_CHUC_DICH";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string NGAY_NHAP = "NGAY_NHAP";
+        public const string NGAY_NHAP_CUOI = "NGAY_NHAP_CUOI";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
         public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
+        public const string MA_NHAN_VIEN = "MA_NHAN_VIEN";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string HO_TEN_NHAN_VIEN = "HO_TEN_NHAN_VIEN";
+        public const string SO_TIEN = "SO_TIEN";
+        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
     }
 
     public class DM_NHA_CUNG_CAP
