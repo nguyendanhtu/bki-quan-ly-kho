@@ -37,6 +37,18 @@ namespace BKI_KHO.DS.CDBNames
         public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
         public const string TEN = "TEN";
     }
+    public class GD_CHI_TIET_CHUNG_TU {
+        public const string ID =  "ID";
+        public const string ID_CHUNG_TU =  "ID_CHUNG_TU";
+        public const string ID_HANG_HOA =  "ID_HANG_HOA";
+        public const string SO_LUONG =  "SO_LUONG";
+        public const string GIA_GIAO_DICH =  "GIA_GIAO_DICH";
+        public const string ID_DON_VI_TINH =  "ID_DON_VI_TINH";
+        public const string SO_SERI =  "SO_SERI";
+        public const string THOI_GIAN_BH =  "THOI_GIAN_BH";
+        public const string ID_DVT_THOI_GIAN =  "ID_DVT_THOI_GIAN";
+    }
+
     public class V_GD_CHUNG_TU
     {
         public const string ID_CHUNG_TU = "ID_CHUNG_TU";
