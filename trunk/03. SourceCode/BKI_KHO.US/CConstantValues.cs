@@ -8,7 +8,8 @@ namespace BKI_KHO.US {
        
         public const decimal ID_TAT_CA = -1;
         public const decimal ID_NHAP_SO_DU = 60;
-      
+        public const decimal ID_BAO_HANH_SUA_CHUA = 37;
+
     }
 
     public class CONST_ID_TRANG_THAI_HANG_HOA {

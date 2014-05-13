@@ -144,7 +144,7 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 505);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1074, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(796, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_select
@@ -156,7 +156,7 @@ namespace BKI_KHO
             this.m_cmd_select.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_select.ImageIndex = 13;
             this.m_cmd_select.ImageList = this.ImageList;
-            this.m_cmd_select.Location = new System.Drawing.Point(428, 4);
+            this.m_cmd_select.Location = new System.Drawing.Point(308, 4);
             this.m_cmd_select.Name = "m_cmd_select";
             this.m_cmd_select.Size = new System.Drawing.Size(153, 28);
             this.m_cmd_select.TabIndex = 23;
@@ -172,7 +172,7 @@ namespace BKI_KHO
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(581, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(461, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -187,7 +187,7 @@ namespace BKI_KHO
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(669, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(549, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(87, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -202,7 +202,7 @@ namespace BKI_KHO
             this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_view.ImageIndex = 18;
             this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_view.Location = new System.Drawing.Point(162, 4);
             this.m_cmd_view.Name = "m_cmd_view";
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_view.TabIndex = 21;
@@ -213,11 +213,11 @@ namespace BKI_KHO
             this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(756, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(158, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -232,7 +232,7 @@ namespace BKI_KHO
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(914, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(636, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(156, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -244,7 +244,7 @@ namespace BKI_KHO
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 83);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1074, 422);
+            this.m_fg.Size = new System.Drawing.Size(796, 422);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -258,7 +258,7 @@ namespace BKI_KHO
             this.m_pn_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_pn_top.Location = new System.Drawing.Point(0, 0);
             this.m_pn_top.Name = "m_pn_top";
-            this.m_pn_top.Size = new System.Drawing.Size(1074, 83);
+            this.m_pn_top.Size = new System.Drawing.Size(796, 83);
             this.m_pn_top.TabIndex = 22;
             // 
             // m_lbl_total_rows
@@ -311,19 +311,19 @@ namespace BKI_KHO
             this.m_txt_tim_kiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tim_kiem.Location = new System.Drawing.Point(201, 19);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(634, 20);
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(356, 20);
             this.m_txt_tim_kiem.TabIndex = 23;
             // 
             // F706_GD_PHIEU_BAO_HANH
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1074, 541);
+            this.ClientSize = new System.Drawing.Size(796, 541);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pn_top);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "F706_GD_PHIEU_BAO_HANH";
             this.Text = "F706 - Danh sách phiếu bảo hành";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.F706_GD_PHIEU_BAO_HANH_FormClosed);
+            
             this.Load += new System.EventHandler(this.F706_GD_PHIEU_BAO_HANH_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
@@ -338,6 +338,13 @@ namespace BKI_KHO
         public void display()
         {
             this.ShowDialog();
+        }
+        public DialogResult select_phieu_bao_hanh(US_V_BAO_HANH_SUA_CHUA iop_us_bao_hanh)
+        {
+             m_dgl_result = DialogResult.Cancel;
+            m_us_v_bao_hanh = iop_us_bao_hanh;   
+            this.ShowDialog();
+            return m_dgl_result;
         }
         #endregion
 
@@ -362,8 +369,10 @@ namespace BKI_KHO
 
         #region Members
         ITransferDataRow m_obj_trans;
-        DS_GD_CHUNG_TU m_ds = new DS_GD_CHUNG_TU();
-        US_GD_CHUNG_TU m_us = new US_GD_CHUNG_TU();
+        DialogResult m_dgl_result = DialogResult.Cancel;
+        DS_V_BAO_HANH_SUA_CHUA m_ds_v_bao_hanh = new DS_V_BAO_HANH_SUA_CHUA();
+ 
+        US_V_BAO_HANH_SUA_CHUA m_us_v_bao_hanh = new US_V_BAO_HANH_SUA_CHUA();
 
         #endregion
 
@@ -393,18 +402,21 @@ namespace BKI_KHO
             v_htb.Add(GD_CHUNG_TU.MA_CT, e_col_Number.MA_CT);
             v_htb.Add(GD_CHUNG_TU.GHI_CHU_1, e_col_Number.GHI_CHU_1);
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.GD_CHUNG_TU.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds_v_bao_hanh.V_BAO_HANH_SUA_CHUA.NewRow());
             return v_obj_trans;
         }
         private void load_data_2_grid()
         {
-            m_ds = new DS_GD_CHUNG_TU();
-            m_us.FillDatasetByLoaiChungTu(m_ds, m_txt_tim_kiem.Text);
+            m_ds_v_bao_hanh = new DS_V_BAO_HANH_SUA_CHUA();
+            m_us_v_bao_hanh.FillDatasetByLoaiChungTu(
+                m_ds_v_bao_hanh
+                , m_txt_tim_kiem.Text
+                , CONST_ID_DM_LOAI_CHUNG_TU.ID_BAO_HANH_SUA_CHUA);
             m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            CGridUtils.Dataset2C1Grid(m_ds_v_bao_hanh, m_fg, m_obj_trans);
             m_fg.Redraw = true;
         }
-        private void grid2us_object(US_GD_CHUNG_TU i_us
+        private void grid2us_object(US_V_BAO_HANH_SUA_CHUA i_us
             , int i_grid_row)
         {
             DataRow v_dr;
@@ -414,7 +426,7 @@ namespace BKI_KHO
         }
 
 
-        private void us_object2grid(US_GD_CHUNG_TU i_us
+        private void us_object2grid(US_V_BAO_HANH_SUA_CHUA i_us
             , int i_grid_row)
         {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
@@ -434,7 +446,7 @@ namespace BKI_KHO
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            grid2us_object(m_us_v_bao_hanh, m_fg.Row);
             //	F706_GD_PHIEU_BAO_HANH_DE v_fDE = new F706_GD_PHIEU_BAO_HANH_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
@@ -445,26 +457,11 @@ namespace BKI_KHO
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
-            US_GD_CHUNG_TU v_us = new US_GD_CHUNG_TU();
+            US_V_BAO_HANH_SUA_CHUA v_us = new US_V_BAO_HANH_SUA_CHUA();
             grid2us_object(v_us, m_fg.Row);
             try
             {
-                v_us.BeginTransaction();
-                US_GD_CHI_TIET_CHUNG_TU v_us_gd_chi_tiet_chung_tu = new US_GD_CHI_TIET_CHUNG_TU();
-                DS_GD_CHI_TIET_CHUNG_TU v_ds_gd_chi_tiet_chung_tu = new DS_GD_CHI_TIET_CHUNG_TU();
-                US_GD_CHUNG_TU_NHAN_VIEN v_us_gd_chung_tu_nhan_vien = new US_GD_CHUNG_TU_NHAN_VIEN();
-                DS_GD_CHUNG_TU_NHAN_VIEN v_ds_gd_chung_tu_nhan_vien = new DS_GD_CHUNG_TU_NHAN_VIEN();
-
-                v_us_gd_chung_tu_nhan_vien.FillDatasetByIDChungTu(v_ds_gd_chung_tu_nhan_vien, v_us.dcID);
-                for (int i = 0; i < v_ds_gd_chung_tu_nhan_vien.GD_CHUNG_TU_NHAN_VIEN.Count; i++)
-                {
-                    v_us_gd_chung_tu_nhan_vien.DeleteByID((decimal)v_ds_gd_chung_tu_nhan_vien.Tables[0].Rows[i]["ID"]);
-                }
-                v_us_gd_chi_tiet_chung_tu.FillDatasetByIDChungTu(v_ds_gd_chi_tiet_chung_tu, v_us.dcID);
-                for (int i = 0; i < v_ds_gd_chi_tiet_chung_tu.GD_CHI_TIET_CHUNG_TU.Count; i++)
-                {
-                    v_us_gd_chi_tiet_chung_tu.DeleteByID((decimal)v_ds_gd_chi_tiet_chung_tu.Tables[0].Rows[i]["ID"]);
-                }
+                v_us.BeginTransaction();      
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
@@ -472,9 +469,7 @@ namespace BKI_KHO
             catch (Exception v_e)
             {
                 v_us.Rollback();
-                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-                    new CDBClientDBExceptionInterpret());
-                v_objErrHandler.showErrorMessage();
+                throw v_e;
             }
         }
 
@@ -482,19 +477,18 @@ namespace BKI_KHO
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
-            //	F706_GD_PHIEU_BAO_HANH_DE v_fDE = new F706_GD_PHIEU_BAO_HANH_DE();			
-            //	v_fDE.display(m_us);
+            grid2us_object(m_us_v_bao_hanh, m_fg.Row);
+            m_us_v_bao_hanh.InitByID(m_us_v_bao_hanh.dcID);
+            this.Close();
         }
 
         private void select_phieu_sua_chua()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
-            F704_V_BAO_HANH_SUA_CHUA frm = new F704_V_BAO_HANH_SUA_CHUA();
-            frm.display_for_update(m_us);
-            this.Hide();
+            grid2us_object(m_us_v_bao_hanh, m_fg.Row);
+            m_dgl_result = DialogResult.OK;
+            this.Close();
         }
 
         private void set_define_events()
@@ -504,6 +498,19 @@ namespace BKI_KHO
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                select_phieu_sua_chua();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
         #endregion
 
@@ -597,19 +604,7 @@ namespace BKI_KHO
             }
         }
 
-        private void F706_GD_PHIEU_BAO_HANH_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            try
-            {
-                F704_V_BAO_HANH_SUA_CHUA frm = new F704_V_BAO_HANH_SUA_CHUA();
-                frm.Show();
-                this.Hide();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        
 
         private void m_cmd_select_Click(object sender, EventArgs e)
         {

@@ -145,5 +145,11 @@ namespace BKI_KHO.US
             v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
+        public void DeleteByIDChungTu(decimal ip_dc_id_chung_tu)
+        {
+            CStoredProc v_sp = new CStoredProc("pr_GD_CHUNG_TU_NHAN_VIEN_delete_by_id_chung_tu");
+            v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
+           v_sp.ExecuteCommand(this);
+        }
     }
 }

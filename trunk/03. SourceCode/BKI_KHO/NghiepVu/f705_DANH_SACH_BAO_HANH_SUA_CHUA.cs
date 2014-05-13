@@ -371,7 +371,7 @@ namespace BKI_KHO
         {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_BAO_HANH_SUA_CHUA.NGAY_CT, e_col_Number.NGAY_CT);
-            v_htb.Add(V_BAO_HANH_SUA_CHUA.HO_TEN, e_col_Number.HO_TEN);
+            v_htb.Add(V_BAO_HANH_SUA_CHUA.HO_TEN_NHAN_VIEN, e_col_Number.HO_TEN);
             v_htb.Add(V_BAO_HANH_SUA_CHUA.MA_NHAN_VIEN, e_col_Number.MA_NHAN_VIEN);
             v_htb.Add(V_BAO_HANH_SUA_CHUA.SO_TIEN, e_col_Number.SO_TIEN);
             v_htb.Add(V_BAO_HANH_SUA_CHUA.DIEN_GIAI, e_col_Number.DIEN_GIAI);
@@ -398,7 +398,7 @@ namespace BKI_KHO
             i_us.strMA_NHAN_VIEN = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_NHAN_VIEN].ToString();
             i_us.datNGAY_CT = DateTime.Parse(m_fg.Rows[i_grid_row][(int)e_col_Number.NGAY_CT].ToString());
             i_us.dcSO_TIEN = decimal.Parse(m_fg.Rows[i_grid_row][(int)e_col_Number.SO_TIEN].ToString());
-            i_us.strHO_TEN = m_fg.Rows[i_grid_row][(int)e_col_Number.HO_TEN].ToString();
+            i_us.strHO_TEN_NHAN_VIEN = m_fg.Rows[i_grid_row][(int)e_col_Number.HO_TEN].ToString();
             i_us.strDIEN_GIAI = v_dr.ItemArray[10].ToString();
             i_us.strGHI_CHU_2 = m_fg.Rows[i_grid_row][(int)e_col_Number.GHI_CHU_2].ToString();
             //m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
