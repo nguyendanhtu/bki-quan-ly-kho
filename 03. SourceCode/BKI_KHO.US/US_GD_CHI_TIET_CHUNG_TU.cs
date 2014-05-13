@@ -261,7 +261,7 @@ namespace BKI_KHO.US
             v_sp.addDecimalInputParam("@id_chung_tu", ip_dc_id_chung_tu);
             v_sp.fillDataSetByCommand(this, op_ds);
         }
-        
-        #endregion 
+
+        #endregion
     }
 }
