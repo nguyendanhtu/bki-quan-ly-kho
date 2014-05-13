@@ -115,9 +115,9 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -182,6 +182,7 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
             // 
             // m_rbb_khac
             // 
@@ -514,7 +515,6 @@ namespace Form_menu
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
             // 
             // m_rbb_kho
             // 
@@ -580,13 +580,13 @@ namespace Form_menu
             // 
             // m_cmd_sua_chua
             // 
-            this.m_cmd_sua_chua.Enabled = false;
             this.m_cmd_sua_chua.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_sua_chua.Icon")));
             this.m_cmd_sua_chua.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
             this.m_cmd_sua_chua.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.m_cmd_sua_chua.Name = "m_cmd_sua_chua";
             this.m_cmd_sua_chua.SubItemsExpandWidth = 14;
             this.m_cmd_sua_chua.Text = "Sửa chữa";
+            this.m_cmd_sua_chua.Click += new System.EventHandler(this.m_cmd_sua_chua_Click);
             // 
             // m_rbb_mua_ban
             // 
@@ -1036,13 +1036,13 @@ namespace Form_menu
             // 
             // m_rbtab_tab2
             // 
-            this.m_rbtab_tab2.Checked = true;
             this.m_rbtab_tab2.Name = "m_rbtab_tab2";
             this.m_rbtab_tab2.Panel = this.ribbonPanel2;
             this.m_rbtab_tab2.Text = "Danh mục";
             // 
             // m_rbtab_tab3
             // 
+            this.m_rbtab_tab3.Checked = true;
             this.m_rbtab_tab3.Name = "m_rbtab_tab3";
             this.m_rbtab_tab3.Panel = this.ribbonPanel3;
             this.m_rbtab_tab3.Text = "Nghiệp vụ";

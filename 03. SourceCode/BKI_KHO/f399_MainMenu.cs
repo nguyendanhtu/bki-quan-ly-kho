@@ -255,5 +255,17 @@ namespace Form_menu {
 
         }
 
+        private void m_cmd_sua_chua_Click(object sender, EventArgs e) {
+            try
+            {
+                F704_V_BAO_HANH_SUA_CHUA v_frm = new F704_V_BAO_HANH_SUA_CHUA();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }
 }
