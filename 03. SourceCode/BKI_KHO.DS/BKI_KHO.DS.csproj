@@ -160,6 +160,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_RPT_HANG_HOA_XUAT_NHAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RPT_HANG_HOA_XUAT_NHAP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_RPT_LOI_NHUAN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -478,6 +483,17 @@
     </None>
     <None Include="DS_RPT_CHUNG_TU_THEO_NHOM.xss">
       <DependentUpon>DS_RPT_CHUNG_TU_THEO_NHOM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RPT_HANG_HOA_XUAT_NHAP.xsc">
+      <DependentUpon>DS_RPT_HANG_HOA_XUAT_NHAP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RPT_HANG_HOA_XUAT_NHAP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RPT_HANG_HOA_XUAT_NHAP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RPT_HANG_HOA_XUAT_NHAP.xss">
+      <DependentUpon>DS_RPT_HANG_HOA_XUAT_NHAP.xsd</DependentUpon>
     </None>
     <None Include="DS_RPT_LOI_NHUAN.xsc">
       <DependentUpon>DS_RPT_LOI_NHUAN.xsd</DependentUpon>
