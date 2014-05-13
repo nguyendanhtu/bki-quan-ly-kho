@@ -35,6 +35,12 @@ namespace BKI_KHO.DanhMuc
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
+        public void display_for_update(US_V_DM_HANG_HOA m_us) {
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            m_us_v_dm_hang_hoa = m_us;
+            us_obj_2_form();
+            this.ShowDialog();
+        }
         #endregion
 
         #region Private Methods
@@ -46,6 +52,18 @@ namespace BKI_KHO.DanhMuc
         {
             load_data_2_cboNhomHang();
             load_data_2_cboTrangThai();
+            load_data_2_cboDonViTinh();
+        }
+
+        private void load_data_2_cboDonViTinh() {
+            US_DM_DON_VI v_us_dm_don_vi = new US_DM_DON_VI();
+            DS_DM_DON_VI v_ds_dm_don_vi = new DS_DM_DON_VI();
+
+            v_us_dm_don_vi.FillDataset(v_ds_dm_don_vi);
+
+            m_cbo_don_vi_tinh.DataSource = v_ds_dm_don_vi.DM_DON_VI;
+            m_cbo_don_vi_tinh.ValueMember = DM_DON_VI.ID;
+            m_cbo_don_vi_tinh.DisplayMember = DM_DON_VI.TEN;
         }
 
         private void load_data_2_cboTrangThai()
@@ -81,9 +99,15 @@ namespace BKI_KHO.DanhMuc
             m_us_v_dm_hang_hoa.dcGiA_NHAP = CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim());
             m_us_v_dm_hang_hoa.dcGIA_BAN = CIPConvert.ToDecimal(m_txt_gia_ban.Text.Trim());
         }
-        private void us_obj_2_form(US_V_DM_HANG_HOA ip_us_v_dm_hang_hoa)
+        private void us_obj_2_form()
         {
-
+            m_txt_ma_hang.Text = m_us_v_dm_hang_hoa.strMA_HANG;
+            m_txt_ten_hang.Text = m_us_v_dm_hang_hoa.strTEN_HANG_VN;
+            m_cbo_nhom.SelectedValue = m_us_v_dm_hang_hoa.dcID_NHOM;
+            m_cbo_trang_thai.SelectedValue = m_us_v_dm_hang_hoa.dcID_TRANG_THAI;
+            m_txt_gia_nhap.Text = CIPConvert.ToStr(m_us_v_dm_hang_hoa.dcGiA_NHAP);
+            m_txt_gia_ban.Text = CIPConvert.ToStr(m_us_v_dm_hang_hoa.dcGIA_BAN);
+            m_cbo_don_vi_tinh.SelectedValue = m_us_v_dm_hang_hoa.dcID_DON_VI;
         }
         private bool is_validate_data_ok()
         {
@@ -163,7 +187,5 @@ namespace BKI_KHO.DanhMuc
             }
         }
         #endregion
-
-        
     }
 }
