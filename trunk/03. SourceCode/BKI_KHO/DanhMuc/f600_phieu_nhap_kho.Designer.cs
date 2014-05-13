@@ -34,20 +34,17 @@
             this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.m_group_lap_phieu = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.m_lbl_ten_phieu = new System.Windows.Forms.Label();
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
             this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.m_cmd_chon_kho = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
             this.m_lab_ngay = new System.Windows.Forms.Label();
             this.m_txt_so_phieu_thu_chi = new System.Windows.Forms.TextBox();
             this.m_lab_so_phieu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_noi_dung = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_context = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -57,13 +54,18 @@
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.m_group_lap_phieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_context.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -97,7 +99,7 @@
             // 
             this.m_txt_nguoi_thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.m_txt_nguoi_thu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(193, 193);
+            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(193, 137);
             this.m_txt_nguoi_thu.MaxLength = 10;
             this.m_txt_nguoi_thu.Name = "m_txt_nguoi_thu";
             this.m_txt_nguoi_thu.Size = new System.Drawing.Size(167, 20);
@@ -106,7 +108,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(97, 196);
+            this.label9.Location = new System.Drawing.Point(97, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 10;
@@ -114,7 +116,6 @@
             // 
             // m_group_lap_phieu
             // 
-            this.m_group_lap_phieu.Controls.Add(this.label1);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_nguoi_thu);
             this.m_group_lap_phieu.Controls.Add(this.label9);
             this.m_group_lap_phieu.Controls.Add(this.m_lbl_ten_phieu);
@@ -122,28 +123,17 @@
             this.m_group_lap_phieu.Controls.Add(this.m_txt_ten_kho);
             this.m_group_lap_phieu.Controls.Add(this.label2);
             this.m_group_lap_phieu.Controls.Add(this.m_cmd_chon_kho);
-            this.m_group_lap_phieu.Controls.Add(this.m_txt_tong_tien);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_ngay);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_so_phieu_thu_chi);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_so_phieu);
             this.m_group_lap_phieu.Controls.Add(this.label4);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_noi_dung);
-            this.m_group_lap_phieu.Controls.Add(this.label6);
             this.m_group_lap_phieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_group_lap_phieu.Location = new System.Drawing.Point(0, 0);
             this.m_group_lap_phieu.Name = "m_group_lap_phieu";
-            this.m_group_lap_phieu.Size = new System.Drawing.Size(809, 268);
+            this.m_group_lap_phieu.Size = new System.Drawing.Size(809, 213);
             this.m_group_lap_phieu.TabIndex = 0;
             this.m_group_lap_phieu.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(363, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "VNĐ";
             // 
             // m_lbl_ten_phieu
             // 
@@ -170,7 +160,7 @@
             this.m_txt_ten_kho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.m_txt_ten_kho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_txt_ten_kho.Enabled = false;
-            this.m_txt_ten_kho.Location = new System.Drawing.Point(193, 228);
+            this.m_txt_ten_kho.Location = new System.Drawing.Point(193, 172);
             this.m_txt_ten_kho.MaxLength = 10;
             this.m_txt_ten_kho.Name = "m_txt_ten_kho";
             this.m_txt_ten_kho.Size = new System.Drawing.Size(167, 20);
@@ -179,7 +169,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 232);
+            this.label2.Location = new System.Drawing.Point(97, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 12;
@@ -194,7 +184,7 @@
             this.m_cmd_chon_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_kho.ImageIndex = 14;
             this.m_cmd_chon_kho.ImageList = this.imageList1;
-            this.m_cmd_chon_kho.Location = new System.Drawing.Point(366, 188);
+            this.m_cmd_chon_kho.Location = new System.Drawing.Point(366, 132);
             this.m_cmd_chon_kho.Name = "m_cmd_chon_kho";
             this.m_cmd_chon_kho.Size = new System.Drawing.Size(32, 28);
             this.m_cmd_chon_kho.TabIndex = 14;
@@ -227,22 +217,6 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_txt_tong_tien
-            // 
-            this.m_txt_tong_tien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_tong_tien.CustomFormat = "###,###,###,###0";
-            this.m_txt_tong_tien.DataType = typeof(decimal);
-            this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_txt_tong_tien.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat;
-            this.m_txt_tong_tien.Location = new System.Drawing.Point(193, 83);
-            this.m_txt_tong_tien.Name = "m_txt_tong_tien";
-            this.m_txt_tong_tien.NullText = "0";
-            this.m_txt_tong_tien.ReadOnly = true;
-            this.m_txt_tong_tien.Size = new System.Drawing.Size(167, 17);
-            this.m_txt_tong_tien.TabIndex = 5;
-            this.m_txt_tong_tien.Tag = null;
-            this.m_txt_tong_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // m_lab_ngay
             // 
             this.m_lab_ngay.AutoSize = true;
@@ -274,7 +248,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 160);
+            this.label4.Location = new System.Drawing.Point(97, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 8;
@@ -283,28 +257,19 @@
             // m_txt_noi_dung
             // 
             this.m_txt_noi_dung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_noi_dung.Location = new System.Drawing.Point(193, 143);
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(193, 87);
             this.m_txt_noi_dung.Multiline = true;
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Size = new System.Drawing.Size(471, 35);
             this.m_txt_noi_dung.TabIndex = 9;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(97, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Tổng tiền nhập";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.m_fg);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 268);
+            this.groupBox1.Location = new System.Drawing.Point(0, 213);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(809, 246);
+            this.groupBox1.Size = new System.Drawing.Size(809, 301);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết phiếu";
@@ -319,8 +284,8 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 39;
-            this.m_fg.Size = new System.Drawing.Size(803, 227);
+            this.m_fg.Rows.Count = 40;
+            this.m_fg.Size = new System.Drawing.Size(803, 282);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
             // 
@@ -396,11 +361,58 @@
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_txt_tong_tien);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 468);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(809, 46);
+            this.panel1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(744, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "VNĐ";
+            // 
+            // m_txt_tong_tien
+            // 
+            this.m_txt_tong_tien.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.m_txt_tong_tien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_txt_tong_tien.CustomFormat = "###,###,###,###0";
+            this.m_txt_tong_tien.DataType = typeof(decimal);
+            this.m_txt_tong_tien.Enabled = false;
+            this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_txt_tong_tien.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat;
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(616, 13);
+            this.m_txt_tong_tien.Name = "m_txt_tong_tien";
+            this.m_txt_tong_tien.NullText = "0";
+            this.m_txt_tong_tien.Size = new System.Drawing.Size(122, 17);
+            this.m_txt_tong_tien.TabIndex = 17;
+            this.m_txt_tong_tien.Tag = null;
+            this.m_txt_tong_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(508, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Tổng tiền nhập";
+            // 
             // f600_phieu_nhap_kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 548);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_group_lap_phieu);
@@ -409,11 +421,13 @@
             this.m_group_lap_phieu.ResumeLayout(false);
             this.m_group_lap_phieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_context.ResumeLayout(false);
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,13 +445,11 @@
         private System.Windows.Forms.ToolTip toolTip1;
         internal SIS.Controls.Button.SiSButton m_cmd_chon_kho;
         internal System.Windows.Forms.ImageList imageList1;
-        private C1.Win.C1Input.C1TextBox m_txt_tong_tien;
         private System.Windows.Forms.Label m_lab_ngay;
         private System.Windows.Forms.TextBox m_txt_so_phieu_thu_chi;
         private System.Windows.Forms.Label m_lab_so_phieu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_txt_noi_dung;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.ContextMenuStrip m_context;
@@ -446,7 +458,10 @@
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private C1.Win.C1Input.C1TextBox m_txt_tong_tien;
+        private System.Windows.Forms.Label label6;
 
     }
 }

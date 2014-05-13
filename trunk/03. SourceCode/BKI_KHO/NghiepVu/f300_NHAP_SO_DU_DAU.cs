@@ -286,13 +286,13 @@ namespace BKI_KHO.NghiepVu {
 
             CExcelReport v_obj_excel_rpt = new CExcelReport(m_obj_dialog.FileName);
             int v_i_start_excel_row = 2;
-            for(int v_i_cur_col = m_fg.Cols.Fixed; v_i_cur_col < m_fg.Cols.Count; v_i_cur_col++) {
-                v_obj_excel_rpt.Export2Grid(m_fg
-                    , v_i_start_excel_row
-                    , (int) v_hst_excel_col[v_i_cur_col]
-                    , v_i_cur_col
-                    , true);
-            }
+            //for(int v_i_cur_col = m_fg.Cols.Fixed; v_i_cur_col < m_fg.Cols.Count; v_i_cur_col++)// {
+            //   // v_obj_excel_rpt.Export2Grid(m_fg
+            //        , v_i_start_excel_row
+            //        , (int) v_hst_excel_col[v_i_cur_col]
+            //        , v_i_cur_col
+            //        , true);
+         //   }
             CGridUtils.MakeSoTT(0, m_fg);
         }
         private void set_define_events() {
