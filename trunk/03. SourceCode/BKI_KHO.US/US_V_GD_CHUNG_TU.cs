@@ -950,5 +950,29 @@ public class US_V_GD_CHUNG_TU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+    #region Methods
+    public void Filldataset_by_search(decimal ip_id_loai_chung_tu
+                                    , string ma_chung_tu
+                                    , DS_V_GD_CHUNG_TU i_ds)
+    {
+        CStoredProc v_store_proc = new CStoredProc("Filldata_Bysearch");
+        v_store_proc.addDecimalInputParam("@id_loai_ct", ip_id_loai_chung_tu);
+        v_store_proc.addNVarcharInputParam("@ma_ct", ma_chung_tu);
+
+        v_store_proc.fillDataSetByCommand(this,i_ds);  
+    }
+
+    public void delete_v_gd_chung_tu(decimal ip_id_chung_tu
+                                   , decimal ip_id_chung_tu_detail
+                                   , decimal ip_id_nhan_vien)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_GD_CHUNG_TU_Delete");
+        v_store_proc.addDecimalInputParam("@ID_CHI_TIET_CHUNG_TU", ip_id_chung_tu_detail);
+        v_store_proc.addDecimalInputParam("@ID_NHAN_VIEN", ip_id_nhan_vien);
+        v_store_proc.addNVarcharInputParam("@ID_CHUNG_TU", ip_id_chung_tu);
+
+        v_store_proc.Equals(this);
+    }
+    #endregion
+}
 }
