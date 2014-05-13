@@ -35,7 +35,7 @@ namespace BKI_KHO
             m_e_form_mode = DataEntryFormMode.SelectDataState;
             us_2_form_objects(m_v_us_chung_tu);
             this.ShowDialog();
-
+            m_cmd_insert.Enabled = false;
             return m_dlg_result;
         }
         #endregion
@@ -97,6 +97,7 @@ namespace BKI_KHO
 			set_define_events();
             m_fg.AllowEditing = true;
 			this.KeyPreview = true;
+            m_cmd_sua_phieu.Enabled = false;
             m_txt_so_phieu_thu_chi.Text = "PN-";
 		}
 		private void set_initial_form_load(){	
@@ -327,7 +328,7 @@ namespace BKI_KHO
             m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
             m_txt_ten_kho.Text =CIPConvert.ToStr( i_us.dcID_TO_CHUC_NGUON);
             m_txt_nguoi_thu.Text = CIPConvert.ToStr(i_us.dcID_NGUOI_GIAO_DICH);
-
+            m_fg[2, (int)e_col_Number.MA_HANG_HOA] = i_us.strMA_HANG;
         }
         private void form_2_us_gd_chung_tu()
         {

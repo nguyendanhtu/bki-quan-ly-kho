@@ -27,6 +27,15 @@ namespace BKI_KHO
         {
             this.ShowDialog();
         }
+        public DialogResult display_detail_chung_tu(US_V_GD_CHUNG_TU i_us)
+        {
+            m_v_us_chung_tu = i_us;
+            m_e_form_mode = DataEntryFormMode.SelectDataState;
+            us_2_form_objects(m_v_us_chung_tu);
+            this.ShowDialog();
+            m_cmd_insert.Enabled = false;
+            return m_dlg_result;
+        }
         #endregion
 
         #region Data Structure
@@ -50,7 +59,7 @@ namespace BKI_KHO
         decimal m_dc_tong_tien = 0;
         decimal m_dc_id = 0;
         decimal id_hang_hoa = 0;
-
+        US_V_GD_CHUNG_TU m_v_us_chung_tu = new US_V_GD_CHUNG_TU();
         DS_V_DM_KHO m_ds_kho = new DS_V_DM_KHO();
         US_V_DM_KHO m_us_kho = new US_V_DM_KHO();
  
@@ -82,6 +91,7 @@ namespace BKI_KHO
             m_txt_nguoi_thu.Enabled = false;
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
+            m_cmd_sua_phieu.Enabled = false;
             m_txt_so_phieu_thu_chi.Text = "PX-";
         }
         private void set_initial_form_load()
@@ -271,7 +281,16 @@ namespace BKI_KHO
             }
 
         }
-        
+        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
+        {
+            m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
+            m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
+            m_dat_ngay_lap.Value = CIPConvert.ToDatetime(CIPConvert.ToStr(i_us.datNGAY_CT), "dd/MM/yyyy");
+            m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
+            m_txt_ten_kho.Text = CIPConvert.ToStr(i_us.dcID_TO_CHUC_NGUON);
+            m_txt_nguoi_thu.Text = CIPConvert.ToStr(i_us.dcID_NGUOI_GIAO_DICH);
+
+        }
         private void form_2_us_gd_chung_tu()
         {
             //GD chứng từ

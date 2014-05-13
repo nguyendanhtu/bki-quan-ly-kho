@@ -223,7 +223,7 @@ namespace BKI_KHO
             this.m_cmd_xoa_chung_tu.ImageList = this.ImageList;
             this.m_cmd_xoa_chung_tu.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xoa_chung_tu.Name = "m_cmd_xoa_chung_tu";
-            this.m_cmd_xoa_chung_tu.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xoa_chung_tu.Size = new System.Drawing.Size(120, 28);
             this.m_cmd_xoa_chung_tu.TabIndex = 12;
             this.m_cmd_xoa_chung_tu.Text = "Xóa chứng từ";
             // 
@@ -320,10 +320,12 @@ namespace BKI_KHO
 			return v_obj_trans;			
 		}
 		private void load_data_2_grid(decimal ip_id_loai_chung_tu){						
-			//m_ds = new DS_V_GD_CHUNG_TU();
-
+			m_ds = new DS_V_GD_CHUNG_TU();
+            if (m_txt_tim_kiem.Text.Length>0)
             m_us.Filldataset_by_search(ip_id_loai_chung_tu, m_txt_tim_kiem.Text, m_ds);    //.FillDataset(m_ds, "where ID_LOAI_CT=" + ip_id_loai_chung_tu);
-			m_fg.Redraw = false;
+			else
+                m_us.FillDataset(m_ds,"where ID_LOAI_CT="+ip_id_loai_chung_tu);
+            m_fg.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
             make_stt();
@@ -389,7 +391,7 @@ namespace BKI_KHO
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_search.Click += m_cmd_search_Click;
             m_cmd_xoa_chung_tu.Click += m_cmd_xoa_chung_tu_Click;
-           // m_fg.DoubleClick += m_fg_DoubleClick;
+            m_fg.DoubleClick += m_fg_DoubleClick;
 		}
 
         void m_cmd_xoa_chung_tu_Click(object sender, EventArgs e)
@@ -427,8 +429,16 @@ namespace BKI_KHO
                 m_dlg_result = DialogResult.OK;
                 this.Close();
             }
-            f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
-            v_frm.display_detail_chung_tu(m_us);
+            if (m_us.dcID_LOAI_CT == 1)
+            {
+                f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+                v_frm.display_detail_chung_tu(m_us);
+            }
+            else
+            {
+                f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
+                v_frm.display_detail_chung_tu(m_us);
+            }
         }
 
         void m_fg_Click(object sender, EventArgs e)
