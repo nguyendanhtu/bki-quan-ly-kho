@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="m_fg.ColumnInfo" xml:space="preserve">
-    <value>5,1,0,0,0,85,Columns:0{Width:20;DataType:System.Decimal;TextAlign:RightCenter;}	1{Width:102;Caption:"Mã hàng hóa";DataType:System.String;TextAlign:LeftCenter;}	2{Width:227;Caption:"Tên hàng hóa";DataType:System.String;TextAlign:LeftCenter;}	3{Width:111;Caption:"Đơn vị tính";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	4{Width:117;Caption:"Giá xuất(vnđ)";DataType:System.Decimal;Format:"###,###,###";TextAlign:CenterCenter;TextAlignFixed:CenterCenter;ImageAlign:CenterCenter;}	</value>
+    <value>5,1,0,0,0,85,Columns:0{Width:20;DataType:System.Decimal;TextAlign:RightCenter;}	1{Width:102;Caption:"Mã hàng hóa";DataType:System.String;TextAlign:LeftCenter;}	2{Width:227;Caption:"Tên hàng hóa";DataType:System.String;TextAlign:LeftCenter;}	3{Width:111;Caption:"Đơn vị tính";Visible:False;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	4{Width:117;Caption:"Giá xuất(vnđ)";DataType:System.Decimal;Format:"###,###,###";TextAlign:CenterCenter;TextAlignFixed:CenterCenter;ImageAlign:CenterCenter;}	</value>
   </data>
   <metadata name="m_context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>633, 17</value>
