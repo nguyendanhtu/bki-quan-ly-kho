@@ -58,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.m_cmd_sua_phieu = new SIS.Controls.Button.SiSButton();
             this.m_group_lap_phieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -285,7 +284,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 41;
+            this.m_fg.Rows.Count = 42;
             this.m_fg.Size = new System.Drawing.Size(803, 282);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -321,7 +320,6 @@
             // 
             // m_pnl_out_place_dm
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_sua_phieu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xem);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
@@ -389,7 +387,6 @@
             this.m_txt_tong_tien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_txt_tong_tien.CustomFormat = "###,###,###,###0";
             this.m_txt_tong_tien.DataType = typeof(decimal);
-            this.m_txt_tong_tien.Enabled = false;
             this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tong_tien.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat;
             this.m_txt_tong_tien.Location = new System.Drawing.Point(616, 13);
@@ -408,22 +405,6 @@
             this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Tổng tiền nhập";
-            // 
-            // m_cmd_sua_phieu
-            // 
-            this.m_cmd_sua_phieu.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_sua_phieu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_sua_phieu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_sua_phieu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_sua_phieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_sua_phieu.ImageIndex = 3;
-            this.m_cmd_sua_phieu.ImageList = this.imageList1;
-            this.m_cmd_sua_phieu.Location = new System.Drawing.Point(100, 4);
-            this.m_cmd_sua_phieu.Name = "m_cmd_sua_phieu";
-            this.m_cmd_sua_phieu.Size = new System.Drawing.Size(96, 26);
-            this.m_cmd_sua_phieu.TabIndex = 5;
-            this.m_cmd_sua_phieu.Text = "Sửa phiếu ";
-            this.toolTip1.SetToolTip(this.m_cmd_sua_phieu, "Lập phiếu thu / chi cho học viên này");
             // 
             // f600_phieu_nhap_kho
             // 
@@ -480,7 +461,6 @@
         private System.Windows.Forms.Label label1;
         private C1.Win.C1Input.C1TextBox m_txt_tong_tien;
         private System.Windows.Forms.Label label6;
-        internal SIS.Controls.Button.SiSButton m_cmd_sua_phieu;
 
     }
 }

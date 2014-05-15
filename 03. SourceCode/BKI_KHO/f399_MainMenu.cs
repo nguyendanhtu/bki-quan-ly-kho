@@ -67,7 +67,7 @@ namespace Form_menu {
         void m_cmd_xuat_kho_Click(object sender, EventArgs e) {
             try {
                 f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
-                v_frm.display();
+                v_frm.ShowDialog();
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -77,7 +77,7 @@ namespace Form_menu {
         void m_cmd_nhap_kho_Click(object sender, EventArgs e) {
             try {
                 f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
-                v_frm.display();
+                v_frm.ShowDialog();
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

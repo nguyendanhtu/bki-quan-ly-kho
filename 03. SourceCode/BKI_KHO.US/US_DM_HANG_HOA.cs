@@ -354,6 +354,12 @@ public class US_DM_HANG_HOA : US_Object
 	}
 #endregion
     #region MEthods
+    public void deleteDM_HANG_HOA_By_Id(decimal ip_id_hang_hoa)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("deleteDM_HANG_HOA_By_Id");
+        v_stored_proc.addDecimalInputParam("@id", ip_id_hang_hoa);
+        v_stored_proc.ExecuteCommand(this);
+    }
     public void update_gia_ban_hang(string @ma_hang_hoa, decimal @gia_ban,DS_DM_HANG_HOA i_ds,US_DM_HANG_HOA i_us)
     {
         CStoredProc v_stored_proc = new CStoredProc("update_gia_ban");
@@ -401,6 +407,12 @@ public class US_DM_HANG_HOA : US_Object
         {
             return false;
         }
+    }
+    public void FillHangHoa_By_MaHangHoa(string i_str_ma_hang_hoa,DS_DM_HANG_HOA i_ds)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_DM_HANG_HOA_FillDatasetByMaHangHoa");
+        v_stored_proc.addNVarcharInputParam("@ma_hang_hoa", i_str_ma_hang_hoa);
+        v_stored_proc.fillDataSetByCommand(this, i_ds);
     }
     #endregion
 }

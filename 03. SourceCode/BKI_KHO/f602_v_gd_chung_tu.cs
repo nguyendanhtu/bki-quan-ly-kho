@@ -250,7 +250,15 @@ namespace BKI_KHO
         public void display(decimal ip_id_loai_ct)
         {
             id_loai_ct = ip_id_loai_ct;
+            this.ShowDialog();
+        }
+        public DialogResult select_chung_tu(decimal ip_id_loai_ct ,US_V_GD_CHUNG_TU i_us)
+        {
+            m_dlg_result = DialogResult.Cancel;
+           id_loai_ct = ip_id_loai_ct;
+            m_us = i_us;
 			this.ShowDialog();
+            return m_dlg_result;
 		}
 		#endregion
 
@@ -276,7 +284,7 @@ namespace BKI_KHO
 
 		#region Members
         decimal id_loai_ct;
-        DialogResult m_dlg_result;
+        DialogResult m_dlg_result = DialogResult.Cancel;
         DataEntryFormMode m_e_form_mode;
 		ITransferDataRow m_obj_trans;		
 		DS_V_GD_CHUNG_TU m_ds = new DS_V_GD_CHUNG_TU();
@@ -423,25 +431,26 @@ namespace BKI_KHO
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
-          
-            if (m_e_form_mode == DataEntryFormMode.SelectDataState)
-            {
-                m_dlg_result = DialogResult.OK;
-                this.Close();
-            }
+            m_dlg_result = DialogResult.OK;
+            this.Close();
+            //if (m_e_form_mode == DataEntryFormMode.SelectDataState)
+            //{
+            //    m_dlg_result = DialogResult.OK;
+            //    this.Close();
+            //}
             if (m_us.dcID_LOAI_CT == 1)
             {
                 this.Close();
                 f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
                 v_frm.display_detail_chung_tu(m_us);
-                
+
             }
             else
             {
                 f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
                 v_frm.display_detail_chung_tu(m_us);
             }
-            this.Close();
+            //this.Close();
         }
 
         void m_fg_Click(object sender, EventArgs e)
