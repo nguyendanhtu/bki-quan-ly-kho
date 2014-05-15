@@ -951,6 +951,19 @@ public class US_V_GD_CHUNG_TU : US_Object
 	}
 #endregion
     #region Methods
+    public void deleteGD_NHAN_VIEN_CHUNG_TU_By_Id(decimal ip_id_nhan_vien,decimal ip_id_chungtu)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("deleteGD_NHAN_VIEN_CHUNG_TU_By_Id");
+        v_stored_proc.addDecimalInputParam("@ID_NHAN_VIEN", ip_id_nhan_vien);
+        v_stored_proc.addDecimalInputParam("@ID_CHUNG_TU", ip_id_chungtu);
+        v_stored_proc.ExecuteCommand(this);
+    }
+    public void deleteGD_CHI_TIET_CHUNG_TU_By_Id(decimal ip_id_gd_chi_tiet_chung_tu)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("deleteGD_CHI_TIET_CHUNG_TU_By_Id");
+        v_stored_proc.addDecimalInputParam("@id", ip_id_gd_chi_tiet_chung_tu);
+        v_stored_proc.ExecuteCommand(this);
+    }
     public void Filldataset_by_search(decimal ip_id_loai_chung_tu
                                     , string ma_chung_tu
                                     , DS_V_GD_CHUNG_TU i_ds)
@@ -971,7 +984,7 @@ public class US_V_GD_CHUNG_TU : US_Object
         v_store_proc.addDecimalInputParam("@ID_NHAN_VIEN", ip_id_nhan_vien);
         v_store_proc.addNVarcharInputParam("@ID_CHUNG_TU", ip_id_chung_tu);
 
-        v_store_proc.Equals(this);
+        v_store_proc.ExecuteCommand(this);
     }
     #endregion
 }

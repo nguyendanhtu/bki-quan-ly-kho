@@ -30,10 +30,12 @@ namespace BKI_KHO
         public DialogResult display_detail_chung_tu(US_V_GD_CHUNG_TU i_us)
         {
             m_v_us_chung_tu = i_us;
-            m_e_form_mode = DataEntryFormMode.SelectDataState;
-            us_2_form_objects(m_v_us_chung_tu);
-            this.ShowDialog();
+            m_dlg_result = DialogResult.Cancel;
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            us_2_form_objects(m_v_us_chung_tu, m_us_nhan_vien);
+            this.display();
             m_cmd_insert.Enabled = false;
+            
             return m_dlg_result;
         }
         #endregion
@@ -53,7 +55,7 @@ namespace BKI_KHO
 
         #region Members
         DialogResult m_dlg_result;
-        DataEntryFormMode m_e_form_mode;
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         ITransferDataRow m_obj_trans;
         decimal tong_tien = 0;
         decimal m_dc_tong_tien = 0;
@@ -66,11 +68,16 @@ namespace BKI_KHO
         US_GD_CHUNG_TU m_us_gd_chung_tu = new US_GD_CHUNG_TU();
 
         US_GD_CHI_TIET_CHUNG_TU m_us_gd_chung_tu_detail = new US_GD_CHI_TIET_CHUNG_TU();
-
+        DS_DM_NHAN_VIEN m_ds_nhan_vien = new DS_DM_NHAN_VIEN();
         US_DM_NHAN_VIEN m_us_nhan_vien = new US_DM_NHAN_VIEN();
 
         US_GD_CHUNG_TU_NHAN_VIEN m_us_chung_tu_nv = new US_GD_CHUNG_TU_NHAN_VIEN();
 
+        US_DM_HANG_HOA m_us_hang_hoa = new US_DM_HANG_HOA();
+        DS_DM_HANG_HOA m_ds_hang_hoa = new DS_DM_HANG_HOA();
+
+        DS_DM_DON_VI m_ds_don_vi = new DS_DM_DON_VI();
+        US_DM_DON_VI m_us_don_vi = new US_DM_DON_VI();
         #endregion
 
         #region Methods
@@ -91,15 +98,47 @@ namespace BKI_KHO
             m_txt_nguoi_thu.Enabled = false;
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
-            m_cmd_sua_phieu.Enabled = false;
+            
             m_txt_so_phieu_thu_chi.Text = "PX-";
         }
         private void set_initial_form_load()
         {
             load_data_kho();
+            load_cbo_don_vi_on_grid();
             m_dat_ngay_lap.Value = CIPConvert.ToStr(CAppContext_201.getCurentDate());
         }
-        
+        private Hashtable get_mapping_col_don_vi()
+        {
+
+            Hashtable v_hst = new Hashtable();
+            m_ds_don_vi.EnforceConstraints = false;
+            try
+            {
+                m_us_don_vi.FillDataset(m_ds_don_vi);
+
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            foreach (DataRow v_dr in m_ds_don_vi.DM_DON_VI.Rows)
+            {
+                v_hst.Add(v_dr[DM_DON_VI.ID], v_dr[DM_DON_VI.TEN]);
+            }
+            return v_hst;
+        }
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
+        {
+            var v_htb = new Hashtable();
+            v_htb.Add(DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG_HOA);
+            v_htb.Add(DM_HANG_HOA.TEN_HANG_VN, e_col_Number.TEN_HANG_HOA);
+            v_htb.Add(DM_HANG_HOA.GIA_BAN, e_col_Number.SO_TIEN);
+            v_htb.Add(DM_HANG_HOA.ID_DON_VI, e_col_Number.DON_VI_TINH);
+
+
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds_hang_hoa.DM_HANG_HOA.NewRow());
+            return v_obj_trans;
+        }
         private bool check_validate_is_ok()
         {
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
@@ -151,7 +190,7 @@ namespace BKI_KHO
                 m_txt_ten_kho.Focus();
                 return false;
             }
-            if (!check_so_chung_tu_is_not_exits_db()) return false;
+           // if (!check_so_chung_tu_is_not_exits_db()) return false;
             if (!check_value_phieu_detail())
                 return false;
 
@@ -229,43 +268,88 @@ namespace BKI_KHO
             }
             return m_dc_tong_tien;
         }
+        private void load_cbo_don_vi_on_grid()
+        {
+            m_fg.Cols[(int)e_col_Number.DON_VI_TINH].DataMap = get_mapping_col_don_vi();
+        }
         private void save_data_2db()
         {
-            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
-            DS_DM_HANG_HOA v_ds_hang_hoa=new DS_DM_HANG_HOA ();
-            if (!check_validate_is_ok()) return;
+            if (!check_validate_is_ok())
+                return;
+
             form_2_us_gd_chung_tu();
             try
             {
-
                 //1. insert ban ghi vao phieu_thu_chid
                 m_us_gd_chung_tu.BeginTransaction();
-                m_us_gd_chung_tu.Insert();
-              
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us_gd_chung_tu.Insert();
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_gd_chung_tu.dcID = m_v_us_chung_tu.dcID_CHUNG_TU;
+                        m_us_gd_chung_tu.Update();
+                        break;
+                }
+
+
                 //2. insert ban ghi vao phieu_thu_chi_detail
                 m_us_gd_chung_tu_detail.UseTransOfUSObject(m_us_gd_chung_tu);
-                for (int v_i_cur_grid_row = m_fg.Rows.Fixed; v_i_cur_grid_row <= m_fg.Rows.Count - 2; v_i_cur_grid_row++)
+                switch (m_e_form_mode)
                 {
-                    //update giá xuất hàng
-                    v_us_hang_hoa.UseTransOfUSObject(m_us_gd_chung_tu);
-                    v_us_hang_hoa.update_gia_ban_hang(CIPConvert.ToStr(m_fg[v_i_cur_grid_row, (int)e_col_Number.MA_HANG_HOA])
-                                            , CIPConvert.ToDecimal(m_fg[v_i_cur_grid_row, (int)e_col_Number.SO_TIEN])
-                                            , v_ds_hang_hoa
-                                            ,v_us_hang_hoa);
-                    //insert phiếu detail
-                    grid_row_2_us_gd_chi_tiet_chung_tu(
-                        v_i_cur_grid_row
-                        , m_us_gd_chung_tu_detail);
-                    m_us_gd_chung_tu_detail.dcID_HANG_HOA = v_us_hang_hoa.dcID;
-                    m_us_gd_chung_tu_detail.Insert();
-                   
+                    case DataEntryFormMode.InsertDataState:
+                        {
+                            for (int v_i_cur_grid_row = m_fg.Rows.Fixed; v_i_cur_grid_row <= m_fg.Rows.Count - 2; v_i_cur_grid_row++)
+                            {
+                                // insert hang hoa
+                                form_2_us_hang_hoa(v_i_cur_grid_row);
+                                m_us_hang_hoa.Update();
+                                //
+
+                                grid_row_2_us_gd_chi_tiet_chung_tu(
+                                    v_i_cur_grid_row
+                                    , m_us_gd_chung_tu_detail);
+                                m_us_gd_chung_tu_detail.dcID_HANG_HOA = m_us_hang_hoa.dcID;
+                                m_us_gd_chung_tu_detail.Insert();
+
+
+                            }
+                            break;
+                        }
+                    case DataEntryFormMode.UpdateDataState:
+                        {
+                            //1.xoa phieu detail
+                            m_v_us_chung_tu.deleteGD_CHI_TIET_CHUNG_TU_By_Id(m_v_us_chung_tu.dcID_CHUNG_TU_DETAIL);
+                            //2.xoa hang hoa
+                            m_us_hang_hoa.deleteDM_HANG_HOA_By_Id(m_v_us_chung_tu.dcID_HANG_HOA);
+                            //3.insert phieu detail
+                            for (int v_i_cur_grid_row = m_fg.Rows.Fixed; v_i_cur_grid_row <= m_fg.Rows.Count - 2; v_i_cur_grid_row++)
+                            {
+                                // insert hang hoa
+                                form_2_us_hang_hoa(v_i_cur_grid_row);
+                                m_us_hang_hoa.Insert();
+                                //
+
+                                grid_row_2_us_gd_chi_tiet_chung_tu(
+                                    v_i_cur_grid_row
+                                    , m_us_gd_chung_tu_detail);
+
+                                m_us_gd_chung_tu_detail.dcID_HANG_HOA = m_us_hang_hoa.dcID;
+                                m_us_gd_chung_tu_detail.dcID_CHUNG_TU = m_us_gd_chung_tu.dcID;
+                                m_us_gd_chung_tu_detail.Insert();
+
+
+                            }
+                            break;
+                        }
                 }
+
                 //2. insert gd chứng từ nhân viên
                 m_us_chung_tu_nv.UseTransOfUSObject(m_us_gd_chung_tu);
-                m_us_chung_tu_nv.dcID_CHUNG_TU = m_us_gd_chung_tu.dcID;
-                m_us_chung_tu_nv.dcID_NHAN_VIEN = m_us_nhan_vien.dcID;
-                m_us_chung_tu_nv.dcSO_TIEN = m_us_gd_chung_tu.dcTONG_TIEN;
 
+                m_v_us_chung_tu.deleteGD_NHAN_VIEN_CHUNG_TU_By_Id(m_v_us_chung_tu.dcID_NGUOI_NHAP, m_v_us_chung_tu.dcID_CHUNG_TU);
+                form_2_us_obj_chung_tu_nhan_vien(m_us_gd_chung_tu, m_us_nhan_vien);
                 m_us_chung_tu_nv.Insert();
                 m_us_gd_chung_tu.CommitTransaction();
                 BaseMessages.MsgBox_Infor("Đã lập phiếu nhập kho thành công.");
@@ -279,17 +363,47 @@ namespace BKI_KHO
                 }
                 throw v_e;
             }
-
         }
-        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
+        private void form_2_us_obj_chung_tu_nhan_vien(US_GD_CHUNG_TU i_us_chung_tu, US_DM_NHAN_VIEN i_us_nhan_vien)
         {
+            m_us_chung_tu_nv.dcID_CHUNG_TU = i_us_chung_tu.dcID;
+            m_us_chung_tu_nv.dcID_NHAN_VIEN = i_us_nhan_vien.dcID;
+            m_us_chung_tu_nv.dcSO_TIEN = i_us_chung_tu.dcTONG_TIEN;
+        }
+        private void form_2_us_hang_hoa(int i_row)
+        {
+            m_us_hang_hoa.SetID_NHOM_GOCNull();
+           // m_us_hang_hoa.dcID_NHOM = CIPConvert.ToDecimal(m_fg[i_row, (int)e_col_Number.NHOM_HANG]);
+            m_us_hang_hoa.strMA_HANG = m_fg[i_row, (int)e_col_Number.MA_HANG_HOA].ToString();
+            m_us_hang_hoa.strTEN_HANG_VN = m_fg[i_row, (int)e_col_Number.TEN_HANG_HOA].ToString();
+            m_us_hang_hoa.SetTEN_HANG_ENNull();
+            m_us_hang_hoa.SetIMAGENull();
+            m_us_hang_hoa.SetMO_TANull();
+            m_us_hang_hoa.SetID_NHA_CUNG_CAPNull();
+            m_us_hang_hoa.SetBARCODENull();
+            m_us_hang_hoa.dcID_DON_VI = CIPConvert.ToDecimal(m_fg[i_row, (int)e_col_Number.DON_VI_TINH]);
+            m_us_hang_hoa.dcGIA_BAN = CIPConvert.ToDecimal(m_fg[i_row, (int)e_col_Number.SO_TIEN]);
+            m_us_hang_hoa.SetGIA_NHAPNull();
+            m_us_hang_hoa.SetGIA_BAN_LENull();
+            m_us_hang_hoa.dcID_TRANG_THAI = 692;//nhap kho
+        }
+        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us, US_DM_NHAN_VIEN i_us_nhan_vien)
+        {
+            m_us_nhan_vien.FillDatasetSearchByID(m_ds_nhan_vien, i_us.dcID_NGUOI_NHAP);
+            DataRow v_dr = (DataRow)m_ds_nhan_vien.DM_NHAN_VIEN.Rows[0];
+            i_us_nhan_vien.DataRow2Me(v_dr);
+            m_txt_nguoi_thu.Text = i_us_nhan_vien.strHO_DEM + " " + i_us_nhan_vien.strTEN;
+
             m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
-            m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
+            //m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
             m_dat_ngay_lap.Value = CIPConvert.ToDatetime(CIPConvert.ToStr(i_us.datNGAY_CT), "dd/MM/yyyy");
             m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
             m_txt_ten_kho.Text = CIPConvert.ToStr(i_us.dcID_TO_CHUC_NGUON);
-            m_txt_nguoi_thu.Text = CIPConvert.ToStr(i_us.dcID_NGUOI_GIAO_DICH);
 
+            m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where id=" + i_us.dcID_HANG_HOA);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds_hang_hoa, m_fg, get_trans_object(m_fg));
+            m_fg.Redraw = true;
         }
         private void form_2_us_gd_chung_tu()
         {
@@ -302,10 +416,10 @@ namespace BKI_KHO
             m_us_gd_chung_tu.dcTONG_TIEN = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
             m_us_gd_chung_tu.SetID_TO_CHUC_DICHNull();
             m_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
-            m_us_gd_chung_tu.SetID_NGUOI_GIAO_DICHNull();
-            m_us_gd_chung_tu.SetID_NGUOI_NHAPNull();
-            m_us_gd_chung_tu.SetNGAY_NHAPNull();
-            m_us_gd_chung_tu.SetNGAY_NHAP_CUOINull();
+            m_us_gd_chung_tu.dcID_NGUOI_GIAO_DICH = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.dcID_NGUOI_NHAP = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.datNGAY_NHAP = CAppContext_201.getCurentDate();
+            m_us_gd_chung_tu.datNGAY_NHAP_CUOI = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.SetGHI_CHU_1Null();
             m_us_gd_chung_tu.SetGHI_CHU_2Null();
             m_us_gd_chung_tu.SetGHI_CHU_3Null();
@@ -335,7 +449,7 @@ namespace BKI_KHO
             //ip_us_gd_chi_tiet_chung_tu.dcID_HANG_HOA = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.TEN_HANG_HOA]);
             ip_us_gd_chi_tiet_chung_tu.dcSO_LUONG = 1;
             ip_us_gd_chi_tiet_chung_tu.dcGIA_GIAO_DICH = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.SO_TIEN]);
-            ip_us_gd_chi_tiet_chung_tu.SetID_DON_VI_TINHNull();
+            ip_us_gd_chi_tiet_chung_tu.dcID_DON_VI_TINH = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_Number.DON_VI_TINH]);
             ip_us_gd_chi_tiet_chung_tu.strSO_SERI = CIPConvert.ToStr(m_fg[ip_grid_row, (int)e_col_Number.MA_HANG_HOA]);
             ip_us_gd_chi_tiet_chung_tu.SetTHOI_GIAN_BHNull();
             ip_us_gd_chi_tiet_chung_tu.SetID_DVT_THOI_GIANNull();
@@ -370,6 +484,22 @@ namespace BKI_KHO
                     
                     tong_tien += (CIPConvert.ToDecimal(m_fg[m_fg.Row, (int)e_col_Number.SO_TIEN]));
                     m_txt_tong_tien.Value = CIPConvert.ToStr(tong_tien);
+                }
+                if (e.Col == (int)e_col_Number.MA_HANG_HOA)
+                {
+                    //m_fg[e.Row, (int)e_col_Number.MA_HANG_HOA] = m_fg[e.Row, (int)e_col_Number.MA_HANG_HOA].ToString().ToUpper();
+                    //DataRow[] v_dr_product = m_ds_hang_hoa.DM_HANG_HOA.Select(DM_HANG_HOA.MA_HANG + " = '" + m_fg[e.Row, (int)e_col_Number.MA_HANG_HOA].ToString() + "'");
+                    m_us_hang_hoa.FillHangHoa_By_MaHangHoa(m_fg[e.Row, (int)e_col_Number.MA_HANG_HOA].ToString(),m_ds_hang_hoa);
+                    DataRow v_dr_product = (DataRow)m_ds_hang_hoa.DM_HANG_HOA.Rows[0];
+                    m_us_hang_hoa.DataRow2Me(v_dr_product);
+                    if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count == 0)
+                    {
+                        BaseMessages.MsgBox_Warning(1);
+                        return;// Neu khong co' trong ban PRODUCT thi phai thoat luon? Nhung cha'c cha'n la sai do'
+                    }
+                    m_fg[e.Row, (int)e_col_Number.TEN_HANG_HOA] = m_us_hang_hoa.strTEN_HANG_VN;
+                    m_fg[e.Row, (int)e_col_Number.DON_VI_TINH] = m_us_hang_hoa.dcID_DON_VI;
+                    // Focus vào cột nào(tương ứng với dòng nào)
                 }
             }
             catch (Exception v_e)
