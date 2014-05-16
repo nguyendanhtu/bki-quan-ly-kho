@@ -206,6 +206,22 @@ namespace BKI_KHO
                     return false;
                 }
             }
+            bool v_exit_ma_hang_yn=false;
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+            {
+                m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where ma_hang='" + CIPConvert.ToStr(m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA]) + "'");
+                if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+                {
+                    v_exit_ma_hang_yn = true;
+                    m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
+                }
+            }
+            if(v_exit_ma_hang_yn)
+            {
+                BaseMessages.MsgBox_Infor("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
+                
+                return false;
+            }
             if (!CValidateTextBox.IsValid(m_txt_so_phieu_thu_chi, DataType.StringType, allowNull.NO, false))
             {
                 BaseMessages.MsgBox_Error("Số chứng từ không được để trống!");
