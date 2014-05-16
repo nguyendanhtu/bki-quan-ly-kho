@@ -169,6 +169,22 @@ namespace BKI_KHO
                     return false;
                 }
             }
+            bool v_exit_ma_hang_yn=false;
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+            {
+                m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where id_trang_thai=692 and ma_hang='" + CIPConvert.ToStr(m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA]) + "'");
+                if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+                {
+                    v_exit_ma_hang_yn = true;
+                    m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
+                }
+            }
+            if (v_exit_ma_hang_yn)
+            {
+                BaseMessages.MsgBox_Infor("Hàng hóa này đã xuất kho. Không thể lập phiếu xuất cho hàng này nữa.");
+
+                return false;
+            }
             if (!CValidateTextBox.IsValid(m_txt_so_phieu_thu_chi, DataType.StringType, allowNull.NO, false))
             {
                 BaseMessages.MsgBox_Error("Số chứng từ không được để trống!");
@@ -383,7 +399,7 @@ namespace BKI_KHO
             m_us_hang_hoa.SetBARCODENull();
             m_us_hang_hoa.dcID_DON_VI = CIPConvert.ToDecimal(m_fg[i_row, (int)e_col_Number.DON_VI_TINH]);
             m_us_hang_hoa.dcGIA_BAN = CIPConvert.ToDecimal(m_fg[i_row, (int)e_col_Number.SO_TIEN]);
-            m_us_hang_hoa.SetGIA_NHAPNull();
+           // m_us_hang_hoa.SetGIA_NHAPNull();
             m_us_hang_hoa.SetGIA_BAN_LENull();
             m_us_hang_hoa.dcID_TRANG_THAI = 692;//nhap kho
         }

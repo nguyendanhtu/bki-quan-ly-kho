@@ -82,6 +82,7 @@ namespace BKI_KHO
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f602_v_gd_chung_tu));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_xoa_chung_tu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -89,7 +90,6 @@ namespace BKI_KHO
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_cmd_xoa_chung_tu = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -132,6 +132,21 @@ namespace BKI_KHO
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(962, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_xoa_chung_tu
+            // 
+            this.m_cmd_xoa_chung_tu.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xoa_chung_tu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xoa_chung_tu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xoa_chung_tu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xoa_chung_tu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xoa_chung_tu.ImageIndex = 4;
+            this.m_cmd_xoa_chung_tu.ImageList = this.ImageList;
+            this.m_cmd_xoa_chung_tu.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xoa_chung_tu.Name = "m_cmd_xoa_chung_tu";
+            this.m_cmd_xoa_chung_tu.Size = new System.Drawing.Size(120, 28);
+            this.m_cmd_xoa_chung_tu.TabIndex = 12;
+            this.m_cmd_xoa_chung_tu.Text = "Xóa chứng từ";
             // 
             // m_cmd_exit
             // 
@@ -189,7 +204,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(622, 73);
+            this.m_cmd_search.Location = new System.Drawing.Point(622, 68);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(82, 28);
             this.m_cmd_search.TabIndex = 30;
@@ -198,34 +213,18 @@ namespace BKI_KHO
             // m_txt_tim_kiem
             // 
             this.m_txt_tim_kiem.Location = new System.Drawing.Point(243, 73);
-            this.m_txt_tim_kiem.Multiline = true;
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 28);
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 20);
             this.m_txt_tim_kiem.TabIndex = 29;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 81);
+            this.label2.Location = new System.Drawing.Point(169, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tìm kiếm";
-            // 
-            // m_cmd_xoa_chung_tu
-            // 
-            this.m_cmd_xoa_chung_tu.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xoa_chung_tu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xoa_chung_tu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xoa_chung_tu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xoa_chung_tu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xoa_chung_tu.ImageIndex = 4;
-            this.m_cmd_xoa_chung_tu.ImageList = this.ImageList;
-            this.m_cmd_xoa_chung_tu.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xoa_chung_tu.Name = "m_cmd_xoa_chung_tu";
-            this.m_cmd_xoa_chung_tu.Size = new System.Drawing.Size(120, 28);
-            this.m_cmd_xoa_chung_tu.TabIndex = 12;
-            this.m_cmd_xoa_chung_tu.Text = "Xóa chứng từ";
             // 
             // f602_v_gd_chung_tu
             // 
@@ -380,10 +379,24 @@ namespace BKI_KHO
 			grid2us_object(v_us, m_fg.Row);
            //xóa bang gd_chung_tu,gd_chi_tiet_chung_tu,gd_chung_tu_nhan_vien
            // v_us.Delete();
-			try {			
-				v_us.BeginTransaction();
-                v_us.delete_v_gd_chung_tu(v_us.dcID_CHUNG_TU, v_us.dcID_CHUNG_TU_DETAIL, v_us.dcID_NGUOI_NHAP);                  								
-				v_us.CommitTransaction();
+			try {		
+	            //1. nếu là phiếu nhập kho, trước khi xóa phiếu cần kiểm tra trạng thái hàng hóa
+                US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+                DS_DM_HANG_HOA v_ds_hang_hoa=new DS_DM_HANG_HOA ();
+                v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_trang_thai = 692 and id=" + v_us.dcID_HANG_HOA);
+                if (v_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+                {
+                    BaseMessages.MsgBox_Error("Hàng hóa này đã được xuất kho nên không thể xóa chứng từ được nữa");
+                    return;
+                }
+				//v_us.BeginTransaction();
+                v_us.V_GD_CHUNG_TU_Delete_By_ID( v_us.dcID_CHUNG_TU_DETAIL
+                                                , v_us.dcID_CHUNG_TU
+                                                , v_us.dcID_NGUOI_NHAP
+                                                , v_us.dcID_HANG_HOA
+                                                , id_loai_ct);
+                //v_us.delete_v_gd_chung_tu(v_us.dcID_CHUNG_TU, v_us.dcID_CHUNG_TU_DETAIL, v_us.dcID_NGUOI_NHAP);                  								
+				//v_us.CommitTransaction();
 				m_fg.Rows.Remove(m_fg.Row);				
 			}
 			catch (Exception v_e) {
@@ -431,6 +444,14 @@ namespace BKI_KHO
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
+            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+            v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_trang_thai = 692 and id=" + m_us.dcID_HANG_HOA);
+            if (v_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+            {
+                BaseMessages.MsgBox_Error("Hàng hóa này đã được xuất kho nên không thể xóa chứng từ được nữa");
+                return;
+            }
             m_dlg_result = DialogResult.OK;
             this.Close();
             //if (m_e_form_mode == DataEntryFormMode.SelectDataState)
