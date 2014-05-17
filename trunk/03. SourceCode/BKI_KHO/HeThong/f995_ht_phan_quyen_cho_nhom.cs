@@ -26,6 +26,7 @@ namespace BKI_KHO.HeThong
         public f995_ht_phan_quyen_cho_nhom()
         {
             InitializeComponent();
+            format_control();
         }
         public void display() {
             this.ShowDialog();

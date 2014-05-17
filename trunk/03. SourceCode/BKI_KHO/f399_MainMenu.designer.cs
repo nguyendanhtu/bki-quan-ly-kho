@@ -96,6 +96,7 @@ namespace Form_menu
             this.m_rbtab_tab5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_cmd_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -200,7 +201,7 @@ namespace Form_menu
             this.m_rbb_du_lieu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_cmd_sao_luu,
             this.m_cmd_phuc_hoi});
-            this.m_rbb_du_lieu.Location = new System.Drawing.Point(554, 0);
+            this.m_rbb_du_lieu.Location = new System.Drawing.Point(683, 0);
             this.m_rbb_du_lieu.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_du_lieu.Name = "m_rbb_du_lieu";
             this.m_rbb_du_lieu.Size = new System.Drawing.Size(114, 126);
@@ -253,11 +254,12 @@ namespace Form_menu
             this.m_cmd_nhom_nguoi_sd,
             this.m_cmd_phan_quyen_cho_nhom,
             this.m_cmd_nhat_ky_he_thong,
-            this.m_cmd_phan_quyen_he_thong});
+            this.m_cmd_phan_quyen_he_thong,
+            this.m_cmd_phan_quyen_chi_tiet});
             this.m_rbb_bao_mat.Location = new System.Drawing.Point(184, 0);
             this.m_rbb_bao_mat.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_bao_mat.Name = "m_rbb_bao_mat";
-            this.m_rbb_bao_mat.Size = new System.Drawing.Size(370, 126);
+            this.m_rbb_bao_mat.Size = new System.Drawing.Size(499, 126);
             this.m_rbb_bao_mat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_bao_mat.TabIndex = 1;
             this.m_rbb_bao_mat.Text = "Bảo mật";
@@ -1118,6 +1120,16 @@ namespace Form_menu
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
             // 
+            // m_cmd_phan_quyen_chi_tiet
+            // 
+            this.m_cmd_phan_quyen_chi_tiet.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_chi_tiet.Icon")));
+            this.m_cmd_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
+            this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
+            this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
+            this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
+            // 
             // f399_MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1206,6 +1218,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_phan_quyen_cho_nhom;
         private DevComponents.DotNetBar.ButtonItem m_cmd_doi_mat_khau;
         private DevComponents.DotNetBar.ButtonItem m_cmd_phan_quyen_he_thong;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_phan_quyen_chi_tiet;
 
     }
 }

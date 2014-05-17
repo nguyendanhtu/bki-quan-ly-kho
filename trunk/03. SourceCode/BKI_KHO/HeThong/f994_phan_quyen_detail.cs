@@ -19,6 +19,9 @@ namespace BKI_KHO.HeThong
 {
     public partial class f994_phan_quyen_detail : Form
     {
+        public void display() {
+            this.ShowDialog();
+        }
         public void load_data_2_txt_form(US_HT_FORM ip_us){
             m_txt_form.Text = ip_us.strFORM_NAME;
         }
@@ -31,7 +34,7 @@ namespace BKI_KHO.HeThong
 
         private void format_control()
         {
-            //CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
@@ -93,5 +96,7 @@ namespace BKI_KHO.HeThong
             f990_ht_form v_frm = new f990_ht_form();
             v_frm.show_2_choose(this);
         }
+
+        
     }
 }
