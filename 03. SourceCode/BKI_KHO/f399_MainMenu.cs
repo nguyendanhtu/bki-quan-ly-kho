@@ -292,6 +292,18 @@ namespace Form_menu {
             }
         }
 
+        private void m_cmd_phan_quyen_he_thong_Click(object sender, EventArgs e) {
+            try
+            {
+                f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
         
 
     }

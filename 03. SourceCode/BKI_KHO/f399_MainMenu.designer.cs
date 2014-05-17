@@ -43,11 +43,12 @@ namespace Form_menu
             this.m_cmd_nhom_nguoi_sd = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_phan_quyen_cho_nhom = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nhat_ky_he_thong = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_phan_quyen_he_thong = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_he_thong = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_dang_nhap = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_thong_tin = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_thoat = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_doi_mat_khau = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_thoat = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.m_rbb_kho = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_nhap_kho = new DevComponents.DotNetBar.ButtonItem();
@@ -251,7 +252,8 @@ namespace Form_menu
             this.m_cmd_phan_quyen,
             this.m_cmd_nhom_nguoi_sd,
             this.m_cmd_phan_quyen_cho_nhom,
-            this.m_cmd_nhat_ky_he_thong});
+            this.m_cmd_nhat_ky_he_thong,
+            this.m_cmd_phan_quyen_he_thong});
             this.m_rbb_bao_mat.Location = new System.Drawing.Point(184, 0);
             this.m_rbb_bao_mat.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_bao_mat.Name = "m_rbb_bao_mat";
@@ -309,6 +311,16 @@ namespace Form_menu
             this.m_cmd_nhat_ky_he_thong.Text = "Nhật ký hệ thống";
             this.m_cmd_nhat_ky_he_thong.Visible = false;
             // 
+            // m_cmd_phan_quyen_he_thong
+            // 
+            this.m_cmd_phan_quyen_he_thong.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_he_thong.Icon")));
+            this.m_cmd_phan_quyen_he_thong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_phan_quyen_he_thong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_phan_quyen_he_thong.Name = "m_cmd_phan_quyen_he_thong";
+            this.m_cmd_phan_quyen_he_thong.SubItemsExpandWidth = 14;
+            this.m_cmd_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
+            this.m_cmd_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_phan_quyen_he_thong_Click);
+            // 
             // m_rbb_he_thong
             // 
             this.m_rbb_he_thong.AutoOverflowEnabled = true;
@@ -362,16 +374,6 @@ namespace Form_menu
             this.m_cmd_thong_tin.SubItemsExpandWidth = 14;
             this.m_cmd_thong_tin.Text = "Thông tin";
             // 
-            // m_cmd_thoat
-            // 
-            this.m_cmd_thoat.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_thoat.Icon")));
-            this.m_cmd_thoat.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_thoat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_thoat.Name = "m_cmd_thoat";
-            this.m_cmd_thoat.SubItemsExpandWidth = 14;
-            this.m_cmd_thoat.Text = "Thoát";
-            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
-            // 
             // m_cmd_doi_mat_khau
             // 
             this.m_cmd_doi_mat_khau.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_doi_mat_khau.Icon")));
@@ -381,6 +383,16 @@ namespace Form_menu
             this.m_cmd_doi_mat_khau.SubItemsExpandWidth = 14;
             this.m_cmd_doi_mat_khau.Text = "Đổi mật khẩu";
             this.m_cmd_doi_mat_khau.Visible = false;
+            // 
+            // m_cmd_thoat
+            // 
+            this.m_cmd_thoat.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_thoat.Icon")));
+            this.m_cmd_thoat.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_thoat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_thoat.Name = "m_cmd_thoat";
+            this.m_cmd_thoat.SubItemsExpandWidth = 14;
+            this.m_cmd_thoat.Text = "Thoát";
+            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
             // 
             // ribbonPanel3
             // 
@@ -1193,6 +1205,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_nhom_nguoi_sd;
         private DevComponents.DotNetBar.ButtonItem m_cmd_phan_quyen_cho_nhom;
         private DevComponents.DotNetBar.ButtonItem m_cmd_doi_mat_khau;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_phan_quyen_he_thong;
 
     }
 }

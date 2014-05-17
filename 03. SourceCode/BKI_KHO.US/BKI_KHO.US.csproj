@@ -70,8 +70,10 @@
     <Compile Include="US_GD_CHI_TIET_CHUNG_TU.cs" />
     <Compile Include="US_GD_CHUNG_TU.cs" />
     <Compile Include="US_GD_CHUNG_TU_NHAN_VIEN.cs" />
+    <Compile Include="US_HT_FORM.cs" />
     <Compile Include="US_HT_NHOM_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
+    <Compile Include="US_HT_PHAN_QUYEN_DETAIL.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
     <Compile Include="US_RPT_CHUNG_TU_THEO_NHOM.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="US_V_DM_NHOM_HANG.cs" />
     <Compile Include="US_V_GD_CHI_TIET_CHUNG_TU.cs" />
     <Compile Include="US_V_GD_CHUNG_TU.cs" />
+    <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_KHO.DS\BKI_KHO.DS.csproj">
