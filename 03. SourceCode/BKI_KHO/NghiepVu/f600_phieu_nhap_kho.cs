@@ -268,13 +268,14 @@ namespace BKI_KHO {
 
                
                 v_us_gd_chi_tiet_chung_tu.UseTransOfUSObject(m_us_v_chung_tu);
+                v_us_dm_hang_hoa.UseTransOfUSObject(m_us_v_chung_tu);
                 switch (m_e_form_mode) {
                     case DataEntryFormMode.InsertDataState: {
                         break;
                         }
                     case DataEntryFormMode.UpdateDataState: {
                             //1.xoa phieu detail, hang hoa, nhan vien chung tu
-                            m_us_v_chung_tu.Delete_Detail_by_ID_CHUNG_TU(m_us_v_chung_tu.dcID_CHUNG_TU_DETAIL);
+                            m_us_v_chung_tu.Delete_Detail_by_ID_CHUNG_TU(m_us_v_chung_tu.dcID);
                             break;
                         }
                 }
