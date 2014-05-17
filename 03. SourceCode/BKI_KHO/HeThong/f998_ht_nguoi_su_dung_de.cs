@@ -101,11 +101,11 @@ namespace BKI_KHO
             this.label6 = new System.Windows.Forms.Label();
             this.m_chk_is_admin = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.m_cbo_nhom_quyen = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.m_cbo_nhom_quyen = new System.Windows.Forms.ComboBox();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +180,7 @@ namespace BKI_KHO
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
@@ -190,7 +190,7 @@ namespace BKI_KHO
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(45, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
@@ -200,7 +200,7 @@ namespace BKI_KHO
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
@@ -259,12 +259,12 @@ namespace BKI_KHO
             "Đã đóng"});
             this.m_cbo_trang_thai.Location = new System.Drawing.Point(119, 120);
             this.m_cbo_trang_thai.Name = "m_cbo_trang_thai";
-            this.m_cbo_trang_thai.Size = new System.Drawing.Size(96, 21);
+            this.m_cbo_trang_thai.Size = new System.Drawing.Size(96, 22);
             this.m_cbo_trang_thai.TabIndex = 12;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(22, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 24);
@@ -274,7 +274,7 @@ namespace BKI_KHO
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(2, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 16);
@@ -318,6 +318,17 @@ namespace BKI_KHO
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin người sử dụng";
             // 
+            // m_cbo_nhom_quyen
+            // 
+            this.m_cbo_nhom_quyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_nhom_quyen.Items.AddRange(new object[] {
+            "Đang sử dụng",
+            "Đã đóng"});
+            this.m_cbo_nhom_quyen.Location = new System.Drawing.Point(119, 147);
+            this.m_cbo_nhom_quyen.Name = "m_cbo_nhom_quyen";
+            this.m_cbo_nhom_quyen.Size = new System.Drawing.Size(224, 22);
+            this.m_cbo_nhom_quyen.TabIndex = 12;
+            // 
             // label9
             // 
             this.label9.ForeColor = System.Drawing.Color.Red;
@@ -347,24 +358,13 @@ namespace BKI_KHO
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 147);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 16);
             this.label10.TabIndex = 11;
             this.label10.Text = "Nhóm quyền";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // m_cbo_nhom_quyen
-            // 
-            this.m_cbo_nhom_quyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m_cbo_nhom_quyen.Items.AddRange(new object[] {
-            "Đang sử dụng",
-            "Đã đóng"});
-            this.m_cbo_nhom_quyen.Location = new System.Drawing.Point(119, 147);
-            this.m_cbo_nhom_quyen.Name = "m_cbo_nhom_quyen";
-            this.m_cbo_nhom_quyen.Size = new System.Drawing.Size(224, 21);
-            this.m_cbo_nhom_quyen.TabIndex = 12;
             // 
             // f998_ht_nguoi_su_dung_de
             // 
@@ -373,7 +373,7 @@ namespace BKI_KHO
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f998_ht_nguoi_su_dung_de";
-            this.Text = "F998 - cap nhat thong tin nguoi su dung";
+            this.Text = "F998 - Cập nhật thông tin người sử dụng";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

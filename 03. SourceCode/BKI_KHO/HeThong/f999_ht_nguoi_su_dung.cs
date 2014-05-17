@@ -196,7 +196,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f999_ht_nguoi_su_dung";
-            this.Text = "F999 - Thong tin nguoi su dung";
+            this.Text = "F999 - Thông tin người sử dụng";
             this.Load += new System.EventHandler(this.f999_ht_nguoi_su_dung_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
