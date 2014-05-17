@@ -117,6 +117,9 @@
     <Compile Include="BaoCao\f809_RPT_HANG_HOA_XUAT_NHAP.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f810_RPT_HANG_HOA_LOI_NHUAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f809_RPT_HANG_HOA_XUAT_NHAP.resx">
       <DependentUpon>f809_RPT_HANG_HOA_XUAT_NHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f810_RPT_HANG_HOA_LOI_NHUAN.resx">
+      <DependentUpon>f810_RPT_HANG_HOA_LOI_NHUAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_DM_NGUOI_DUNG_DE.resx">
       <DependentUpon>f100_DM_NGUOI_DUNG_DE.cs</DependentUpon>

@@ -108,6 +108,7 @@ Public Class CIPConvert
 
     Public Shared Function is_valid_number(ByVal i_str_input As String) As Boolean
         Try
+
             ToDecimal(i_str_input)
             Return True
         Catch ex As Exception

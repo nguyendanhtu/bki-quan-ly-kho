@@ -30,7 +30,7 @@ namespace BKI_KHO
     {
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_dgv;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
@@ -90,7 +90,7 @@ namespace BKI_KHO
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.m_dgv = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_txt_search = new System.Windows.Forms.TextBox();
             this.m_lbl_title = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@ namespace BKI_KHO
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -226,17 +226,17 @@ namespace BKI_KHO
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_fg
+            // m_dgv
             // 
-            this.m_fg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.m_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 142);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 231);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_dgv.ColumnInfo = resources.GetString("m_dgv.ColumnInfo");
+            this.m_dgv.Location = new System.Drawing.Point(0, 142);
+            this.m_dgv.Name = "m_dgv";
+            this.m_dgv.Size = new System.Drawing.Size(686, 231);
+            this.m_dgv.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_dgv.Styles"));
+            this.m_dgv.TabIndex = 20;
             // 
             // m_txt_search
             // 
@@ -342,13 +342,13 @@ namespace BKI_KHO
             this.Controls.Add(this.label2);
             this.Controls.Add(this.m_dat_tu_ngay);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_dgv);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f807_RPT_LOI_NHUAN";
             this.Text = "F807 - Báo cáo lợi nhuận";
             this.Load += new System.EventHandler(this.f807_RPT_LOI_NHUAN_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,10 +386,10 @@ namespace BKI_KHO
         #region Private Methods
         private void format_controls()
         {
-            //CControlFormat.setFormStyle(this, new CAppContext_201());
-            CControlFormat.setC1FlexFormat(m_fg);
-            CGridUtils.AddSave_Excel_Handlers(m_fg);
-            CGridUtils.AddSearch_Handlers(m_fg);
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setC1FlexFormat(m_dgv);
+            CGridUtils.AddSave_Excel_Handlers(m_dgv);
+            CGridUtils.AddSearch_Handlers(m_dgv);
 
 
 
@@ -398,7 +398,7 @@ namespace BKI_KHO
         }
         private void set_initial_form_load()
         {
-            m_obj_trans = get_trans_object(m_fg);
+            m_obj_trans = get_trans_object(m_dgv);
             load_data_2_grid();
 
             m_txt_search.Text = m_search_info_string;
@@ -419,15 +419,15 @@ namespace BKI_KHO
         {
             m_ds = new DS_RPT_LOI_NHUAN();
             m_us.FillDatasetByNgayThang(m_ds, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, m_txt_search.Text);
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-            m_fg.Redraw = true;
+            m_dgv.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_dgv, m_obj_trans);
+            m_dgv.Redraw = true;
         }
         private void grid2us_object(US_RPT_LOI_NHUAN i_us
             , int i_grid_row)
         {
             DataRow v_dr;
-            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            v_dr = (DataRow)m_dgv.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
@@ -436,7 +436,7 @@ namespace BKI_KHO
         private void us_object2grid(US_RPT_LOI_NHUAN i_us
             , int i_grid_row)
         {
-            DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            DataRow v_dr = (DataRow)m_dgv.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
@@ -451,9 +451,9 @@ namespace BKI_KHO
 
         private void update_rpt_loi_nhuan()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
+            grid2us_object(m_us, m_dgv.Row);
             //	f807_RPT_LOI_NHUAN_DE v_fDE = new f807_RPT_LOI_NHUAN_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
@@ -461,17 +461,17 @@ namespace BKI_KHO
 
         private void delete_rpt_loi_nhuan()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_RPT_LOI_NHUAN v_us = new US_RPT_LOI_NHUAN();
-            grid2us_object(v_us, m_fg.Row);
+            grid2us_object(v_us, m_dgv.Row);
             try
             {
                 v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
-                m_fg.Rows.Remove(m_fg.Row);
+                m_dgv.Rows.Remove(m_dgv.Row);
             }
             catch (Exception v_e)
             {
@@ -484,9 +484,9 @@ namespace BKI_KHO
 
         private void view_rpt_loi_nhuan()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
+            grid2us_object(m_us, m_dgv.Row);
             //	f807_RPT_LOI_NHUAN_DE v_fDE = new f807_RPT_LOI_NHUAN_DE();			
             //	v_fDE.display(m_us);
         }
@@ -499,20 +499,31 @@ namespace BKI_KHO
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
 
-            m_fg.DoubleClick += m_fg_DoubleClick;
+            m_dgv.DoubleClick += m_fg_DoubleClick;
             m_txt_search.Enter += new EventHandler(m_txt_search_Enter);
             m_txt_search.Leave += new EventHandler(m_txt_search_Leave);
         }
 
         private void danh_sach_chung_tu_theo_nhom_hang()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            if (m_fg.Rows[m_fg.Row].IsNode) return;
-            grid2us_object(m_us, m_fg.Row);
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
+            if (m_dgv.Rows[m_dgv.Row].IsNode) return;
+            grid2us_object(m_us, m_dgv.Row);
 
             var frm = new f808_RPT_CHUNG_TU_THEO_NHOM();
             frm.display(m_us.dcID, m_us.strTEN_NHOM_HANG);
+        }
+
+        private void hang_hoa_loi_nhuan()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_dgv)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_dgv, m_dgv.Row)) return;
+            if (m_dgv.Rows[m_dgv.Row].IsNode) return;
+            grid2us_object(m_us, m_dgv.Row);
+
+            var v_frm = new f810_RPT_HANG_HOA_LOI_NHUAN();
+            v_frm.display_with_data(m_us, m_dat_tu_ngay.Value, m_dat_den_ngay.Value);
         }
         #endregion
 
@@ -538,7 +549,7 @@ namespace BKI_KHO
         {
             try
             {
-                danh_sach_chung_tu_theo_nhom_hang();
+                hang_hoa_loi_nhuan();
             }
             catch (Exception v_e)
             {

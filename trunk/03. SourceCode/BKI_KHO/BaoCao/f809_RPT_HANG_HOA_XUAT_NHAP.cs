@@ -46,10 +46,10 @@ namespace BKI_KHO
         private Label m_lbl_den_ngay;
         private Label label5;
         private Label m_lbl_nhom_hang;
-        private Label label2;
         private Label m_lbl_so_du_dau;
         private Label m_lbl_so_du_cuoi;
-        private Label label7;
+        private Label label2;
+        private Label label4;
 		private System.ComponentModel.IContainer components;
 
 		public f809_RPT_HANG_HOA_XUAT_NHAP()
@@ -104,10 +104,10 @@ namespace BKI_KHO
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.m_lbl_nhom_hang = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_so_du_dau = new System.Windows.Forms.Label();
             this.m_lbl_so_du_cuoi = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dgv)).BeginInit();
             this.SuspendLayout();
@@ -259,7 +259,7 @@ namespace BKI_KHO
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 50);
+            this.label1.Location = new System.Drawing.Point(192, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 38;
@@ -268,7 +268,7 @@ namespace BKI_KHO
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(243, 50);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(250, 50);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(16, 13);
             this.m_lbl_tu_ngay.TabIndex = 39;
@@ -277,7 +277,7 @@ namespace BKI_KHO
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(398, 50);
+            this.label3.Location = new System.Drawing.Point(415, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 40;
@@ -286,7 +286,7 @@ namespace BKI_KHO
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(463, 50);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(480, 50);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(16, 13);
             this.m_lbl_den_ngay.TabIndex = 41;
@@ -310,56 +310,58 @@ namespace BKI_KHO
             this.m_lbl_nhom_hang.TabIndex = 43;
             this.m_lbl_nhom_hang.Text = "...";
             // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(246, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 30);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Số dư đầu:                   ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // m_lbl_so_du_dau
             // 
             this.m_lbl_so_du_dau.AutoSize = true;
+            this.m_lbl_so_du_dau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_lbl_so_du_dau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_so_du_dau.ForeColor = System.Drawing.Color.Blue;
-            this.m_lbl_so_du_dau.Location = new System.Drawing.Point(349, 105);
+            this.m_lbl_so_du_dau.Location = new System.Drawing.Point(352, 105);
             this.m_lbl_so_du_dau.Name = "m_lbl_so_du_dau";
-            this.m_lbl_so_du_dau.Size = new System.Drawing.Size(16, 13);
+            this.m_lbl_so_du_dau.Size = new System.Drawing.Size(18, 15);
             this.m_lbl_so_du_dau.TabIndex = 45;
             this.m_lbl_so_du_dau.Text = "...";
+            this.m_lbl_so_du_dau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_lbl_so_du_cuoi
             // 
             this.m_lbl_so_du_cuoi.AutoSize = true;
+            this.m_lbl_so_du_cuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_lbl_so_du_cuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.m_lbl_so_du_cuoi.ForeColor = System.Drawing.Color.Blue;
-            this.m_lbl_so_du_cuoi.Location = new System.Drawing.Point(349, 344);
+            this.m_lbl_so_du_cuoi.Location = new System.Drawing.Point(352, 344);
             this.m_lbl_so_du_cuoi.Name = "m_lbl_so_du_cuoi";
-            this.m_lbl_so_du_cuoi.Size = new System.Drawing.Size(16, 13);
+            this.m_lbl_so_du_cuoi.Size = new System.Drawing.Size(18, 15);
             this.m_lbl_so_du_cuoi.TabIndex = 47;
             this.m_lbl_so_du_cuoi.Text = "...";
+            this.m_lbl_so_du_cuoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // label2
             // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(246, 335);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 30);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Số dư cuối:                   ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(286, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Số dư đầu:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(286, 344);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Số dư đầu:";
             // 
             // f809_RPT_HANG_HOA_XUAT_NHAP
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
-            this.Controls.Add(this.m_lbl_so_du_cuoi);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.m_lbl_so_du_dau);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.m_lbl_so_du_cuoi);
+            this.Controls.Add(this.m_lbl_so_du_dau);
             this.Controls.Add(this.m_lbl_nhom_hang);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.m_lbl_den_ngay);
@@ -426,7 +428,11 @@ namespace BKI_KHO
 			CControlFormat.setFormStyle(this, new CAppContext_201());
 			CControlFormat.setC1FlexFormat(m_dgv);
 			CGridUtils.AddSave_Excel_Handlers(m_dgv);
-            			CGridUtils.AddSearch_Handlers(m_dgv);
+            CGridUtils.AddSearch_Handlers(m_dgv);
+
+            m_dgv.Tree.Column = (int)e_col_Number.MA_HANG;
+            m_dgv.Tree.Style = TreeStyleFlags.SimpleLeaf;
+
 			set_define_events();
 			this.KeyPreview = true;		
 		}
@@ -450,6 +456,20 @@ namespace BKI_KHO
 			m_dgv.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_dgv, m_obj_trans);
 			m_dgv.Redraw = true;
+
+            m_dgv.Subtotal(
+                AggregateEnum.Count
+                , 0
+                , -1
+                , (int)e_col_Number.NGAY_NHAP
+                , "Tổng");
+
+            m_dgv.Subtotal(
+                AggregateEnum.Count
+                , 0
+                , -1
+                , (int)e_col_Number.NGAY_XUAT
+                , "Tổng");
 		}
 		private void grid2us_object(US_RPT_HANG_HOA_XUAT_NHAP i_us
 			, int i_grid_row) {
@@ -510,12 +530,16 @@ namespace BKI_KHO
 		//	f809_RPT_HANG_HOA_XUAT_NHAP_DE v_fDE = new f809_RPT_HANG_HOA_XUAT_NHAP_DE();			
 		//	v_fDE.display(m_us);
 		}
+
+
+
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
 			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
 			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
 			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
 			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_dgv.DoubleClick += new EventHandler(m_dgv_DoubleClick);
 		}
 		#endregion
 
@@ -579,6 +603,17 @@ namespace BKI_KHO
 			}
 		}
 
-	}
+        private void m_dgv_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                // Bật form 602 v_gd_chung_tu và truyền mã hàng vào phần tìm kiếm và search mã hàng đó.
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+    }
 }
 
