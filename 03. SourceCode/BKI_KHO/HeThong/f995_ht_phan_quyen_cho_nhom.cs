@@ -109,18 +109,32 @@ namespace BKI_KHO.HeThong
 
         private void m_cmd_left_2_right_Click(object sender, EventArgs e)
         {
-            m_lbox_quyen_chua_cap.SelectedIndex = m_dc_index_in_left;
-            m_lbox_quyen_da_cap.Items.Add(m_lbox_quyen_chua_cap.SelectedItem);
-            m_lbox_quyen_chua_cap.Items.RemoveAt(m_lbox_quyen_chua_cap.SelectedIndex);
-            m_dc_index_in_left = 0;
+            try
+            {
+                m_lbox_quyen_chua_cap.SelectedIndex = m_dc_index_in_left;
+                m_lbox_quyen_da_cap.Items.Add(m_lbox_quyen_chua_cap.SelectedItem);
+                m_lbox_quyen_chua_cap.Items.RemoveAt(m_lbox_quyen_chua_cap.SelectedIndex);
+                m_dc_index_in_left = 0;
+            }
+            catch (System.Exception v_e)
+            {
+                BaseMessages.MsgBox_Error("Đã cấp hết quyền!");
+            }          
         }
 
         private void m_cmd_right_2_left_Click(object sender, EventArgs e)
         {
-            m_lbox_quyen_da_cap.SelectedIndex = m_dc_index_in_right;
-            m_lbox_quyen_chua_cap.Items.Add(m_lbox_quyen_da_cap.SelectedItem);
-            m_lbox_quyen_da_cap.Items.RemoveAt(m_lbox_quyen_da_cap.SelectedIndex);
-            m_dc_index_in_right = 0;
+            try
+            {
+                m_lbox_quyen_da_cap.SelectedIndex = m_dc_index_in_right;
+                m_lbox_quyen_chua_cap.Items.Add(m_lbox_quyen_da_cap.SelectedItem);
+                m_lbox_quyen_da_cap.Items.RemoveAt(m_lbox_quyen_da_cap.SelectedIndex);
+                m_dc_index_in_right = 0;
+            }
+            catch (System.Exception v_e)
+            {
+                BaseMessages.MsgBox_Error("Không còn quyền đã cấp để chuyển!");
+            }      
         }
 
         private void m_cmd_left_2_right_all_Click(object sender, EventArgs e)
@@ -206,7 +220,7 @@ namespace BKI_KHO.HeThong
                     v_us_ht_phan_quyen_cho_nhom.Delete();
                 }
                 BaseMessages.MsgBox_Infor("Dữ liệu đã được cập nhật");
-                this.Close();
+                //this.Close();
             }
             catch (Exception v_e)
             {
