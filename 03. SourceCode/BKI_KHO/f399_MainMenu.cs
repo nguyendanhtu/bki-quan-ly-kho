@@ -267,5 +267,17 @@ namespace Form_menu {
             }
         }
 
+        private void m_cmd_nhom_nguoi_sd_Click(object sender, EventArgs e) {
+            try
+            {
+                f306_HT_USER_GROUP v_frm = new f306_HT_USER_GROUP();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }
 }
