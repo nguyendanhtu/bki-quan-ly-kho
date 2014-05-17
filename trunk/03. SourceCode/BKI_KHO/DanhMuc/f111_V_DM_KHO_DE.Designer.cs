@@ -237,7 +237,7 @@
             this.Controls.Add(this.label1);
             this.Name = "f111_V_DM_KHO_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "f111 Chi tiết danh mục kho";
+            this.Text = "F111 - Cập nhật thông tin chi tiết kho";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
