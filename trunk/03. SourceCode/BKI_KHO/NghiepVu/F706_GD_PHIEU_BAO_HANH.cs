@@ -371,9 +371,7 @@ namespace BKI_KHO
         ITransferDataRow m_obj_trans;
         DialogResult m_dgl_result = DialogResult.Cancel;
         DS_V_BAO_HANH_SUA_CHUA m_ds_v_bao_hanh = new DS_V_BAO_HANH_SUA_CHUA();
-
         US_V_BAO_HANH_SUA_CHUA m_us_v_bao_hanh = new US_V_BAO_HANH_SUA_CHUA();
-
         #endregion
 
         #region Private Methods
@@ -603,8 +601,6 @@ namespace BKI_KHO
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-
 
         private void m_cmd_select_Click(object sender, EventArgs e)
         {

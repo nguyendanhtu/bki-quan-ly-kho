@@ -40,13 +40,10 @@ namespace BKI_KHO.NghiepVu
         #endregion
 
         #region Public method
-        public void display_for_insert()
+        public void display()
         {
-            m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
-
-
         #endregion
 
         #region Private method
@@ -72,6 +69,7 @@ namespace BKI_KHO.NghiepVu
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_tien_sua_chua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -79,10 +77,10 @@ namespace BKI_KHO.NghiepVu
             m_fg.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.None;
             m_fg.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
             m_fg.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
-            this.MinimizeBox = true;
-            this.MaximizeBox = true;
+         
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
+            set_define_events();
         }
 
         private Hashtable get_mapping_col_nhan_vien()
@@ -125,20 +123,21 @@ namespace BKI_KHO.NghiepVu
                 MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng!");
                 return false;
             }
-            if (m_txt_tien_sua_chua.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập số tiền sửa chữa!");
-                return false;
-            }
-            decimal v_dc_total = 0;
+
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
             {
-                v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
-            }
-            if (v_dc_total != CIPConvert.ToDecimal(m_txt_tien_sua_chua.Text))
-            {
-                MessageBox.Show("Tổng số tiền của nhân viên phải bằng với tiền sửa chữa!");
-                return false;
+                if (m_fg[v_i_cur_row, (int)e_col_number.HO_TEN] == null)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn chưa chọn nhân viên");
+                    m_fg.Select(v_i_cur_row, (int)e_col_number.HO_TEN);
+                    return false;
+                }
+                if (m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN] == null)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn chưa nhập số tiền cho nhân viên");
+                    m_fg.Select(v_i_cur_row, (int)e_col_number.SO_TIEN);
+                    return false;
+                }
             }
             return true;
         }
@@ -153,7 +152,7 @@ namespace BKI_KHO.NghiepVu
             op_us_v_bao_hanh_sua_chua.strMA_CT = m_txt_so.Text;
             op_us_v_bao_hanh_sua_chua.datNGAY_CT = m_dat_ngay.Value;
             op_us_v_bao_hanh_sua_chua.dcID_LOAI_CT = 37;
-            op_us_v_bao_hanh_sua_chua.dcTONG_TIEN = int.Parse(m_txt_tien_sua_chua.Text.Replace(",", ""));
+            op_us_v_bao_hanh_sua_chua.dcTONG_TIEN = CIPConvert.ToDecimal(m_lbl_tien_sua_chua.Text);
         }
 
         private void us_v_bao_hanh_sua_chua_2_form(US_V_BAO_HANH_SUA_CHUA ip_us_v_bao_hanh_sua_chua)
@@ -164,8 +163,7 @@ namespace BKI_KHO.NghiepVu
             m_txt_ho_ten_khach_hang.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_1;
             m_txt_dien_thoai_khach_hang.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_2;
             m_txt_dia_chi.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_3;
-            m_txt_tien_sua_chua.TextDetached = true;
-            m_txt_tien_sua_chua.Text = string.Format("{0:0,0}", ip_us_v_bao_hanh_sua_chua.dcTONG_TIEN);
+            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(ip_us_v_bao_hanh_sua_chua.dcTONG_TIEN, "#,##0");
             m_txt_noi_dung.Text = ip_us_v_bao_hanh_sua_chua.strDIEN_GIAI;
 
             US_GD_CHI_TIET_CHUNG_TU v_us_gd_ct_chung_tu = new US_GD_CHI_TIET_CHUNG_TU();
@@ -181,32 +179,28 @@ namespace BKI_KHO.NghiepVu
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_ct_nhan_vien, m_fg, get_trans_object(m_fg));
             m_fg.Redraw = true;
+
+            decimal v_dc_total = 0;
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+            {
+                if (m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN] != null)
+                {
+                    v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
+                }
+            }
+            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
         }
+
         private void grid_row_2_us_gd_chung_tu_nhan_vien(
         int ip_grid_row
         , US_V_BAO_HANH_SUA_CHUA ip_us_v_bh_sua_chua
         , US_GD_CHUNG_TU_NHAN_VIEN op_us_ct_nhan_vien)
         {
-
-            switch (m_e_form_mode)
-            {
-                case DataEntryFormMode.UpdateDataState:
-                    DataRow v_dr;
-                    v_dr = (DataRow)m_fg.Rows[ip_grid_row].UserData;
-                    m_obj_trans.GridRow2DataRow(ip_grid_row, v_dr);
-                    op_us_ct_nhan_vien.DataRow2Me(v_dr);
-                    break;
-                case DataEntryFormMode.InsertDataState:
-                    op_us_ct_nhan_vien.dcSO_TIEN
-              = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.SO_TIEN].ToString());
-                    op_us_ct_nhan_vien.dcID_NHAN_VIEN
-                        = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.HO_TEN]);
-                    op_us_ct_nhan_vien.dcID_CHUNG_TU = ip_us_v_bh_sua_chua.dcID;
-                    break;
-            }
-
-
+            op_us_ct_nhan_vien.dcSO_TIEN = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.SO_TIEN].ToString());
+            op_us_ct_nhan_vien.dcID_NHAN_VIEN = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int)e_col_number.HO_TEN]);
+            op_us_ct_nhan_vien.dcID_CHUNG_TU = ip_us_v_bh_sua_chua.dcID;
         }
+
         private void form_2_us_gd_chi_tiet_chung_tu(
            US_V_BAO_HANH_SUA_CHUA ip_us_v_bh_sua_chua
            , US_GD_CHI_TIET_CHUNG_TU op_us_gd_ct_chung_tu)
@@ -214,6 +208,7 @@ namespace BKI_KHO.NghiepVu
             op_us_gd_ct_chung_tu.dcID_CHUNG_TU = ip_us_v_bh_sua_chua.dcID;
             op_us_gd_ct_chung_tu.strSO_SERI = m_txt_serial.Text;
         }
+
         private void save_data()
         {
             if (check_validate_is_ok() == false)
@@ -270,26 +265,59 @@ namespace BKI_KHO.NghiepVu
                 }
                 throw v_e;
             }
-
-
-
-
-
-
-
         }
-
-
-
-
         #endregion
 
         #region Event
-        private void m_cmd_exit_Click(object sender, EventArgs e)
+        private void set_define_events()
+        {
+            m_cmd_exit.Click += m_cmd_exit_Click;
+            m_cmd_danh_sach.Click += m_cmd_danh_sach_Click;
+            this.Load += F704_V_BAO_HANH_SUA_CHUA_Load;
+            m_cmd_save.Click += m_cmd_save_Click;
+            m_fg.LeaveCell += m_fg_LeaveCell;
+            m_fg.AfterAddRow += m_fg_AfterAddRow;
+            m_cmd_del.Click += m_cmd_del_Click;
+        }
+
+        void m_cmd_del_Click(object sender, EventArgs e)
         {
             try
             {
-                this.Close();
+                if (m_fg.Rows.Count == 3)
+                {
+                    return;
+                }
+                m_fg.Rows.Remove(m_fg.Row);
+                CGridUtils.MakeSoTT(0, m_fg);
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_fg_AfterAddRow(object sender, C1.Win.C1FlexGrid.RowColEventArgs e)
+        {
+            CGridUtils.MakeSoTT(0, m_fg);
+        }
+
+        void m_fg_LeaveCell(object sender, EventArgs e)
+        {
+            decimal v_dc_total = 0;
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+            {
+                if (m_fg.Rows[v_i_cur_row][2] != null)
+                    v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
+            }
+            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
+        }
+
+        void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                save_data();
             }
             catch (Exception v_e)
             {
@@ -297,7 +325,19 @@ namespace BKI_KHO.NghiepVu
             }
         }
 
-        private void m_cmd_danh_sach_Click(object sender, EventArgs e)
+        void F704_V_BAO_HANH_SUA_CHUA_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_danh_sach_Click(object sender, EventArgs e)
         {
             try
             {
@@ -319,23 +359,11 @@ namespace BKI_KHO.NghiepVu
             }
         }
 
-        private void F704_V_BAO_HANH_SUA_CHUA_Load(object sender, EventArgs e)
+        void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try
             {
-                set_initial_form_load();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_cmd_save_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                save_data();
+                this.Close();
             }
             catch (Exception v_e)
             {
