@@ -958,4 +958,14 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_NHAP = "NGAY_NHAP";
         public const string NGAY_XUAT = "NGAY_XUAT";
     }
+
+    public class RPT_HANG_HOA_LOI_NHUAN
+    {
+        public const string ID = "ID";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string TEN_HANG_EN = "TEN_HANG_EN";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string GIA_XUAT = "GIA_XUAT";
+    }
 }
