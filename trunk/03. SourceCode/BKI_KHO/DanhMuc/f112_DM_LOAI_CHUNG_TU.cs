@@ -254,7 +254,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f112_DM_LOAI_CHUNG_TU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "f112 Danh Sách Chứng Từ";
+            this.Text = "F112 - Danh sách chứng từ";
             this.Load += new System.EventHandler(this.f112_DM_LOAI_CHUNG_TU_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
