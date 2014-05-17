@@ -211,7 +211,7 @@ namespace BKI_KHO
             // label4
             // 
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(216, 124);
+            this.label4.Location = new System.Drawing.Point(223, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 13;
@@ -220,7 +220,7 @@ namespace BKI_KHO
             // m_txt_ten_truy_cap
             // 
             this.m_txt_ten_truy_cap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_ten_truy_cap.Location = new System.Drawing.Point(112, 24);
+            this.m_txt_ten_truy_cap.Location = new System.Drawing.Point(119, 24);
             this.m_txt_ten_truy_cap.Name = "m_txt_ten_truy_cap";
             this.m_txt_ten_truy_cap.Size = new System.Drawing.Size(152, 20);
             this.m_txt_ten_truy_cap.TabIndex = 2;
@@ -228,7 +228,7 @@ namespace BKI_KHO
             // m_txt_ten
             // 
             this.m_txt_ten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_ten.Location = new System.Drawing.Point(112, 48);
+            this.m_txt_ten.Location = new System.Drawing.Point(119, 48);
             this.m_txt_ten.Name = "m_txt_ten";
             this.m_txt_ten.Size = new System.Drawing.Size(224, 20);
             this.m_txt_ten.TabIndex = 5;
@@ -236,7 +236,7 @@ namespace BKI_KHO
             // m_txt_mat_khau
             // 
             this.m_txt_mat_khau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_mat_khau.Location = new System.Drawing.Point(112, 72);
+            this.m_txt_mat_khau.Location = new System.Drawing.Point(119, 72);
             this.m_txt_mat_khau.Name = "m_txt_mat_khau";
             this.m_txt_mat_khau.PasswordChar = '*';
             this.m_txt_mat_khau.Size = new System.Drawing.Size(120, 20);
@@ -245,7 +245,7 @@ namespace BKI_KHO
             // m_txt_go_lai_mat_khau
             // 
             this.m_txt_go_lai_mat_khau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_go_lai_mat_khau.Location = new System.Drawing.Point(112, 96);
+            this.m_txt_go_lai_mat_khau.Location = new System.Drawing.Point(119, 96);
             this.m_txt_go_lai_mat_khau.Name = "m_txt_go_lai_mat_khau";
             this.m_txt_go_lai_mat_khau.PasswordChar = '*';
             this.m_txt_go_lai_mat_khau.Size = new System.Drawing.Size(120, 20);
@@ -257,7 +257,7 @@ namespace BKI_KHO
             this.m_cbo_trang_thai.Items.AddRange(new object[] {
             "Đang sử dụng",
             "Đã đóng"});
-            this.m_cbo_trang_thai.Location = new System.Drawing.Point(112, 120);
+            this.m_cbo_trang_thai.Location = new System.Drawing.Point(119, 120);
             this.m_cbo_trang_thai.Name = "m_cbo_trang_thai";
             this.m_cbo_trang_thai.Size = new System.Drawing.Size(96, 21);
             this.m_cbo_trang_thai.TabIndex = 12;
@@ -284,7 +284,7 @@ namespace BKI_KHO
             // 
             // m_chk_is_admin
             // 
-            this.m_chk_is_admin.Location = new System.Drawing.Point(312, 122);
+            this.m_chk_is_admin.Location = new System.Drawing.Point(319, 122);
             this.m_chk_is_admin.Name = "m_chk_is_admin";
             this.m_chk_is_admin.Size = new System.Drawing.Size(60, 20);
             this.m_chk_is_admin.TabIndex = 14;
@@ -293,6 +293,12 @@ namespace BKI_KHO
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.m_txt_ten_truy_cap);
+            this.groupBox1.Controls.Add(this.m_txt_ten);
+            this.groupBox1.Controls.Add(this.m_txt_mat_khau);
+            this.groupBox1.Controls.Add(this.m_txt_go_lai_mat_khau);
+            this.groupBox1.Controls.Add(this.m_cbo_nhom_quyen);
+            this.groupBox1.Controls.Add(this.m_cbo_trang_thai);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -302,12 +308,6 @@ namespace BKI_KHO
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.m_txt_ten_truy_cap);
-            this.groupBox1.Controls.Add(this.m_txt_ten);
-            this.groupBox1.Controls.Add(this.m_txt_mat_khau);
-            this.groupBox1.Controls.Add(this.m_txt_go_lai_mat_khau);
-            this.groupBox1.Controls.Add(this.m_cbo_nhom_quyen);
-            this.groupBox1.Controls.Add(this.m_cbo_trang_thai);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -323,7 +323,7 @@ namespace BKI_KHO
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(96, 72);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 16);
+            this.label9.Size = new System.Drawing.Size(26, 68);
             this.label9.TabIndex = 7;
             this.label9.Text = "(*)";
             // 
@@ -332,7 +332,7 @@ namespace BKI_KHO
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(96, 48);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 16);
+            this.label8.Size = new System.Drawing.Size(26, 68);
             this.label8.TabIndex = 4;
             this.label8.Text = "(*)";
             // 
@@ -341,7 +341,7 @@ namespace BKI_KHO
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(96, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 16);
+            this.label7.Size = new System.Drawing.Size(26, 68);
             this.label7.TabIndex = 1;
             this.label7.Text = "(*)";
             // 
@@ -361,7 +361,7 @@ namespace BKI_KHO
             this.m_cbo_nhom_quyen.Items.AddRange(new object[] {
             "Đang sử dụng",
             "Đã đóng"});
-            this.m_cbo_nhom_quyen.Location = new System.Drawing.Point(112, 147);
+            this.m_cbo_nhom_quyen.Location = new System.Drawing.Point(119, 147);
             this.m_cbo_nhom_quyen.Name = "m_cbo_nhom_quyen";
             this.m_cbo_nhom_quyen.Size = new System.Drawing.Size(224, 21);
             this.m_cbo_nhom_quyen.TabIndex = 12;
