@@ -269,6 +269,9 @@ Public Class f100_TuDien
 #End Region
 
 #Region "PUBLIC INTERFACE"
+    Public Sub display()
+        Me.ShowDialog()
+    End Sub
     Public Sub displayDataMaintain(ByVal i_constraintObject As Object) _
                 Implements I_IPDataMaintainForm.displayDataMaintain
         Try
@@ -284,10 +287,10 @@ Public Class f100_TuDien
             CSystemLog_301.ExceptionHandle(v_e)
         End Try
     End Sub
-    
-    
-    private sub loadData_fromDatasets_toGrid(byval i_dcID_loai_TD as decimal)
-        try 
+
+
+    Private Sub loadData_fromDatasets_toGrid(ByVal i_dcID_loai_TD As Decimal)
+        Try
             m_fg.Redraw = False
             CGridUtils.ClearDataInGrid(m_fg)
             'FILTER LOAI TU DIEN 
@@ -322,9 +325,9 @@ Public Class f100_TuDien
             Next
         Catch v_e As Exception
             CSystemLog_301.ExceptionHandle(v_e)
-        finally
+        Finally
             m_fg.Redraw = True
-        end try
+        End Try
     End Sub
 
     Private Sub LoaiTD_2_GridRow(ByVal i_dcIDLoaiTD As Decimal, ByVal i_iGridRowIndex As Integer)

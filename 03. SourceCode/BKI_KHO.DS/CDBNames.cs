@@ -199,7 +199,7 @@ namespace BKI_KHO.DS.CDBNames
     public class HT_PHAN_QUYEN_CHO_NHOM
     {
         public const string ID = "ID";
-        public const string ID_NHOM_NGUOI_SU_DUNG = "ID_NHOM_NGUOI_SU_DUNG";
+        public const string ID_USER_GROUP = "ID_USER_GROUP";
         public const string ID_PHAN_QUYEN_HE_THONG = "ID_PHAN_QUYEN_HE_THONG";
     }
 

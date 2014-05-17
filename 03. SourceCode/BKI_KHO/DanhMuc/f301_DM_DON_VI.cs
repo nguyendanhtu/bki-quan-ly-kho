@@ -283,6 +283,9 @@ namespace BKI_KHO {
         #endregion
 
         #region Public Interface
+        public void display() {
+            this.ShowDialog();
+        }
         #endregion
 
         #region Data Structure
