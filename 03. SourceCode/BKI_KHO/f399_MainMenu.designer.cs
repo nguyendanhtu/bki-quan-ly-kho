@@ -115,8 +115,8 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
@@ -182,7 +182,6 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // m_rbb_khac
             // 
@@ -312,7 +311,6 @@ namespace Form_menu
             this.m_rbb_con_nguoi.Size = new System.Drawing.Size(157, 126);
             this.m_rbb_con_nguoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_con_nguoi.TabIndex = 3;
-            this.m_rbb_con_nguoi.Text = "Con người";
             // 
             // 
             // 
@@ -677,6 +675,7 @@ namespace Form_menu
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // m_rbb_du_lieu
             // 
@@ -815,7 +814,6 @@ namespace Form_menu
             this.m_rbb_he_thong.Size = new System.Drawing.Size(180, 126);
             this.m_rbb_he_thong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_he_thong.TabIndex = 0;
-            this.m_rbb_he_thong.Text = "Hệ thống";
             // 
             // 
             // 
@@ -1048,13 +1046,13 @@ namespace Form_menu
             // 
             // m_rbtab_tab1
             // 
-            this.m_rbtab_tab1.Checked = true;
             this.m_rbtab_tab1.Name = "m_rbtab_tab1";
             this.m_rbtab_tab1.Panel = this.ribbonPanel1;
             this.m_rbtab_tab1.Text = "Hệ thống";
             // 
             // m_rbtab_tab2
             // 
+            this.m_rbtab_tab2.Checked = true;
             this.m_rbtab_tab2.Name = "m_rbtab_tab2";
             this.m_rbtab_tab2.Panel = this.ribbonPanel2;
             this.m_rbtab_tab2.Text = "Danh mục";
