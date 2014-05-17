@@ -118,16 +118,16 @@ namespace BKI_KHO {
             return v_hst;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
-            DS_DM_HANG_HOA v_ds_dm_hang_hoa = new DS_DM_HANG_HOA();
-            var v_htb = new Hashtable();
-            v_htb.Add(DM_HANG_HOA.ID_NHOM, e_col_Number.NHOM_HANG);
-            v_htb.Add(DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG_HOA);
-            v_htb.Add(DM_HANG_HOA.TEN_HANG_VN, e_col_Number.TEN_HANG_HOA);
-            v_htb.Add(DM_HANG_HOA.GIA_NHAP, e_col_Number.SO_TIEN);
-            v_htb.Add(DM_HANG_HOA.ID_DON_VI, e_col_Number.DON_VI_TINH);
+            DS_V_GD_CHI_TIET_CHUNG_TU v_ds_gd_chitiet_chung_tu = new DS_V_GD_CHI_TIET_CHUNG_TU();
+            Hashtable v_htb = new Hashtable();
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.ID_NHOM, e_col_Number.NHOM_HANG);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.MA_HANG, e_col_Number.MA_HANG_HOA);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.TEN_HANG_VN, e_col_Number.TEN_HANG_HOA);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.GIA_NHAP, e_col_Number.SO_TIEN);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.ID_DON_VI_TINH, e_col_Number.DON_VI_TINH);
 
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_dm_hang_hoa.DM_HANG_HOA.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_gd_chitiet_chung_tu.V_GD_CHI_TIET_CHUNG_TU.NewRow());
             return v_obj_trans;
         }
         private void load_cbo_on_grid() {
@@ -407,12 +407,31 @@ namespace BKI_KHO {
         }
         private void set_define_events() {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_chon_kho.Click += m_cmd_chon_kho_Click;
+            m_cmd_chon_nhan_vien.Click += m_cmd_chon_nhan_vien_Click;
             this.Load += f600_phieu_nhap_kho_Load;
             m_fg.CellChanged += m_fg_CellChanged;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xem.Click += m_cmd_xem_Click;
 
+        }
+
+        void m_cmd_chon_nhan_vien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f701_DM_NHAN_VIEN v_frm = new f701_DM_NHAN_VIEN();
+                DialogResult v_dlg_result = v_frm.display_select_f250(m_us_nhan_vien);
+                if (v_dlg_result == DialogResult.OK)
+                {
+                    m_txt_nguoi_thu.Text = m_us_nhan_vien.strHO_DEM + " " + m_us_nhan_vien.strTEN;
+
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+           
         }
         #endregion
         void m_fg_CellChanged(object sender, C1.Win.C1FlexGrid.RowColEventArgs e) {
@@ -426,13 +445,25 @@ namespace BKI_KHO {
             }
         }
         void m_cmd_xem_Click(object sender, EventArgs e) {
-            f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
-            //US_V_GD_CHUNG_TU v_us_chung_tu=new US_V_GD_CHUNG_TU ();
-            if (v_frm.select_chung_tu(1, m_us_v_chung_tu) == DialogResult.OK) {
-                us_v_chung_tu_2_form(m_us_v_chung_tu);
-                m_txt_tong_tien.Value = get_tong_tien();
-                m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            try
+            {
+                f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
+                //US_V_GD_CHUNG_TU v_us_chung_tu=new US_V_GD_CHUNG_TU ();
+                if (v_frm.select_chung_tu(1, m_us_v_chung_tu) == DialogResult.OK)
+                {
+                    m_us_nhan_vien = new US_DM_NHAN_VIEN(m_us_v_chung_tu.dcID_NGUOI_GIAO_DICH);
+
+                    us_v_chung_tu_2_form(m_us_v_chung_tu);
+
+                    m_txt_tong_tien.Value = get_tong_tien();
+                    m_e_form_mode = DataEntryFormMode.UpdateDataState;
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+           
         }
 
 
@@ -454,22 +485,7 @@ namespace BKI_KHO {
             }
         }
 
-        void m_cmd_chon_kho_Click(object sender, EventArgs e) {
-            //f110_V_DM_KHO v_frm = new f110_V_DM_KHO();
-            //DialogResult v_dlg_result = v_frm.display_select_f250(m_us_kho);
-            //if (v_dlg_result == DialogResult.OK)
-            //{
-            //    m_txt_ten_kho.Text = m_us_kho.strMA_KHO;
-            //}
-
-            f701_DM_NHAN_VIEN v_frm = new f701_DM_NHAN_VIEN();
-            DialogResult v_dlg_result = v_frm.display_select_f250(m_us_nhan_vien);
-            if (v_dlg_result == DialogResult.OK) {
-                m_txt_nguoi_thu.Text = m_us_nhan_vien.strHO_DEM + " " + m_us_nhan_vien.strTEN;
-
-            }
-        }
-
+       
 
         private void m_cmd_exit_Click(object sender, EventArgs e) {
             try {

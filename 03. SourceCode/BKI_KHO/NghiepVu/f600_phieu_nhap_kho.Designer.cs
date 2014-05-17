@@ -38,7 +38,7 @@
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
             this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_cmd_chon_kho = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_chon_nhan_vien = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_lab_ngay = new System.Windows.Forms.Label();
             this.m_txt_so_phieu_thu_chi = new System.Windows.Forms.TextBox();
@@ -122,7 +122,7 @@
             this.m_group_lap_phieu.Controls.Add(this.m_dat_ngay_lap);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_ten_kho);
             this.m_group_lap_phieu.Controls.Add(this.label2);
-            this.m_group_lap_phieu.Controls.Add(this.m_cmd_chon_kho);
+            this.m_group_lap_phieu.Controls.Add(this.m_cmd_chon_nhan_vien);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_ngay);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_so_phieu_thu_chi);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_so_phieu);
@@ -176,19 +176,19 @@
             this.label2.Text = "Kho";
             this.toolTip1.SetToolTip(this.label2, "Kho");
             // 
-            // m_cmd_chon_kho
+            // m_cmd_chon_nhan_vien
             // 
-            this.m_cmd_chon_kho.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_chon_kho.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_chon_kho.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_chon_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_chon_kho.ImageIndex = 14;
-            this.m_cmd_chon_kho.ImageList = this.imageList1;
-            this.m_cmd_chon_kho.Location = new System.Drawing.Point(366, 132);
-            this.m_cmd_chon_kho.Name = "m_cmd_chon_kho";
-            this.m_cmd_chon_kho.Size = new System.Drawing.Size(32, 28);
-            this.m_cmd_chon_kho.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.m_cmd_chon_kho, "Chọn kho");
+            this.m_cmd_chon_nhan_vien.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_chon_nhan_vien.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_chon_nhan_vien.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_chon_nhan_vien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_chon_nhan_vien.ImageIndex = 14;
+            this.m_cmd_chon_nhan_vien.ImageList = this.imageList1;
+            this.m_cmd_chon_nhan_vien.Location = new System.Drawing.Point(366, 132);
+            this.m_cmd_chon_nhan_vien.Name = "m_cmd_chon_nhan_vien";
+            this.m_cmd_chon_nhan_vien.Size = new System.Drawing.Size(32, 28);
+            this.m_cmd_chon_nhan_vien.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.m_cmd_chon_nhan_vien, "Chọn kho");
             // 
             // imageList1
             // 
@@ -284,7 +284,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 44;
+            this.m_fg.Rows.Count = 45;
             this.m_fg.Size = new System.Drawing.Size(803, 282);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -442,7 +442,7 @@
         private System.Windows.Forms.TextBox m_txt_ten_kho;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip toolTip1;
-        internal SIS.Controls.Button.SiSButton m_cmd_chon_kho;
+        internal SIS.Controls.Button.SiSButton m_cmd_chon_nhan_vien;
         internal System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label m_lab_ngay;
         private System.Windows.Forms.TextBox m_txt_so_phieu_thu_chi;
