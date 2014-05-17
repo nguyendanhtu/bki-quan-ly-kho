@@ -20,95 +20,74 @@ using System;
 namespace BKI_KHO.US
 {
 
-    public class US_HT_PHAN_QUYEN_CHO_NHOM : US_Object
-    {
+    public class US_HT_PHAN_QUYEN_CHO_NHOM : US_Object {
         private const string c_TableName = "HT_PHAN_QUYEN_CHO_NHOM";
-        #region Public Properties
-        public decimal dcID
-        {
-            get
-            {
+        #region "Public Properties"
+        public decimal dcID {
+            get {
                 return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
             }
-            set
-            {
+            set {
                 pm_objDR["ID"] = value;
             }
         }
 
-        public bool IsIDNull()
-        {
+        public bool IsIDNull() {
             return pm_objDR.IsNull("ID");
         }
 
-        public void SetIDNull()
-        {
+        public void SetIDNull() {
             pm_objDR["ID"] = System.Convert.DBNull;
         }
 
-        public decimal dcID_NHOM_NGUOI_SU_DUNG
-        {
-            get
-            {
-                return CNull.RowNVLDecimal(pm_objDR, "ID_NHOM_NGUOI_SU_DUNG", IPConstants.c_DefaultDecimal);
+        public decimal dcID_USER_GROUP {
+            get {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_USER_GROUP", IPConstants.c_DefaultDecimal);
             }
-            set
-            {
-                pm_objDR["ID_NHOM_NGUOI_SU_DUNG"] = value;
+            set {
+                pm_objDR["ID_USER_GROUP"] = value;
             }
         }
 
-        public bool IsID_NHOM_NGUOI_SU_DUNGNull()
-        {
-            return pm_objDR.IsNull("ID_NHOM_NGUOI_SU_DUNG");
+        public bool IsID_USER_GROUPNull() {
+            return pm_objDR.IsNull("ID_USER_GROUP");
         }
 
-        public void SetID_NHOM_NGUOI_SU_DUNGNull()
-        {
-            pm_objDR["ID_NHOM_NGUOI_SU_DUNG"] = System.Convert.DBNull;
+        public void SetID_USER_GROUPNull() {
+            pm_objDR["ID_USER_GROUP"] = System.Convert.DBNull;
         }
 
-        public decimal dcID_PHAN_QUYEN_HE_THONG
-        {
-            get
-            {
+        public decimal dcID_PHAN_QUYEN_HE_THONG {
+            get {
                 return CNull.RowNVLDecimal(pm_objDR, "ID_PHAN_QUYEN_HE_THONG", IPConstants.c_DefaultDecimal);
             }
-            set
-            {
+            set {
                 pm_objDR["ID_PHAN_QUYEN_HE_THONG"] = value;
             }
         }
 
-        public bool IsID_PHAN_QUYEN_HE_THONGNull()
-        {
+        public bool IsID_PHAN_QUYEN_HE_THONGNull() {
             return pm_objDR.IsNull("ID_PHAN_QUYEN_HE_THONG");
         }
 
-        public void SetID_PHAN_QUYEN_HE_THONGNull()
-        {
+        public void SetID_PHAN_QUYEN_HE_THONGNull() {
             pm_objDR["ID_PHAN_QUYEN_HE_THONG"] = System.Convert.DBNull;
         }
 
         #endregion
-
-
-        #region Init Functions
-        public US_HT_PHAN_QUYEN_CHO_NHOM()
-        {
+        #region "Init Functions"
+        public US_HT_PHAN_QUYEN_CHO_NHOM() {
             pm_objDS = new DS_HT_PHAN_QUYEN_CHO_NHOM();
             pm_strTableName = c_TableName;
             pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
         }
 
         public US_HT_PHAN_QUYEN_CHO_NHOM(DataRow i_objDR)
-            : this()
-        {
+            : this() {
             this.DataRow2Me(i_objDR);
         }
 
-        public US_HT_PHAN_QUYEN_CHO_NHOM(decimal i_dbID)
-        {
+        public US_HT_PHAN_QUYEN_CHO_NHOM(decimal i_dbID) {
             pm_objDS = new DS_HT_PHAN_QUYEN_CHO_NHOM();
             pm_strTableName = c_TableName;
             IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
@@ -121,20 +100,25 @@ namespace BKI_KHO.US
         #endregion
 
 
+
         #region Addtional
         public void FillDatasetByGroupUserID(decimal i_dc_group_user_id
-            , DS_HT_PHAN_QUYEN_CHO_NHOM i_ds)
-        {
+            , DS_HT_PHAN_QUYEN_CHO_NHOM i_ds) {
 
             IMakeSelectCmd v_obj_mak_cmd = new CMakeAndSelectCmd(i_ds, i_ds.HT_PHAN_QUYEN_CHO_NHOM.TableName);
-            v_obj_mak_cmd.AddCondition(HT_PHAN_QUYEN_CHO_NHOM.ID_NHOM_NGUOI_SU_DUNG, i_dc_group_user_id, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
+            v_obj_mak_cmd.AddCondition(HT_PHAN_QUYEN_CHO_NHOM.ID_USER_GROUP, i_dc_group_user_id, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
             this.FillDatasetByCommand(i_ds, v_obj_mak_cmd.getSelectCmd());
         }
-        public void DeleteAllQuyenOfGroupUser(decimal i_dc_group_user_id)
-        {
+        public void DeleteAllQuyenOfGroupUser(decimal i_dc_group_user_id) {
             CStoredProc v_obj = new CStoredProc("pr_HT_PHAN_QUYEN_HE_THONG_Delele_All_Quyen_Of_group_user");
             v_obj.addDecimalInputParam("@ip_dc_group_user_id", i_dc_group_user_id);
             v_obj.ExecuteCommand(this);
+        }
+        public void FillDatasetByIdUserGroupAndMaPhanQuyen(DS_HT_PHAN_QUYEN_CHO_NHOM op_ds, decimal ip_dc_id, string ip_str) {
+            CStoredProc v_stored_proc = new CStoredProc("pr_HT_PHAN_QUYEN_CHO_NHOM_select_by_ma_pq");
+            v_stored_proc.addNVarcharInputParam("@MA_PHAN_QUYEN", ip_str);
+            v_stored_proc.addDecimalInputParam("@ID_USER_GROUP", ip_dc_id);
+            v_stored_proc.fillDataSetByCommand(this, op_ds);
         }
         #endregion
     }

@@ -25,6 +25,9 @@ namespace BKI_KHO.NghiepVu {
         #endregion
 
         #region Public Interface
+        public void display() {
+            this.ShowDialog();
+        }
         #endregion
 
         #region Data Structure
