@@ -18,9 +18,8 @@ namespace BKI_KHO.HeThong {
             format_control();
         }
 
-        #region PublicInterface   
-        public void display_for_insert()
-        {
+        #region PublicInterface
+        public void display_for_insert() {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
@@ -44,12 +43,11 @@ namespace BKI_KHO.HeThong {
         #endregion
 
         #region PrivateMethod
-        private void save_data()
-        {
-            if (!check_validate()) return;
+        private void save_data() {
+            if(!check_validate())
+                return;
             form_2_us_object();
-            switch (m_e_form_mode)
-            {
+            switch(m_e_form_mode) {
                 case DataEntryFormMode.InsertDataState:
                     m_us.Insert();
                     break;
@@ -61,30 +59,26 @@ namespace BKI_KHO.HeThong {
             this.Close();
         }
 
-        private void form_2_us_object()
-        {
+        private void form_2_us_object() {
             m_us.strDESCRIPTION = m_txt_mo_ta.Text;
             m_us.strUSER_GROUP_NAME = m_txt_ten_nhom.Text;
         }
 
-        private bool check_validate()
-        {
-            if (m_txt_ten_nhom.Text == "")
-            {
-                MessageBox.Show("Bạn cần nhập tên nhóm!!!");
-                m_lbl_mess.Text = "Bạn cần nhập tên nhóm!!!";
+        private bool check_validate() {
+            if(!CValidateTextBox.IsValid(
+            m_txt_ten_nhom
+            , DataType.StringType
+            , allowNull.NO
+            , true))
                 return false;
-            }
             return true;
         }
 
-        private void format_control()
-        {
+        private void format_control() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
         }
-      
-        private void us_obj_2_form()
-        {
+
+        private void us_obj_2_form() {
             m_txt_ten_nhom.Text = m_us.strUSER_GROUP_NAME;
             m_txt_mo_ta.Text = m_us.strDESCRIPTION;
         }
@@ -92,13 +86,11 @@ namespace BKI_KHO.HeThong {
 
         #region Events
         private void m_cmd_exit_Click(object sender, EventArgs e) {
-            try
-            {
+            try {
                 this.Close();
             }
-            catch (System.Exception v_e)
-            {
-            	CSystemLog_301.ExceptionHandle(v_e);
+            catch(System.Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -122,6 +114,6 @@ namespace BKI_KHO.HeThong {
         }
         #endregion
 
-        
+
     }
 }
