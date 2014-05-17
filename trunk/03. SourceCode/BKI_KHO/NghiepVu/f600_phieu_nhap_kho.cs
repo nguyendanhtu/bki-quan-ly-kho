@@ -182,7 +182,7 @@ namespace BKI_KHO {
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.DON_VI_TINH);
                     return false;
                 }
-                if (m_fg[v_i_cur_row, (int)e_col_Number.SO_TIEN].ToString() == "") {
+                if (m_fg[v_i_cur_row, (int)e_col_Number.SO_TIEN] == null) {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin giá nhập ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.SO_TIEN);
                     return false;

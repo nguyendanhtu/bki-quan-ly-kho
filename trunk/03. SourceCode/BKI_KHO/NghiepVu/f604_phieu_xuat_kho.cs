@@ -146,25 +146,25 @@ namespace BKI_KHO
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
             {
 
-                if (m_fg[v_i_cur_row, (int)e_col_Number.TEN_HANG_HOA].ToString() == "")
+                if (m_fg[v_i_cur_row, (int)e_col_Number.TEN_HANG_HOA] == null)
                 {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin tên hàng ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.TEN_HANG_HOA);
                     return false;
                 }
-                if (m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA].ToString() == "")
+                if (m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA] == null)
                 {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin mã hàng ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
                     return false;
                 }
-                if (m_fg[v_i_cur_row, (int)e_col_Number.DON_VI_TINH].ToString() == "")
+                if (m_fg[v_i_cur_row, (int)e_col_Number.DON_VI_TINH] == null)
                 {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin đơn vị tính ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.DON_VI_TINH);
                     return false;
                 }
-                if (m_fg[v_i_cur_row, (int)e_col_Number.SO_TIEN].ToString() == "")
+                if (m_fg[v_i_cur_row, (int)e_col_Number.SO_TIEN] == null)
                 {
                     BaseMessages.MsgBox_Infor("Bạn chưa nhập thông tin giá nhập ở một số mặt hàng");
                     m_fg.Select(v_i_cur_row, (int)e_col_Number.SO_TIEN);
