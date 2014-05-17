@@ -390,7 +390,8 @@ namespace BKI_KHO
         private void load_data_2_grid()
         {
             m_ds = new DS_V_DM_NHOM_HANG();
-            m_us.FillDataset(m_ds, " ORDER BY " + V_DM_NHOM_HANG.TEN_NHOM_CHA);
+            //m_us.FillDataset(m_ds, " ORDER BY " + V_DM_NHOM_HANG.TEN_NHOM_CHA);
+            m_us.FillDataset_By_Select(m_ds);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -407,7 +408,6 @@ namespace BKI_KHO
               , (int)e_col_Number.TEN      // Subtotal theo cột này     
               , "{0}"
               );
-
         }
         private void grid2us_object(US_V_DM_NHOM_HANG i_us, int i_grid_row)
         {
@@ -442,7 +442,19 @@ namespace BKI_KHO
                 return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row))
                 return;
-            grid2us_object(m_us, m_fg.Row);
+
+            if (m_fg.Rows[m_fg.Row].IsNode == true)
+            {
+                DS_DM_NHOM_HANG v_ds = new DS_DM_NHOM_HANG();
+                m_us_dm_nhom_hang.fillDataSet_By_TEN_NHOM_HANG(v_ds, (String)m_fg.Rows[m_fg.Row].Node.Data);
+
+                DataRow v_dr = v_ds.Tables[0].Rows[0];
+                m_us_dm_nhom_hang = new US_DM_NHOM_HANG((decimal)v_dr.ItemArray[0]);
+            }
+            else
+            {
+                grid2us_object(m_us, m_fg.Row);
+            }
 
             f302_V_DM_NHOM_HANG_DE v_fDE = new f302_V_DM_NHOM_HANG_DE();
             v_fDE.display_for_update(m_us_dm_nhom_hang);
