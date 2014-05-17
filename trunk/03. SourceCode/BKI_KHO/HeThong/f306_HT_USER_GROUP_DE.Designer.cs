@@ -172,7 +172,7 @@
             this.Controls.Add(this.m_txt_ten_nhom);
             this.Controls.Add(this.m_lbl_ten_nhom);
             this.Name = "f306_HT_USER_GROUP_DE";
-            this.Text = "f306_HT_USER_GROUP_DE";
+            this.Text = "Cập nhật nhóm người sử dụng";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
