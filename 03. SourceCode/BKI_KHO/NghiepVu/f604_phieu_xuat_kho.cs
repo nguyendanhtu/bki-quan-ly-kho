@@ -433,7 +433,7 @@ namespace BKI_KHO
             m_us_gd_chung_tu.SetID_TO_CHUC_DICHNull();
             m_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
             m_us_gd_chung_tu.dcID_NGUOI_GIAO_DICH = m_us_nhan_vien.dcID;
-            m_us_gd_chung_tu.dcID_NGUOI_NHAP = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.dcID_NGUOI_NHAP = CAppContext_201.getCurrentUserID();
             m_us_gd_chung_tu.datNGAY_NHAP = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.datNGAY_NHAP_CUOI = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.SetGHI_CHU_1Null();

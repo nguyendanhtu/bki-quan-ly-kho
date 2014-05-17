@@ -455,7 +455,6 @@ namespace BKI_KHO
             grid2us_object(m_us, m_fg.Row);
             m_dlg_result = DialogResult.OK;
             this.Close();
-           
         }
 
         void m_fg_Click(object sender, EventArgs e)

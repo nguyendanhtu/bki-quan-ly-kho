@@ -89,7 +89,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 45;
+            this.m_fg.Rows.Count = 46;
             this.m_fg.Size = new System.Drawing.Size(829, 245);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -172,11 +172,11 @@
             this.m_cmd_xem.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_xem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_xem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_xem.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_cmd_xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_xem.ImageIndex = 10;
             this.m_cmd_xem.ImageList = this.imageList1;
-            this.m_cmd_xem.Location = new System.Drawing.Point(586, 4);
+            this.m_cmd_xem.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xem.Name = "m_cmd_xem";
             this.m_cmd_xem.Size = new System.Drawing.Size(157, 26);
             this.m_cmd_xem.TabIndex = 2;
@@ -260,11 +260,11 @@
             this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 3;
             this.m_cmd_insert.ImageList = this.imageList1;
-            this.m_cmd_insert.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(647, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(96, 26);
             this.m_cmd_insert.TabIndex = 1;

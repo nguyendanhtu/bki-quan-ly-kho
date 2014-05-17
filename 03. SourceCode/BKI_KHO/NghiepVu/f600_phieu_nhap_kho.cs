@@ -34,7 +34,7 @@ namespace BKI_KHO
             m_v_us_chung_tu = i_us;
             m_dlg_result = DialogResult.Cancel;
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            us_2_form_objects(m_v_us_chung_tu,m_us_nhan_vien);
+            us_2_form_objects(m_v_us_chung_tu);
             this.display();
             m_cmd_insert.Enabled = false;
             //this.Close();
@@ -402,20 +402,28 @@ namespace BKI_KHO
             }
 
         }
-        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us,US_DM_NHAN_VIEN i_us_nhan_vien)
+        private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
         {
-            m_us_nhan_vien.FillDatasetSearchByID(m_ds_nhan_vien, i_us.dcID_NGUOI_NHAP);
+
+            //kho
+            US_DM_KHO v_us_kho = new US_DM_KHO();
+            DS_DM_KHO v_ds_kho=new DS_DM_KHO ();
+            v_us_kho.FillDataset(v_ds_kho, "where id=" + i_us.dcID_TO_CHUC_NGUON);
+            DataRow v_dr_kho = (DataRow)v_ds_kho.DM_KHO.Rows[0];
+            v_us_kho.DataRow2Me(v_dr_kho);
+            m_txt_ten_kho.Text = v_us_kho.strTEN_KHO;
+            //nhân viên
+            US_DM_NHAN_VIEN v_us_nhan_vien = new US_DM_NHAN_VIEN();
+            m_ds_nhan_vien = new DS_DM_NHAN_VIEN();
+            m_us_nhan_vien.FillDatasetSearchByID(m_ds_nhan_vien, i_us.dcID_NGUOI_GIAO_DICH);
             DataRow v_dr = (DataRow)m_ds_nhan_vien.DM_NHAN_VIEN.Rows[0];
-            i_us_nhan_vien.DataRow2Me(v_dr);
-            m_txt_nguoi_thu.Text = i_us_nhan_vien.strHO_DEM +" "+ i_us_nhan_vien.strTEN;
-            
+            v_us_nhan_vien.DataRow2Me(v_dr);
+            m_txt_nguoi_thu.Text = v_us_nhan_vien.strHO_DEM + " " + v_us_nhan_vien.strTEN;
             m_fg.Cols[(int)e_col_Number.NHOM_HANG].Visible = true;
             m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
-            //m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
             m_dat_ngay_lap.Value = CIPConvert.ToDatetime(CIPConvert.ToStr( i_us.datNGAY_CT),"dd/MM/yyyy");
             m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
-            m_txt_ten_kho.Text =CIPConvert.ToStr( i_us.dcID_TO_CHUC_NGUON);
-
+            m_ds_hang_hoa = new DS_DM_HANG_HOA();
             m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where id=" + i_us.dcID_HANG_HOA);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds_hang_hoa, m_fg, get_trans_object(m_fg));
@@ -429,9 +437,9 @@ namespace BKI_KHO
             m_us_gd_chung_tu.datNGAY_CT = IP.Core.IPSystemAdmin.CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.dcTONG_TIEN = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
             m_us_gd_chung_tu.SetID_TO_CHUC_DICHNull();
-            m_us_gd_chung_tu.SetID_TO_CHUC_NGUONNull();
+            m_us_gd_chung_tu.dcID_TO_CHUC_NGUON = m_us_kho.dcID;
             m_us_gd_chung_tu.dcID_NGUOI_GIAO_DICH = m_us_nhan_vien.dcID;
-            m_us_gd_chung_tu.dcID_NGUOI_NHAP = m_us_nhan_vien.dcID;
+            m_us_gd_chung_tu.dcID_NGUOI_NHAP = CAppContext_201.getCurrentUserID();
             m_us_gd_chung_tu.datNGAY_NHAP = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.datNGAY_NHAP_CUOI = CAppContext_201.getCurentDate();
             m_us_gd_chung_tu.SetGHI_CHU_1Null();
@@ -516,12 +524,11 @@ namespace BKI_KHO
         }
         void m_cmd_xem_Click(object sender, EventArgs e)
         {
-            this.Close();
             f602_v_gd_chung_tu v_frm = new f602_v_gd_chung_tu();
             US_V_GD_CHUNG_TU v_us_chung_tu=new US_V_GD_CHUNG_TU ();
             if (v_frm.select_chung_tu(1, v_us_chung_tu) == DialogResult.OK)
             {
-                us_2_form_objects(v_us_chung_tu,m_us_nhan_vien);
+                us_2_form_objects(v_us_chung_tu);
                 m_e_form_mode = DataEntryFormMode.UpdateDataState;
             }
         }
