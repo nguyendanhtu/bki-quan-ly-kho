@@ -187,8 +187,8 @@ namespace BKI_KHO.HeThong
                 for (int i = 0; i < v_coll_quyen_insert.getIndex(); i++)
                 {
                     v_us_ht_phan_quyen_cho_nhom = new US_HT_PHAN_QUYEN_CHO_NHOM();
-                    v_us_ht_phan_quyen_cho_nhom.dcID_USER_GROUP = 1;
-                    //v_us_ht_phan_quyen_cho_nhom.dcID_USER_GROUP = m_dc_id_user_group;
+                    //v_us_ht_phan_quyen_cho_nhom.dcID_USER_GROUP = 1;
+                    v_us_ht_phan_quyen_cho_nhom.dcID_USER_GROUP = m_dc_id_user_group;
                     v_ds_pqht.Clear();
                     v_us_pqht.FillDatasetByMaPhanQuyen(v_ds_pqht, v_coll_quyen_insert.s[i]);
                     v_us_ht_phan_quyen_cho_nhom.dcID_PHAN_QUYEN_HE_THONG = CIPConvert.ToDecimal(v_ds_pqht.Tables[0].Rows[0][HT_PHAN_QUYEN_HE_THONG.ID]);
