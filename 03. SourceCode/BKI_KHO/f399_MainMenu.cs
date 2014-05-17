@@ -260,7 +260,7 @@ namespace Form_menu {
             try
             {
                 F704_V_BAO_HANH_SUA_CHUA v_frm = new F704_V_BAO_HANH_SUA_CHUA();
-                v_frm.display_for_insert();
+                v_frm.display();
             }
             catch (System.Exception v_e)
             {
