@@ -458,10 +458,6 @@ namespace BKI_KHO
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
-            //	f701_DM_NHAN_VIEN_DE v_fDE = new f701_DM_NHAN_VIEN_DE();			
-            //	v_fDE.display(m_us);
-            F704_V_BAO_HANH_SUA_CHUA frm = new F704_V_BAO_HANH_SUA_CHUA();
-            frm.display_for_insert();
         }
         private void set_define_events()
         {
