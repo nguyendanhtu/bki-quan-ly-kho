@@ -373,8 +373,6 @@ namespace BKI_KHO
                 , TEN_NHOM_HANG = 1
 
         }
-
-        private const String m_search_info_string = "Tên nhóm hàng";
         #endregion
 
         #region Members
@@ -398,9 +396,6 @@ namespace BKI_KHO
         {
             m_obj_trans = get_trans_object(m_dgv);
             load_data_2_grid();
-
-            m_txt_search.Text = m_search_info_string;
-            m_txt_search.ForeColor = Color.Silver;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -498,8 +493,6 @@ namespace BKI_KHO
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
 
             m_dgv.DoubleClick += m_fg_DoubleClick;
-            m_txt_search.Enter += new EventHandler(m_txt_search_Enter);
-            m_txt_search.Leave += new EventHandler(m_txt_search_Leave);
         }
 
         private void danh_sach_chung_tu_theo_nhom_hang()
@@ -643,31 +636,11 @@ namespace BKI_KHO
         {
             try
             {
-                m_txt_search.Text = m_txt_search.Text == m_search_info_string ? String.Empty : m_txt_search.Text;
                 load_data_2_grid();
-                m_txt_search.Text = m_txt_search.Text == String.Empty ? m_search_info_string : m_txt_search.Text;
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_txt_search_Leave(object sender, EventArgs e)
-        {
-            if (m_txt_search.Text == String.Empty)
-            {
-                m_txt_search.Text = m_search_info_string;
-                m_txt_search.ForeColor = Color.Silver;
-            }
-        }
-
-        private void m_txt_search_Enter(object sender, EventArgs e)
-        {
-            if (m_txt_search.Text == m_search_info_string)
-            {
-                m_txt_search.Text = String.Empty;
-                m_txt_search.ForeColor = Color.Black;
             }
         }
     }

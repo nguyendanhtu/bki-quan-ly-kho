@@ -392,6 +392,13 @@ namespace BKI_KHO
                , (int)e_col_Number.MA_HANG // chỗ này là tên trường mà mình Count
                , "{0}");
 
+            m_fg.Subtotal(
+              AggregateEnum.Count
+               , 0
+               , (int)e_col_Number.TEN_NHOM 
+               , (int)e_col_Number.TEN_HANG_VN 
+               , "");
+
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_DM_HANG_HOA i_us

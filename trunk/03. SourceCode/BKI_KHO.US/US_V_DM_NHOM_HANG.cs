@@ -180,5 +180,12 @@ public class US_V_DM_NHOM_HANG : US_Object
         v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_search);
         v_sp.fillDataSetByCommand(this, op_ds);
     }
+
+    public void FillDataset_By_Select(DS_V_DM_NHOM_HANG op_ds)
+    {
+        //V_DM_NHOM_HANG_Select_All
+        CStoredProc v_sp = new CStoredProc("V_DM_NHOM_HANG_Select_All");
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
 }
 }

@@ -191,5 +191,12 @@ namespace BKI_KHO.US
             v_stored_proc.addDecimalInputParam("@ID", ip_dc_id);
             v_stored_proc.fillDataSetByCommand(this, op_ds);
         }
+
+        public void fillDataSet_By_TEN_NHOM_HANG(DS_DM_NHOM_HANG op_ds, String ip_ten_nhom_hang)
+        {
+            CStoredProc v_stored_proc = new CStoredProc("pr_DM_NHOM_HANG_Select_By_TEN_NHOM_HANG");
+            v_stored_proc.addNVarcharInputParam("@ip_ten_nhom_hang", ip_ten_nhom_hang);
+            v_stored_proc.fillDataSetByCommand(this, op_ds);
+        }
     }
 }
