@@ -243,7 +243,7 @@ namespace BKI_KHO
             this.m_txt_search.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.m_txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.m_txt_search.Location = new System.Drawing.Point(152, 96);
+            this.m_txt_search.Location = new System.Drawing.Point(151, 96);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(384, 20);
             this.m_txt_search.TabIndex = 42;
@@ -387,12 +387,10 @@ namespace BKI_KHO
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_dgv);
             CGridUtils.AddSave_Excel_Handlers(m_dgv);
             CGridUtils.AddSearch_Handlers(m_dgv);
-
-
-
             set_define_events();
             this.KeyPreview = true;
         }

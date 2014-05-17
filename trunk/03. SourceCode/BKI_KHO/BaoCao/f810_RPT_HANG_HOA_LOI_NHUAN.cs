@@ -226,9 +226,9 @@ namespace BKI_KHO
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(-4, 131);
+            this.m_fg.Location = new System.Drawing.Point(-4, 109);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(817, 285);
+            this.m_fg.Size = new System.Drawing.Size(817, 307);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -371,10 +371,12 @@ namespace BKI_KHO
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
 
+            m_fg.Tree.Column = (int)e_col_Number.MA_HANG;
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
 
             set_define_events();

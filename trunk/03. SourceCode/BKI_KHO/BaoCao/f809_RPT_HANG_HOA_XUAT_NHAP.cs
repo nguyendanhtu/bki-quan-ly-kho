@@ -312,47 +312,45 @@ namespace BKI_KHO
             // 
             // m_lbl_so_du_dau
             // 
-            this.m_lbl_so_du_dau.AutoSize = true;
             this.m_lbl_so_du_dau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_lbl_so_du_dau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_so_du_dau.ForeColor = System.Drawing.Color.Blue;
-            this.m_lbl_so_du_dau.Location = new System.Drawing.Point(352, 105);
+            this.m_lbl_so_du_dau.Location = new System.Drawing.Point(539, 89);
             this.m_lbl_so_du_dau.Name = "m_lbl_so_du_dau";
-            this.m_lbl_so_du_dau.Size = new System.Drawing.Size(18, 15);
+            this.m_lbl_so_du_dau.Size = new System.Drawing.Size(126, 27);
             this.m_lbl_so_du_dau.TabIndex = 45;
             this.m_lbl_so_du_dau.Text = "...";
-            this.m_lbl_so_du_dau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_lbl_so_du_dau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // m_lbl_so_du_cuoi
             // 
-            this.m_lbl_so_du_cuoi.AutoSize = true;
             this.m_lbl_so_du_cuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_lbl_so_du_cuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.m_lbl_so_du_cuoi.ForeColor = System.Drawing.Color.Blue;
-            this.m_lbl_so_du_cuoi.Location = new System.Drawing.Point(352, 344);
+            this.m_lbl_so_du_cuoi.Location = new System.Drawing.Point(539, 337);
             this.m_lbl_so_du_cuoi.Name = "m_lbl_so_du_cuoi";
-            this.m_lbl_so_du_cuoi.Size = new System.Drawing.Size(18, 15);
+            this.m_lbl_so_du_cuoi.Size = new System.Drawing.Size(126, 27);
             this.m_lbl_so_du_cuoi.TabIndex = 47;
             this.m_lbl_so_du_cuoi.Text = "...";
-            this.m_lbl_so_du_cuoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_lbl_so_du_cuoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(286, 105);
+            this.label2.Location = new System.Drawing.Point(459, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 48;
-            this.label2.Text = "Số dư đầu:";
+            this.label2.Text = "Số lượng đầu:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(286, 344);
+            this.label4.Location = new System.Drawing.Point(459, 344);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 49;
-            this.label4.Text = "Số dư đầu:";
+            this.label4.Text = "Số lượng cuối:";
             // 
             // f809_RPT_HANG_HOA_XUAT_NHAP
             // 
@@ -426,6 +424,7 @@ namespace BKI_KHO
 		#region Private Methods
 		private void format_controls(){
 			CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			CControlFormat.setC1FlexFormat(m_dgv);
 			CGridUtils.AddSave_Excel_Handlers(m_dgv);
             CGridUtils.AddSearch_Handlers(m_dgv);
