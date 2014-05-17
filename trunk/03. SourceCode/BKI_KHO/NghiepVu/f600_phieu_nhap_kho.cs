@@ -206,24 +206,7 @@ namespace BKI_KHO
                     return false;
                 }
             }
-            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
-            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
-            bool v_exit_ma_hang_yn=false;
-            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
-            {
-                m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where ma_hang='" + CIPConvert.ToStr(m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA]) + "'");
-                if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
-                {
-                    v_exit_ma_hang_yn = true;
-                    m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
-                }
-            }
-            if(v_exit_ma_hang_yn)
-            {
-                BaseMessages.MsgBox_Error("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
-                
-                return false;
-            }
+            
             if (!CValidateTextBox.IsValid(m_txt_so_phieu_thu_chi, DataType.StringType, allowNull.NO, false))
             {
                 BaseMessages.MsgBox_Error("Số chứng từ không được để trống!");
@@ -319,12 +302,47 @@ namespace BKI_KHO
             {
                 //1. insert ban ghi vao phieu_thu_chid
                 m_us_gd_chung_tu.BeginTransaction();
+                DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+                US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
+                bool v_exit_ma_hang_yn = false;
                 switch (m_e_form_mode)
                 {
                     case DataEntryFormMode.InsertDataState:
+                       
+                        for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+                        {
+                            m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where ma_hang='" + CIPConvert.ToStr(m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA]) + "'");
+                            if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+                            {
+                                v_exit_ma_hang_yn = true;
+                                m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
+                            }
+                        }
+                        if(v_exit_ma_hang_yn)
+                        {
+                            BaseMessages.MsgBox_Error("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
+                
+                            return ;
+                        }
                         m_us_gd_chung_tu.Insert();
                         break;
                     case DataEntryFormMode.UpdateDataState:
+                        
+                        for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
+                        {
+                            m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where ma_hang='" + CIPConvert.ToStr(m_fg[v_i_cur_row, (int)e_col_Number.MA_HANG_HOA]) + "'");
+                            if (m_ds_hang_hoa.DM_HANG_HOA.Rows.Count > 0)
+                            {
+                                v_exit_ma_hang_yn = true;
+                                m_fg.Select(v_i_cur_row, (int)e_col_Number.MA_HANG_HOA);
+                            }
+                        }
+                        if(v_exit_ma_hang_yn)
+                        {
+                            BaseMessages.MsgBox_Error("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
+                
+                            return ;
+                        }
                         m_us_gd_chung_tu.dcID = m_v_us_chung_tu.dcID_CHUNG_TU;
                         m_us_gd_chung_tu.Update();
                         break;
