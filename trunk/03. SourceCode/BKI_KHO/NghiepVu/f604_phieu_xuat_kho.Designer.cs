@@ -89,7 +89,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 46;
+            this.m_fg.Rows.Count = 47;
             this.m_fg.Size = new System.Drawing.Size(829, 245);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -364,7 +364,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(591, 12);
+            this.label1.Location = new System.Drawing.Point(720, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 18;
@@ -376,13 +376,12 @@
             this.m_txt_tong_tien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_txt_tong_tien.CustomFormat = "###,###,###,###0";
             this.m_txt_tong_tien.DataType = typeof(decimal);
-            this.m_txt_tong_tien.Enabled = false;
             this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tong_tien.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat;
-            this.m_txt_tong_tien.Location = new System.Drawing.Point(467, 8);
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(572, 8);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.NullText = "0";
-            this.m_txt_tong_tien.Size = new System.Drawing.Size(120, 17);
+            this.m_txt_tong_tien.Size = new System.Drawing.Size(140, 17);
             this.m_txt_tong_tien.TabIndex = 17;
             this.m_txt_tong_tien.Tag = null;
             this.m_txt_tong_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -390,7 +389,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(371, 13);
+            this.label6.Location = new System.Drawing.Point(476, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 16;

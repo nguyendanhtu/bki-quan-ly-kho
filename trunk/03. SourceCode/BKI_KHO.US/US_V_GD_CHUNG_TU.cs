@@ -951,15 +951,11 @@ public class US_V_GD_CHUNG_TU : US_Object
 	}
 #endregion
     #region Methods
-    public void V_GD_CHUNG_TU_Delete_By_ID(decimal id_chung_tu_detail, decimal ip_id_chungtu, decimal ip_id_nhan_vien, decimal ip_id_hang_hoa, decimal id_loai_chung_tu)
+    public void V_GD_CHUNG_TU_Delete_By_ID( decimal ip_id_chungtu)
     {
-        CStoredProc v_stored_proc = new CStoredProc("pr_V_GD_CHUNG_TU_Delete_By_ID");
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_GD_CHUNG_TU_Delete_By_ID_CHUNG_TU");
         
         v_stored_proc.addDecimalInputParam("@ID_CHUNG_TU", ip_id_chungtu);
-        v_stored_proc.addDecimalInputParam("@id_chung_tu_detail", id_chung_tu_detail);
-        v_stored_proc.addDecimalInputParam("@ID_NHAN_VIEN", ip_id_nhan_vien);
-        v_stored_proc.addDecimalInputParam("@id_hang_hoa", ip_id_hang_hoa);
-        v_stored_proc.addDecimalInputParam("@id_loai_chung_tu", id_loai_chung_tu);
         v_stored_proc.ExecuteCommand(this);
     }
     public void deleteGD_NHAN_VIEN_CHUNG_TU_By_Id(decimal ip_id_nhan_vien,decimal ip_id_chungtu)
