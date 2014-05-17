@@ -290,7 +290,7 @@ namespace BKI_KHO
                         m_us_gd_chung_tu.Insert();
                         break;
                     case DataEntryFormMode.UpdateDataState:
-                        m_us_gd_chung_tu.dcID = m_v_us_chung_tu.dcID_CHUNG_TU;
+                        m_us_gd_chung_tu.dcID = m_v_us_chung_tu.dcID;
                         m_us_gd_chung_tu.Update();
                         break;
                 }

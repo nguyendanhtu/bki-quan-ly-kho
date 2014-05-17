@@ -9,6 +9,7 @@
 
 using System;
 using BKI_KHO.DS;
+using BKI_KHO.DS.CDBNames;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;
@@ -642,5 +643,18 @@ public class US_V_GD_CHI_TIET_CHUNG_TU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    #region Addtional
+    public void FillDataset(decimal ip_id_chung_tu, DS_V_GD_CHI_TIET_CHUNG_TU op_ds_chi_tiet_chung_tu) {
+        IMakeSelectCmd v_obj_mak_cmd = new CMakeAndSelectCmd(op_ds_chi_tiet_chung_tu, op_ds_chi_tiet_chung_tu.V_GD_CHI_TIET_CHUNG_TU.TableName);
+
+        v_obj_mak_cmd.AddCondition(
+            V_GD_CHI_TIET_CHUNG_TU.ID_CHUNG_TU
+            , ip_id_chung_tu
+            , eKieuDuLieu.KieuNumber
+            , eKieuSoSanh.Bang);
+        this.FillDatasetByCommand(op_ds_chi_tiet_chung_tu, v_obj_mak_cmd.getSelectCmd());
+    }
+    #endregion
+}
 }

@@ -1018,10 +1018,24 @@ public class US_V_GD_CHUNG_TU : US_Object
 	}
 #endregion
     #region Methods
-    public void V_GD_CHUNG_TU_Delete_By_ID( decimal ip_id_chungtu)
+    /// <summary>
+    /// Delete Hàng hóa, chi tiết chứng từ, nhân viên chứng từ, chứng từ
+    /// </summary>
+    /// <param name="ip_id_chungtu"></param>
+    public void Delete_By_ID( decimal ip_id_chungtu)
     {
         CStoredProc v_stored_proc = new CStoredProc("pr_V_GD_CHUNG_TU_Delete_By_ID_CHUNG_TU");
         
+        v_stored_proc.addDecimalInputParam("@ID_CHUNG_TU", ip_id_chungtu);
+        v_stored_proc.ExecuteCommand(this);
+    }
+    /// <summary>
+    /// Delete Hàng hóa, chi tiết chứng từ, nhân viên chứng từ
+    /// </summary>
+    /// <param name="ip_id_chungtu"></param>
+    public void Delete_Detail_by_ID_CHUNG_TU(decimal ip_id_chungtu) {
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_GD_CHUNG_TU_Delete_Detail_by_ID_CHUNG_TU");
+
         v_stored_proc.addDecimalInputParam("@ID_CHUNG_TU", ip_id_chungtu);
         v_stored_proc.ExecuteCommand(this);
     }

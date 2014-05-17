@@ -390,8 +390,7 @@ namespace BKI_KHO
                     return;
                 }
 				//v_us.BeginTransaction();
-                v_us.V_GD_CHUNG_TU_Delete_By_ID(v_us.dcID_CHUNG_TU
-                                               );
+                v_us.Delete_By_ID(v_us.dcID);
                 //v_us.delete_v_gd_chung_tu(v_us.dcID_CHUNG_TU, v_us.dcID_CHUNG_TU_DETAIL, v_us.dcID_NGUOI_NHAP);                  								
 				//v_us.CommitTransaction();
                 load_data_2_grid(id_loai_ct);
