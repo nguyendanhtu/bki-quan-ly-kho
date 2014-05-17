@@ -306,6 +306,7 @@ namespace Form_menu
             this.m_cmd_nhom_nguoi_sd.Stretch = true;
             this.m_cmd_nhom_nguoi_sd.SubItemsExpandWidth = 14;
             this.m_cmd_nhom_nguoi_sd.Text = "Quản lý nhóm người sử dụng";
+            this.m_cmd_nhom_nguoi_sd.Click += new System.EventHandler(this.m_cmd_nhom_nguoi_sd_Click);
             // 
             // m_rbb_he_thong
             // 
