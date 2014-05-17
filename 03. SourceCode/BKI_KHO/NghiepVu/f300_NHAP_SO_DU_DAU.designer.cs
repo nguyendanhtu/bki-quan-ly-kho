@@ -56,11 +56,11 @@
             // m_lbl_title
             // 
             this.m_lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_title.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_title.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(952, 40);
+            this.m_lbl_title.Size = new System.Drawing.Size(952, 43);
             this.m_lbl_title.TabIndex = 0;
             this.m_lbl_title.Text = "NHẬP SỐ DƯ ĐẦU";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,9 +73,9 @@
             this.m_grb_header.Controls.Add(this.m_dat_ngay_nhap_thuc_te);
             this.m_grb_header.Controls.Add(this.m_lbl_ngay_nhap_thuc_te);
             this.m_grb_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_grb_header.Location = new System.Drawing.Point(0, 40);
+            this.m_grb_header.Location = new System.Drawing.Point(0, 43);
             this.m_grb_header.Name = "m_grb_header";
-            this.m_grb_header.Size = new System.Drawing.Size(952, 86);
+            this.m_grb_header.Size = new System.Drawing.Size(952, 93);
             this.m_grb_header.TabIndex = 1;
             this.m_grb_header.TabStop = false;
             // 
@@ -87,9 +87,9 @@
             this.m_cmd_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_del.ImageIndex = 4;
             this.m_cmd_del.ImageList = this.ImageList;
-            this.m_cmd_del.Location = new System.Drawing.Point(863, 54);
+            this.m_cmd_del.Location = new System.Drawing.Point(863, 58);
             this.m_cmd_del.Name = "m_cmd_del";
-            this.m_cmd_del.Size = new System.Drawing.Size(83, 26);
+            this.m_cmd_del.Size = new System.Drawing.Size(83, 28);
             this.m_cmd_del.TabIndex = 3;
             this.m_cmd_del.TabStop = false;
             this.m_cmd_del.Text = "&Xóa hàng";
@@ -123,7 +123,7 @@
             // 
             // m_txt_ma_ct
             // 
-            this.m_txt_ma_ct.Location = new System.Drawing.Point(419, 41);
+            this.m_txt_ma_ct.Location = new System.Drawing.Point(419, 44);
             this.m_txt_ma_ct.Name = "m_txt_ma_ct";
             this.m_txt_ma_ct.Size = new System.Drawing.Size(200, 20);
             this.m_txt_ma_ct.TabIndex = 1;
@@ -132,9 +132,9 @@
             // m_lbl_ma_chung_tu
             // 
             this.m_lbl_ma_chung_tu.AutoSize = true;
-            this.m_lbl_ma_chung_tu.Location = new System.Drawing.Point(333, 44);
+            this.m_lbl_ma_chung_tu.Location = new System.Drawing.Point(333, 47);
             this.m_lbl_ma_chung_tu.Name = "m_lbl_ma_chung_tu";
-            this.m_lbl_ma_chung_tu.Size = new System.Drawing.Size(65, 13);
+            this.m_lbl_ma_chung_tu.Size = new System.Drawing.Size(67, 14);
             this.m_lbl_ma_chung_tu.TabIndex = 1;
             this.m_lbl_ma_chung_tu.Text = "Số chứng từ";
             // 
@@ -142,7 +142,7 @@
             // 
             this.m_dat_ngay_nhap_thuc_te.CustomFormat = "dd/MM/yyyy";
             this.m_dat_ngay_nhap_thuc_te.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_ngay_nhap_thuc_te.Location = new System.Drawing.Point(419, 15);
+            this.m_dat_ngay_nhap_thuc_te.Location = new System.Drawing.Point(419, 16);
             this.m_dat_ngay_nhap_thuc_te.Name = "m_dat_ngay_nhap_thuc_te";
             this.m_dat_ngay_nhap_thuc_te.Size = new System.Drawing.Size(200, 20);
             this.m_dat_ngay_nhap_thuc_te.TabIndex = 0;
@@ -151,9 +151,9 @@
             // m_lbl_ngay_nhap_thuc_te
             // 
             this.m_lbl_ngay_nhap_thuc_te.AutoSize = true;
-            this.m_lbl_ngay_nhap_thuc_te.Location = new System.Drawing.Point(333, 21);
+            this.m_lbl_ngay_nhap_thuc_te.Location = new System.Drawing.Point(333, 23);
             this.m_lbl_ngay_nhap_thuc_te.Name = "m_lbl_ngay_nhap_thuc_te";
-            this.m_lbl_ngay_nhap_thuc_te.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_ngay_nhap_thuc_te.Size = new System.Drawing.Size(62, 14);
             this.m_lbl_ngay_nhap_thuc_te.TabIndex = 0;
             this.m_lbl_ngay_nhap_thuc_te.Text = "Ngày nhập ";
             // 
@@ -195,17 +195,17 @@
             this.panel1.Controls.Add(this.m_cmd_exit);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 460);
+            this.panel1.Location = new System.Drawing.Point(0, 539);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(952, 33);
+            this.panel1.Size = new System.Drawing.Size(952, 35);
             this.panel1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 8);
+            this.label1.Location = new System.Drawing.Point(112, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(67, 14);
             this.label1.TabIndex = 3;
             this.label1.Text = "Số mặt hàng";
             // 
@@ -228,7 +228,7 @@
             this.m_cmd_nhap_lo.ImageList = this.imageList1;
             this.m_cmd_nhap_lo.Location = new System.Drawing.Point(0, 0);
             this.m_cmd_nhap_lo.Name = "m_cmd_nhap_lo";
-            this.m_cmd_nhap_lo.Size = new System.Drawing.Size(106, 31);
+            this.m_cmd_nhap_lo.Size = new System.Drawing.Size(106, 33);
             this.m_cmd_nhap_lo.TabIndex = 2;
             this.m_cmd_nhap_lo.Text = "&Nhập từ Excel";
             // 
@@ -243,7 +243,7 @@
             this.m_cmd_save.ImageList = this.ImageList;
             this.m_cmd_save.Location = new System.Drawing.Point(735, 0);
             this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(112, 31);
+            this.m_cmd_save.Size = new System.Drawing.Size(112, 33);
             this.m_cmd_save.TabIndex = 0;
             this.m_cmd_save.Text = "&Lưu";
             // 
@@ -259,7 +259,7 @@
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(847, 0);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(103, 31);
+            this.m_cmd_exit.Size = new System.Drawing.Size(103, 33);
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -269,7 +269,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Location = new System.Drawing.Point(950, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(0, 31);
+            this.button1.Size = new System.Drawing.Size(0, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -278,10 +278,10 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 126);
+            this.m_fg.Location = new System.Drawing.Point(0, 136);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Count = 2;
-            this.m_fg.Size = new System.Drawing.Size(952, 334);
+            this.m_fg.Size = new System.Drawing.Size(952, 403);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 3;
             this.m_fg.TabStop = false;
@@ -292,9 +292,9 @@
             // 
             // f300_NHAP_SO_DU_DAU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 493);
+            this.ClientSize = new System.Drawing.Size(952, 574);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_grb_header);
