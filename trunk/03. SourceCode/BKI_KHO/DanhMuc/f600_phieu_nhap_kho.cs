@@ -206,6 +206,8 @@ namespace BKI_KHO
                     return false;
                 }
             }
+            DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
+            US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
             bool v_exit_ma_hang_yn=false;
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count - 1; v_i_cur_row++)
             {
@@ -218,7 +220,7 @@ namespace BKI_KHO
             }
             if(v_exit_ma_hang_yn)
             {
-                BaseMessages.MsgBox_Infor("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
+                BaseMessages.MsgBox_Error("Mã hàng hóa đã tồn tại, thay đổi mã hàng hóa");
                 
                 return false;
             }
