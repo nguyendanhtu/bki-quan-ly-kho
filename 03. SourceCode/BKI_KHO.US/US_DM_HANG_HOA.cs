@@ -354,6 +354,12 @@ public class US_DM_HANG_HOA : US_Object
 	}
 #endregion
     #region MEthods
+    public void update_trang_thai_DM_HANG_HOA_By_ID(decimal ip_id_hang_hoa)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("update_trang_thai_DM_HANG_HOA_By_ID");
+        v_stored_proc.addDecimalInputParam("@id", ip_id_hang_hoa);
+        v_stored_proc.ExecuteCommand(this);
+    }
     public void deleteDM_HANG_HOA_By_Id(decimal ip_id_hang_hoa)
     {
         CStoredProc v_stored_proc = new CStoredProc("deleteDM_HANG_HOA_By_Id");

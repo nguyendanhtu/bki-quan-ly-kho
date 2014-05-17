@@ -390,13 +390,11 @@ namespace BKI_KHO
                     return;
                 }
 				//v_us.BeginTransaction();
-                v_us.V_GD_CHUNG_TU_Delete_By_ID( v_us.dcID_CHUNG_TU_DETAIL
-                                                , v_us.dcID_CHUNG_TU
-                                                , v_us.dcID_NGUOI_NHAP
-                                                , v_us.dcID_HANG_HOA
-                                                , id_loai_ct);
+                v_us.V_GD_CHUNG_TU_Delete_By_ID(v_us.dcID_CHUNG_TU
+                                               );
                 //v_us.delete_v_gd_chung_tu(v_us.dcID_CHUNG_TU, v_us.dcID_CHUNG_TU_DETAIL, v_us.dcID_NGUOI_NHAP);                  								
 				//v_us.CommitTransaction();
+                load_data_2_grid(id_loai_ct);
 				m_fg.Rows.Remove(m_fg.Row);				
 			}
 			catch (Exception v_e) {
@@ -443,7 +441,7 @@ namespace BKI_KHO
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            
             US_DM_HANG_HOA v_us_hang_hoa = new US_DM_HANG_HOA();
             DS_DM_HANG_HOA v_ds_hang_hoa = new DS_DM_HANG_HOA();
             v_us_hang_hoa.FillDataset(v_ds_hang_hoa, "where id_trang_thai = 692 and id=" + m_us.dcID_HANG_HOA);
@@ -452,26 +450,10 @@ namespace BKI_KHO
                 BaseMessages.MsgBox_Error("Hàng hóa này đã được xuất kho nên không thể xóa chứng từ được nữa");
                 return;
             }
+            grid2us_object(m_us, m_fg.Row);
             m_dlg_result = DialogResult.OK;
             this.Close();
-            //if (m_e_form_mode == DataEntryFormMode.SelectDataState)
-            //{
-            //    m_dlg_result = DialogResult.OK;
-            //    this.Close();
-            //}
-            if (m_us.dcID_LOAI_CT == 1)
-            {
-                this.Close();
-                f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
-                v_frm.display_detail_chung_tu(m_us);
-
-            }
-            else
-            {
-                f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
-                v_frm.display_detail_chung_tu(m_us);
-            }
-            //this.Close();
+            
         }
 
         void m_fg_Click(object sender, EventArgs e)
