@@ -13,6 +13,7 @@ using BKI_KHO;
 using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
 using BKI_KHO.NghiepVu;
+using BKI_KHO.HeThong;
 
 namespace Form_menu {
     public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm {
@@ -282,7 +283,7 @@ namespace Form_menu {
         private void m_cmd_phan_quyen_cho_nhom_Click(object sender, EventArgs e) {
             try
             {
-                f999_ht_nguoi_su_dung v_frm = new f999_ht_nguoi_su_dung();
+                f995_ht_phan_quyen_cho_nhom v_frm = new f995_ht_phan_quyen_cho_nhom();
                 v_frm.display();
             }
             catch (System.Exception v_e)
