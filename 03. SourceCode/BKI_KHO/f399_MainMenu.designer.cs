@@ -42,7 +42,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_mat_khau = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nhat_ky_he_thong = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_nhom_nguoi_sd = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_he_thong = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_dang_nhap = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_thong_tin = new DevComponents.DotNetBar.ButtonItem();
@@ -250,7 +250,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen,
             this.m_cmd_mat_khau,
             this.m_cmd_nhat_ky_he_thong,
-            this.buttonItem1});
+            this.m_cmd_nhom_nguoi_sd});
             this.m_rbb_bao_mat.Location = new System.Drawing.Point(184, 0);
             this.m_rbb_bao_mat.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_bao_mat.Name = "m_rbb_bao_mat";
@@ -297,15 +297,15 @@ namespace Form_menu
             this.m_cmd_nhat_ky_he_thong.Text = "Nhật ký hệ thống";
             this.m_cmd_nhat_ky_he_thong.Visible = false;
             // 
-            // buttonItem1
+            // m_cmd_nhom_nguoi_sd
             // 
-            this.buttonItem1.Icon = ((System.Drawing.Icon)(resources.GetObject("buttonItem1.Icon")));
-            this.buttonItem1.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Stretch = true;
-            this.buttonItem1.SubItemsExpandWidth = 14;
-            this.buttonItem1.Text = "Quản lý nhóm người sử dụng";
+            this.m_cmd_nhom_nguoi_sd.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_nhom_nguoi_sd.Icon")));
+            this.m_cmd_nhom_nguoi_sd.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_nhom_nguoi_sd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_nhom_nguoi_sd.Name = "m_cmd_nhom_nguoi_sd";
+            this.m_cmd_nhom_nguoi_sd.Stretch = true;
+            this.m_cmd_nhom_nguoi_sd.SubItemsExpandWidth = 14;
+            this.m_cmd_nhom_nguoi_sd.Text = "Quản lý nhóm người sử dụng";
             // 
             // m_rbb_he_thong
             // 
@@ -1176,7 +1176,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_ma_vach;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nha_san_xuat;
         private OpenFileDialog openFileDialog1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_nhom_nguoi_sd;
 
     }
 }
