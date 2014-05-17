@@ -24,9 +24,9 @@ namespace BKI_KHO.DS.CDBNames
         public const string ID_HANG_HOA = "ID_HANG_HOA";
         public const string MA_HANG = "MA_HANG";
         public const string TEN_HANG_VN = "TEN_HANG_VN";
-        public const string ID_DON_VI = "ID_DON_VI";
+       // public const string ID_DON_VI = "ID_DON_VI_TINH";
         public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string GiA_NHAP = "GiA_NHAP";
+        public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";

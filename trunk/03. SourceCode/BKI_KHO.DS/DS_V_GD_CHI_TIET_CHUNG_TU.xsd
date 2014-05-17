@@ -38,7 +38,7 @@
               <Mapping SourceColumn="ID_HANG_HOA" DataSetColumn="ID_HANG_HOA" />
               <Mapping SourceColumn="MA_HANG" DataSetColumn="MA_HANG" />
               <Mapping SourceColumn="TEN_HANG_VN" DataSetColumn="TEN_HANG_VN" />
-              <Mapping SourceColumn="GiA_NHAP" DataSetColumn="GiA_NHAP" />
+              <Mapping SourceColumn="GiA_NHAP" DataSetColumn="GIA_NHAP" />
               <Mapping SourceColumn="GIA_BAN" DataSetColumn="GIA_BAN" />
               <Mapping SourceColumn="ID_NHA_CUNG_CAP" DataSetColumn="ID_NHA_CUNG_CAP" />
               <Mapping SourceColumn="ID_TRANG_THAI" DataSetColumn="ID_TRANG_THAI" />
@@ -60,7 +60,7 @@
   <xs:element name="DS_V_GD_CHI_TIET_CHUNG_TU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_UserDSName="DS_V_GD_CHI_TIET_CHUNG_TU">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_TableClassName="V_GD_CHI_TIET_CHUNG_TUDataTable" msprop:Generator_TableVarName="tableV_GD_CHI_TIET_CHUNG_TU" msprop:Generator_TablePropName="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_RowDeletingName="V_GD_CHI_TIET_CHUNG_TURowDeleting" msprop:Generator_RowChangingName="V_GD_CHI_TIET_CHUNG_TURowChanging" msprop:Generator_RowEvHandlerName="V_GD_CHI_TIET_CHUNG_TURowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_CHI_TIET_CHUNG_TURowDeleted" msprop:Generator_UserTableName="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_RowChangedName="V_GD_CHI_TIET_CHUNG_TURowChanged" msprop:Generator_RowEvArgName="V_GD_CHI_TIET_CHUNG_TURowChangeEvent" msprop:Generator_RowClassName="V_GD_CHI_TIET_CHUNG_TURow">
+        <xs:element name="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_TableClassName="V_GD_CHI_TIET_CHUNG_TUDataTable" msprop:Generator_TableVarName="tableV_GD_CHI_TIET_CHUNG_TU" msprop:Generator_RowChangedName="V_GD_CHI_TIET_CHUNG_TURowChanged" msprop:Generator_TablePropName="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_RowDeletingName="V_GD_CHI_TIET_CHUNG_TURowDeleting" msprop:Generator_RowChangingName="V_GD_CHI_TIET_CHUNG_TURowChanging" msprop:Generator_RowEvHandlerName="V_GD_CHI_TIET_CHUNG_TURowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_CHI_TIET_CHUNG_TURowDeleted" msprop:Generator_RowClassName="V_GD_CHI_TIET_CHUNG_TURow" msprop:Generator_UserTableName="V_GD_CHI_TIET_CHUNG_TU" msprop:Generator_RowEvArgName="V_GD_CHI_TIET_CHUNG_TURowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -117,7 +117,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="GiA_NHAP" msprop:Generator_ColumnVarNameInTable="columnGiA_NHAP" msprop:Generator_ColumnPropNameInRow="GiA_NHAP" msprop:Generator_ColumnPropNameInTable="GiA_NHAPColumn" msprop:Generator_UserColumnName="GiA_NHAP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GIA_NHAP" msprop:Generator_ColumnVarNameInTable="columnGIA_NHAP" msprop:Generator_ColumnPropNameInRow="GIA_NHAP" msprop:Generator_ColumnPropNameInTable="GIA_NHAPColumn" msprop:Generator_UserColumnName="GIA_NHAP" type="xs:decimal" minOccurs="0" />
               <xs:element name="GIA_BAN" msprop:Generator_ColumnVarNameInTable="columnGIA_BAN" msprop:Generator_ColumnPropNameInRow="GIA_BAN" msprop:Generator_ColumnPropNameInTable="GIA_BANColumn" msprop:Generator_UserColumnName="GIA_BAN" type="xs:decimal" minOccurs="0" />
               <xs:element name="ID_NHA_CUNG_CAP" msprop:Generator_ColumnVarNameInTable="columnID_NHA_CUNG_CAP" msprop:Generator_ColumnPropNameInRow="ID_NHA_CUNG_CAP" msprop:Generator_ColumnPropNameInTable="ID_NHA_CUNG_CAPColumn" msprop:Generator_UserColumnName="ID_NHA_CUNG_CAP" type="xs:decimal" minOccurs="0" />
               <xs:element name="ID_TRANG_THAI" msprop:Generator_ColumnVarNameInTable="columnID_TRANG_THAI" msprop:Generator_ColumnPropNameInRow="ID_TRANG_THAI" msprop:Generator_ColumnPropNameInTable="ID_TRANG_THAIColumn" msprop:Generator_UserColumnName="ID_TRANG_THAI" type="xs:decimal" minOccurs="0" />
