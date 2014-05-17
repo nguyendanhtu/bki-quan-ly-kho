@@ -304,6 +304,18 @@ namespace Form_menu {
             }
         }
 
+        private void m_cmd_phan_quyen_chi_tiet_Click(object sender, EventArgs e) {
+            try
+            {
+                f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
         
 
     }
