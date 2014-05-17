@@ -522,7 +522,7 @@ namespace BKI_KHO
             if (v_frm.select_chung_tu(1, v_us_chung_tu) == DialogResult.OK)
             {
                 us_2_form_objects(v_us_chung_tu,m_us_nhan_vien);
-                m_e_form_mode = DataEntryFormMode.SelectDataState;
+                m_e_form_mode = DataEntryFormMode.UpdateDataState;
             }
         }
 

@@ -210,16 +210,16 @@
     <Compile Include="DanhMuc\f305_V_DM_HANG_HOA_DE.Designer.cs">
       <DependentUpon>f305_V_DM_HANG_HOA_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f600_phieu_nhap_kho.cs">
+    <Compile Include="NghiepVu\f600_phieu_nhap_kho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f600_phieu_nhap_kho.Designer.cs">
+    <Compile Include="NghiepVu\f600_phieu_nhap_kho.Designer.cs">
       <DependentUpon>f600_phieu_nhap_kho.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f604_phieu_xuat_kho.cs">
+    <Compile Include="NghiepVu\f604_phieu_xuat_kho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f604_phieu_xuat_kho.Designer.cs">
+    <Compile Include="NghiepVu\f604_phieu_xuat_kho.Designer.cs">
       <DependentUpon>f604_phieu_xuat_kho.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f701_DM_NHAN_VIEN.cs">
@@ -377,10 +377,10 @@
     <EmbeddedResource Include="DanhMuc\f305_V_DM_HANG_HOA_DE.resx">
       <DependentUpon>f305_V_DM_HANG_HOA_DE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f600_phieu_nhap_kho.resx">
+    <EmbeddedResource Include="NghiepVu\f600_phieu_nhap_kho.resx">
       <DependentUpon>f600_phieu_nhap_kho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f604_phieu_xuat_kho.resx">
+    <EmbeddedResource Include="NghiepVu\f604_phieu_xuat_kho.resx">
       <DependentUpon>f604_phieu_xuat_kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f701_DM_NHAN_VIEN.resx">
