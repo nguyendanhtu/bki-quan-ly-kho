@@ -167,9 +167,9 @@ namespace BKI_KHO
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 123);
+            this.m_fg.Location = new System.Drawing.Point(0, 95);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(962, 440);
+            this.m_fg.Size = new System.Drawing.Size(962, 468);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -182,16 +182,16 @@ namespace BKI_KHO
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(962, 123);
+            this.panel1.Size = new System.Drawing.Size(962, 95);
             this.panel1.TabIndex = 21;
             // 
             // m_lbl_title
             // 
-            this.m_lbl_title.AutoSize = true;
+            this.m_lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_title.Location = new System.Drawing.Point(271, 26);
+            this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(495, 31);
+            this.m_lbl_title.Size = new System.Drawing.Size(962, 31);
             this.m_lbl_title.TabIndex = 31;
             this.m_lbl_title.Text = "DANH SÁCH PHIẾU XUẤT NHẬP KHO";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,7 +204,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(622, 68);
+            this.m_cmd_search.Location = new System.Drawing.Point(622, 45);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(82, 28);
             this.m_cmd_search.TabIndex = 30;
@@ -212,7 +212,7 @@ namespace BKI_KHO
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(243, 73);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(243, 50);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(350, 20);
             this.m_txt_tim_kiem.TabIndex = 29;
@@ -220,7 +220,7 @@ namespace BKI_KHO
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 77);
+            this.label2.Location = new System.Drawing.Point(169, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 28;
@@ -295,6 +295,7 @@ namespace BKI_KHO
 		#region Private Methods
 		private void format_controls(){
 			CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			CControlFormat.setC1FlexFormat(m_fg);
 			CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);

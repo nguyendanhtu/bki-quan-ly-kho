@@ -129,14 +129,16 @@ namespace BKI_KHO
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
-            var v_htb = new Hashtable();
-            v_htb.Add(DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG_HOA);
-            v_htb.Add(DM_HANG_HOA.TEN_HANG_VN, e_col_Number.TEN_HANG_HOA);
-            v_htb.Add(DM_HANG_HOA.GIA_BAN, e_col_Number.SO_TIEN);
-            v_htb.Add(DM_HANG_HOA.ID_DON_VI, e_col_Number.DON_VI_TINH);
+            DS_V_GD_CHI_TIET_CHUNG_TU v_ds_gd_chitiet_chung_tu = new DS_V_GD_CHI_TIET_CHUNG_TU();
+            Hashtable v_htb = new Hashtable();
+            
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.MA_HANG, e_col_Number.MA_HANG_HOA);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.TEN_HANG_VN, e_col_Number.TEN_HANG_HOA);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.GIA_NHAP, e_col_Number.SO_TIEN);
+            v_htb.Add(V_GD_CHI_TIET_CHUNG_TU.ID_DON_VI_TINH, e_col_Number.DON_VI_TINH);
 
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds_hang_hoa.DM_HANG_HOA.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds_gd_chitiet_chung_tu.V_GD_CHI_TIET_CHUNG_TU.NewRow());
             return v_obj_trans;
         }
         private bool check_validate_is_ok()
@@ -298,7 +300,7 @@ namespace BKI_KHO
 
                 //2. insert ban ghi vao phieu_thu_chi_detail
                 m_us_gd_chung_tu_detail.UseTransOfUSObject(m_us_gd_chung_tu);
-                
+                m_us_hang_hoa.UseTransOfUSObject(m_us_gd_chung_tu);
                 switch (m_e_form_mode)
                 {
                     case DataEntryFormMode.InsertDataState:
@@ -342,7 +344,7 @@ namespace BKI_KHO
                         {
 
                             //1.xoa phieu detail
-                            m_v_us_chung_tu.deleteGD_CHI_TIET_CHUNG_TU_By_Id(m_v_us_chung_tu.dcID_CHUNG_TU_DETAIL);
+                            m_v_us_chung_tu.deleteGD_CHI_TIET_CHUNG_TU_By_Id(m_v_us_chung_tu.dcID);
                             //2.update hang hoa
                             
                             //3.insert phieu detail
@@ -367,8 +369,8 @@ namespace BKI_KHO
                                 }
 
                                 // insert hang hoa
-                                //form_2_us_hang_hoa(v_i_cur_grid_row);
-                                //m_us_hang_hoa.Update();
+                                form_2_us_hang_hoa(v_i_cur_grid_row);
+                                m_us_hang_hoa.Update();
                                 //
 
                                 grid_row_2_us_gd_chi_tiet_chung_tu(
@@ -429,30 +431,22 @@ namespace BKI_KHO
         }
         private void us_2_form_objects(US_V_GD_CHUNG_TU i_us)
         {
-            //kho
-            US_DM_KHO v_us_kho = new US_DM_KHO();
-            DS_DM_KHO v_ds_kho = new DS_DM_KHO();
-            v_us_kho.FillDataset(v_ds_kho);//"where id=" + i_us.dcID_TO_CHUC_NGUON
-            DataRow v_dr_kho = (DataRow)v_ds_kho.DM_KHO.Rows[0];
-            v_us_kho.DataRow2Me(v_dr_kho);
-            m_txt_ten_kho.Text = v_us_kho.strTEN_KHO;
-            //nhân viên
-            //US_DM_NHAN_VIEN v_us_nhan_vien = new US_DM_NHAN_VIEN();
-            m_ds_nhan_vien = new DS_DM_NHAN_VIEN();
-            m_us_nhan_vien.FillDatasetSearchByID(m_ds_nhan_vien, i_us.dcID_NGUOI_GIAO_DICH);
-            DataRow v_dr = (DataRow)m_ds_nhan_vien.DM_NHAN_VIEN.Rows[0];
-            m_us_nhan_vien.DataRow2Me(v_dr);
-            m_txt_nguoi_thu.Text = m_us_nhan_vien.strHO_DEM + " " + m_us_nhan_vien.strTEN;
+            // 1. Lấy thông tin kho
+            load_data_kho();
+            //2. Lấy thông tin nhân viên
+            US_DM_NHAN_VIEN v_us_nhan_vien = new US_DM_NHAN_VIEN(i_us.dcID_NGUOI_GIAO_DICH);
+            m_txt_nguoi_thu.Text = v_us_nhan_vien.strHO_DEM + " " + v_us_nhan_vien.strTEN;
 
             m_txt_so_phieu_thu_chi.Text = i_us.strMA_CT;
             //m_txt_tong_tien.Text = CIPConvert.ToStr(i_us.dcTONG_TIEN);
             m_dat_ngay_lap.Value = CIPConvert.ToDatetime(CIPConvert.ToStr(i_us.datNGAY_CT), "dd/MM/yyyy");
             m_txt_noi_dung.Text = i_us.strDIEN_GIAI;
-           
 
-            m_us_hang_hoa.FillDataset(m_ds_hang_hoa, "where id=" + i_us.dcID_HANG_HOA);
+            US_V_GD_CHI_TIET_CHUNG_TU v_us_gd_chi_tiet_chung_tu = new US_V_GD_CHI_TIET_CHUNG_TU();
+            DS_V_GD_CHI_TIET_CHUNG_TU v_ds_gd_chi_tiet_chung_tu = new DS_V_GD_CHI_TIET_CHUNG_TU();
+            v_us_gd_chi_tiet_chung_tu.FillDataset(i_us.dcID, v_ds_gd_chi_tiet_chung_tu);
             m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds_hang_hoa, m_fg, get_trans_object(m_fg));
+            CGridUtils.Dataset2C1Grid(v_ds_gd_chi_tiet_chung_tu, m_fg, get_trans_object(m_fg));
             m_fg.Redraw = true;
         }
         private void form_2_us_gd_chung_tu()
