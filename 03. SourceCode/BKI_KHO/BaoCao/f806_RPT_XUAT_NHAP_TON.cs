@@ -231,8 +231,8 @@ namespace BKI_KHO
             // 
             // m_dgv
             // 
-            this.m_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.m_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.m_dgv.ColumnInfo = resources.GetString("m_dgv.ColumnInfo");
             this.m_dgv.Location = new System.Drawing.Point(0, 136);
@@ -247,7 +247,7 @@ namespace BKI_KHO
             this.m_txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_search.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.m_txt_search.Location = new System.Drawing.Point(154, 89);
+            this.m_txt_search.Location = new System.Drawing.Point(151, 89);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(384, 20);
             this.m_txt_search.TabIndex = 34;
