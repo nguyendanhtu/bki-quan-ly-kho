@@ -264,6 +264,7 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_to_chuc.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_to_chuc.Visible = false;
             // 
             // m_cmd_nha_cung_cap
             // 
