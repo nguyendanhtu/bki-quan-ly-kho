@@ -309,7 +309,7 @@ namespace BKI_KHO {
                 //2.insert phieu detail
                 for (int v_i_cur_grid_row = m_fg.Rows.Fixed; v_i_cur_grid_row <= m_fg.Rows.Count - 2; v_i_cur_grid_row++) {
                     // insert hang hoa
-                    form_2_us_hang_hoa(v_i_cur_grid_row, v_us_dm_hang_hoa);
+                    grid_row_2_us_hang_hoa(v_i_cur_grid_row, v_us_dm_hang_hoa);
                     v_us_dm_hang_hoa.Insert();
 
                     //insert chi tiet chung tu
@@ -385,7 +385,7 @@ namespace BKI_KHO {
 
         }
 
-        private void form_2_us_hang_hoa(int i_row, US_DM_HANG_HOA op_us_dm_hang_hoa) {
+        private void grid_row_2_us_hang_hoa(int i_row, US_DM_HANG_HOA op_us_dm_hang_hoa) {
             Debug.Assert(m_fg[i_row, (int)e_col_Number.NHOM_HANG] != null, "function form_2_us_hang_hoa: Nhóm hàng không được null");
             Debug.Assert(m_fg[i_row, (int)e_col_Number.DON_VI_TINH] != null, "function form_2_us_hang_hoa: Nhóm hàng không được null");
             Debug.Assert(m_fg[i_row, (int)e_col_Number.SO_TIEN] != null, "function form_2_us_hang_hoa: Nhóm hàng không được null");
