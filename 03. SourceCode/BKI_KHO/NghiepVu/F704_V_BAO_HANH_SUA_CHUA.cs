@@ -36,7 +36,7 @@ namespace BKI_KHO.NghiepVu
         private DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         ITransferDataRow m_obj_trans;
         US_V_BAO_HANH_SUA_CHUA m_us_v_bao_hanh_sua_chua = new US_V_BAO_HANH_SUA_CHUA();
-
+        private string m_str_ma_chung_tu_old = "";
         #endregion
 
         #region Public method
@@ -69,7 +69,8 @@ namespace BKI_KHO.NghiepVu
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tien_sua_chua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -77,7 +78,7 @@ namespace BKI_KHO.NghiepVu
             m_fg.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.None;
             m_fg.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
             m_fg.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcrossOut;
-         
+
             m_fg.AllowEditing = true;
             this.KeyPreview = true;
             set_define_events();
@@ -115,12 +116,18 @@ namespace BKI_KHO.NghiepVu
         {
             if (m_txt_ho_ten_khach_hang.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn chưa nhập tên khách hàng!");
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập tên khách hàng!");
                 return false;
             }
             if (m_txt_dien_thoai_khach_hang.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng!");
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại khách hàng!");
+                return false;
+            }
+
+            if (m_txt_serial.Text.Trim().Length == 0)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập số Serial!");
                 return false;
             }
 
@@ -142,6 +149,16 @@ namespace BKI_KHO.NghiepVu
             return true;
         }
 
+        private bool is_exist_chung_tu(string ip_str_ma_chung_tu)
+        {
+            US_GD_CHUNG_TU v_us_gd_chung_tu = new US_GD_CHUNG_TU();
+            DS_GD_CHUNG_TU v_ds_gd_chung_tu = new DS_GD_CHUNG_TU();
+            v_us_gd_chung_tu.FillDatasetByMaChungTu(v_ds_gd_chung_tu, ip_str_ma_chung_tu);
+            if (v_ds_gd_chung_tu.GD_CHUNG_TU.Rows.Count > 0)
+                return true;
+            return false;
+        }
+
         private void form_2_us_v_bao_hanh_sua_chua(
             US_V_BAO_HANH_SUA_CHUA op_us_v_bao_hanh_sua_chua)
         {
@@ -152,18 +169,20 @@ namespace BKI_KHO.NghiepVu
             op_us_v_bao_hanh_sua_chua.strMA_CT = m_txt_so.Text;
             op_us_v_bao_hanh_sua_chua.datNGAY_CT = m_dat_ngay.Value;
             op_us_v_bao_hanh_sua_chua.dcID_LOAI_CT = 37;
-            op_us_v_bao_hanh_sua_chua.dcTONG_TIEN = CIPConvert.ToDecimal(m_lbl_tien_sua_chua.Text);
+            op_us_v_bao_hanh_sua_chua.dcTONG_TIEN = CIPConvert.ToDecimal(m_lbl_tong_tien.Text);
         }
 
         private void us_v_bao_hanh_sua_chua_2_form(US_V_BAO_HANH_SUA_CHUA ip_us_v_bao_hanh_sua_chua)
         {
             m_us_v_bao_hanh_sua_chua = ip_us_v_bao_hanh_sua_chua;
+            m_str_ma_chung_tu_old = ip_us_v_bao_hanh_sua_chua.strMA_CT;
+
             m_txt_so.Text = ip_us_v_bao_hanh_sua_chua.strMA_CT;
             m_dat_ngay.Value = ip_us_v_bao_hanh_sua_chua.datNGAY_CT;
             m_txt_ho_ten_khach_hang.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_1;
             m_txt_dien_thoai_khach_hang.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_2;
             m_txt_dia_chi.Text = ip_us_v_bao_hanh_sua_chua.strGHI_CHU_3;
-            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(ip_us_v_bao_hanh_sua_chua.dcTONG_TIEN, "#,##0");
+            m_lbl_tong_tien.Text = CIPConvert.ToStr(ip_us_v_bao_hanh_sua_chua.dcTONG_TIEN, "#,##0");
             m_txt_noi_dung.Text = ip_us_v_bao_hanh_sua_chua.strDIEN_GIAI;
 
             US_GD_CHI_TIET_CHUNG_TU v_us_gd_ct_chung_tu = new US_GD_CHI_TIET_CHUNG_TU();
@@ -188,7 +207,7 @@ namespace BKI_KHO.NghiepVu
                     v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
                 }
             }
-            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
+            m_lbl_tong_tien.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
         }
 
         private void grid_row_2_us_gd_chung_tu_nhan_vien(
@@ -223,9 +242,24 @@ namespace BKI_KHO.NghiepVu
                 switch (m_e_form_mode)
                 {
                     case DataEntryFormMode.UpdateDataState:
+                        if (!m_txt_so.Text.Equals(m_str_ma_chung_tu_old))
+                        {
+                            if (is_exist_chung_tu(m_txt_so.Text))
+                            {
+                                BaseMessages.MsgBox_Error("Mã số phiếu bảo hành đã tồn tại.");
+                                m_txt_so.Focus();
+                                return;
+                            }
+                        }
                         m_us_v_bao_hanh_sua_chua.Update();
                         break;
                     case DataEntryFormMode.InsertDataState:
+                        if (is_exist_chung_tu(m_txt_so.Text))
+                        {
+                            BaseMessages.MsgBox_Error("Mã số phiếu bảo hành đã tồn tại.");
+                            m_txt_so.Focus();
+                            return;
+                        }
                         m_us_v_bao_hanh_sua_chua.Insert();
                         break;
                 }
@@ -310,7 +344,7 @@ namespace BKI_KHO.NghiepVu
                 if (m_fg.Rows[v_i_cur_row][2] != null)
                     v_dc_total += CIPConvert.ToDecimal(m_fg[v_i_cur_row, (int)e_col_number.SO_TIEN]);
             }
-            m_lbl_tien_sua_chua.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
+            m_lbl_tong_tien.Text = CIPConvert.ToStr(v_dc_total, "#,##0");
         }
 
         void m_cmd_save_Click(object sender, EventArgs e)
