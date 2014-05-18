@@ -316,6 +316,18 @@ namespace Form_menu {
             }
         }
 
+        private void m_cmd_doi_mat_khau_Click(object sender, EventArgs e) {
+            try
+            {
+                f308_DOI_MAT_KHAU_NGUOI_SD v_frm = new f308_DOI_MAT_KHAU_NGUOI_SD();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
         
 
     }

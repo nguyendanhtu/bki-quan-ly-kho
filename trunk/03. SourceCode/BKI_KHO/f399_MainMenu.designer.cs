@@ -44,6 +44,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen_cho_nhom = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nhat_ky_he_thong = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_phan_quyen_he_thong = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_he_thong = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_dang_nhap = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_thong_tin = new DevComponents.DotNetBar.ButtonItem();
@@ -96,7 +97,6 @@ namespace Form_menu
             this.m_rbtab_tab5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.m_cmd_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -323,6 +323,16 @@ namespace Form_menu
             this.m_cmd_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
             this.m_cmd_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_phan_quyen_he_thong_Click);
             // 
+            // m_cmd_phan_quyen_chi_tiet
+            // 
+            this.m_cmd_phan_quyen_chi_tiet.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_chi_tiet.Icon")));
+            this.m_cmd_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
+            this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
+            this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
+            this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
+            // 
             // m_rbb_he_thong
             // 
             this.m_rbb_he_thong.AutoOverflowEnabled = true;
@@ -384,7 +394,7 @@ namespace Form_menu
             this.m_cmd_doi_mat_khau.Name = "m_cmd_doi_mat_khau";
             this.m_cmd_doi_mat_khau.SubItemsExpandWidth = 14;
             this.m_cmd_doi_mat_khau.Text = "Đổi mật khẩu";
-            this.m_cmd_doi_mat_khau.Visible = false;
+            this.m_cmd_doi_mat_khau.Click += new System.EventHandler(this.m_cmd_doi_mat_khau_Click);
             // 
             // m_cmd_thoat
             // 
@@ -1119,16 +1129,6 @@ namespace Form_menu
             // qatCustomizeItem1
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
-            // 
-            // m_cmd_phan_quyen_chi_tiet
-            // 
-            this.m_cmd_phan_quyen_chi_tiet.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_chi_tiet.Icon")));
-            this.m_cmd_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
-            this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
-            this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
-            this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
             // 
             // f399_MainMenu
             // 
