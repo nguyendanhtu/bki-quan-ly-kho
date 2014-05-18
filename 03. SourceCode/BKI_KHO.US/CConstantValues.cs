@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_KHO.US {
+    public class CONST_ID_CM_DM_LOAI_TD {
+        public const decimal ID_CHUC_NANG = 16;
+    }
+    public class CONST_ID_CM_DM_TU_DIEN {
+        public const decimal ID_VIEW = 698;
+        public const decimal ID_REPORT= 699;
+        public const decimal ID_EDIT = 697;
+         
+    }
 
     public class CONST_ID_DM_LOAI_CHUNG_TU {
        
