@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.m_cmd_del = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -60,7 +61,8 @@
             this.m_cmd_in_hoa_don = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.m_lbl_tong_tien = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -134,7 +136,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.m_lbl_tien_sua_chua);
@@ -150,7 +151,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Maroon;
-            this.label7.Location = new System.Drawing.Point(561, 350);
+            this.label7.Location = new System.Drawing.Point(550, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 17);
             this.label7.TabIndex = 23;
@@ -158,6 +159,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.m_lbl_tong_tien);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.m_cmd_del);
             this.groupBox2.Controls.Add(this.m_fg);
@@ -168,6 +172,14 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin doanh thu bảo hành theo nhân viên";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(305, 190);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 25;
             // 
             // m_cmd_del
             // 
@@ -219,7 +231,7 @@
             this.m_fg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.m_fg.Location = new System.Drawing.Point(6, 46);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 23;
+            this.m_fg.Rows.Count = 24;
             this.m_fg.Size = new System.Drawing.Size(734, 136);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 23;
@@ -420,13 +432,25 @@
             this.panel2.Size = new System.Drawing.Size(740, 52);
             this.panel2.TabIndex = 21;
             // 
-            // label10
+            // label12
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(305, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
-            this.label10.TabIndex = 25;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(305, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Tổng : ";
+            // 
+            // m_lbl_tong_tien
+            // 
+            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_tong_tien.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_tong_tien.Location = new System.Drawing.Point(385, 185);
+            this.m_lbl_tong_tien.Name = "m_lbl_tong_tien";
+            this.m_lbl_tong_tien.Size = new System.Drawing.Size(159, 23);
+            this.m_lbl_tong_tien.TabIndex = 27;
+            this.m_lbl_tong_tien.Text = "label13";
+            this.m_lbl_tong_tien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // F704_V_BAO_HANH_SUA_CHUA
             // 
@@ -489,5 +513,7 @@
         internal SIS.Controls.Button.SiSButton m_cmd_del;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label m_lbl_tong_tien;
+        private System.Windows.Forms.Label label12;
     }
 }
