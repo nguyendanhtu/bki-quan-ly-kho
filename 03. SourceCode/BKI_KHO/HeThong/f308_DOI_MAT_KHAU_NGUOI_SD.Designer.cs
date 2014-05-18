@@ -156,22 +156,24 @@
             // 
             this.m_txt_mat_khau_cu.Location = new System.Drawing.Point(186, 72);
             this.m_txt_mat_khau_cu.Name = "m_txt_mat_khau_cu";
-            this.m_txt_mat_khau_cu.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_mat_khau_cu.Size = new System.Drawing.Size(143, 20);
             this.m_txt_mat_khau_cu.TabIndex = 11;
             // 
             // m_txt_mat_khau_moi
             // 
             this.m_txt_mat_khau_moi.Location = new System.Drawing.Point(186, 112);
             this.m_txt_mat_khau_moi.Name = "m_txt_mat_khau_moi";
-            this.m_txt_mat_khau_moi.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_mat_khau_moi.Size = new System.Drawing.Size(143, 20);
             this.m_txt_mat_khau_moi.TabIndex = 12;
+            this.m_txt_mat_khau_moi.UseSystemPasswordChar = true;
             // 
             // m_txt_nhap_lai_mat_khau_moi
             // 
             this.m_txt_nhap_lai_mat_khau_moi.Location = new System.Drawing.Point(186, 152);
             this.m_txt_nhap_lai_mat_khau_moi.Name = "m_txt_nhap_lai_mat_khau_moi";
-            this.m_txt_nhap_lai_mat_khau_moi.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_nhap_lai_mat_khau_moi.Size = new System.Drawing.Size(143, 20);
             this.m_txt_nhap_lai_mat_khau_moi.TabIndex = 13;
+            this.m_txt_nhap_lai_mat_khau_moi.UseSystemPasswordChar = true;
             // 
             // f308_DOI_MAT_KHAU_NGUOI_SD
             // 
