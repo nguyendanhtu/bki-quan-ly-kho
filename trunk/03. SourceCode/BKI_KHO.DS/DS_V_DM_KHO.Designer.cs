@@ -932,6 +932,13 @@ namespace BKI_KHO.DS {
                 }
             }
         }
+
+        //public void FillDatasetSearch(DS_V_DM_KHO m_ds_v_dm_kho, string p)
+        //{
+        //    CStoredProc v_sp = new CStoredProc("pr_V_DM_KHO_search");
+        //    v_sp.addNVarcharInputParam("@STR_SEARCH", p);
+        //    v_sp.fillDataSetByCommand(this, m_ds_v_dm_kho);
+        //}
     }
 }
 namespace BKI_KHO.DS.DS_V_DM_KHOTableAdapters {
