@@ -449,7 +449,16 @@ namespace BKI_KHO
                 m_us_dm_nhom_hang.fillDataSet_By_TEN_NHOM_HANG(v_ds, (String)m_fg.Rows[m_fg.Row].Node.Data);
 
                 DataRow v_dr = v_ds.Tables[0].Rows[0];
-                m_us_dm_nhom_hang = new US_DM_NHOM_HANG((decimal)v_dr.ItemArray[0]);
+                if (v_dr != null)
+                {
+                    m_us_dm_nhom_hang = new US_DM_NHOM_HANG();
+                    m_us_dm_nhom_hang.dcID = v_dr["ID"] == DBNull.Value ? Decimal.Zero : (Decimal)v_dr["ID"];
+                    m_us_dm_nhom_hang.dcID_NHOM_CHA = v_dr["ID_NHOM_CHA"] == DBNull.Value ? Decimal.Zero : (Decimal)v_dr["ID_NHOM_CHA"];
+                    m_us_dm_nhom_hang.dcLEVEL_MODE = v_dr["LEVEL_MODE"] == DBNull.Value ? Decimal.Zero : (Decimal)v_dr["LEVEL_MODE"];
+                    m_us_dm_nhom_hang.dcSTT = v_dr["STT"] == DBNull.Value ? Decimal.Zero : (Decimal)v_dr["STT"];
+                    m_us_dm_nhom_hang.strMO_TA = v_dr["MO_TA"] == DBNull.Value ? String.Empty : (String)v_dr["MO_TA"];
+                    m_us_dm_nhom_hang.strTEN = v_dr["TEN"] == DBNull.Value ? String.Empty : (String)v_dr["TEN"];
+                }
             }
             else
             {
