@@ -250,8 +250,10 @@ namespace BKI_KHO.NghiepVu {
             //1. Kiem tra du lieu da ok chua? Neu chua OK thi khong lam gi het!
             if(!check_validate_is_ok())
                 return;
+
             US_GD_CHUNG_TU v_us_gd_chung_tu = new US_GD_CHUNG_TU();
             US_V_GD_CHI_TIET_CHUNG_TU v_us_gd_chi_tiet_chung_tu = new US_V_GD_CHI_TIET_CHUNG_TU();
+
             try {
 
                 v_us_gd_chung_tu.BeginTransaction();
@@ -275,7 +277,6 @@ namespace BKI_KHO.NghiepVu {
             }
 
             //3. Thong bao thanh cong
-
             BaseMessages.MsgBox_Infor("Bạn đã cập nhật xong số dư đầu cho hàng hóa!");
         }
         private void excel_2_grid() {

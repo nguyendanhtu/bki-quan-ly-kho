@@ -105,8 +105,12 @@ namespace BKI_KHO.DanhMuc
         private void form_2_us_obj()
         {                
                 m_us_dm_nhom_hang.strTEN = m_txt_ten_nhom.Text;
-                if (CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue) != -1)
-                    m_us_dm_nhom_hang.dcID_NHOM_CHA = CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue);
+
+                if (m_cbo_ten_nhom_cha.SelectedValue != null)
+                {
+                    if (CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue) != -1)
+                        m_us_dm_nhom_hang.dcID_NHOM_CHA = CIPConvert.ToDecimal(m_cbo_ten_nhom_cha.SelectedValue);
+                }
 
                 m_us_dm_nhom_hang.strMO_TA = m_txt_mo_ta.Text;                                        
         }

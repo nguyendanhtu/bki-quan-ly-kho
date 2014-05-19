@@ -295,7 +295,7 @@ namespace BKI_KHO
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(114, 20);
             this.m_dat_den_ngay.TabIndex = 40;
-            this.m_dat_den_ngay.Value = new System.DateTime(2014, 5, 1, 0, 0, 0, 0);
+            this.m_dat_den_ngay.Value = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
             this.m_dat_den_ngay.ValueChanged += new System.EventHandler(this.m_dat_den_ngay_ValueChanged);
             // 
             // label2
@@ -317,7 +317,7 @@ namespace BKI_KHO
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(114, 20);
             this.m_dat_tu_ngay.TabIndex = 38;
-            this.m_dat_tu_ngay.Value = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
+            this.m_dat_tu_ngay.Value = new System.DateTime(2014, 1, 2, 0, 0, 0, 0);
             this.m_dat_tu_ngay.ValueChanged += new System.EventHandler(this.m_dat_tu_ngay_ValueChanged);
             // 
             // label1
@@ -365,12 +365,10 @@ namespace BKI_KHO
         #region Data Structure
         private enum e_col_Number
         {
-            DOANH_THU_THUAN = 3
-,
-            LOI_NHUAN = 2
-                ,
-            GIA_VON_HANG_BAN = 4
-                , TEN_NHOM_HANG = 1
+            DOANH_THU_THUAN = 3,
+            LOI_NHUAN = 2,
+            GIA_VON_HANG_BAN = 4, 
+            TEN_NHOM_HANG = 1
 
         }
         #endregion

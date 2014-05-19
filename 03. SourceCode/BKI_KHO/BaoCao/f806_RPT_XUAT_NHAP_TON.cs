@@ -299,7 +299,7 @@ namespace BKI_KHO
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(114, 20);
             this.m_dat_den_ngay.TabIndex = 32;
-            this.m_dat_den_ngay.Value = new System.DateTime(2014, 5, 1, 0, 0, 0, 0);
+            this.m_dat_den_ngay.Value = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
             this.m_dat_den_ngay.ValueChanged += new System.EventHandler(this.m_dat_den_ngay_ValueChanged);
             // 
             // label2
@@ -321,7 +321,7 @@ namespace BKI_KHO
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(114, 20);
             this.m_dat_tu_ngay.TabIndex = 30;
-            this.m_dat_tu_ngay.Value = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
+            this.m_dat_tu_ngay.Value = new System.DateTime(2014, 1, 2, 0, 0, 0, 0);
             this.m_dat_tu_ngay.ValueChanged += new System.EventHandler(this.m_dat_tu_ngay_ValueChanged);
             // 
             // label1
