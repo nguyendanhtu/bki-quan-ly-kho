@@ -941,18 +941,6 @@ namespace BKI_KHO.DS.CDBNames
         public const string HO_TEN = "HO_TEN";
     }
 
-    public class V_BAO_CAO_BAO_HANH
-    {
-        public const string ID_HANG_HOA = "ID_HANG_HOA";
-        public const string THOI_GIAN_BH = "THOI_GIAN_BH";
-        public const string MA_HANG = "MA_HANG";
-        public const string TEN_HANG_VN = "TEN_HANG_VN";
-        public const string TEN = "TEN";
-        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
-        public const string NGAY_CT = "NGAY_CT";
-        public const string MA_CT = "MA_CT";
-    }
-
     public class RPT_CHUNG_TU_THEO_NHOM
     {
         public const string ID = "ID";
@@ -984,4 +972,27 @@ namespace BKI_KHO.DS.CDBNames
         public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_XUAT = "GIA_XUAT";
     }
+
+    public class V_TRA_CUU_BAO_HANH
+    {
+        public const string ID = "ID";
+        public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string ID_LOAI_CT = "ID_LOAI_CT";
+        public const string MA_CT = "MA_CT";
+        public const string NGAY_CT = "NGAY_CT";
+        public const string ID_CHUNG_TU = "ID_CHUNG_TU";
+        public const string ID_HANG_HOA = "ID_HANG_HOA";
+        public const string THOI_GIAN_BH = "THOI_GIAN_BH";
+        public const string ID_DVT_THOI_GIAN = "ID_DVT_THOI_GIAN";
+        public const string ID_NHOM = "ID_NHOM";
+        public const string MA_HANG = "MA_HANG";
+        public const string TEN_HANG_VN = "TEN_HANG_VN";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN = "TEN";
+        public const string Expr1 = "Expr1";
+        public const string Expr2 = "Expr2";
+        public const string TEN_NHOM_HANG = "TEN_NHOM_HANG";
+    }
+
 }
