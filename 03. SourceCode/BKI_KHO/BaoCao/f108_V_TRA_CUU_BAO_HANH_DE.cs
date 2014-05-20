@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_KHO.US;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_KHO.BaoCao
 {
@@ -16,13 +17,19 @@ namespace BKI_KHO.BaoCao
         public f108_V_TRA_CUU_BAO_HANH_DE()
         {
             InitializeComponent();
+            format_control();
         }
+
+        
 
         #region Members
         //DataEntryFormMode m_e_form_mode;
         US_V_TRA_CUU_BAO_HANH m_us_v_tra_cuu_bao_hanh = new US_V_TRA_CUU_BAO_HANH();
         #endregion
-
+        private void format_control() {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+        }
         private void grid_2_form(US_V_TRA_CUU_BAO_HANH m_us_tra_cuu_bao_hanh)
         {
             m_txt_ma_hang.Text = m_us_tra_cuu_bao_hanh.strMA_HANG;
