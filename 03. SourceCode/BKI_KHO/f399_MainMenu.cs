@@ -320,19 +320,19 @@ namespace Form_menu {
             }
         }
 
-        //private void m_cmd_bao_hanh_seri_Click(object sender, EventArgs e)
-        //{
-        //    try {
-        //        f107_V_TRA_CUU_BAO_HANH frm = new f107_V_TRA_CUU_BAO_HANH();
-        //        //frm.display();
-        //        frm.ShowDialog();
-        //    }
-        //    catch(Exception v_e) {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-        //}
+        private void m_cmd_bao_hanh_seri_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f107_V_TRA_CUU_BAO_HANH v_frm = new f107_V_TRA_CUU_BAO_HANH();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-        
 
     }
 }

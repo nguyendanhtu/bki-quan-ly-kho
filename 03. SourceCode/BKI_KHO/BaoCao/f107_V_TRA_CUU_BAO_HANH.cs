@@ -278,7 +278,7 @@ namespace BKI_KHO
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f107_V_TRA_CUU_BAO_HANH";
-            this.Text = "F107_V_TRA_CUU_BAO_HANH";
+            this.Text = "F107 Danh sách bảo hành";
             this.Load += new System.EventHandler(this.f107_V_TRA_CUU_BAO_HANH_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
