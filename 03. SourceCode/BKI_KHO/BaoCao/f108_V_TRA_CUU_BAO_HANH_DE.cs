@@ -29,6 +29,7 @@ namespace BKI_KHO.BaoCao
         private void format_control() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            m_cmd_insert.Enabled = false;
         }
         private void grid_2_form(US_V_TRA_CUU_BAO_HANH m_us_tra_cuu_bao_hanh)
         {
