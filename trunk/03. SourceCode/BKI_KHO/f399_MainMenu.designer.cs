@@ -232,6 +232,7 @@ namespace Form_menu
             this.m_cmd_bao_hanh_seri.Name = "m_cmd_bao_hanh_seri";
             this.m_cmd_bao_hanh_seri.SubItemsExpandWidth = 14;
             this.m_cmd_bao_hanh_seri.Text = "Bảo hành theo số Seri";
+            this.m_cmd_bao_hanh_seri.Click += new System.EventHandler(this.m_cmd_bao_hanh_seri_Click);
             // 
             // ribbonPanel2
             // 
