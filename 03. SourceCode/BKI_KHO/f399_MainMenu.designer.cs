@@ -120,10 +120,10 @@ namespace Form_menu
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_rbc_menu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_rbtab_tab1,
@@ -222,6 +222,7 @@ namespace Form_menu
             this.m_cmd_mat_hang_theo_nhom.Name = "m_cmd_mat_hang_theo_nhom";
             this.m_cmd_mat_hang_theo_nhom.SubItemsExpandWidth = 14;
             this.m_cmd_mat_hang_theo_nhom.Text = "Mặt hàng";
+            this.m_cmd_mat_hang_theo_nhom.Tooltip = "Tra cứu mặt hàng trong kho";
             this.m_cmd_mat_hang_theo_nhom.Click += new System.EventHandler(this.m_cmd_mat_hang_theo_nhom_Click);
             // 
             // m_cmd_bao_hanh_seri
@@ -408,6 +409,7 @@ namespace Form_menu
             this.m_cmd_nhan_vien.Name = "m_cmd_nhan_vien";
             this.m_cmd_nhan_vien.SubItemsExpandWidth = 14;
             this.m_cmd_nhan_vien.Text = "Nhân viên";
+            this.m_cmd_nhan_vien.Tooltip = "Quản lý thông tin nhân viên";
             this.m_cmd_nhan_vien.Click += new System.EventHandler(this.m_cmd_nhan_vien_Click);
             // 
             // m_cmd_khach_hang
@@ -418,6 +420,7 @@ namespace Form_menu
             this.m_cmd_khach_hang.Name = "m_cmd_khach_hang";
             this.m_cmd_khach_hang.SubItemsExpandWidth = 14;
             this.m_cmd_khach_hang.Text = "Khách hàng";
+            this.m_cmd_khach_hang.Tooltip = "Quản lý thông tin khách hàng";
             this.m_cmd_khach_hang.Visible = false;
             this.m_cmd_khach_hang.Click += new System.EventHandler(this.m_cmd_khach_hang_Click);
             // 
@@ -467,6 +470,7 @@ namespace Form_menu
             this.m_cmd_kho.Name = "m_cmd_kho";
             this.m_cmd_kho.SubItemsExpandWidth = 14;
             this.m_cmd_kho.Text = "Kho";
+            this.m_cmd_kho.Tooltip = "Quản lý thông tin các kho hàng";
             this.m_cmd_kho.Click += new System.EventHandler(this.m_cmd_kho_Click);
             // 
             // m_cmd_mat_hang
@@ -477,6 +481,7 @@ namespace Form_menu
             this.m_cmd_mat_hang.Name = "m_cmd_mat_hang";
             this.m_cmd_mat_hang.SubItemsExpandWidth = 14;
             this.m_cmd_mat_hang.Text = "Mặt hàng";
+            this.m_cmd_mat_hang.Tooltip = "Quản lý thông tin các mặt hàng trong kho";
             this.m_cmd_mat_hang.Click += new System.EventHandler(this.m_cmd_mat_hang_Click);
             // 
             // m_cmd_nhom_hang
@@ -487,6 +492,7 @@ namespace Form_menu
             this.m_cmd_nhom_hang.Name = "m_cmd_nhom_hang";
             this.m_cmd_nhom_hang.SubItemsExpandWidth = 14;
             this.m_cmd_nhom_hang.Text = "Nhóm hàng";
+            this.m_cmd_nhom_hang.Tooltip = "Quản lý thông tin các nhóm hàng";
             this.m_cmd_nhom_hang.Click += new System.EventHandler(this.m_cmd_nhom_hang_Click);
             // 
             // m_cmd_tien_te
@@ -507,6 +513,7 @@ namespace Form_menu
             this.m_cmd_don_vi_tinh.Name = "m_cmd_don_vi_tinh";
             this.m_cmd_don_vi_tinh.SubItemsExpandWidth = 14;
             this.m_cmd_don_vi_tinh.Text = "Đơn vị tính";
+            this.m_cmd_don_vi_tinh.Tooltip = "Các đơn vị tính cho hàng hóa";
             this.m_cmd_don_vi_tinh.Click += new System.EventHandler(this.m_cmd_don_vi_tinh_Click);
             // 
             // m_cmd_tu_dien
@@ -528,6 +535,7 @@ namespace Form_menu
             this.m_cmd_loai_chung_tu.Name = "m_cmd_loai_chung_tu";
             this.m_cmd_loai_chung_tu.SubItemsExpandWidth = 14;
             this.m_cmd_loai_chung_tu.Text = "Loại chứng từ";
+            this.m_cmd_loai_chung_tu.Tooltip = "Quản lý thông tin các loại chứng từ";
             this.m_cmd_loai_chung_tu.Click += new System.EventHandler(this.m_cmd_loai_chung_tu_Click);
             // 
             // m_cmd_ma_vach
@@ -703,6 +711,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen.Name = "m_cmd_phan_quyen";
             this.m_cmd_phan_quyen.SubItemsExpandWidth = 14;
             this.m_cmd_phan_quyen.Text = "Người sử dụng";
+            this.m_cmd_phan_quyen.Tooltip = "Quản lý thông tin người sử dụng phần mềm";
             this.m_cmd_phan_quyen.Click += new System.EventHandler(this.m_cmd_phan_quyen_Click);
             // 
             // m_cmd_nhom_nguoi_sd
@@ -714,6 +723,7 @@ namespace Form_menu
             this.m_cmd_nhom_nguoi_sd.Stretch = true;
             this.m_cmd_nhom_nguoi_sd.SubItemsExpandWidth = 14;
             this.m_cmd_nhom_nguoi_sd.Text = "Nhóm người sử dụng";
+            this.m_cmd_nhom_nguoi_sd.Tooltip = "Quản lý thông tin nhóm người sử dụng phần mềm";
             this.m_cmd_nhom_nguoi_sd.Click += new System.EventHandler(this.m_cmd_nhom_nguoi_sd_Click);
             // 
             // m_cmd_phan_quyen_cho_nhom
@@ -724,6 +734,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen_cho_nhom.Name = "m_cmd_phan_quyen_cho_nhom";
             this.m_cmd_phan_quyen_cho_nhom.SubItemsExpandWidth = 14;
             this.m_cmd_phan_quyen_cho_nhom.Text = "Phân quyền cho nhóm";
+            this.m_cmd_phan_quyen_cho_nhom.Tooltip = "Phân quyền cho nhóm người sử dụng phần mềm";
             this.m_cmd_phan_quyen_cho_nhom.Click += new System.EventHandler(this.m_cmd_phan_quyen_cho_nhom_Click);
             // 
             // m_cmd_nhat_ky_he_thong
@@ -744,6 +755,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen_he_thong.Name = "m_cmd_phan_quyen_he_thong";
             this.m_cmd_phan_quyen_he_thong.SubItemsExpandWidth = 14;
             this.m_cmd_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
+            this.m_cmd_phan_quyen_he_thong.Visible = false;
             this.m_cmd_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_phan_quyen_he_thong_Click);
             // 
             // m_cmd_phan_quyen_chi_tiet
@@ -754,6 +766,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
             this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
             this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
+            this.m_cmd_phan_quyen_chi_tiet.Visible = false;
             this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
             // 
             // m_rbb_he_thong
@@ -808,6 +821,7 @@ namespace Form_menu
             this.m_cmd_thong_tin.Name = "m_cmd_thong_tin";
             this.m_cmd_thong_tin.SubItemsExpandWidth = 14;
             this.m_cmd_thong_tin.Text = "Thông tin";
+            this.m_cmd_thong_tin.Tooltip = "Thông tin phần mềm";
             // 
             // m_cmd_doi_mat_khau
             // 
@@ -817,6 +831,7 @@ namespace Form_menu
             this.m_cmd_doi_mat_khau.Name = "m_cmd_doi_mat_khau";
             this.m_cmd_doi_mat_khau.SubItemsExpandWidth = 14;
             this.m_cmd_doi_mat_khau.Text = "Đổi mật khẩu";
+            this.m_cmd_doi_mat_khau.Tooltip = "Đổi mật khẩu người sử dụng";
             this.m_cmd_doi_mat_khau.Click += new System.EventHandler(this.m_cmd_doi_mat_khau_Click);
             // 
             // m_cmd_thoat
@@ -897,6 +912,7 @@ namespace Form_menu
             this.m_cmd_nhap_kho.Name = "m_cmd_nhap_kho";
             this.m_cmd_nhap_kho.SubItemsExpandWidth = 14;
             this.m_cmd_nhap_kho.Text = "Nhập kho";
+            this.m_cmd_nhap_kho.Tooltip = "Quản lý việc nhập hàng hóa vào trong kho";
             // 
             // m_cmd_xuat_kho
             // 
@@ -906,6 +922,7 @@ namespace Form_menu
             this.m_cmd_xuat_kho.Name = "m_cmd_xuat_kho";
             this.m_cmd_xuat_kho.SubItemsExpandWidth = 14;
             this.m_cmd_xuat_kho.Text = "Xuất kho";
+            this.m_cmd_xuat_kho.Tooltip = "Quản lý việc xuất hàng hóa ra khỏi kho";
             // 
             // m_cmd_nhap_so_du_dau
             // 
@@ -915,6 +932,7 @@ namespace Form_menu
             this.m_cmd_nhap_so_du_dau.Name = "m_cmd_nhap_so_du_dau";
             this.m_cmd_nhap_so_du_dau.SubItemsExpandWidth = 14;
             this.m_cmd_nhap_so_du_dau.Text = "Nhập số dư đầu";
+            this.m_cmd_nhap_so_du_dau.Tooltip = "Nhập số dư mặt hàng ban đầu trong kho";
             this.m_cmd_nhap_so_du_dau.Click += new System.EventHandler(this.m_cmd_nhap_so_du_dau_Click);
             // 
             // m_cmd_sua_chua
@@ -925,6 +943,7 @@ namespace Form_menu
             this.m_cmd_sua_chua.Name = "m_cmd_sua_chua";
             this.m_cmd_sua_chua.SubItemsExpandWidth = 14;
             this.m_cmd_sua_chua.Text = "Sửa chữa";
+            this.m_cmd_sua_chua.Tooltip = "Quản lý bảo hành sửa chữa các mặt hàng";
             this.m_cmd_sua_chua.Click += new System.EventHandler(this.m_cmd_sua_chua_Click);
             // 
             // m_rbb_mua_ban
@@ -1043,6 +1062,7 @@ namespace Form_menu
             this.m_cmd_loi_nhuan_gop.Name = "m_cmd_loi_nhuan_gop";
             this.m_cmd_loi_nhuan_gop.SubItemsExpandWidth = 14;
             this.m_cmd_loi_nhuan_gop.Text = "Lợi nhuận gộp";
+            this.m_cmd_loi_nhuan_gop.Tooltip = "Lợi nhuận gộp của hàng hóa";
             this.m_cmd_loi_nhuan_gop.Click += new System.EventHandler(this.m_cmd_loi_nhuan_gop_Click);
             // 
             // m_cmd_doanh_thu_theo_nhan_vien
@@ -1053,6 +1073,7 @@ namespace Form_menu
             this.m_cmd_doanh_thu_theo_nhan_vien.Name = "m_cmd_doanh_thu_theo_nhan_vien";
             this.m_cmd_doanh_thu_theo_nhan_vien.SubItemsExpandWidth = 14;
             this.m_cmd_doanh_thu_theo_nhan_vien.Text = "Doanh thu theo nhân viên";
+            this.m_cmd_doanh_thu_theo_nhan_vien.Tooltip = "Doanh thu theo từng nhân viên";
             this.m_cmd_doanh_thu_theo_nhan_vien.Click += new System.EventHandler(this.m_cmd_doanh_thu_theo_nhan_vien_Click);
             // 
             // m_rbb_bao_cao_kho
@@ -1093,6 +1114,7 @@ namespace Form_menu
             this.m_cmd_xuat_nhap_ton.Name = "m_cmd_xuat_nhap_ton";
             this.m_cmd_xuat_nhap_ton.SubItemsExpandWidth = 14;
             this.m_cmd_xuat_nhap_ton.Text = "Xuất - Nhập - Tồn";
+            this.m_cmd_xuat_nhap_ton.Tooltip = "Báo cáo xuất - nhập - tồn các mặt hàng trong kho";
             this.m_cmd_xuat_nhap_ton.Click += new System.EventHandler(this.m_cmd_xuat_nhap_ton_Click);
             // 
             // m_rbtab_tab1
