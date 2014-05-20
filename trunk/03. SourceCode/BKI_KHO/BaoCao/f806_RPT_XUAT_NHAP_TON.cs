@@ -226,7 +226,7 @@ namespace BKI_KHO
             this.m_cmd_exit.Location = new System.Drawing.Point(594, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_dgv
@@ -250,7 +250,7 @@ namespace BKI_KHO
             this.m_txt_search.Location = new System.Drawing.Point(151, 89);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(384, 20);
-            this.m_txt_search.TabIndex = 34;
+            this.m_txt_search.TabIndex = 2;
             // 
             // m_lbl_title
             // 
@@ -286,7 +286,7 @@ namespace BKI_KHO
             this.m_cmd_search.Location = new System.Drawing.Point(553, 84);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 35;
+            this.m_cmd_search.TabIndex = 3;
             this.m_cmd_search.Text = "Tìm kiếm";
             this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
@@ -298,7 +298,7 @@ namespace BKI_KHO
             this.m_dat_den_ngay.Location = new System.Drawing.Point(428, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(114, 20);
-            this.m_dat_den_ngay.TabIndex = 32;
+            this.m_dat_den_ngay.TabIndex = 1;
             this.m_dat_den_ngay.Value = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
             this.m_dat_den_ngay.ValueChanged += new System.EventHandler(this.m_dat_den_ngay_ValueChanged);
             // 
@@ -320,7 +320,7 @@ namespace BKI_KHO
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(174, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(114, 20);
-            this.m_dat_tu_ngay.TabIndex = 30;
+            this.m_dat_tu_ngay.TabIndex = 0;
             this.m_dat_tu_ngay.Value = new System.DateTime(2014, 1, 2, 0, 0, 0, 0);
             this.m_dat_tu_ngay.ValueChanged += new System.EventHandler(this.m_dat_tu_ngay_ValueChanged);
             // 
