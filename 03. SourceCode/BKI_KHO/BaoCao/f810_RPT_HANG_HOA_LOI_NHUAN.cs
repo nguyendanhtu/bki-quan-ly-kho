@@ -409,8 +409,8 @@ namespace BKI_KHO
             //  2. Tao cot loi nhuan 
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
             {
-                if (m_fg[v_i_cur_row, (int)e_col_Number.GIA_XUAT] == null) continue;
-                if (m_fg[v_i_cur_row, (int)e_col_Number.GIA_NHAP] == null) continue;
+                if (m_fg[v_i_cur_row, (int)e_col_Number.GIA_XUAT] == null) m_fg[v_i_cur_row, (int)e_col_Number.GIA_XUAT] = Decimal.Zero;
+                if (m_fg[v_i_cur_row, (int)e_col_Number.GIA_NHAP] == null) m_fg[v_i_cur_row, (int)e_col_Number.GIA_NHAP] = Decimal.Zero;
                 if (!CIPConvert.is_valid_number(m_fg[v_i_cur_row, (int)e_col_Number.GIA_XUAT])) continue;
                 if (!CIPConvert.is_valid_number(m_fg[v_i_cur_row, (int)e_col_Number.GIA_NHAP])) continue;
 
