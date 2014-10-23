@@ -296,6 +296,8 @@ Public Class CControlFormat
             .SheetBorder = System.Drawing.SystemColors.WindowText
             .TreeColor = System.Drawing.Color.DarkGray
             .SelectionMode = C1.Win.C1FlexGrid.Classic.SelModeSettings.flexSelectionFree
+
+            
         End With
     End Sub
 
@@ -317,6 +319,8 @@ Public Class CControlFormat
             .Styles.EmptyArea.BackColor = .BackColor
             .Styles.EmptyArea.Border.Style = C1.Win.C1FlexGrid.BorderStyleEnum.None
             .SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Cell
+
+           
         End With
     End Sub
 
@@ -403,6 +407,16 @@ Public Class CControlFormat
         End Select
         i_lbl.Font = v_Font
         i_lbl.ForeColor = v_ForeColor
+    End Sub
+    Public Shared Sub wrap_text_cells(i_fg As C1.Win.C1FlexGrid.C1FlexGrid)
+        With i_fg
+            'TuyenNT sua ngay 23/10/2014
+            'Auto Wrap Text All Cells
+            .Styles("Normal").WordWrap = True
+            .AllowResizing = C1.Win.C1FlexGrid.AllowResizingEnum.Rows
+            .AutoSizeRows()
+
+        End With
     End Sub
 #End Region
 
