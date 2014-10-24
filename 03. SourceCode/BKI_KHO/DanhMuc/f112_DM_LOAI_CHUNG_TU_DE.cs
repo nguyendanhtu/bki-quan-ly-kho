@@ -28,7 +28,8 @@ namespace BKI_KHO.DanhMuc
         public void display_for_update(US.US_DM_LOAI_CHUNG_TU m_us)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            m_us = m_us_dm_loai_chung_tu;
+
+            m_us_dm_loai_chung_tu = m_us;
             us_object_2_form();
             this.ShowDialog();
         }
