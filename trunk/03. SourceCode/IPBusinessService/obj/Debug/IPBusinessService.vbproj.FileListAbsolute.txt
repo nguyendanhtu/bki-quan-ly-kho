@@ -18,3 +18,23 @@ D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessS
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\bin\IPException.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb

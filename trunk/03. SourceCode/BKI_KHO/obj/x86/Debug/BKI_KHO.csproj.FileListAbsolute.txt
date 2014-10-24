@@ -1,0 +1,206 @@
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.exe.config
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.exe
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.DS.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.US.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Common.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1FlexGrid.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1Input.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\SiSButton.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\SiSMenu.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.Shared.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\Interop.Excel.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\Interop.Microsoft.Office.Core.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.DS.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.US.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.csprojResolveAssemblyReference.cache
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f806_RPT_XUAT_NHAP_TON.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f807_RPT_LOI_NHUAN.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f808_RPT_CHUNG_TU_THEO_NHOM.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f809_RPT_HANG_HOA_XUAT_NHAP.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f810_RPT_HANG_HOA_LOI_NHUAN.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f100_DM_NGUOI_DUNG_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f100_DM_THUE_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f101_DM_NGUOI_DUNG.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f101_DM_NGUOI_DUNG_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f101_DM_THUE_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f105_DM_KHACH_HANG.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f105_DM_KHACH_HANG_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f110_V_DM_KHO.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f111_V_DM_KHO_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f112_DM_LOAI_CHUNG_TU.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f112_DM_LOAI_CHUNG_TU_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f302_V_DM_NHOM_HANG.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f302_V_DM_NHOM_HANG_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f304_DM_NHA_SX.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f304_DM_NHA_SX_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f305_V_DM_HANG_HOA.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f305_V_DM_HANG_HOA_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f306_HT_USER_GROUP.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f306_HT_USER_GROUP_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f995_ht_phan_quyen_cho_nhom.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f600_phieu_nhap_kho.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f602_v_gd_chung_tu.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f604_phieu_xuat_kho.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f701_DM_NHAN_VIEN.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f701_DM_NHAN_VIEN_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f301_DM_DON_VI.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f301_DM_DON_VI_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f800_DM_NHA_CUNG_CAP.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f801_DM_NHA_CUNG_CAP_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f802_DM_NHOM_HANG.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f803_DM_NHOM_HANG_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f804_DM_TIEN_TE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f805_DM_TIEN_TE_DE.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\Form_menu.f399_MainMenu.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f400_Main.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f998_ht_nguoi_su_dung_de.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f999_ht_nguoi_su_dung.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.NghiepVu.f300_NHAP_SO_DU_DAU.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.NghiepVu.F704_V_BAO_HANH_SUA_CHUA.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.F706_GD_PHIEU_BAO_HANH.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.Properties.Resources.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.csproj.GenerateResource.Cache
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.exe.licenses
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.exe
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f992_phan_quyen_he_thong_de.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f993_phan_quyen_he_thong.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f994_phan_quyen_detail.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f990_ht_form.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f308_DOI_MAT_KHAU_NGUOI_SD.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f107_V_TRA_CUU_BAO_HANH.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.BaoCao.f108_V_TRA_CUU_BAO_HANH_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.csprojResolveAssemblyReference.cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f107_V_TRA_CUU_BAO_HANH.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.BaoCao.f108_V_TRA_CUU_BAO_HANH_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.F703_V_DANH_SACH_CHUNG_TU_THEO_NHAN_VIEN.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f806_RPT_XUAT_NHAP_TON.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f807_RPT_LOI_NHUAN.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f808_RPT_CHUNG_TU_THEO_NHOM.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f809_RPT_HANG_HOA_XUAT_NHAP.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f810_RPT_HANG_HOA_LOI_NHUAN.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f100_DM_NGUOI_DUNG_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f100_DM_THUE_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f101_DM_NGUOI_DUNG.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f101_DM_NGUOI_DUNG_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f101_DM_THUE_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f105_DM_KHACH_HANG.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f105_DM_KHACH_HANG_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f110_V_DM_KHO.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f111_V_DM_KHO_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f112_DM_LOAI_CHUNG_TU.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f112_DM_LOAI_CHUNG_TU_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f302_V_DM_NHOM_HANG.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f302_V_DM_NHOM_HANG_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f304_DM_NHA_SX.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f304_DM_NHA_SX_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f305_V_DM_HANG_HOA.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f305_V_DM_HANG_HOA_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f306_HT_USER_GROUP.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f306_HT_USER_GROUP_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f308_DOI_MAT_KHAU_NGUOI_SD.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f990_ht_form.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f992_phan_quyen_he_thong_de.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f993_phan_quyen_he_thong.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f994_phan_quyen_detail.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.HeThong.f995_ht_phan_quyen_cho_nhom.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f600_phieu_nhap_kho.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f602_v_gd_chung_tu.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f604_phieu_xuat_kho.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f701_DM_NHAN_VIEN.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f701_DM_NHAN_VIEN_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f301_DM_DON_VI.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f301_DM_DON_VI_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f800_DM_NHA_CUNG_CAP.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f801_DM_NHA_CUNG_CAP_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f802_DM_NHOM_HANG.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f803_DM_NHOM_HANG_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f804_DM_TIEN_TE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.DanhMuc.f805_DM_TIEN_TE_DE.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\Form_menu.f399_MainMenu.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f400_Main.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f998_ht_nguoi_su_dung_de.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.f999_ht_nguoi_su_dung.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.NghiepVu.f300_NHAP_SO_DU_DAU.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.NghiepVu.F704_V_BAO_HANH_SUA_CHUA.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.F706_GD_PHIEU_BAO_HANH.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.Properties.Resources.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.csproj.GenerateResource.Cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.exe.licenses
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.exe.config
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.exe
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.DS.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.US.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Common.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1FlexGrid.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\C1.Win.C1Input.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\SiSButton.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\SiSMenu.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.Shared.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\Interop.Excel.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\Interop.Microsoft.Office.Core.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.DS.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\BKI_KHO.US.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPBusinessService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPCommon.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPData.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelReport.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPExcelWebReport.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPException.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPSystemAdmin.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\bin\Debug\IPUserService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.exe
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO\obj\x86\Debug\BKI_KHO.pdb

@@ -16,3 +16,22 @@ D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelRepor
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbprojResolveAssemblyReference.cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb

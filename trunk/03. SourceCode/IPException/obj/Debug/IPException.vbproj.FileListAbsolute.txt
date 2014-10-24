@@ -10,3 +10,15 @@ D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\bin\IPException.xml
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.dll
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.xml
 D:\1.My Project\BKIQL Kho\03. SourceCode\IPException\obj\Debug\IPException.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\bin\IPException.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\IPException\obj\Debug\IPException.pdb
