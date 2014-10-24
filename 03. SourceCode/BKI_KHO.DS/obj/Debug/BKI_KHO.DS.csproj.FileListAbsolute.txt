@@ -1,0 +1,11 @@
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.dll.config
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\obj\Debug\BKI_KHO.DS.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\obj\Debug\BKI_KHO.DS.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\obj\Debug\BKI_KHO.DS.csprojResolveAssemblyReference.cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.dll.config
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\bin\Debug\BKI_KHO.DS.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\obj\Debug\BKI_KHO.DS.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.DS\obj\Debug\BKI_KHO.DS.pdb

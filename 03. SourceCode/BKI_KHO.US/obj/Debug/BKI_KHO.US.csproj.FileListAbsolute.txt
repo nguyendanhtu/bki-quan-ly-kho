@@ -1,0 +1,66 @@
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.US.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.US.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.DS.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Win.C1FlexGrid.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.Shared.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\SiSButton.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Common.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.DS.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.pdb
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.xml
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.csprojResolveAssemblyReference.cache
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.dll
+D:\5.Projects\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.US.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.US.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.DS.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Win.C1FlexGrid.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.Shared.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\SiSButton.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\C1.Common.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\BKI_KHO.DS.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPBusinessService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPCommon.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPData.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPException.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPSystemAdmin.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.pdb
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\bin\Debug\IPUserService.xml
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.csprojResolveAssemblyReference.cache
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.dll
+D:\3 PROJECTS\2. Inventory\SVN Inventory\03. SourceCode\BKI_KHO.US\obj\Debug\BKI_KHO.US.pdb
