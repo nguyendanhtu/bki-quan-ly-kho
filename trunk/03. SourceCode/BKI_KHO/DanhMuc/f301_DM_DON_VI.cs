@@ -130,7 +130,7 @@ namespace BKI_KHO {
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 335);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(616, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(614, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -142,7 +142,7 @@ namespace BKI_KHO {
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(232, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(230, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(99, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -157,7 +157,7 @@ namespace BKI_KHO {
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(331, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(329, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(93, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -172,7 +172,7 @@ namespace BKI_KHO {
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(424, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(422, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(90, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -187,7 +187,7 @@ namespace BKI_KHO {
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(514, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(512, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(98, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -197,9 +197,9 @@ namespace BKI_KHO {
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 59);
+            this.m_fg.Location = new System.Drawing.Point(0, 72);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(616, 276);
+            this.m_fg.Size = new System.Drawing.Size(614, 263);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -208,7 +208,7 @@ namespace BKI_KHO {
             this.m_txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_search.ForeColor = System.Drawing.Color.DimGray;
-            this.m_txt_search.Location = new System.Drawing.Point(185, 5);
+            this.m_txt_search.Location = new System.Drawing.Point(185, 13);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(254, 20);
             this.m_txt_search.TabIndex = 26;
@@ -223,7 +223,7 @@ namespace BKI_KHO {
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(456, 0);
+            this.m_cmd_search.Location = new System.Drawing.Point(456, 8);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(74, 28);
             this.m_cmd_search.TabIndex = 27;
@@ -233,7 +233,7 @@ namespace BKI_KHO {
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(75, 8);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(75, 16);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
             this.m_lbl_tim_kiem.Size = new System.Drawing.Size(88, 13);
             this.m_lbl_tim_kiem.TabIndex = 25;
@@ -246,7 +246,7 @@ namespace BKI_KHO {
             this.m_lbl_title.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_title.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_title.Name = "m_lbl_title";
-            this.m_lbl_title.Size = new System.Drawing.Size(616, 28);
+            this.m_lbl_title.Size = new System.Drawing.Size(614, 28);
             this.m_lbl_title.TabIndex = 43;
             this.m_lbl_title.Text = "DANH MỤC ĐƠN VỊ TÍNH";
             this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,13 +259,13 @@ namespace BKI_KHO {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 31);
+            this.panel1.Size = new System.Drawing.Size(614, 44);
             this.panel1.TabIndex = 44;
             // 
             // f301_DM_DON_VI
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(616, 371);
+            this.ClientSize = new System.Drawing.Size(614, 371);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_lbl_title);
