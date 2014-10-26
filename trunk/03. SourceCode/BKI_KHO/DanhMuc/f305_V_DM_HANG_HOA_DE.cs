@@ -96,7 +96,7 @@ namespace BKI_KHO.DanhMuc
             m_us_v_dm_hang_hoa.strTEN_HANG_VN = m_txt_ten_hang.Text.Trim();
             m_us_v_dm_hang_hoa.dcID_NHOM = CIPConvert.ToDecimal(m_cbo_nhom.SelectedValue);
             m_us_v_dm_hang_hoa.dcID_TRANG_THAI = CIPConvert.ToDecimal(m_cbo_trang_thai.SelectedValue);
-            m_us_v_dm_hang_hoa.dcGiA_NHAP = CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim());
+            m_us_v_dm_hang_hoa.dcGIA_NHAP = CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim());
             m_us_v_dm_hang_hoa.dcGIA_BAN = CIPConvert.ToDecimal(m_txt_gia_ban.Text.Trim());
         }
         private void us_obj_2_form()
@@ -105,7 +105,7 @@ namespace BKI_KHO.DanhMuc
             m_txt_ten_hang.Text = m_us_v_dm_hang_hoa.strTEN_HANG_VN;
             m_cbo_nhom.SelectedValue = m_us_v_dm_hang_hoa.dcID_NHOM;
             m_cbo_trang_thai.SelectedValue = m_us_v_dm_hang_hoa.dcID_TRANG_THAI;
-            m_txt_gia_nhap.Text = CIPConvert.ToStr(m_us_v_dm_hang_hoa.dcGiA_NHAP);
+            m_txt_gia_nhap.Text = CIPConvert.ToStr(m_us_v_dm_hang_hoa.dcGIA_NHAP);
             m_txt_gia_ban.Text = CIPConvert.ToStr(m_us_v_dm_hang_hoa.dcGIA_BAN);
             m_cbo_don_vi_tinh.SelectedValue = m_us_v_dm_hang_hoa.dcID_DON_VI;
         }
