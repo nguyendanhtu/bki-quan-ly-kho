@@ -674,7 +674,17 @@ namespace BKI_KHO.DS.CDBNames
         public const string GIA_BAN = "GIA_BAN";
         public const string GIA_BAN_LE = "GIA_BAN_LE";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string PART_NUMBER = "PART_NUMBER";
+        public const string NGUOI_MUON = "NGUOI_MUON";
+        public const string NGAY_MUON = "NGAY_MUON";
+        public const string NGAY_PHAI_TRA = "NGAY_PHAI_TRA";
+        public const string NGUOI_TRA = "NGUOI_TRA";
+        public const string NGAY_TRA = "NGAY_TRA";
+        public const string ID_LOAI_HANG = "ID_LOAI_HANG";
+        public const string ID_KHO = "ID_KHO";
+        public const string LEVEL_MODE = "LEVEL_MODE";
     }
+
 
 
     public class DM_DON_VI
@@ -700,13 +710,27 @@ namespace BKI_KHO.DS.CDBNames
         public const string TEN_HANG_EN = "TEN_HANG_EN";
         public const string ANH = "ANH";
         public const string MA_VACH = "MA_VACH";
-        public const string GiA_NHAP = "GiA_NHAP";
+        public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
         public const string GIA_BAN_LE = "GIA_BAN_LE";
         public const string MO_TA = "MO_TA";
-        public const string TRANG_THAI = "TRANG_THAI";
+        public const string TRANG_THAI_HANG = "TRANG_THAI_HANG";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string PART_NUMBER = "PART_NUMBER";
+        public const string NGUOI_MUON = "NGUOI_MUON";
+        public const string NGAY_MUON = "NGAY_MUON";
+        public const string NGAY_PHAI_TRA = "NGAY_PHAI_TRA";
+        public const string NGUOI_TRA = "NGUOI_TRA";
+        public const string NGAY_TRA = "NGAY_TRA";
+        public const string ID_LOAI_HANG = "ID_LOAI_HANG";
+        public const string TEN_LOAI_HANG = "TEN_LOAI_HANG";
+        public const string ID_KHO = "ID_KHO";
+        public const string TEN_KHO = "TEN_KHO";
+        public const string LEVEL_MODE = "LEVEL_MODE";
+        public const string ID_HANG_CHA = "ID_HANG_CHA";
+        public const string TEN_HANG_CHA = "TEN_HANG_CHA";
     }
+
 
 
 

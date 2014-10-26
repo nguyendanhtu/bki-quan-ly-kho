@@ -372,8 +372,8 @@ namespace BKI_KHO
             v_htb.Add(V_DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG);
             v_htb.Add(V_DM_HANG_HOA.TEN_DON_VI, e_col_Number.TEN_DON_VI);
             v_htb.Add(V_DM_HANG_HOA.TEN_NHOM, e_col_Number.TEN_NHOM);
-            v_htb.Add(V_DM_HANG_HOA.GiA_NHAP, e_col_Number.GiA_NHAP);
-            v_htb.Add(V_DM_HANG_HOA.TRANG_THAI, e_col_Number.TRANG_THAI);
+            v_htb.Add(V_DM_HANG_HOA.GIA_NHAP, e_col_Number.GiA_NHAP);
+            v_htb.Add(V_DM_HANG_HOA.TRANG_THAI_HANG, e_col_Number.TRANG_THAI);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_HANG_HOA.NewRow());
             return v_obj_trans;
