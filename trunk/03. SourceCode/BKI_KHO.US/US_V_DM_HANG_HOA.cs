@@ -775,10 +775,12 @@ public class US_V_DM_HANG_HOA : US_Object
 	}
 #endregion
 
-    public void FillDatasetSearch(DS_V_DM_HANG_HOA op_ds, string i_str_search)
+    public void FillDatasetSearch(DS_V_DM_HANG_HOA op_ds, string i_str_search, decimal i_id_kho)
     {
         CStoredProc v_sp = new CStoredProc("pr_V_DM_HANG_HOA_search");
         v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_search);
+        v_sp.addDecimalInputParam("@ID_KHO", i_id_kho);
+
         v_sp.fillDataSetByCommand(this, op_ds);
     }
 }
