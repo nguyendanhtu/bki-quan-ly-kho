@@ -45,6 +45,8 @@ namespace BKI_KHO
         private TextBox m_txt_tim_kiem;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private Label m_lbl_title;
+        private ComboBox m_cbo_kho;
+        private Label label1;
         private System.ComponentModel.IContainer components;
 
         public f305_V_DM_HANG_HOA()
@@ -58,6 +60,7 @@ namespace BKI_KHO
             // TODO: Add any constructor code after InitializeComponent call
             //
             format_controls();
+            
         }
 
         /// <summary>
@@ -93,6 +96,8 @@ namespace BKI_KHO
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_cbo_kho = new System.Windows.Forms.ComboBox();
             this.m_lbl_tim_kiem = new System.Windows.Forms.Label();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
@@ -222,29 +227,51 @@ namespace BKI_KHO
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 88);
+            this.m_fg.Location = new System.Drawing.Point(0, 130);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(995, 405);
+            this.m_fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.m_fg.Size = new System.Drawing.Size(995, 363);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
+            this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_cbo_kho);
             this.panel1.Controls.Add(this.m_lbl_tim_kiem);
             this.panel1.Controls.Add(this.m_txt_tim_kiem);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 48);
+            this.panel1.Size = new System.Drawing.Size(995, 90);
             this.panel1.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Kho";
+            // 
+            // m_cbo_kho
+            // 
+            this.m_cbo_kho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cbo_kho.FormattingEnabled = true;
+            this.m_cbo_kho.Location = new System.Drawing.Point(93, 63);
+            this.m_cbo_kho.Name = "m_cbo_kho";
+            this.m_cbo_kho.Size = new System.Drawing.Size(139, 21);
+            this.m_cbo_kho.TabIndex = 31;
             // 
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
             this.m_lbl_tim_kiem.Location = new System.Drawing.Point(55, 20);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
-            this.m_lbl_tim_kiem.Size = new System.Drawing.Size(86, 14);
+            this.m_lbl_tim_kiem.Size = new System.Drawing.Size(88, 13);
             this.m_lbl_tim_kiem.TabIndex = 28;
             this.m_lbl_tim_kiem.Text = "Từ khoá tìm kiếm";
             // 
@@ -316,20 +343,23 @@ namespace BKI_KHO
         #region Data Structure
         private enum e_col_Number
         {
-            TEN_HANG_VN = 3
-,
-            GIA_BAN = 6
-                ,
-            MA_HANG = 2
-                ,
-            TEN_DON_VI = 4
-                ,
-            TEN_NHOM = 1
-                ,
-            GiA_NHAP = 5
-                ,
-            TRANG_THAI = 7
-
+            TEN_HANG_CHA = 4,
+            MA_HANG = 5,
+            TEN_NHOM = 3,
+            TEN_NHOM_CHA = 2,
+            TEN_DON_VI = 9,
+            TEN_HANG_VN = 7,
+            GIA_NHAP = 10,
+            GIA_BAN = 11,
+            MO_TA = 8,
+            TRANG_THAI_HANG = 6,
+            PART_NUMBER = 12,
+            NGUOI_MUON = 13,
+            NGAY_MUON = 14,
+            NGAY_PHAI_TRA = 15,
+            NGUOI_TRA = 16,
+            NGAY_TRA = 17,
+            TEN_KHO = 1,
         }
         #endregion
 
@@ -347,58 +377,91 @@ namespace BKI_KHO
             this.m_lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
+
+            m_fg.Tree.Style = TreeStyleFlags.CompleteLeaf;
             m_fg.Tree.Column = (int)e_col_Number.MA_HANG;
+
+            m_fg.Cols[(int)e_col_Number.TEN_KHO].Visible = false;
+
+            m_fg.Cols[(int)e_col_Number.TEN_NHOM_CHA].Visible = false;
+
             m_fg.Cols[(int)e_col_Number.TEN_NHOM].Visible = false;
-            m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
+            m_fg.Cols[(int)e_col_Number.TEN_HANG_CHA].Visible = false;
+           // m_fg.Cols[(int)e_col_Number.TEN_HANG_CHA].Visible = false;
             CGridUtils.AddSearch_Handlers(m_fg);
             m_cmd_view.Visible = false;
             m_cmd_insert.Visible = false;
             //m_cmd_update.Visible = false;
             //m_cmd_delete.Visible = false;
-            CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, true);
+            //CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, true);
             set_define_events();
             this.KeyPreview = true;
         }
+        private void load_data_2_cbo_kho()
+        {
+            US_DM_KHO v_us = new US_DM_KHO();
+            DS_DM_KHO v_ds = new DS_DM_KHO();
+            v_us.FillDataset(v_ds);
+
+            m_cbo_kho.DataSource = v_ds.DM_KHO;
+            m_cbo_kho.DisplayMember = DM_KHO.TEN_KHO;
+            m_cbo_kho.ValueMember = DM_KHO.ID;
+        }
         private void set_initial_form_load()
         {
+            load_data_2_cbo_kho();
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
+            m_cbo_kho.SelectedValueChanged += m_cbo_kho_SelectedValueChanged;
         }
+
+        
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_DM_HANG_HOA.TEN_HANG_VN, e_col_Number.TEN_HANG_VN);
-            v_htb.Add(V_DM_HANG_HOA.GIA_BAN, e_col_Number.GIA_BAN);
-            v_htb.Add(V_DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG);
-            v_htb.Add(V_DM_HANG_HOA.TEN_DON_VI, e_col_Number.TEN_DON_VI);
+            v_htb.Add(V_DM_HANG_HOA.TEN_KHO, e_col_Number.TEN_KHO);
+            v_htb.Add(V_DM_HANG_HOA.TEN_NHOM_CHA, e_col_Number.TEN_NHOM_CHA);
             v_htb.Add(V_DM_HANG_HOA.TEN_NHOM, e_col_Number.TEN_NHOM);
-            v_htb.Add(V_DM_HANG_HOA.GIA_NHAP, e_col_Number.GiA_NHAP);
-            v_htb.Add(V_DM_HANG_HOA.TRANG_THAI_HANG, e_col_Number.TRANG_THAI);
-
+            v_htb.Add(V_DM_HANG_HOA.MA_HANG, e_col_Number.MA_HANG);
+            v_htb.Add(V_DM_HANG_HOA.TRANG_THAI_HANG, e_col_Number.TRANG_THAI_HANG);
+            v_htb.Add(V_DM_HANG_HOA.TEN_HANG_VN, e_col_Number.TEN_HANG_VN);
+            v_htb.Add(V_DM_HANG_HOA.MO_TA, e_col_Number.MO_TA);
+            v_htb.Add(V_DM_HANG_HOA.TEN_DON_VI, e_col_Number.TEN_DON_VI);
+            v_htb.Add(V_DM_HANG_HOA.GIA_NHAP, e_col_Number.GIA_NHAP);
+            v_htb.Add(V_DM_HANG_HOA.GIA_BAN, e_col_Number.GIA_BAN);
+            v_htb.Add(V_DM_HANG_HOA.PART_NUMBER, e_col_Number.PART_NUMBER);
+            v_htb.Add(V_DM_HANG_HOA.NGUOI_MUON, e_col_Number.NGUOI_MUON);
+            v_htb.Add(V_DM_HANG_HOA.NGAY_MUON, e_col_Number.NGAY_MUON);
+            v_htb.Add(V_DM_HANG_HOA.NGAY_PHAI_TRA, e_col_Number.NGAY_PHAI_TRA);
+            v_htb.Add(V_DM_HANG_HOA.NGUOI_TRA, e_col_Number.NGUOI_TRA);
+            v_htb.Add(V_DM_HANG_HOA.NGAY_TRA, e_col_Number.NGAY_TRA);
+            
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_HANG_HOA.NewRow());
             return v_obj_trans;
         }
         private void load_data_2_grid()
         {
             m_ds = new DS_V_DM_HANG_HOA();
-            m_us.FillDataset(m_ds, "ORDER BY " + V_DM_HANG_HOA.TEN_NHOM);
+            m_us.FillDataset(m_ds, " where ID_KHO = "+ m_cbo_kho.SelectedValue.ToString() + " AND ID_HANG_CHA IS NULL"+" ORDER BY " + V_DM_HANG_HOA.TEN_KHO + "," + V_DM_HANG_HOA.TEN_NHOM_CHA + "," + V_DM_HANG_HOA.TEN_NHOM);
             m_fg.Redraw = false;
+            
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-
-            m_fg.Subtotal(
-              AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
-               , 0
-               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
-               , (int)e_col_Number.MA_HANG // chỗ này là tên trường mà mình Count
-               , "{0}");
 
             m_fg.Subtotal(
               AggregateEnum.Count
                , 0
-               , (int)e_col_Number.TEN_NHOM 
-               , (int)e_col_Number.TEN_HANG_VN 
-               , "");
+               , (int)e_col_Number.TEN_NHOM_CHA
+               , 0
+               , "{0}");
+            m_fg.Subtotal(
+              AggregateEnum.Count
+               , 1
+               , (int)e_col_Number.TEN_NHOM
+               , 0
+               , "{0}");
 
+            m_fg.AutoSizeCols();
+            CControlFormat.wrap_text_cells(m_fg);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_DM_HANG_HOA i_us
@@ -410,7 +473,6 @@ namespace BKI_KHO
             i_us.DataRow2Me(v_dr);
         }
 
-
         private void us_object2grid(US_V_DM_HANG_HOA i_us
             , int i_grid_row)
         {
@@ -418,7 +480,6 @@ namespace BKI_KHO
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-
 
         private void insert_v_dm_hang_hoa()
         {
@@ -433,7 +494,8 @@ namespace BKI_KHO
                 return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row))
                 return;
-            if(m_fg.Rows[m_fg.Row].IsNode == true) {
+            if (m_fg.Rows[m_fg.Row].IsNode == true)
+            {
                 BaseMessages.MsgBox_Error("Không được sửa nhóm cha!");
                 return;
             }
@@ -461,7 +523,7 @@ namespace BKI_KHO
             try
             {
                 v_us.BeginTransaction();
-                v_us.Delete();
+                v_us.DeleteByID(v_us.dcID);
                 v_us.CommitTransaction();
                 load_data_2_grid();
             }
@@ -499,6 +561,17 @@ namespace BKI_KHO
         //		EVENT HANLDERS
         //
         //
+        void m_cbo_kho_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         private void f305_V_DM_HANG_HOA_Load(object sender, System.EventArgs e)
         {
             try
@@ -585,24 +658,33 @@ namespace BKI_KHO
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-
         }
 
         private void load_data_2_grid_search()
         {
             m_obj_trans = get_trans_object(m_fg);
             m_ds.Clear();
-            m_us.FillDatasetSearch(m_ds, m_txt_tim_kiem.Text.Trim());
+            m_us.FillDatasetSearch(m_ds, m_txt_tim_kiem.Text.Trim(), CIPConvert.ToDecimal(m_cbo_kho.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
             m_fg.Subtotal(
-              AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+              AggregateEnum.Count
                , 0
-               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
-               , (int)e_col_Number.MA_HANG // chỗ này là tên trường mà mình Count
+               , (int)e_col_Number.TEN_NHOM_CHA
+               , 0
                , "{0}");
+            m_fg.Subtotal(
+              AggregateEnum.Count
+               , 1
+               , (int)e_col_Number.TEN_NHOM
+               , 0
+               , "{0}");
+
+            m_fg.AutoSizeCols();
+            CControlFormat.wrap_text_cells(m_fg);
             m_fg.Redraw = true;
-            
+
         }
         private void m_txt_tim_kiem_KeyDown(object sender, KeyEventArgs e)
         {
@@ -629,6 +711,11 @@ namespace BKI_KHO
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            update_v_dm_hang_hoa();
         }
 
     }
