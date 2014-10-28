@@ -91,7 +91,7 @@ namespace BKI_KHO {
             DataRow v_dr = (DataRow)v_ds_dm_kho.DM_KHO.Rows[0];
 
             m_us_dm_kho.DataRow2Me(v_dr);
-            m_txt_ten_kho.Text = m_us_dm_kho.strTEN_KHO;
+            //m_txt_ten_kho.Text = m_us_dm_kho.strTEN_KHO;
 
         }
         private void set_initial_form_load() {
@@ -171,11 +171,11 @@ namespace BKI_KHO {
 
             if (!CValidateTextBox.IsValid(m_dat_ngay_lap, DataType.DateType, allowNull.NO, true)) return false;
 
-            if (m_txt_ten_kho.Text.Length == 0) {
-                BaseMessages.MsgBox_Error("Bạn phải chọn kho để nhập hàng hóa");
-                m_txt_ten_kho.Focus();
-                return false;
-            }
+            //if (m_txt_ten_kho.Text.Length == 0) {
+            //    BaseMessages.MsgBox_Error("Bạn phải chọn kho để nhập hàng hóa");
+            //    m_txt_ten_kho.Focus();
+            //    return false;
+            //}
 
 
             if (!CValidateTextBox.IsValid(m_txt_tong_tien, DataType.NumberType, allowNull.NO, true)) return false;
