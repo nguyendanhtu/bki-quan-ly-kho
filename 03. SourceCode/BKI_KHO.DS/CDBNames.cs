@@ -35,24 +35,30 @@ namespace BKI_KHO.DS.CDBNames
         public const string NGAY_NHAP_CUOI = "NGAY_NHAP_CUOI";
         public const string ID_LOAI_CT = "ID_LOAI_CT";
         public const string MA_LOAI_CT = "MA_LOAI_CT";
+        public const string ID_KHO = "ID_KHO";
+        public const string TEN_KHO = "TEN_KHO";
+        public const string ID_NHOM_CHA = "ID_NHOM_CHA";
+        public const string TEN_NHOM_CHA = "TEN_NHOM_CHA";
         public const string ID_NHOM = "ID_NHOM";
         public const string TEN_NHOM = "TEN_NHOM";
         public const string ID_HANG_HOA = "ID_HANG_HOA";
         public const string MA_HANG = "MA_HANG";
+        public const string MA_VACH = "MA_VACH";
         public const string TEN_HANG_VN = "TEN_HANG_VN";
-       // public const string ID_DON_VI = "ID_DON_VI_TINH";
-        public const string TEN_DON_VI = "TEN_DON_VI";
         public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
+        public const string PART_NUMBER = "PART_NUMBER";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
-        public const string TRANG_THAI = "TRANG_THAI";
+        public const string TRANG_THAI_HANG = "TRANG_THAI_HANG";
         public const string SO_LUONG = "SO_LUONG";
         public const string GIA_GIAO_DICH = "GIA_GIAO_DICH";
         public const string THOI_GIAN_BH = "THOI_GIAN_BH";
         public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
-        public const string TEN = "TEN";
+        public const string TEN_LOAI_CT = "TEN_LOAI_CT";
+        public const string ID_DVT_THOI_GIAN = "ID_DVT_THOI_GIAN";
     }
+
     public class GD_CHI_TIET_CHUNG_TU {
         public const string ID =  "ID";
         public const string ID_CHUNG_TU =  "ID_CHUNG_TU";
