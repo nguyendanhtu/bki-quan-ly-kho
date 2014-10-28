@@ -14,12 +14,16 @@ using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
 using BKI_KHO.NghiepVu;
 using BKI_KHO.HeThong;
+using GuiDev;
+using DevExpress.XtraTab;
 
 namespace Form_menu {
     public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm {
+        TabAdd m_tab_add = new TabAdd();
         public f399_MainMenu() {
             InitializeComponent();
             format_controls();
+            m_tab_add.setCloseButtonTab(xtraTabControl1, ClosePageButtonShowMode.InAllTabPageHeaders);
         }
         #region Members
         int trangthaiweb = 1;
@@ -58,13 +62,23 @@ namespace Form_menu {
             //m_cmd_nhap_so_du_dau.Enabled = false;
             m_cmd_ma_vach.Enabled = false;
         }
+        public void closeTabPage(EventArgs e)
+        {
+            m_tab_add.setCloseTabInEventCloseForm(xtraTabControl1, e);
+        }
         #endregion
         // Event handlers
         private void set_define_events() {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
+            xtraTabControl1.CloseButtonClick += xtraTabControl1_CloseButtonClick;
         }
+   
 
+        public void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        {
+            closeTabPage(e);
+        }
         void m_cmd_xuat_kho_Click(object sender, EventArgs e) {
             try {
                 f604_phieu_xuat_kho v_frm = new f604_phieu_xuat_kho();
@@ -78,7 +92,7 @@ namespace Form_menu {
         void m_cmd_nhap_kho_Click(object sender, EventArgs e) {
             try {
                 f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -88,7 +102,8 @@ namespace Form_menu {
         private void m_cmd_mat_hang_Click(object sender, EventArgs e) {
             try {
                 f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
-                v_f.display();
+                m_tab_add.AddTab(xtraTabControl1, v_f.Name, v_f.Text, v_f, new UserControl());
+                //v_f.display();
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -97,8 +112,8 @@ namespace Form_menu {
 
         private void m_cmd_nhom_hang_Click(object sender, EventArgs e) {
             try {
-                f302_V_DM_NHOM_HANG f302 = new f302_V_DM_NHOM_HANG();
-                f302.display();
+                f302_V_DM_NHOM_HANG v_f = new f302_V_DM_NHOM_HANG();
+                m_tab_add.AddTab(xtraTabControl1, v_f.Name, v_f.Text, v_f, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -128,7 +143,7 @@ namespace Form_menu {
         private void m_cmd_kho_Click(object sender, EventArgs e) {
             try {
                 f110_V_DM_KHO frm = new f110_V_DM_KHO();
-                frm.display();
+                m_tab_add.AddTab(xtraTabControl1, frm.Name, frm.Text, frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
