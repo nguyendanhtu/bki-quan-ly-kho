@@ -34,6 +34,8 @@
             this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.m_group_lap_phieu = new System.Windows.Forms.GroupBox();
+            this.m_cbo_kho = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.m_lbl_ten_phieu = new System.Windows.Forms.Label();
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
             this.m_cmd_chon_nhan_vien = new SIS.Controls.Button.SiSButton();
@@ -56,8 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.m_group_lap_phieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             this.m_txt_nguoi_thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.m_txt_nguoi_thu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(119, 129);
+            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(118, 133);
             this.m_txt_nguoi_thu.MaxLength = 10;
             this.m_txt_nguoi_thu.Name = "m_txt_nguoi_thu";
             this.m_txt_nguoi_thu.Size = new System.Drawing.Size(167, 20);
@@ -108,7 +108,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(37, 131);
+            this.label9.Location = new System.Drawing.Point(36, 135);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             // m_group_lap_phieu
             // 
-            this.m_group_lap_phieu.Controls.Add(this.comboBox1);
+            this.m_group_lap_phieu.Controls.Add(this.m_cbo_kho);
             this.m_group_lap_phieu.Controls.Add(this.label3);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_nguoi_thu);
             this.m_group_lap_phieu.Controls.Add(this.label9);
@@ -134,6 +134,23 @@
             this.m_group_lap_phieu.Size = new System.Drawing.Size(933, 171);
             this.m_group_lap_phieu.TabIndex = 0;
             this.m_group_lap_phieu.TabStop = false;
+            // 
+            // m_cbo_kho
+            // 
+            this.m_cbo_kho.FormattingEnabled = true;
+            this.m_cbo_kho.Location = new System.Drawing.Point(345, 35);
+            this.m_cbo_kho.Name = "m_cbo_kho";
+            this.m_cbo_kho.Size = new System.Drawing.Size(135, 21);
+            this.m_cbo_kho.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(306, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Kho";
             // 
             // m_lbl_ten_phieu
             // 
@@ -163,7 +180,7 @@
             this.m_cmd_chon_nhan_vien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_nhan_vien.ImageIndex = 14;
             this.m_cmd_chon_nhan_vien.ImageList = this.imageList1;
-            this.m_cmd_chon_nhan_vien.Location = new System.Drawing.Point(292, 125);
+            this.m_cmd_chon_nhan_vien.Location = new System.Drawing.Point(291, 129);
             this.m_cmd_chon_nhan_vien.Name = "m_cmd_chon_nhan_vien";
             this.m_cmd_chon_nhan_vien.Size = new System.Drawing.Size(70, 28);
             this.m_cmd_chon_nhan_vien.TabIndex = 14;
@@ -264,7 +281,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(3, 16);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 47;
+            this.m_fg.Rows.Count = 48;
             this.m_fg.Size = new System.Drawing.Size(927, 245);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 0;
@@ -386,23 +403,6 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Tổng tiền nhập";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(306, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Kho";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(345, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 16;
-            // 
             // f600_phieu_nhap_kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,7 +457,7 @@
         private C1.Win.C1Input.C1TextBox m_txt_tong_tien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox m_cbo_kho;
 
     }
 }

@@ -78,9 +78,11 @@ namespace BKI_KHO
 
         DS_DM_DON_VI m_ds_don_vi = new DS_DM_DON_VI();
         US_DM_DON_VI m_us_don_vi = new US_DM_DON_VI();
+
+       
         #endregion
 
-        #region Methods
+        #region Private Methods
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
@@ -107,6 +109,10 @@ namespace BKI_KHO
             load_cbo_don_vi_on_grid();
             m_dat_ngay_lap.Value = CIPConvert.ToStr(CAppContext_201.getCurentDate());
         }
+        
+
+        
+
         private Hashtable get_mapping_col_don_vi()
         {
 

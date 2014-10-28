@@ -233,7 +233,7 @@ namespace BKI_KHO.NghiepVu {
             iop_us_gd_chi_tiet_chung_tu.strTEN_HANG_VN 
                 = CIPConvert.ToStr(m_fg[ip_grid_row, (int) e_col_Number.TEN_HANG]);
 
-            iop_us_gd_chi_tiet_chung_tu.dcGiA_NHAP 
+            iop_us_gd_chi_tiet_chung_tu.dcGIA_NHAP 
                 = CIPConvert.ToDecimal(m_fg[ip_grid_row, (int) e_col_Number.GIA_NHAP]);
 
             iop_us_gd_chi_tiet_chung_tu.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_HANG_HOA.ID_DA_NHAP;
