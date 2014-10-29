@@ -39,16 +39,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.m_cmd_chon_nhan_vien = new SIS.Controls.Button.SiSButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.m_cmd_clear_grid = new SIS.Controls.Button.SiSButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.m_txt_ten_hang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_cmd_nhap_hang = new SIS.Controls.Button.SiSButton();
             this.label14 = new System.Windows.Forms.Label();
             this.m_cbo_dvt = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -64,6 +64,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.m_cmd_clear_grid = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_nhap_hang = new SIS.Controls.Button.SiSButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.m_lbl_ten_phieu = new System.Windows.Forms.Label();
             this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
@@ -78,17 +82,16 @@
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.m_context.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_tong_tien)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -222,21 +225,6 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Tổng tiền nhập";
             // 
-            // m_cmd_insert
-            // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 3;
-            this.m_cmd_insert.ImageList = this.imageList1;
-            this.m_cmd_insert.Location = new System.Drawing.Point(149, 5);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(96, 26);
-            this.m_cmd_insert.TabIndex = 0;
-            this.m_cmd_insert.Text = "Lập phiếu ";
-            this.toolTip1.SetToolTip(this.m_cmd_insert, "Lập phiếu thu / chi cho học viên này");
-            // 
             // m_cmd_exit
             // 
             this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -251,6 +239,21 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 26);
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 3;
+            this.m_cmd_insert.ImageList = this.imageList1;
+            this.m_cmd_insert.Location = new System.Drawing.Point(180, 17);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(96, 26);
+            this.m_cmd_insert.TabIndex = 0;
+            this.m_cmd_insert.Text = "Lập phiếu ";
+            this.toolTip1.SetToolTip(this.m_cmd_insert, "Lập phiếu thu / chi cho học viên này");
             // 
             // m_cmd_chon_nhan_vien
             // 
@@ -279,7 +282,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.m_txt_ten_hang);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label14);
@@ -297,6 +301,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 109);
             this.groupBox2.Name = "groupBox2";
@@ -305,20 +310,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhập liệu";
             // 
-            // m_cmd_clear_grid
+            // label16
             // 
-            this.m_cmd_clear_grid.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_clear_grid.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_clear_grid.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_clear_grid.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_clear_grid.ImageIndex = 9;
-            this.m_cmd_clear_grid.ImageList = this.imageList1;
-            this.m_cmd_clear_grid.Location = new System.Drawing.Point(282, 5);
-            this.m_cmd_clear_grid.Name = "m_cmd_clear_grid";
-            this.m_cmd_clear_grid.Size = new System.Drawing.Size(162, 26);
-            this.m_cmd_clear_grid.TabIndex = 34;
-            this.m_cmd_clear_grid.Text = "Xóa dữ liệu trên phiếu";
-            this.m_cmd_clear_grid.Click += new System.EventHandler(this.siSButton1_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(171, 92);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(121, 13);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "Bước 2: Lập phiếu nhập";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 92);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 13);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Bước 1: Lưu từng mặt hàng";
             // 
             // m_txt_ten_hang
             // 
@@ -338,20 +346,6 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 32;
             this.label2.Text = "Tên hàng";
-            // 
-            // m_cmd_nhap_hang
-            // 
-            this.m_cmd_nhap_hang.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_nhap_hang.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_nhap_hang.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_nhap_hang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_nhap_hang.ImageIndex = 16;
-            this.m_cmd_nhap_hang.ImageList = this.imageList1;
-            this.m_cmd_nhap_hang.Location = new System.Drawing.Point(6, 5);
-            this.m_cmd_nhap_hang.Name = "m_cmd_nhap_hang";
-            this.m_cmd_nhap_hang.Size = new System.Drawing.Size(109, 26);
-            this.m_cmd_nhap_hang.TabIndex = 31;
-            this.m_cmd_nhap_hang.Text = "Lưu mặt hàng";
             // 
             // label14
             // 
@@ -489,6 +483,56 @@
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Mã hàng";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.m_cmd_clear_grid);
+            this.panel1.Controls.Add(this.m_cmd_nhap_hang);
+            this.panel1.Controls.Add(this.m_cmd_insert);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 92);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1149, 46);
+            this.panel1.TabIndex = 35;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(328, 17);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(190, 13);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Bước 3: Lập chi tiết thành phần thiết bị";
+            // 
+            // m_cmd_clear_grid
+            // 
+            this.m_cmd_clear_grid.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_clear_grid.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_clear_grid.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_clear_grid.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_clear_grid.ImageIndex = 9;
+            this.m_cmd_clear_grid.ImageList = this.imageList1;
+            this.m_cmd_clear_grid.Location = new System.Drawing.Point(665, 17);
+            this.m_cmd_clear_grid.Name = "m_cmd_clear_grid";
+            this.m_cmd_clear_grid.Size = new System.Drawing.Size(162, 26);
+            this.m_cmd_clear_grid.TabIndex = 34;
+            this.m_cmd_clear_grid.Text = "Xóa dữ liệu trên phiếu";
+            this.m_cmd_clear_grid.Click += new System.EventHandler(this.siSButton1_Click);
+            // 
+            // m_cmd_nhap_hang
+            // 
+            this.m_cmd_nhap_hang.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_nhap_hang.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_nhap_hang.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_nhap_hang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_nhap_hang.ImageIndex = 16;
+            this.m_cmd_nhap_hang.ImageList = this.imageList1;
+            this.m_cmd_nhap_hang.Location = new System.Drawing.Point(6, 17);
+            this.m_cmd_nhap_hang.Name = "m_cmd_nhap_hang";
+            this.m_cmd_nhap_hang.Size = new System.Drawing.Size(109, 26);
+            this.m_cmd_nhap_hang.TabIndex = 31;
+            this.m_cmd_nhap_hang.Text = "Lưu mặt hàng";
             // 
             // panel3
             // 
@@ -638,17 +682,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.m_cmd_clear_grid);
-            this.panel1.Controls.Add(this.m_cmd_nhap_hang);
-            this.panel1.Controls.Add(this.m_cmd_insert);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 103);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1149, 35);
-            this.panel1.TabIndex = 35;
-            // 
             // f600_phieu_nhap_kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,12 +698,13 @@
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -726,6 +760,9 @@
         private System.Windows.Forms.TextBox m_txt_ten_hang;
         internal SIS.Controls.Button.SiSButton m_cmd_clear_grid;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
 
     }
 }
