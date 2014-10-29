@@ -643,5 +643,7 @@ public class US_DM_HANG_HOA : US_Object
         v_stored_proc.fillDataSetByCommand(this, i_ds);
     }
     #endregion
+
+    
 }
 }

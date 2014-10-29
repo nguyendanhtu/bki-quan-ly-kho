@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IPUserService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IPUserService\bin\IPUserService.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -117,10 +121,6 @@
     <ProjectReference Include="..\IPSystemAdmin\IPSystemAdmin.vbproj">
       <Project>{455CD3A5-79BA-480A-B9BD-D4A7DDA397A8}</Project>
       <Name>IPSystemAdmin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IPUserService\IPUserService.vbproj">
-      <Project>{B490EA92-2990-4CBB-B58B-12901AFCCCB5}</Project>
-      <Name>IPUserService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
