@@ -783,5 +783,12 @@ public class US_V_DM_HANG_HOA : US_Object
 
         v_sp.fillDataSetByCommand(this, op_ds);
     }
+
+    public void FillDatasetByIdKho(decimal ip_dc_id_kho, DS_V_DM_HANG_HOA m_ds_v_hang_hoa)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_DM_HANG_HOA_FillDatasetByIdKho");
+        v_stored_proc.addDecimalInputParam("@id_kho", ip_dc_id_kho);
+        v_stored_proc.fillDataSetByCommand(this, m_ds_v_hang_hoa);
+    }
 }
 }

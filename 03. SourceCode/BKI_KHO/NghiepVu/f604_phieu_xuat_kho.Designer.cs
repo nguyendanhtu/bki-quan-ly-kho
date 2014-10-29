@@ -31,35 +31,44 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f604_phieu_xuat_kho));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MA_HANG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_HANG_VN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_DON_VI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIA_BAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_NHOM_CHA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_NHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_context = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.m_cmd_delete_detail = new System.Windows.Forms.ToolStripMenuItem();
             this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.m_lbl_ten_phieu = new System.Windows.Forms.Label();
             this.m_dat_ngay_lap = new C1.Win.C1Input.C1TextBox();
-            this.m_txt_ten_kho = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.m_cmd_xem = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_chon_kho = new SIS.Controls.Button.SiSButton();
             this.m_lab_ngay = new System.Windows.Forms.Label();
             this.m_txt_so_phieu_thu_chi = new System.Windows.Forms.TextBox();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.m_lab_so_phieu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_noi_dung = new System.Windows.Forms.TextBox();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_group_lap_phieu = new System.Windows.Forms.GroupBox();
+            this.m_cbo_ma_hang_hoa = new System.Windows.Forms.ComboBox();
+            this.m_cbo_kho = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new C1.Win.C1Input.C1TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.m_context.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -70,7 +79,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.m_fg);
+            this.groupBox1.Controls.Add(this.gridControl1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 212);
             this.groupBox1.Name = "groupBox1";
@@ -79,20 +88,80 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết phiếu";
             // 
-            // m_fg
+            // gridControl1
             // 
-            this.m_fg.AllowAddNew = true;
-            this.m_fg.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.ContextMenuStrip = this.m_context;
-            this.m_fg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(3, 16);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Count = 48;
-            this.m_fg.Size = new System.Drawing.Size(829, 245);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 0;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(3, 16);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(829, 245);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MA_HANG,
+            this.TEN_HANG_VN,
+            this.TEN_DON_VI,
+            this.GIA_BAN,
+            this.TEN_NHOM_CHA,
+            this.TEN_NHOM});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupCount = 2;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.TEN_NHOM_CHA, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.TEN_NHOM, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // MA_HANG
+            // 
+            this.MA_HANG.Caption = "Mã hàng hóa";
+            this.MA_HANG.FieldName = "MA_HANG";
+            this.MA_HANG.Name = "MA_HANG";
+            this.MA_HANG.Visible = true;
+            this.MA_HANG.VisibleIndex = 0;
+            // 
+            // TEN_HANG_VN
+            // 
+            this.TEN_HANG_VN.Caption = "Tên hàng";
+            this.TEN_HANG_VN.FieldName = "TEN_HANG_VN";
+            this.TEN_HANG_VN.Name = "TEN_HANG_VN";
+            this.TEN_HANG_VN.Visible = true;
+            this.TEN_HANG_VN.VisibleIndex = 1;
+            // 
+            // TEN_DON_VI
+            // 
+            this.TEN_DON_VI.Caption = "Đơn vị tính";
+            this.TEN_DON_VI.FieldName = "TEN_DON_VI";
+            this.TEN_DON_VI.Name = "TEN_DON_VI";
+            this.TEN_DON_VI.Visible = true;
+            this.TEN_DON_VI.VisibleIndex = 2;
+            // 
+            // GIA_BAN
+            // 
+            this.GIA_BAN.Caption = "Giá xuất";
+            this.GIA_BAN.FieldName = "GIA_BAN";
+            this.GIA_BAN.Name = "GIA_BAN";
+            this.GIA_BAN.Visible = true;
+            this.GIA_BAN.VisibleIndex = 3;
+            // 
+            // TEN_NHOM_CHA
+            // 
+            this.TEN_NHOM_CHA.Caption = "Nhóm cha";
+            this.TEN_NHOM_CHA.FieldName = "TEN_NHOM_CHA";
+            this.TEN_NHOM_CHA.Name = "TEN_NHOM_CHA";
+            this.TEN_NHOM_CHA.Visible = true;
+            this.TEN_NHOM_CHA.VisibleIndex = 4;
+            // 
+            // TEN_NHOM
+            // 
+            this.TEN_NHOM.Caption = "Nhóm";
+            this.TEN_NHOM.FieldName = "TEN_NHOM";
+            this.TEN_NHOM.Name = "TEN_NHOM";
+            this.TEN_NHOM.Visible = true;
+            this.TEN_NHOM.VisibleIndex = 3;
             // 
             // m_context
             // 
@@ -109,10 +178,12 @@
             // 
             // m_txt_nguoi_thu
             // 
-            this.m_txt_nguoi_thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.m_txt_nguoi_thu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_nguoi_thu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.m_txt_nguoi_thu.BackColor = System.Drawing.SystemColors.Window;
             this.m_txt_nguoi_thu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_txt_nguoi_thu.Location = new System.Drawing.Point(192, 137);
-            this.m_txt_nguoi_thu.MaxLength = 10;
+            this.m_txt_nguoi_thu.MaxLength = 50;
             this.m_txt_nguoi_thu.Name = "m_txt_nguoi_thu";
             this.m_txt_nguoi_thu.Size = new System.Drawing.Size(167, 20);
             this.m_txt_nguoi_thu.TabIndex = 11;
@@ -140,22 +211,11 @@
             // m_dat_ngay_lap
             // 
             this.m_dat_ngay_lap.EditMask = "##/##/####";
-            this.m_dat_ngay_lap.Location = new System.Drawing.Point(474, 48);
+            this.m_dat_ngay_lap.Location = new System.Drawing.Point(496, 49);
             this.m_dat_ngay_lap.Name = "m_dat_ngay_lap";
             this.m_dat_ngay_lap.Size = new System.Drawing.Size(166, 19);
             this.m_dat_ngay_lap.TabIndex = 3;
             this.m_dat_ngay_lap.Tag = null;
-            // 
-            // m_txt_ten_kho
-            // 
-            this.m_txt_ten_kho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.m_txt_ten_kho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_txt_ten_kho.Enabled = false;
-            this.m_txt_ten_kho.Location = new System.Drawing.Point(192, 172);
-            this.m_txt_ten_kho.MaxLength = 10;
-            this.m_txt_ten_kho.Name = "m_txt_ten_kho";
-            this.m_txt_ten_kho.Size = new System.Drawing.Size(167, 20);
-            this.m_txt_ten_kho.TabIndex = 13;
             // 
             // label2
             // 
@@ -209,20 +269,6 @@
             this.imageList1.Images.SetKeyName(19, "");
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
-            // 
-            // m_cmd_chon_kho
-            // 
-            this.m_cmd_chon_kho.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_chon_kho.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_chon_kho.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_chon_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_chon_kho.ImageIndex = 14;
-            this.m_cmd_chon_kho.ImageList = this.imageList1;
-            this.m_cmd_chon_kho.Location = new System.Drawing.Point(365, 132);
-            this.m_cmd_chon_kho.Name = "m_cmd_chon_kho";
-            this.m_cmd_chon_kho.Size = new System.Drawing.Size(32, 28);
-            this.m_cmd_chon_kho.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.m_cmd_chon_kho, "Chọn kho");
             // 
             // m_lab_ngay
             // 
@@ -286,6 +332,16 @@
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(423, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Mã hàng hóa";
+            this.toolTip1.SetToolTip(this.label3, "Kho");
+            // 
             // m_lab_so_phieu
             // 
             this.m_lab_so_phieu.AutoSize = true;
@@ -342,13 +398,14 @@
             // 
             // m_group_lap_phieu
             // 
+            this.m_group_lap_phieu.Controls.Add(this.m_cbo_ma_hang_hoa);
+            this.m_group_lap_phieu.Controls.Add(this.label3);
+            this.m_group_lap_phieu.Controls.Add(this.m_cbo_kho);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_nguoi_thu);
             this.m_group_lap_phieu.Controls.Add(this.label9);
             this.m_group_lap_phieu.Controls.Add(this.m_lbl_ten_phieu);
             this.m_group_lap_phieu.Controls.Add(this.m_dat_ngay_lap);
-            this.m_group_lap_phieu.Controls.Add(this.m_txt_ten_kho);
             this.m_group_lap_phieu.Controls.Add(this.label2);
-            this.m_group_lap_phieu.Controls.Add(this.m_cmd_chon_kho);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_ngay);
             this.m_group_lap_phieu.Controls.Add(this.m_txt_so_phieu_thu_chi);
             this.m_group_lap_phieu.Controls.Add(this.m_lab_so_phieu);
@@ -360,6 +417,26 @@
             this.m_group_lap_phieu.Size = new System.Drawing.Size(835, 212);
             this.m_group_lap_phieu.TabIndex = 3;
             this.m_group_lap_phieu.TabStop = false;
+            // 
+            // m_cbo_ma_hang_hoa
+            // 
+            this.m_cbo_ma_hang_hoa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_cbo_ma_hang_hoa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.m_cbo_ma_hang_hoa.FormattingEnabled = true;
+            this.m_cbo_ma_hang_hoa.Location = new System.Drawing.Point(496, 168);
+            this.m_cbo_ma_hang_hoa.Name = "m_cbo_ma_hang_hoa";
+            this.m_cbo_ma_hang_hoa.Size = new System.Drawing.Size(167, 21);
+            this.m_cbo_ma_hang_hoa.TabIndex = 16;
+            this.m_cbo_ma_hang_hoa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_cbo_ma_hang_hoa_KeyUp);
+            // 
+            // m_cbo_kho
+            // 
+            this.m_cbo_kho.FormattingEnabled = true;
+            this.m_cbo_kho.Location = new System.Drawing.Point(192, 168);
+            this.m_cbo_kho.Name = "m_cbo_kho";
+            this.m_cbo_kho.Size = new System.Drawing.Size(167, 21);
+            this.m_cbo_kho.TabIndex = 13;
+            this.m_cbo_kho.SelectedIndexChanged += new System.EventHandler(this.m_cbo_kho_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -418,7 +495,8 @@
             this.Name = "f604_phieu_xuat_kho";
             this.Text = "F604 - PHIEU XUAT KHO";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.m_context.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
@@ -434,19 +512,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.ContextMenuStrip m_context;
         private System.Windows.Forms.ToolStripMenuItem m_cmd_delete_detail;
         private System.Windows.Forms.TextBox m_txt_nguoi_thu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label m_lbl_ten_phieu;
         private C1.Win.C1Input.C1TextBox m_dat_ngay_lap;
-        private System.Windows.Forms.TextBox m_txt_ten_kho;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip toolTip1;
         internal SIS.Controls.Button.SiSButton m_cmd_xem;
         internal System.Windows.Forms.ImageList imageList1;
-        internal SIS.Controls.Button.SiSButton m_cmd_chon_kho;
         private System.Windows.Forms.Label m_lab_ngay;
         private System.Windows.Forms.TextBox m_txt_so_phieu_thu_chi;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
@@ -461,5 +536,16 @@
         private C1.Win.C1Input.C1TextBox m_txt_tong_tien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox m_cbo_kho;
+        private System.Windows.Forms.ComboBox m_cbo_ma_hang_hoa;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_HANG;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_HANG_VN;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_DON_VI;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_NHOM_CHA;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_NHOM;
+        private DevExpress.XtraGrid.Columns.GridColumn GIA_BAN;
     }
 }
