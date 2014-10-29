@@ -26,11 +26,11 @@ namespace BKI_KHO.NghiepVu
         #region Public Interfaces
         public void display(US_V_DM_HANG_HOA i_us)
         {
-            m_us_dm_hang_hoa = i_us;
+            m_v_us_dm_hang_hoa = i_us;
             this.ShowDialog();
         }
         #endregion
-        US_V_DM_HANG_HOA m_us_dm_hang_hoa = new US_V_DM_HANG_HOA();
+        US_V_DM_HANG_HOA m_v_us_dm_hang_hoa = new US_V_DM_HANG_HOA();
         #region Members
         
         #endregion
@@ -58,7 +58,7 @@ namespace BKI_KHO.NghiepVu
             this.KeyPreview = true;
         }
         private void load_hang_cha(){
-            m_txt_ten_hang_cha.Text = m_us_dm_hang_hoa.strTEN_HANG_VN;
+            m_txt_ten_hang_cha.Text = m_v_us_dm_hang_hoa.strTEN_HANG_VN;
         }
         private void set_initial_form_load()
         {
@@ -114,6 +114,56 @@ namespace BKI_KHO.NghiepVu
             m_fg.Rows[cur_row][(int)e_col_Number.PART_NUMBER] = m_txt_part_number.Text;
 
             CControlFormat.wrap_text_cells(m_fg);
+
+            save_data();
+
+            
+        }
+        private void save_data()
+        {
+            US_V_DM_HANG_HOA v_us = new US_V_DM_HANG_HOA();
+            v_us.strMA_HANG = m_txt_ma_hang.Text;
+            v_us.strTEN_HANG_VN = m_txt_ten_hang.Text;
+            v_us.strMO_TA = m_txt_mo_ta.Text;
+            v_us.dcID_DON_VI = CIPConvert.ToDecimal(m_cbo_dvt.SelectedValue);
+            v_us.dcGIA_NHAP = CIPConvert.ToDecimal(m_txt_gia_nhap.Text);
+            v_us.dcID_TRANG_THAI = 691;
+            v_us.dcID_KHO = m_v_us_dm_hang_hoa.dcID_KHO;
+            v_us.dcID_HANG_CHA = m_v_us_dm_hang_hoa.dcID;
+
+            v_us.SetID_NHOMNull();
+            v_us.SetID_NHOM_CHANull();
+            v_us.SetTEN_NHOMNull();
+            v_us.SetTEN_NHOM_CHANull();
+            v_us.SetID_NHA_CUNG_CAPNull();
+            v_us.SetTEN_NHA_CUNG_CAPNull();
+            //v_us.SetID_DON_VINull();
+            v_us.SetTEN_DON_VINull();
+            //v_us.SetTEN_HANG_VNNull();
+            v_us.SetTEN_HANG_ENNull();
+            v_us.SetANHNull();
+            v_us.SetMA_VACHNull();
+            //v_us.SetGIA_NHAPNull();
+            v_us.SetGIA_BANNull();
+            v_us.SetGIA_BAN_LENull();
+            //v_us.SetMO_TANull();
+            v_us.SetTRANG_THAI_HANGNull();
+            //v_us.SetID_TRANG_THAINull();
+            v_us.SetPART_NUMBERNull();
+            v_us.SetNGUOI_MUONNull();
+            v_us.SetNGAY_MUONNull();
+            v_us.SetNGAY_PHAI_TRANull();
+            v_us.SetNGUOI_TRANull();
+            v_us.SetNGAY_TRANull();
+            v_us.SetID_LOAI_HANGNull();
+            v_us.SetTEN_LOAI_HANGNull();
+            //v_us.SetID_KHONull();
+            v_us.SetTEN_KHONull();
+            v_us.SetLEVEL_MODENull();
+            //v_us.SetID_HANG_CHANull();
+            v_us.SetTEN_HANG_CHANull();
+
+            v_us.Insert();
         }
         #endregion
         #region Events
@@ -122,6 +172,19 @@ namespace BKI_KHO.NghiepVu
             this.Load += f601_phieu_nhap_kho_de_Load;
             m_cmd_clear_grid.Click += m_cmd_clear_grid_Click;
             m_cmd_nhap_hang.Click += m_cmd_nhap_hang_Click;
+            m_cmd_save.Click += m_cmd_save_Click;
+        }
+
+        void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //save_data();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_nhap_hang_Click(object sender, EventArgs e)

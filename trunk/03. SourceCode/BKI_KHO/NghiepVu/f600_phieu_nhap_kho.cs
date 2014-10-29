@@ -71,6 +71,7 @@ namespace BKI_KHO
         ITransferDataRow m_obj_trans;
         bool m_flag_cbo_cha = false;
         ArrayList _al = new ArrayList();
+        bool m_flag_chung_tu = false;
         #endregion
 
         #region Private Methods
@@ -314,8 +315,8 @@ namespace BKI_KHO
                     break;
             }
 
-            if (!check_value_phieu_detail_is_ok())
-                return false;
+            //if (!check_value_phieu_detail_is_ok())
+            //    return false;
 
             if (!check_tong_tien_is_ok()) return false;
             return true;
@@ -437,8 +438,6 @@ namespace BKI_KHO
                 v_us_gd_chung_tu_nhan_vien.Insert();
                 BaseMessages.MsgBox_Infor("Đã lập phiếu nhập kho thành công.");
                 m_us_v_chung_tu.CommitTransaction();
-                
-
             }
             catch (Exception v_e)
             {

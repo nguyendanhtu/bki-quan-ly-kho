@@ -150,6 +150,7 @@
             this.m_cmd_save.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_save.TabIndex = 34;
             this.m_cmd_save.Text = "&Lưu";
+            this.m_cmd_save.Visible = false;
             // 
             // m_cmd_exit
             // 

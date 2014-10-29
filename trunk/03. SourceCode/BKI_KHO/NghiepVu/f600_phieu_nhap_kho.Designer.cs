@@ -180,7 +180,6 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xem);
             this.m_pnl_out_place_dm.Controls.Add(this.m_txt_tong_tien);
             this.m_pnl_out_place_dm.Controls.Add(this.label6);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 440);
@@ -228,11 +227,10 @@
             this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 3;
             this.m_cmd_insert.ImageList = this.imageList1;
-            this.m_cmd_insert.Location = new System.Drawing.Point(973, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(149, 5);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(96, 26);
             this.m_cmd_insert.TabIndex = 0;
@@ -315,7 +313,7 @@
             this.m_cmd_clear_grid.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_clear_grid.ImageIndex = 9;
             this.m_cmd_clear_grid.ImageList = this.imageList1;
-            this.m_cmd_clear_grid.Location = new System.Drawing.Point(150, 4);
+            this.m_cmd_clear_grid.Location = new System.Drawing.Point(282, 5);
             this.m_cmd_clear_grid.Name = "m_cmd_clear_grid";
             this.m_cmd_clear_grid.Size = new System.Drawing.Size(162, 26);
             this.m_cmd_clear_grid.TabIndex = 34;
@@ -584,9 +582,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Kho";
+            this.label3.Text = "Kho ";
             // 
             // m_lab_so_phieu
             // 
@@ -644,6 +642,7 @@
             // 
             this.panel1.Controls.Add(this.m_cmd_clear_grid);
             this.panel1.Controls.Add(this.m_cmd_nhap_hang);
+            this.panel1.Controls.Add(this.m_cmd_insert);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(3, 103);
             this.panel1.Name = "panel1";
