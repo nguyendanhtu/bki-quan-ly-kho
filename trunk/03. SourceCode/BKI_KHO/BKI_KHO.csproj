@@ -77,6 +77,10 @@
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraGrid.v12.2.dll</HintPath>
+    </Reference>
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\SiSButton.dll</HintPath>
@@ -268,6 +272,12 @@
     <Compile Include="NghiepVu\f600_phieu_nhap_kho.Designer.cs">
       <DependentUpon>f600_phieu_nhap_kho.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f601_phieu_nhap_kho_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f601_phieu_nhap_kho_de.Designer.cs">
+      <DependentUpon>f601_phieu_nhap_kho_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\f602_v_gd_chung_tu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -458,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f600_phieu_nhap_kho.resx">
       <DependentUpon>f600_phieu_nhap_kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f601_phieu_nhap_kho_de.resx">
+      <DependentUpon>f601_phieu_nhap_kho_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f602_v_gd_chung_tu.resx">
       <DependentUpon>f602_v_gd_chung_tu.cs</DependentUpon>
