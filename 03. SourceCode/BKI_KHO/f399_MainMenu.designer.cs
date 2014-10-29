@@ -122,10 +122,10 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_rbc_menu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -141,7 +141,7 @@ namespace Form_menu
             this.m_rbc_menu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.m_rbc_menu.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.m_rbc_menu.Size = new System.Drawing.Size(1170, 190);
+            this.m_rbc_menu.Size = new System.Drawing.Size(1170, 159);
             this.m_rbc_menu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbc_menu.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.m_rbc_menu.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -175,7 +175,7 @@ namespace Form_menu
             this.ribbonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1170, 133);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1170, 102);
             // 
             // 
             // 
@@ -189,6 +189,7 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
             // 
             // m_rbb_khac
             // 
@@ -209,7 +210,7 @@ namespace Form_menu
             this.m_rbb_khac.ItemSpacing = 10;
             this.m_rbb_khac.Location = new System.Drawing.Point(819, 0);
             this.m_rbb_khac.Name = "m_rbb_khac";
-            this.m_rbb_khac.Size = new System.Drawing.Size(114, 129);
+            this.m_rbb_khac.Size = new System.Drawing.Size(114, 98);
             this.m_rbb_khac.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_khac.TabIndex = 5;
             // 
@@ -261,7 +262,7 @@ namespace Form_menu
             this.m_rbb_to_chuc.ItemSpacing = 10;
             this.m_rbb_to_chuc.Location = new System.Drawing.Point(666, 0);
             this.m_rbb_to_chuc.Name = "m_rbb_to_chuc";
-            this.m_rbb_to_chuc.Size = new System.Drawing.Size(153, 129);
+            this.m_rbb_to_chuc.Size = new System.Drawing.Size(153, 98);
             this.m_rbb_to_chuc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_to_chuc.TabIndex = 4;
             this.m_rbb_to_chuc.Text = "Tổ chức";
@@ -318,7 +319,7 @@ namespace Form_menu
             this.m_rbb_con_nguoi.Location = new System.Drawing.Point(558, 0);
             this.m_rbb_con_nguoi.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_con_nguoi.Name = "m_rbb_con_nguoi";
-            this.m_rbb_con_nguoi.Size = new System.Drawing.Size(108, 129);
+            this.m_rbb_con_nguoi.Size = new System.Drawing.Size(108, 98);
             this.m_rbb_con_nguoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_con_nguoi.TabIndex = 3;
             this.m_rbb_con_nguoi.Text = "Nhân sự";
@@ -380,7 +381,7 @@ namespace Form_menu
             this.m_rbb_kho_hang.Location = new System.Drawing.Point(132, 0);
             this.m_rbb_kho_hang.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_kho_hang.Name = "m_rbb_kho_hang";
-            this.m_rbb_kho_hang.Size = new System.Drawing.Size(426, 129);
+            this.m_rbb_kho_hang.Size = new System.Drawing.Size(426, 98);
             this.m_rbb_kho_hang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_kho_hang.TabIndex = 2;
             this.m_rbb_kho_hang.Text = "Kho hàng";
@@ -499,7 +500,7 @@ namespace Form_menu
             this.m_rbb_excel.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_excel.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_excel.Name = "m_rbb_excel";
-            this.m_rbb_excel.Size = new System.Drawing.Size(128, 129);
+            this.m_rbb_excel.Size = new System.Drawing.Size(128, 98);
             this.m_rbb_excel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_excel.TabIndex = 1;
             this.m_rbb_excel.Text = "Nhập hàng";
@@ -535,7 +536,7 @@ namespace Form_menu
             this.ribbonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1170, 133);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1170, 102);
             // 
             // 
             // 
@@ -554,7 +555,6 @@ namespace Form_menu
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.StyleMouseOver.WordWrap = true;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
             // 
             // m_rbb_du_lieu
             // 
@@ -576,7 +576,7 @@ namespace Form_menu
             this.m_rbb_du_lieu.Location = new System.Drawing.Point(714, 0);
             this.m_rbb_du_lieu.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_du_lieu.Name = "m_rbb_du_lieu";
-            this.m_rbb_du_lieu.Size = new System.Drawing.Size(114, 129);
+            this.m_rbb_du_lieu.Size = new System.Drawing.Size(114, 98);
             this.m_rbb_du_lieu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_du_lieu.TabIndex = 2;
             this.m_rbb_du_lieu.Text = "Dữ liệu";
@@ -632,7 +632,7 @@ namespace Form_menu
             this.m_rbb_bao_mat.Location = new System.Drawing.Point(215, 0);
             this.m_rbb_bao_mat.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_bao_mat.Name = "m_rbb_bao_mat";
-            this.m_rbb_bao_mat.Size = new System.Drawing.Size(499, 129);
+            this.m_rbb_bao_mat.Size = new System.Drawing.Size(499, 98);
             this.m_rbb_bao_mat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_bao_mat.TabIndex = 1;
             this.m_rbb_bao_mat.Text = "Bảo mật";
@@ -733,7 +733,7 @@ namespace Form_menu
             this.m_rbb_he_thong.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_he_thong.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_he_thong.Name = "m_rbb_he_thong";
-            this.m_rbb_he_thong.Size = new System.Drawing.Size(211, 129);
+            this.m_rbb_he_thong.Size = new System.Drawing.Size(211, 98);
             this.m_rbb_he_thong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_he_thong.TabIndex = 0;
             // 
@@ -797,7 +797,7 @@ namespace Form_menu
             this.ribbonPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1170, 133);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1170, 102);
             // 
             // 
             // 
@@ -832,7 +832,7 @@ namespace Form_menu
             this.m_rbb_doanh_thu.ItemSpacing = 10;
             this.m_rbb_doanh_thu.Location = new System.Drawing.Point(125, 0);
             this.m_rbb_doanh_thu.Name = "m_rbb_doanh_thu";
-            this.m_rbb_doanh_thu.Size = new System.Drawing.Size(249, 129);
+            this.m_rbb_doanh_thu.Size = new System.Drawing.Size(249, 98);
             this.m_rbb_doanh_thu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_doanh_thu.TabIndex = 1;
             this.m_rbb_doanh_thu.Text = "Doanh thu, lợi nhuận";
@@ -863,7 +863,7 @@ namespace Form_menu
             this.m_cmd_doanh_thu_theo_nhan_vien.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.m_cmd_doanh_thu_theo_nhan_vien.Name = "m_cmd_doanh_thu_theo_nhan_vien";
             this.m_cmd_doanh_thu_theo_nhan_vien.SubItemsExpandWidth = 14;
-            this.m_cmd_doanh_thu_theo_nhan_vien.Text = "Doanh thu theo nhân viên";
+            this.m_cmd_doanh_thu_theo_nhan_vien.Text = "Doanh thu/nhân viên";
             this.m_cmd_doanh_thu_theo_nhan_vien.Tooltip = "Doanh thu theo từng nhân viên";
             this.m_cmd_doanh_thu_theo_nhan_vien.Click += new System.EventHandler(this.m_cmd_doanh_thu_theo_nhan_vien_Click);
             // 
@@ -885,7 +885,7 @@ namespace Form_menu
             this.m_rbb_bao_cao_kho.ItemSpacing = 10;
             this.m_rbb_bao_cao_kho.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_bao_cao_kho.Name = "m_rbb_bao_cao_kho";
-            this.m_rbb_bao_cao_kho.Size = new System.Drawing.Size(121, 129);
+            this.m_rbb_bao_cao_kho.Size = new System.Drawing.Size(121, 98);
             this.m_rbb_bao_cao_kho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_bao_cao_kho.TabIndex = 0;
             this.m_rbb_bao_cao_kho.Text = "Kho";
@@ -920,7 +920,7 @@ namespace Form_menu
             this.ribbonPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1170, 133);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1170, 102);
             // 
             // 
             // 
@@ -958,7 +958,7 @@ namespace Form_menu
             this.m_rbb_kho.Location = new System.Drawing.Point(155, 0);
             this.m_rbb_kho.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_kho.Name = "m_rbb_kho";
-            this.m_rbb_kho.Size = new System.Drawing.Size(307, 129);
+            this.m_rbb_kho.Size = new System.Drawing.Size(307, 98);
             this.m_rbb_kho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_kho.TabIndex = 1;
             this.m_rbb_kho.Text = "Kho";
@@ -1033,7 +1033,7 @@ namespace Form_menu
             this.m_rbb_mua_ban.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_mua_ban.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_mua_ban.Name = "m_rbb_mua_ban";
-            this.m_rbb_mua_ban.Size = new System.Drawing.Size(151, 129);
+            this.m_rbb_mua_ban.Size = new System.Drawing.Size(151, 98);
             this.m_rbb_mua_ban.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_mua_ban.TabIndex = 0;
             this.m_rbb_mua_ban.Text = "Mua - Bán";
@@ -1074,7 +1074,7 @@ namespace Form_menu
             this.ribbonPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel5.Name = "ribbonPanel5";
             this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel5.Size = new System.Drawing.Size(1170, 133);
+            this.ribbonPanel5.Size = new System.Drawing.Size(1170, 102);
             // 
             // 
             // 
@@ -1109,7 +1109,7 @@ namespace Form_menu
             this.m_rbb_tra_cuu.ItemSpacing = 10;
             this.m_rbb_tra_cuu.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_tra_cuu.Name = "m_rbb_tra_cuu";
-            this.m_rbb_tra_cuu.Size = new System.Drawing.Size(266, 129);
+            this.m_rbb_tra_cuu.Size = new System.Drawing.Size(266, 98);
             this.m_rbb_tra_cuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_rbb_tra_cuu.TabIndex = 0;
             this.m_rbb_tra_cuu.Text = "Tra cứu";
@@ -1140,18 +1140,18 @@ namespace Form_menu
             this.m_cmd_bao_hanh_seri.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.m_cmd_bao_hanh_seri.Name = "m_cmd_bao_hanh_seri";
             this.m_cmd_bao_hanh_seri.SubItemsExpandWidth = 14;
-            this.m_cmd_bao_hanh_seri.Text = "Bảo hành theo số Seri";
+            this.m_cmd_bao_hanh_seri.Text = "Bảo hành theo Seri";
             this.m_cmd_bao_hanh_seri.Click += new System.EventHandler(this.m_cmd_bao_hanh_seri_Click);
             // 
             // m_rbtab_tab1
             // 
+            this.m_rbtab_tab1.Checked = true;
             this.m_rbtab_tab1.Name = "m_rbtab_tab1";
             this.m_rbtab_tab1.Panel = this.ribbonPanel1;
             this.m_rbtab_tab1.Text = "Hệ thống";
             // 
             // m_rbtab_tab2
             // 
-            this.m_rbtab_tab2.Checked = true;
             this.m_rbtab_tab2.Name = "m_rbtab_tab2";
             this.m_rbtab_tab2.Panel = this.ribbonPanel2;
             this.m_rbtab_tab2.Text = "Danh mục";
@@ -1181,9 +1181,9 @@ namespace Form_menu
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(5, 191);
+            this.xtraTabControl1.Location = new System.Drawing.Point(5, 160);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(1170, 239);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1170, 270);
             this.xtraTabControl1.TabIndex = 1;
             // 
             // f399_MainMenu
