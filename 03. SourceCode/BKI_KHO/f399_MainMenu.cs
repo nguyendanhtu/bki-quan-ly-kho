@@ -122,8 +122,8 @@ namespace Form_menu {
 
         private void m_cmd_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e) {
             try {
-                f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
-                frm.display();
+                f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN v_frm = new f702_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -132,8 +132,8 @@ namespace Form_menu {
 
         private void m_cmd_nhan_vien_Click(object sender, EventArgs e) {
             try {
-                f701_DM_NHAN_VIEN frm = new f701_DM_NHAN_VIEN();
-                frm.display();
+                f701_DM_NHAN_VIEN v_frm = new f701_DM_NHAN_VIEN();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -152,8 +152,9 @@ namespace Form_menu {
 
         private void m_cmd_mat_hang_theo_nhom_Click(object sender, EventArgs e) {
             try {
-                f305_V_DM_HANG_HOA v_f = new f305_V_DM_HANG_HOA();
-                v_f.display();
+
+                f305_V_DM_HANG_HOA v_frm = new f305_V_DM_HANG_HOA();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -162,8 +163,8 @@ namespace Form_menu {
 
         private void m_cmd_loai_chung_tu_Click(object sender, EventArgs e) {
             try {
-                f112_DM_LOAI_CHUNG_TU frm = new f112_DM_LOAI_CHUNG_TU();
-                frm.display();
+                f112_DM_LOAI_CHUNG_TU v_frm = new f112_DM_LOAI_CHUNG_TU();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -172,8 +173,8 @@ namespace Form_menu {
 
         private void m_cmd_khach_hang_Click(object sender, EventArgs e) {
             try {
-                f105_DM_KHACH_HANG frm = new f105_DM_KHACH_HANG();
-                frm.display();
+                f105_DM_KHACH_HANG v_frm = new f105_DM_KHACH_HANG();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -182,8 +183,8 @@ namespace Form_menu {
 
         private void m_cmd_don_vi_tinh_Click(object sender, EventArgs e) {
             try {
-                f301_DM_DON_VI frm = new f301_DM_DON_VI();
-                frm.display();
+                f301_DM_DON_VI v_frm = new f301_DM_DON_VI();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -192,8 +193,8 @@ namespace Form_menu {
 
         private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e) {
             try {
-                f304_DM_NHA_SX v_f = new f304_DM_NHA_SX();
-                v_f.display();
+                f304_DM_NHA_SX v_frm = new f304_DM_NHA_SX();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -204,8 +205,8 @@ namespace Form_menu {
 
         private void m_cmd_xuat_nhap_ton_Click(object sender, EventArgs e) {
             try {
-                f806_RPT_XUAT_NHAP_TON frm = new f806_RPT_XUAT_NHAP_TON();
-                frm.display();
+                f806_RPT_XUAT_NHAP_TON v_frm = new f806_RPT_XUAT_NHAP_TON();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -214,8 +215,8 @@ namespace Form_menu {
 
         private void m_cmd_loi_nhuan_gop_Click(object sender, EventArgs e) {
             try {
-                f807_RPT_LOI_NHUAN frm = new f807_RPT_LOI_NHUAN();
-                frm.display();
+                f807_RPT_LOI_NHUAN v_frm = new f807_RPT_LOI_NHUAN();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -224,8 +225,8 @@ namespace Form_menu {
 
         private void m_cmd_phan_quyen_Click(object sender, EventArgs e) {
             try {
-                f999_ht_nguoi_su_dung frm999 = new f999_ht_nguoi_su_dung();
-                frm999.display();
+                f999_ht_nguoi_su_dung v_frm = new f999_ht_nguoi_su_dung();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -245,8 +246,8 @@ namespace Form_menu {
 
         private void m_cmd_tu_dien_Click(object sender, EventArgs e) {
             try {
-                f100_TuDien frm100 = new f100_TuDien();
-                frm100.display();
+                f100_TuDien v_frm = new f100_TuDien();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -254,8 +255,8 @@ namespace Form_menu {
         }
         private void m_cmd_nhap_so_du_dau_Click(object sender, EventArgs e) {
             try {
-                f300_NHAP_SO_DU_DAU v_f = new f300_NHAP_SO_DU_DAU();
-                v_f.display();
+                f300_NHAP_SO_DU_DAU v_frm = new f300_NHAP_SO_DU_DAU();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -267,7 +268,7 @@ namespace Form_menu {
             try
             {
                 F704_V_BAO_HANH_SUA_CHUA v_frm = new F704_V_BAO_HANH_SUA_CHUA();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -279,7 +280,7 @@ namespace Form_menu {
             try
             {
                 f306_HT_USER_GROUP v_frm = new f306_HT_USER_GROUP();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -291,7 +292,7 @@ namespace Form_menu {
             try
             {
                 f995_ht_phan_quyen_cho_nhom v_frm = new f995_ht_phan_quyen_cho_nhom();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -303,7 +304,7 @@ namespace Form_menu {
             try
             {
                 f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -315,7 +316,7 @@ namespace Form_menu {
             try
             {
                 f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -327,7 +328,7 @@ namespace Form_menu {
             try
             {
                 f308_DOI_MAT_KHAU_NGUOI_SD v_frm = new f308_DOI_MAT_KHAU_NGUOI_SD();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
@@ -340,7 +341,7 @@ namespace Form_menu {
             try
             {
                 f107_V_TRA_CUU_BAO_HANH v_frm = new f107_V_TRA_CUU_BAO_HANH();
-                v_frm.display();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (System.Exception v_e)
             {
