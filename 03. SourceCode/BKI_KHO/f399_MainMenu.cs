@@ -91,7 +91,7 @@ namespace Form_menu {
 
         void m_cmd_nhap_kho_Click(object sender, EventArgs e) {
             try {
-                f600_phieu_nhap_kho v_frm = new f600_phieu_nhap_kho();
+                f201_nhap_kho v_frm = new f201_nhap_kho();
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch(System.Exception v_e) {

@@ -266,6 +266,18 @@
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
     </Compile>
     <Compile Include="HostedControl.cs" />
+    <Compile Include="NghiepVu\f201_nhap_kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f201_nhap_kho.Designer.cs">
+      <DependentUpon>f201_nhap_kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\f202_nhap_kho_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f202_nhap_kho_de.Designer.cs">
+      <DependentUpon>f202_nhap_kho_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\f600_phieu_nhap_kho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +477,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f201_nhap_kho.resx">
+      <DependentUpon>f201_nhap_kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f202_nhap_kho_de.resx">
+      <DependentUpon>f202_nhap_kho_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f600_phieu_nhap_kho.resx">
       <DependentUpon>f600_phieu_nhap_kho.cs</DependentUpon>
