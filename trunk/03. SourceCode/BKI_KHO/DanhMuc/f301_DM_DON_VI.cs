@@ -208,7 +208,7 @@ namespace BKI_KHO {
             this.m_txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_search.ForeColor = System.Drawing.Color.DimGray;
-            this.m_txt_search.Location = new System.Drawing.Point(185, 13);
+            this.m_txt_search.Location = new System.Drawing.Point(117, 12);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(254, 20);
             this.m_txt_search.TabIndex = 26;
@@ -223,7 +223,7 @@ namespace BKI_KHO {
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(456, 8);
+            this.m_cmd_search.Location = new System.Drawing.Point(388, 7);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(74, 28);
             this.m_cmd_search.TabIndex = 27;
@@ -233,7 +233,7 @@ namespace BKI_KHO {
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(75, 16);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(7, 15);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
             this.m_lbl_tim_kiem.Size = new System.Drawing.Size(88, 13);
             this.m_lbl_tim_kiem.TabIndex = 25;
@@ -249,7 +249,7 @@ namespace BKI_KHO {
             this.m_lbl_title.Size = new System.Drawing.Size(614, 28);
             this.m_lbl_title.TabIndex = 43;
             this.m_lbl_title.Text = "DANH MỤC ĐƠN VỊ TÍNH";
-            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 

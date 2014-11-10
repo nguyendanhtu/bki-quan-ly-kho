@@ -245,7 +245,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(428, 9);
+            this.m_cmd_search.Location = new System.Drawing.Point(339, 9);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 22;
@@ -257,7 +257,7 @@ namespace BKI_KHO
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_tim_kiem.ForeColor = System.Drawing.Color.Gray;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(165, 14);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(76, 14);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(243, 20);
             this.m_txt_tim_kiem.TabIndex = 1;
@@ -267,7 +267,7 @@ namespace BKI_KHO
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(95, 17);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(6, 17);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
             this.m_lbl_tim_kiem.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_tim_kiem.TabIndex = 21;
@@ -283,7 +283,7 @@ namespace BKI_KHO
             this.m_lbl_title.Size = new System.Drawing.Size(630, 31);
             this.m_lbl_title.TabIndex = 42;
             this.m_lbl_title.Text = "DANH MỤC NHÓM HÀNG";
-            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // f302_V_DM_NHOM_HANG
             // 
