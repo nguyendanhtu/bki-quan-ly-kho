@@ -237,7 +237,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(462, 13);
+            this.m_cmd_search.Location = new System.Drawing.Point(373, 8);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 21;
@@ -246,7 +246,7 @@ namespace BKI_KHO
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(187, 18);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(98, 13);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(269, 20);
             this.m_txt_tim_kiem.TabIndex = 22;
@@ -261,7 +261,7 @@ namespace BKI_KHO
             this.m_lbl_title.Size = new System.Drawing.Size(665, 44);
             this.m_lbl_title.TabIndex = 44;
             this.m_lbl_title.Text = "DANH SÁCH CHỨNG TỪ";
-            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -277,7 +277,7 @@ namespace BKI_KHO
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(93, 21);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(4, 16);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
             this.m_lbl_tim_kiem.Size = new System.Drawing.Size(88, 13);
             this.m_lbl_tim_kiem.TabIndex = 25;

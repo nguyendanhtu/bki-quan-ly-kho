@@ -269,7 +269,7 @@ namespace BKI_KHO
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(55, 20);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(8, 20);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
             this.m_lbl_tim_kiem.Size = new System.Drawing.Size(88, 13);
             this.m_lbl_tim_kiem.TabIndex = 28;
@@ -280,7 +280,7 @@ namespace BKI_KHO
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_tim_kiem.ForeColor = System.Drawing.Color.Gray;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(171, 17);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(124, 17);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(587, 20);
             this.m_txt_tim_kiem.TabIndex = 29;
@@ -294,7 +294,7 @@ namespace BKI_KHO
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(783, 12);
+            this.m_cmd_search.Location = new System.Drawing.Point(736, 12);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(101, 28);
             this.m_cmd_search.TabIndex = 30;
@@ -311,7 +311,7 @@ namespace BKI_KHO
             this.m_lbl_title.Size = new System.Drawing.Size(995, 40);
             this.m_lbl_title.TabIndex = 55;
             this.m_lbl_title.Text = "DANH MỤC MẶT HÀNG";
-            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // f305_V_DM_HANG_HOA
             // 
