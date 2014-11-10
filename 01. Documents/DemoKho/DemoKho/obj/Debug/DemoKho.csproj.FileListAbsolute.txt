@@ -1,0 +1,17 @@
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\bin\Debug\DemoKho.exe.config
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\bin\Debug\DemoKho.exe
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\bin\Debug\DemoKho.pdb
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.csprojResolveAssemblyReference.cache
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F100_main.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.Properties.Resources.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.csproj.GenerateResource.Cache
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.exe.licenses
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.exe
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.pdb
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F200_Nhap_kho.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F200_Nhap_kho_DE.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F300_Xuat_kho.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F300_Xuat_kho_DE.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F400_Danh_muc_loai_thiet_bi.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F401_Danh_muc_thiet_bi.resources
+F:\BKIndex\PRO\BKI_CRM\bki-crm\04.Source Code\DemoKho\DemoKho\obj\Debug\DemoKho.F401_Danh_muc_thiet_bi_DE.resources
