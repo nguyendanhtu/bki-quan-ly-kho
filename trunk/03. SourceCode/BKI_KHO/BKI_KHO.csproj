@@ -265,7 +265,6 @@
     <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.Designer.cs">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
     </Compile>
-    <Compile Include="HostedControl.cs" />
     <Compile Include="NghiepVu\f201_nhap_kho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,7 +373,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\f107_V_TRA_CUU_BAO_HANH.resx">
       <DependentUpon>f107_V_TRA_CUU_BAO_HANH.cs</DependentUpon>
     </EmbeddedResource>
