@@ -49,12 +49,12 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_v)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -194,7 +194,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Serial Number";
+            this.gridColumn3.Caption = "SN Thành phần";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
@@ -208,14 +208,14 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "Mô tả";
+            this.gridColumn5.Caption = "Mô tả ";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "Giá nhập";
+            this.gridColumn6.Caption = "Giá nhập thành phần";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
@@ -235,6 +235,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 179);
             this.panel1.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 13);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Bước 4: Nhập SN thành phần thiết bị";
             // 
             // groupBox1
             // 
@@ -317,15 +326,6 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(130, 28);
             this.m_cmd_exit.TabIndex = 14;
             this.m_cmd_exit.Text = "Bước 6: Thoát (Esc)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 13);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Bước 4: Nhập SN thành phần thiết bị";
             // 
             // f202_nhap_kho_de
             // 

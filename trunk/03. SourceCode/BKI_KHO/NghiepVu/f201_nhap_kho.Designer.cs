@@ -60,6 +60,7 @@
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_lap.Properties)).BeginInit();
@@ -195,6 +196,7 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn6,
+            this.gridColumn10,
             this.gridColumn9});
             this.m_fg.GridControl = this.m_v;
             this.m_fg.GroupCount = 2;
@@ -410,6 +412,13 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Giá thành phần";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 7;
+            // 
             // f201_nhap_kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +472,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.DateEdit m_dat_ngay_lap;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
     }
 }
