@@ -590,12 +590,12 @@ namespace BKI_KHO
 
             CControlFormat.wrap_text_cells(m_fg);
 
-            Button v_btn = new Button();
-            v_btn.Tag = m_txt_ma_hang.Text;
-            v_btn.Text = "Nhập thành phần";         
+            //Button v_btn = new Button();
+            //v_btn.Tag = m_txt_ma_hang.Text;
+            //v_btn.Text = "Nhập thành phần";         
  
-            v_btn.Click += v_btn_Click;
-            _al.Add(new HostedControl(m_fg, v_btn, m_fg.Rows.Count - 1,(int)e_col_Number.CHI_TIET + 1));
+            //v_btn.Click += v_btn_Click;
+            //_al.Add(new HostedControl(m_fg, v_btn, m_fg.Rows.Count - 1,(int)e_col_Number.CHI_TIET + 1));
         }
 
         private bool check_validate_data_before()
@@ -643,10 +643,7 @@ namespace BKI_KHO
         {
             try
             {
-                foreach (HostedControl item in _al)
-                {
-                    item.UpdatePosition();
-                }
+                
             }
             catch (Exception v_e)
             {
