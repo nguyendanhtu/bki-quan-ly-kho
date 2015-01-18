@@ -101,7 +101,7 @@ namespace BKI_KHO
         private void set_initial_form_load()
         {
             design_data_table();
-            gridControl1.DataSource = m_dt;
+            m_v.DataSource = m_dt;
             load_data_2_custom_source_for_txt_nhan_vien();
             load_data_kho();
             m_dat_ngay_lap.Value = CIPConvert.ToStr(CAppContext_201.getCurentDate());
@@ -426,7 +426,7 @@ namespace BKI_KHO
             v_dr[V_DM_HANG_HOA.GIA_BAN] = dr[0][V_DM_HANG_HOA.GIA_BAN];
             m_dt.Rows.Add(v_dr);
             m_lst_id_hang_hoa.Add(m_cbo_ma_hang_hoa.SelectedValue.ToString());
-            gridControl1.DataSource = m_dt;
+            m_v.DataSource = m_dt;
         }
     }
 }
